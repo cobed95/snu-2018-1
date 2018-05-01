@@ -220,6 +220,7 @@ def getAvgPayoff(population):
     return avgPayoff
 
 def languageGame(k, numOfGen, objNum, vocabNum):
+    print("Evolutionary Language Game begins...")
     forefathers = np.array([])
     for i in range(100):
         forefathers = np.append(forefathers, Individual(objNum, vocabNum))
@@ -228,12 +229,13 @@ def languageGame(k, numOfGen, objNum, vocabNum):
     ancestors = forefathers[:]
     generation = 1
     while generation < numOfGen:
+        print("At generation ", generation, "...")
         children = getNextGen(ancestors, k)
         communicate(children)
         ancestors = children[:]
         generation += 1
 
-    print(getAvgPayoff(children))
+    print("Evolutionary Language Game finished with avg. payoff", getAvgPayoff(children))
     return children
 
 def encounterVocab(population, situation):
@@ -270,6 +272,7 @@ def getAvgKnowledge(population):
     return knowledgeSum/100
 
 def newVocabGame(firstGen, situation, k, numOfGen):
+    print("New Vocabulary Game for situation", situation, "begins...")
     encounterVocab(firstGen, situation)
     spreadVocab(firstGen, k)
     communicate(firstGen)
@@ -280,16 +283,15 @@ def newVocabGame(firstGen, situation, k, numOfGen):
     ancestors = firstGen[:]
     generation = 1
     while generation < numOfGen:
-        print(generation)
-        print('start')
+        print("At generation ", generation, "...")
         children = getNextGen(ancestors, k)
         spreadVocab(children, k)
         communicate(children)
         aggData = np.append(aggData, getAvgKnowledge(children))
         ancestors = children[:]
-        print('end')
         generation += 1
 
+    print("New Vocabulary Game finished with avg. knowledge", aggData[-1])
     return aggData
 
 def plot(aggData0, aggData1):
