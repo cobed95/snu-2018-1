@@ -16,9 +16,9 @@ function DecodedInst decode(Inst inst,Addr pc);
 
 	/* TODO: Finish implementing decode.bsv */
 	/* HINT: rrmovq is included in cmov */
-	?:
+	halt:
 	begin
-		dInst.iType = Unsupported;
+		dInst.iType = Hlt;
 		dInst.opqFunc = FNop;
 		dInst.condUsed = Al;
 		dInst.valP = pc + 1;
@@ -29,6 +29,72 @@ function DecodedInst decode(Inst inst,Addr pc);
 		dInst.valC = Invalid;
 	end
 
+    nop:
+    begin
+        dInst.iType = Nop;
+        dInst.opqFunc = FNop;
+        dInst.condUsed = Al;
+        dInst.valP = pc + 1;
+        dInst.dstE = Invalid;
+        dInst.dstM = Invalid;
+        dInst.regA = Invalid;
+        dInst.regB = Invalid;
+        dInst.valC = Invalid;
+    end
+
+    cmovXX:
+    begin
+        dInst.iType = Cmov;
+        dInst.opqFunc = FNop;
+        dInst.condUsed = case (ifun)
+                            rrmovq: 
+        dInst.valP = pc + 1;
+    end
+
+    irmovq:
+    begin
+
+    end
+
+    rmmovq:
+    begin
+
+    end
+
+    mrmovq:
+    begin
+
+    end
+
+    OPq:
+    begin
+
+    end
+
+    jXX:
+    begin
+
+    end
+
+    call:
+    begin
+
+    end
+
+    ret:
+    begin
+
+    end
+
+    pushq:
+    begin
+
+    end
+
+    popq:
+    begin
+
+    end
 
 	/* DO NOT MODIFY BELOW HERE! */
 	copinst:
