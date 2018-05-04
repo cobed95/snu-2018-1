@@ -39,21 +39,39 @@ function DecodedInst decode(Inst inst,Addr pc);
         dInst.dstM = Invalid;
         dInst.regA = Invalid;
         dInst.regB = Invalid;
-        dInst.valC = Invalid;
+        dInst.valC = Valid(imm);
     end
 
-    cmovXX:
+    cmov:
     begin
         dInst.iType = Cmov;
         dInst.opqFunc = FNop;
         dInst.condUsed = case (ifun)
-                            rrmovq: 
-        dInst.valP = pc + 1;
+                            fNcnd: Al;
+							fLe: Le;
+							fLt: Lt;
+							fEq: Eq;
+							fNeq: Neq;
+							fGe: Ge;
+							fGt: Gt;
+        dInst.valP = pc + 2;
+		dInst.dstE = validReg(rB);
+		dInst.dstM = Invalid;
+		dInst.regA = validReg(rA);
+		dInst.regB = Invalid;
+		dInst.valC = Invalid;
     end
 
     irmovq:
     begin
-
+		dInst.iType = Rmovq;
+		dInst.opqFunc = FNop;
+		dInst.condUsed = Al;
+		dInst.valP = pc + 2;
+		dInst.dstE = validReg(rB);
+		dInst.dstM = Invalid;
+		dInst.regA = validReg(rA);
+		dInst.valC = Invalid;
     end
 
     rmmovq:
@@ -66,12 +84,24 @@ function DecodedInst decode(Inst inst,Addr pc);
 
     end
 
-    OPq:
+    opq:
     begin
-
+			dInst.iType = Opq;
+			dInst.opqFunc = case(ifun)
+												addc: FAdd;
+												subc: FSub;
+												andc: FAnd;
+												xorc: FXor;
+			dInst.condUsed = Al;
+			dInst.valP = pc + 2;
+			dInst.dstE = validReg(rB);
+			dInst.dstM = Invalid;
+			dInst.regA = validReg(rA);
+			dInst.regB = validReg(rB);
+			dInst.valC = Invalid;
     end
 
-    jXX:
+    jmp:
     begin
 
     end
