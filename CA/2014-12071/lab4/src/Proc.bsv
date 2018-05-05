@@ -26,6 +26,7 @@ module mkProc(Proc);
 	Fifo#(1,ProcStatus) statRedirect <- mkBypassFifo;
 
 	Reg#(Inst)	f2e <- mkRegU;
+    Reg#(ExecInst) e2mw <- mkRegU;
 
 	rule doFetch(cop.started && stat == AOK && stage == Fetch);
 		/* Fetch */
@@ -67,10 +68,12 @@ module mkProc(Proc);
                 MRmov, RMmov, Push, Call, Pop, Ret  : Memory;
                 Hlt, Nop, Cmov, Rmov, Opq, Jmp      : WriteBack;
         endcase;
+        e2mw <= eInst;
     endrule
 
     rule doMemory(cop.started && stat == AOK & stage == Memory);
 		/* Memory */
+        let eInst = e2mw;
 		let iType = eInst.iType;
 		case(iType)
 			MRmov, Pop, Ret :
@@ -91,10 +94,13 @@ module mkProc(Proc);
 				$display("Stored %d into %d",stData, eInst.memAddr);
 			end
 		endcase
+        stage <= WriteBack;
+        e2mw <= eInst;
     endrule
 
     rule doWriteBack(cop.started && stat == AOK && stage == WriteBack);
 		/* WriteBack */
+        let eInst = e2mw;
 		if(isValid(eInst.dstE))
 		begin
 			$display("On %d, writes %d	 (wrE)",validRegValue(eInst.dstE), validValue(eInst.valE));
@@ -107,9 +113,9 @@ module mkProc(Proc);
 		end
 
 		pc <= validValue(eInst.nextPc);
-		stage <= Fetch;
 
 			cop.wr(eInst.dstE, validValue(eInst.valE));
+        stage <= Fetch;
 	endrule
 
 
