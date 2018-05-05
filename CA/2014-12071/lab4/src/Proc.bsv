@@ -52,7 +52,7 @@ module mkProc(Proc);
 		dInst.copVal = isValid(dInst.regA)? tagged Valid cop.rd(validRegValue(dInst.regA)) : Invalid;
 
 		/* Update Status */
-		let newStatus = case(iType)
+		let newStatus = case(dInst.iType)
 				Unsupported: INS;
 				Hlt 	   : HLT;
 				default	   : AOK;
@@ -64,14 +64,14 @@ module mkProc(Proc);
 		condFlag <= eInst.condFlag;
 
 		$display("Exec : ppc %d", dInst.valP);
-        stage <= case(iType)
+        stage <= case(eInst.iType)
                 MRmov, RMmov, Push, Call, Pop, Ret  : Memory;
                 Hlt, Nop, Cmov, Rmov, Opq, Jmp      : WriteBack;
         endcase;
         e2mw <= eInst;
     endrule
 
-    rule doMemory(cop.started && stat == AOK & stage == Memory);
+    rule doMemory(cop.started && stat == AOK && stage == Memory);
 		/* Memory */
         let eInst = e2mw;
 		let iType = eInst.iType;
