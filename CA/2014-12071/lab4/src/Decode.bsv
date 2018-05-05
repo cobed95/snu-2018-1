@@ -16,9 +16,13 @@ function DecodedInst decode(Inst inst,Addr pc);
 
 	/* TODO: Finish implementing decode.bsv */
 	/* HINT: rrmovq is included in cmov */
-	halt:
+	halt, nop:
 	begin
-		dInst.iType = Hlt;
+		dInst.iType = case (iCode)
+                        begin
+                            halt: Hlt;
+                            nop: Nop;
+                        end
 		dInst.opqFunc = FNop;
 		dInst.condUsed = Al;
 		dInst.valP = pc + 1;
@@ -29,24 +33,12 @@ function DecodedInst decode(Inst inst,Addr pc);
 		dInst.valC = Invalid;
 	end
 
-    nop:
-    begin
-        dInst.iType = Nop;
-        dInst.opqFunc = FNop;
-        dInst.condUsed = Al;
-        dInst.valP = pc + 1;
-        dInst.dstE = Invalid;
-        dInst.dstM = Invalid;
-        dInst.regA = Invalid;
-        dInst.regB = Invalid;
-        dInst.valC = Valid(imm);
-    end
-
     cmov:
     begin
         dInst.iType = Cmov;
         dInst.opqFunc = FNop;
         dInst.condUsed = case (ifun)
+                        begin
                             fNcnd: Al;
 							fLe: Le;
 							fLt: Lt;
@@ -54,6 +46,7 @@ function DecodedInst decode(Inst inst,Addr pc);
 							fNeq: Neq;
 							fGe: Ge;
 							fGt: Gt;
+                        end
         dInst.valP = pc + 2;
 		dInst.dstE = validReg(rB);
 		dInst.dstM = Invalid;
@@ -67,63 +60,130 @@ function DecodedInst decode(Inst inst,Addr pc);
 		dInst.iType = Rmovq;
 		dInst.opqFunc = FNop;
 		dInst.condUsed = Al;
-		dInst.valP = pc + 2;
+		dInst.valP = pc + 10;
 		dInst.dstE = validReg(rB);
 		dInst.dstM = Invalid;
-		dInst.regA = validReg(rA);
-		dInst.valC = Invalid;
+		dInst.regA = Invalid;
+        dInst.regB = Invalid;
+		dInst.valC = Valid(imm);
     end
 
     rmmovq:
-    begin
-
+    begin 
+        dInst.iType = RMmovq;
+        dInst.opqFunc = FAdd;
+        dInst.condUsed = Al;
+        dInst.valP = pc + 10;
+        dInst.dstE = Invalid;
+        dInst.dstM = Invalid;
+        dInst.regA = validReg(rA);
+        dInst.regB = validReg(rB);
+        dInst.valC = Valid(imm);
     end
 
     mrmovq:
     begin
-
+        dInst.iType = MRmovq;
+        dInst.opqFunc = FAdd;
+        dInst.condUsed = Al;
+        dInst.valP = pc + 10;
+        dInst.dstE = Invalid;
+        dInst.dstM = validReg(rA);
+        dInst.regA = Invalid;
+        dInst.regB = validReg(rB);
+        dInst.valC = Valid(imm);
     end
 
     opq:
     begin
-			dInst.iType = Opq;
-			dInst.opqFunc = case(ifun)
-												addc: FAdd;
-												subc: FSub;
-												andc: FAnd;
-												xorc: FXor;
-			dInst.condUsed = Al;
-			dInst.valP = pc + 2;
-			dInst.dstE = validReg(rB);
-			dInst.dstM = Invalid;
-			dInst.regA = validReg(rA);
-			dInst.regB = validReg(rB);
-			dInst.valC = Invalid;
+		dInst.iType = Opq;
+		dInst.opqFunc = case(ifun)
+                        begin
+							addc: FAdd;
+							subc: FSub;
+							andc: FAnd;
+							xorc: FXor;
+                        end
+		dInst.condUsed = Al;
+		dInst.valP = pc + 2;
+		dInst.dstE = validReg(rB);
+		dInst.dstM = Invalid;
+		dInst.regA = validReg(rA);
+		dInst.regB = validReg(rB);
+		dInst.valC = Invalid;
     end
 
     jmp:
     begin
-
+        dInst.iType = Jmp;
+        dInst.opqFunc = FNop;
+        dInst.condUsed = case(ifun)
+                        begin
+                            fNcnd: Al;
+							fLe: Le;
+							fLt: Lt;
+							fEq: Eq;
+							fNeq: Neq;
+							fGe: Ge;
+							fGt: Gt;
+                        end
+        dInst.valP = pc + 9;
+        dInst.dstE = Invalid;
+        dInst.dstM = Invalid;
+        dInst.regA = Invalid;
+        dInst.regB = Invalid;
+        dInst.valC = Valid(dest);
     end
 
-    call:
+    call, ret:
     begin
-
-    end
-
-    ret:
-    begin
-
+        case(iCode)
+            call:
+            begin
+                dInst.iType = Call; 
+                dInst.opqFunc = FSub;
+                dInst.valP = pc + 9;
+                dInst.valC = Valid(dest);
+                dInst.regA = Invalid;
+            end
+            ret:
+            begin
+                dInst.iType = Ret;
+                dInst.opqFunc = FAdd;
+                dInst.valP = pc + 1;
+                dInst.valC = Invalid;
+                dInst.regA = validReg(rsp);
+            end
+        dInst.condUsed = Al;
+        dInst.dstE = validReg(rsp);
+        dInst.dstM = Invalid;
+        dInst.regB = validReg(rsp);
     end
 
     pushq:
     begin
-
+        dInst.iType = Push;
+        dInst.opqFunc = FSub;
+        dInst.condUsed = Al;
+        dInst.valP = pc + 2;
+        dInst.dstE = validReg(rsp);
+        dInst.dstM = Invalid;
+        dInst.regA = validReg(rA);
+        dInst.regB = validReg(rsp);
+        dInst.valC = Invalid;
     end
 
     popq:
     begin
-
+        dInst.iType = (rA == rsp)? Unsupported : Pop;
+        dInst.opqFunc = FAdd;
+        dInst.condUsed = Al;
+        dInst.valP = pc + 2;
+        dInst.dstE = validReg(rsp);
+        dInst.dstM = validReg(rA);
+        dInst.regA = validReg(rsp);
+        dInst.regB = validReg(rsp);
+        dInst.valC = Invalid;
     end
 
 	/* DO NOT MODIFY BELOW HERE! */
