@@ -9,7 +9,7 @@ import Exec::*;
 import Cop::*;
 import Fifo::*;
 
-typedef enum {Fetch, Execute} Stage deriving(Bits, Eq);
+typedef enum {Fetch, Execute, Memory, WriteBack} Stage deriving(Bits, Eq);
 
 (*synthesize*)
 module mkProc(Proc);
@@ -36,7 +36,7 @@ module mkProc(Proc);
 		f2e <= inst;
 	endrule
 
-	rule doRest(cop.started && stat == AOK && stage == Execute);
+	rule doExecute(cop.started && stat == AOK && stage == Execute);
 		/* TODO: Divide the doExecute rule into doExecute, doMemory and doWriteBack rules */
 		/* The doMemory rule should be skipped whenever it is not required. */
 
@@ -50,14 +50,26 @@ module mkProc(Proc);
 		dInst.valB	 = isValid(dInst.regB)? tagged Valid rf.rdB(validRegValue(dInst.regB)) : Invalid;
 		dInst.copVal = isValid(dInst.regA)? tagged Valid cop.rd(validRegValue(dInst.regA)) : Invalid;
 
+		/* Update Status */
+		let newStatus = case(iType)
+				Unsupported: INS;
+				Hlt 	   : HLT;
+				default	   : AOK;
+		endcase;
+		statRedirect.enq(newStatus);
 
 		/* Execute */
 		let eInst = exec(dInst, condFlag, pc);
 		condFlag <= eInst.condFlag;
 
 		$display("Exec : ppc %d", dInst.valP);
+        stage <= case(iType)
+                MRmov, RMmov, Push, Call, Pop, Ret  : Memory;
+                Hlt, Nop, Cmov, Rmov, Opq, Jmp      : WriteBack;
+        endcase;
+    endrule
 
-
+    rule doMemory(cop.started && stat == AOK & stage == Memory);
 		/* Memory */
 		let iType = eInst.iType;
 		case(iType)
@@ -79,16 +91,9 @@ module mkProc(Proc);
 				$display("Stored %d into %d",stData, eInst.memAddr);
 			end
 		endcase
+    endrule
 
-		/* Update Status */
-		let newStatus = case(iType)
-				Unsupported: INS;
-				Hlt 	   : HLT;
-				default	   : AOK;
-		endcase;
-		statRedirect.enq(newStatus);
-
-
+    rule doWriteBack(cop.started && stat == AOK && stage == WriteBack);
 		/* WriteBack */
 		if(isValid(eInst.dstE))
 		begin
