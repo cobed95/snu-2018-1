@@ -19,10 +19,9 @@ function DecodedInst decode(Inst inst,Addr pc);
 	halt, nop:
 	begin
 		dInst.iType = case (iCode)
-                        begin
                             halt: Hlt;
                             nop: Nop;
-                        end
+						endcase;
 		dInst.opqFunc = FNop;
 		dInst.condUsed = Al;
 		dInst.valP = pc + 1;
@@ -38,7 +37,6 @@ function DecodedInst decode(Inst inst,Addr pc);
         dInst.iType = Cmov;
         dInst.opqFunc = FNop;
         dInst.condUsed = case (ifun)
-                        begin
                             fNcnd: Al;
 							fLe: Le;
 							fLt: Lt;
@@ -46,7 +44,7 @@ function DecodedInst decode(Inst inst,Addr pc);
 							fNeq: Neq;
 							fGe: Ge;
 							fGt: Gt;
-                        end
+                        endcase;
         dInst.valP = pc + 2;
 		dInst.dstE = validReg(rB);
 		dInst.dstM = Invalid;
@@ -57,7 +55,7 @@ function DecodedInst decode(Inst inst,Addr pc);
 
     irmovq:
     begin
-		dInst.iType = Rmovq;
+		dInst.iType = Rmov;
 		dInst.opqFunc = FNop;
 		dInst.condUsed = Al;
 		dInst.valP = pc + 10;
@@ -70,7 +68,7 @@ function DecodedInst decode(Inst inst,Addr pc);
 
     rmmovq:
     begin 
-        dInst.iType = RMmovq;
+        dInst.iType = RMmov;
         dInst.opqFunc = FAdd;
         dInst.condUsed = Al;
         dInst.valP = pc + 10;
@@ -83,7 +81,7 @@ function DecodedInst decode(Inst inst,Addr pc);
 
     mrmovq:
     begin
-        dInst.iType = MRmovq;
+        dInst.iType = MRmov;
         dInst.opqFunc = FAdd;
         dInst.condUsed = Al;
         dInst.valP = pc + 10;
@@ -98,12 +96,11 @@ function DecodedInst decode(Inst inst,Addr pc);
     begin
 		dInst.iType = Opq;
 		dInst.opqFunc = case(ifun)
-                        begin
 							addc: FAdd;
 							subc: FSub;
 							andc: FAnd;
 							xorc: FXor;
-                        end
+                        endcase;
 		dInst.condUsed = Al;
 		dInst.valP = pc + 2;
 		dInst.dstE = validReg(rB);
@@ -118,7 +115,6 @@ function DecodedInst decode(Inst inst,Addr pc);
         dInst.iType = Jmp;
         dInst.opqFunc = FNop;
         dInst.condUsed = case(ifun)
-                        begin
                             fNcnd: Al;
 							fLe: Le;
 							fLt: Lt;
@@ -126,7 +122,7 @@ function DecodedInst decode(Inst inst,Addr pc);
 							fNeq: Neq;
 							fGe: Ge;
 							fGt: Gt;
-                        end
+                        endcase;
         dInst.valP = pc + 9;
         dInst.dstE = Invalid;
         dInst.dstM = Invalid;
@@ -154,13 +150,14 @@ function DecodedInst decode(Inst inst,Addr pc);
                 dInst.valC = Invalid;
                 dInst.regA = validReg(rsp);
             end
+		endcase
         dInst.condUsed = Al;
         dInst.dstE = validReg(rsp);
         dInst.dstM = Invalid;
         dInst.regB = validReg(rsp);
     end
 
-    pushq:
+    push:
     begin
         dInst.iType = Push;
         dInst.opqFunc = FSub;
@@ -173,7 +170,7 @@ function DecodedInst decode(Inst inst,Addr pc);
         dInst.valC = Invalid;
     end
 
-    popq:
+    pop:
     begin
         dInst.iType = (rA == rsp)? Unsupported : Pop;
         dInst.opqFunc = FAdd;
