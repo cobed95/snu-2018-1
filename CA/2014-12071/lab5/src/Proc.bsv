@@ -16,6 +16,13 @@ typedef struct {
 	Bool epoch;
 } Fetch2Decode deriving(Bits, Eq);
 
+typedef struct {
+    Inst inst;
+    Addr pc;
+    Addr ppc;
+    Bool epoch;
+} Decode2Rest deriving(Bits, Eq);
+
 (*synthesize*)
 module mkProc(Proc);
 	Reg#(Addr)		pc	<- mkRegU;
@@ -27,10 +34,11 @@ module mkProc(Proc);
 	Reg#(CondFlag) 			condFlag	 <- mkRegU;
 	Reg#(ProcStatus)			stat		 <- mkRegU;
 
-	Fifo#(2, Addr)				 execRedirect <- mkCFFifo;
-	Fifo#(2, ProcStatus)	 statRedirect <- mkBypassFifo;
+	Fifo#(1, Addr)				 execRedirect <- mkCFFifo;
+	Fifo#(1, ProcStatus)	 statRedirect <- mkBypassFifo;
 
 	Fifo#(2, Fetch2Decode)	f2d <- mkCFFifo;
+    Fifo#(2, Decode2Rest) d2r <- mkCFFifo;
 
 	Reg#(Bool) fEpoch <- mkRegU;
 	Reg#(Bool) eEpoch <- mkRegU;
@@ -43,48 +51,59 @@ module mkProc(Proc);
 		let iCode = getICode(inst);
 		let ppc = nextAddr(pc, iCode);
 
-		if(execRedirect.notEmpty)
+		if(!execRedirect.notEmpty)
+		begin	
+			pc <= ppc;
+		    f2d.enq(Fetch2Decode{inst:inst, pc:pc, ppc:ppc, epoch:fEpoch});
+		end
+		
+        else
 		begin
-			execRedirect.deq;
+            execRedirect.deq;
 			pc <= execRedirect.first;
 			fEpoch <= !fEpoch;
 		end
-		else
-		begin
-			pc <= ppc;
-		end
 
-		f2d.enq(Fetch2Decode{inst:inst, pc:pc, ppc:ppc, epoch:fEpoch});
 		$display("Fetch : from Pc %d , expanded inst : %x, \n", pc, inst, showInst(inst));
 	endrule
 
-	rule doRest(cop.started && stat == AOK);
+	rule doDecode(cop.started && stat == AOK);
 		/* TODO: Divide the doRest rule into doDecode, doRest rules to implement 3-stage pipelined processor */
-
-		let inst = f2d.first.inst;
+        let inst = f2d.first.inst;
 		let pc = f2d.first.pc;
 		let ppc = f2d.first.ppc;
 		let iEpoch = f2d.first.epoch;
 		f2d.deq;
 
+        /* Decode */
+        let dInst = decode(inst, pc);
+        d2r.enq(Decode2Rest{inst:inst, pc:pc, ppc:ppc, epoch:iEpoch});
+    endrule
+
+    rule doRest(cop.started && stat == AOK);
+		let dInst = d2r.first.inst;
+		let pc = d2r.first.pc;
+		let ppc = d2r.first.ppc;
+		let iEpoch = d2r.first.epoch;
+		d2r.deq;
+
 		if(iEpoch == eEpoch)
 		begin
-			/* Decode */
-			let dInst = decode(inst, pc);
-
-			/* Register Read */
-			dInst.valA	 = isValid(dInst.regA)? tagged Valid rf.rdA(validRegValue(dInst.regA)) : Invalid;
-	 		dInst.valB	 = isValid(dInst.regB)? tagged Valid rf.rdB(validRegValue(dInst.regB)) : Invalid;
-			dInst.copVal = isValid(dInst.regA)? tagged Valid cop.rd(validRegValue(dInst.regA)) : Invalid;
-
+            /* Register Read */
+		    dInst.valA	 = isValid(dInst.regA)? tagged Valid rf.rdA(validRegValue(dInst.regA)) : Invalid;
+	 	    dInst.valB	 = isValid(dInst.regB)? tagged Valid rf.rdB(validRegValue(dInst.regB)) : Invalid;
+		    dInst.copVal = isValid(dInst.regA)? tagged Valid cop.rd(validRegValue(dInst.regA)) : Invalid; 
 
 			/* Exec */
 			let eInst = exec(dInst, condFlag, ppc);
 			condFlag <= eInst.condFlag;
-
+            let iType = eInst.iType;
+            case(iType)
+                Call, Ret, Jmp : Cop.incInstTypeCnt(Ctr);
+                MRmov, RMmov, Push, Pop : Cop.incInstTypeCnt(Mem);
+            endcase;
 
 			/* Memory */
-			let iType = eInst.iType;
 			case(iType)
 	 		MRmov, Pop, Ret :
 	 		begin
@@ -117,10 +136,10 @@ module mkProc(Proc);
 				let redirPc = validValue(eInst.nextPc);
 				$display("mispredicted, redirect %d ", redirPc);
 				execRedirect.enq(redirPc);
+                Cop.incBPMissCnt();
 	 		end
 
-
-			/* WriteBack */
+            /* WriteBack */
 			if(isValid(eInst.dstE))
 			begin
 				rf.wrE(validRegValue(eInst.dstE), validValue(eInst.valE));
