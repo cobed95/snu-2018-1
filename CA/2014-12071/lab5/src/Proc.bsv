@@ -17,7 +17,7 @@ typedef struct {
 } Fetch2Decode deriving(Bits, Eq);
 
 typedef struct {
-    DecodedInst inst;
+    DecodedInst dInst;
     Addr pc;
     Addr ppc;
     Bool epoch;
@@ -77,7 +77,7 @@ module mkProc(Proc);
 
         /* Decode */
         let dInst = decode(inst, pc);
-        d2r.enq(Decode2Rest{inst:inst, pc:pc, ppc:ppc, epoch:iEpoch});
+        d2r.enq(Decode2Rest{dInst:dInst, pc:pc, ppc:ppc, epoch:iEpoch});
     endrule
 
     rule doRest(cop.started && stat == AOK);
