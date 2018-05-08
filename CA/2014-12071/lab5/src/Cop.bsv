@@ -7,7 +7,7 @@ import Fifo::*;
 typedef enum {Ctr, Mem} InstCntType deriving(Bits, Eq);
 
 /* TODO: Replace dummies to implement incMissInstTypeCnt */
-typedef enum {Dummy1, Dummy2, Dummy3, ...} InstMissCntType deriving(Bits, Eq);
+typedef enum {Dummy1, Dummy2, Dummy3} InstMissCntType deriving(Bits, Eq);
 
 interface Cop;
     method Action start;

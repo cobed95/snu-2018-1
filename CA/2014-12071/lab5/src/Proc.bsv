@@ -17,7 +17,7 @@ typedef struct {
 } Fetch2Decode deriving(Bits, Eq);
 
 typedef struct {
-    Inst inst;
+    DecodedInst inst;
     Addr pc;
     Addr ppc;
     Bool epoch;
@@ -99,9 +99,9 @@ module mkProc(Proc);
 			condFlag <= eInst.condFlag;
             let iType = eInst.iType;
             case(iType)
-                Call, Ret, Jmp : Cop.incInstTypeCnt(Ctr);
-                MRmov, RMmov, Push, Pop : Cop.incInstTypeCnt(Mem);
-            endcase;
+                Call, Ret, Jmp : Cop::incInstTypeCnt(Ctr);
+                MRmov, RMmov, Push, Pop : Cop::incInstTypeCnt(Mem);
+            endcase
 
 			/* Memory */
 			case(iType)
@@ -136,7 +136,7 @@ module mkProc(Proc);
 				let redirPc = validValue(eInst.nextPc);
 				$display("mispredicted, redirect %d ", redirPc);
 				execRedirect.enq(redirPc);
-                Cop.incBPMissCnt();
+				Cop::incBPMissCnt();
 	 		end
 
             /* WriteBack */
