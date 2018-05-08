@@ -27,8 +27,8 @@ module mkProc(Proc);
 	Reg#(CondFlag) 			condFlag	 <- mkRegU;
 	Reg#(ProcStatus)			stat		 <- mkRegU;
 
-	Fifo#(1, Addr)				 execRedirect <- mkCFFifo;
-	Fifo#(1, ProcStatus)	 statRedirect <- mkBypassFifo;
+	Fifo#(2, Addr)				 execRedirect <- mkCFFifo;
+	Fifo#(2, ProcStatus)	 statRedirect <- mkBypassFifo;
 
 	Fifo#(2, Fetch2Decode)	f2d <- mkCFFifo;
 
