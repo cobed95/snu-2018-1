@@ -38,7 +38,7 @@ module mkCop(Cop);
 
     Reg#(Data) numBPMCall <- mkConfigReg(0);
     Reg#(Data) numBPMRet <- mkConfigReg(0);
-    Reg#(Data) numBPMJmp <- mkConfigREg(0);
+    Reg#(Data) numBPMJmp <- mkConfigReg(0);
 
     Fifo#(2, Tuple3#(RIndx, Data, Data)) copFifo <- mkCFFifo;
 
@@ -82,16 +82,16 @@ module mkCop(Cop);
 		        14: begin
 	    			$fwrite(stderr, "==========================================\n");
 				    $fwrite(stderr, "Specific type of executed instructions\n");
-			    	$fwrite(stderr, "Ctr 		            : %d\n", numCtr);
-			    	$fwrite(stderr, "Mem 		            : %d\n", numMem);
-			    	$fwrite(stderr, "Mispredicted	            : %d\n", numBPMiss);
+			    	$fwrite(stderr, "Ctr 		: %d\n", numCtr);
+			    	$fwrite(stderr, "Mem 		: %d\n", numMem);
+			    	$fwrite(stderr, "Mispredicted	: %d\n", numBPMiss);
 			    	$fwrite(stderr, "==========================================\n");
 
 			    	/* TODO: Implement below to output counted values */
 			    	$fwrite(stderr, "Misprediction detail\n");
-				    $fwrite(stderr, "Call 		            : %d / %d\n", numBPMCall, numCall);
-			    	$fwrite(stderr, "Ret 		            : %d / %d\n", numBPMRet, numRet);
-			    	$fwrite(stderr, "Jmp 		            : %d / %d\n" numBPMJmp, numJmp);
+				    $fwrite(stderr, "Call 		: %d / %d\n", numBPMCall, numCall);
+			    	$fwrite(stderr, "Ret 		: %d / %d\n", numBPMRet, numRet);
+			    	$fwrite(stderr, "Jmp 		: %d / %d\n", numBPMJmp, numJmp);
 	    			$fwrite(stderr, "==========================================\n");
 			    	copFifo.enq(tuple3(14, val, numInsts+1));
 			    end
@@ -102,13 +102,13 @@ module mkCop(Cop);
 
     method Action incInstTypeCnt(InstCntType inst);
 	    case(inst)
-		    Call, Ret, Jmp : 
-            begin
+		    Call, Ret, Jmp : begin
                 numCtr <= numCtr + 1;
                 case(inst)
                     Call : numCall <= numCall + 1;
                     Ret : numRet <= numRet + 1;
                     Jmp : numJmp <= numJmp + 1;
+				endcase
             end
             Mem : numMem <= numMem + 1; // rmmovq, mrmovq, push, pop
         endcase
