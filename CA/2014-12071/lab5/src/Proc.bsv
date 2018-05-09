@@ -81,7 +81,7 @@ module mkProc(Proc);
     endrule
 
     rule doRest(cop.started && stat == AOK);
-		let dInst = d2r.first.inst;
+		let dInst = d2r.first.dInst;
 		let pc = d2r.first.pc;
 		let ppc = d2r.first.ppc;
 		let iEpoch = d2r.first.epoch;
@@ -99,8 +99,8 @@ module mkProc(Proc);
 			condFlag <= eInst.condFlag;
             let iType = eInst.iType;
             case(iType)
-                Call, Ret, Jmp : Cop::incInstTypeCnt(Ctr);
-                MRmov, RMmov, Push, Pop : Cop::incInstTypeCnt(Mem);
+                Call, Ret, Jmp : cop.incInstTypeCnt(Ctr);
+                MRmov, RMmov, Push, Pop : cop.incInstTypeCnt(Mem);
             endcase
 
 			/* Memory */
@@ -136,7 +136,7 @@ module mkProc(Proc);
 				let redirPc = validValue(eInst.nextPc);
 				$display("mispredicted, redirect %d ", redirPc);
 				execRedirect.enq(redirPc);
-				Cop::incBPMissCnt();
+				cop.incBPMissCnt();
 	 		end
 
             /* WriteBack */
