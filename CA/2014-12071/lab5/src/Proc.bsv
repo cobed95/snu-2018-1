@@ -99,7 +99,9 @@ module mkProc(Proc);
 			condFlag <= eInst.condFlag;
             let iType = eInst.iType;
             case(iType)
-                Call, Ret, Jmp : cop.incInstTypeCnt(Ctr);
+                Call: cop.incInstTypeCnt(Call);
+                Ret: cop.incInstTypeCnt(Ret);
+                Jmp: cop.incInstTypeCnt(Jmp);
                 MRmov, RMmov, Push, Pop : cop.incInstTypeCnt(Mem);
             endcase
 
@@ -137,6 +139,11 @@ module mkProc(Proc);
 				$display("mispredicted, redirect %d ", redirPc);
 				execRedirect.enq(redirPc);
 				cop.incBPMissCnt();
+                case(iType)
+                    Call: cop.incMissInstTypeCnt(Call);
+                    Ret: cop.incMissInstTypeCnt(Ret);
+                    Jmp: cop.incMissInstTypeCnt(Jmp);
+                endcase
 	 		end
 
             /* WriteBack */
