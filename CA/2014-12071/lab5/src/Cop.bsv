@@ -4,10 +4,10 @@ import CReg::*;
 import ConfigReg::*;
 import Fifo::*;
 
-typedef enum {Ctr, Mem} InstCntType deriving(Bits, Eq);
+typedef enum {Call, Ret, Jmp, Mem} InstCntType deriving(Bits, Eq);
 
 /* TODO: Replace dummies to implement incMissInstTypeCnt */
-typedef enum {Dummy1, Dummy2, Dummy3} InstMissCntType deriving(Bits, Eq);
+typedef enum {Call, Ret, Jmp} InstMissCntType deriving(Bits, Eq);
 
 interface Cop;
     method Action start;
@@ -31,6 +31,14 @@ module mkCop(Cop);
     Reg#(Data) numMem    <- mkConfigReg(0);
     Reg#(Data) numCtr    <- mkConfigReg(0);
     Reg#(Data) numBPMiss <- mkConfigReg(0);
+
+    Reg#(Data) numCall <- mkConfigReg(0);
+    Reg#(Data) numRet <- mkConfigReg(0);
+    Reg#(Data) numJmp <- mkConfigReg(0);
+
+    Reg#(Data) numBPMCall <- mkConfigReg(0);
+    Reg#(Data) numBPMRet <- mkConfigReg(0);
+    Reg#(Data) numBPMJmp <- mkConfigREg(0);
 
     Fifo#(2, Tuple3#(RIndx, Data, Data)) copFifo <- mkCFFifo;
 
@@ -81,9 +89,9 @@ module mkCop(Cop);
 
 			    	/* TODO: Implement below to output counted values */
 			    	$fwrite(stderr, "Misprediction detail\n");
-				    $fwrite(stderr, "Call 		            : %d / %d\n" /* implement */);
-			    	$fwrite(stderr, "Ret 		            : %d / %d\n"    /* implement */);
-			    	$fwrite(stderr, "Jmp 		            : %d / %d\n" /* implement*/);
+				    $fwrite(stderr, "Call 		            : %d / %d\n", numBPMCall, numCall);
+			    	$fwrite(stderr, "Ret 		            : %d / %d\n", numBPMRet, numRet);
+			    	$fwrite(stderr, "Jmp 		            : %d / %d\n" numBPMJmp, numJmp);
 	    			$fwrite(stderr, "==========================================\n");
 			    	copFifo.enq(tuple3(14, val, numInsts+1));
 			    end
@@ -94,14 +102,25 @@ module mkCop(Cop);
 
     method Action incInstTypeCnt(InstCntType inst);
 	    case(inst)
-		    Ctr : numCtr <= numCtr + 1;
+		    Call, Ret, Jmp : 
+            begin
+                numCtr <= numCtr + 1;
+                case(inst)
+                    Call : numCall <= numCall + 1;
+                    Ret : numRet <= numRet + 1;
+                    Jmp : numJmp <= numJmp + 1;
+            end
             Mem : numMem <= numMem + 1; // rmmovq, mrmovq, push, pop
         endcase
     endmethod
 
     method Action incMissInstTypeCnt(InstMissCntType inst);
         /* TODO: Implement incMissInstTypeCnt */
-        noAction;
+        case(inst)
+            Call : numBPMCall <= numBPMCall + 1;
+            Ret : numBPMRet <= numBPMRet + 1;
+            Jmp : numBPMJmp <= numBPMJmp + 1;
+        endcase
     endmethod
 
     method Action incBPMissCnt();
