@@ -1,7 +1,11 @@
 public class CBTree {
 	public CBNode root;
 
-    public CBTree(String st, String con) {
+    public CBTree(String st, String con) { 
+        this.root = preorderAdd(this.root, st, con);
+    }
+
+    private CBNode preorderAdd(CBNode root, String st, String con) {
         if (st.length() > 0) {
             if (root == null) {
                 root = new CBNode();
@@ -9,21 +13,12 @@ public class CBTree {
             if (st.charAt(0) == '0') {
                 root.label = st.charAt(0);
                 root.character = con.charAt(0);
-
-                CBTree leftSubTree = new CBTree(st.substring(1), con.substring(1));
-                root.left = leftSubTree.root;
-
-                CBTree rightSubTree = new CBTree(st.substring(1), con.substring(1));
-                root.right = rightSubTree.root;
-            
-            } else if (st.charAt(0) == '1') {
-                root.label = st.charAt(0);
-                root.left = null;
-                root.right = null;
+                
+                root.left = preorderAdd(root.left, st, con)
             }
         }
     }
-	
+    
     public CBNode getRoot() {
 		return root;
 	}
