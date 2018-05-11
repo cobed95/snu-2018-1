@@ -2,6 +2,7 @@ public class CBTree {
 	public CBNode root;
 
     public CBTree(String st, String con) { 
+        this.root = new CBNode();
         this.root = preorderAdd(this.root, st, con);
     }
 
@@ -12,11 +13,19 @@ public class CBTree {
             }
             if (st.charAt(0) == '0') {
                 root.label = st.charAt(0);
-                root.character = con.charAt(0);
+                st = st.substring(1);
                 
-                root.left = preorderAdd(root.left, st, con)
+                root.character = con.charAt(0);
+                con = con.substring(1);
+                    
+                root.left = preorderAdd(root.left, st, con);
+                root.right = preorderAdd(root.left, st, con);
+            } else if (st.charAt(0) == '1') {
+                root.label = st.charAt(0);
+                st = st.substring(1);
             }
         }
+        return root;
     }
     
     public CBNode getRoot() {
@@ -50,7 +59,7 @@ public class CBTree {
     }
 
     public String inOrderTraversal() {
-        return postOrderTraversal(root, "");
+        return inOrderTraversal(root, "");
     }
 
     private String inOrderTraversal(CBNode root, String prev) {

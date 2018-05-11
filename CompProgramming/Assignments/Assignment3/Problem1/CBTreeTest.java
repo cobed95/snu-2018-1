@@ -10,4 +10,3 @@ public class CBTreeTest
 		System.out.println(cbt.inOrderStructure());
 	}
 }
-
