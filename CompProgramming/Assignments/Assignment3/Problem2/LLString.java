@@ -2,7 +2,7 @@ public class LLString {
     public class LLStringNode {
         public char label;
         public LLStringNode next;
-        
+
         public LLStringNode(char label) {
             this.label = label;
         }
@@ -16,8 +16,16 @@ public class LLString {
     private LLStringNode head;
 
 	/* Constructor. */
+    public LLString() {
+        this.head = null;
+    }
+
+    public LLString(LLStringNode node) {
+        this.head = node;
+    }
+
 	public LLString(String str) {
-        this.head.label = str.charAt(0);
+        this.head = new LLStringNode(str.charAt(0));
         int idx = 1; 
         LLStringNode node = head;
         while (idx < str.length()) {
@@ -26,6 +34,24 @@ public class LLString {
             idx++;
         }
 	}
+    
+    public static LLString copyOf(LLString llstring) {
+        LLString newLLString = new LLString();
+        newLLString.head = llstring.head;
+        return newLLString;
+    }
+
+    public void add(LLStringNode newNode) {
+        if (this.head == null) {
+            this.head = newNode;
+        } else {
+            LLStringNode node = this.head;
+            while (node.next != null) {
+                node = node.next;
+            }
+            node.next = newNode;
+        }
+    }
 
 	public char charAt(int index) {
         LLStringNode node = head;
@@ -37,7 +63,7 @@ public class LLString {
 
     public int compareTo(String str) {
         LLStringNode node = this.head;
-        int i = 0; 
+        int i = 0;  
         while (node != null && i < str.length() && node.label == str.charAt(i)) {
             node = node.next;
             i++;
@@ -47,13 +73,9 @@ public class LLString {
         } else if (node != null && i == str.length()) {
             return this.length() - str.length();
         } else if (node == null && i != str.length()) {
-            return str.length() - this.length();
+            return this.length() - str.length();
         } else {
-            if (node.label > str.charAt(i)) {
-                return node.label - str.charAt(i);
-            } else {
-                return str.charAt(i) - node.label;
-            }
+            return node.label - str.charAt(i);
         }
     }
 
@@ -69,30 +91,59 @@ public class LLString {
         } else if (myNode != null && otherNode == null) {
             return this.length() - llstring.length();
         } else if (myNode == null && otherNode != null) {
-            return llstring.length() - this.length();
+            return this.length() - llstring.length();
         } else {
-            if (myNode.label > otherNode.label) {
-                return myNode.label - otherNode.label;
-            } else {
-                return otherNode.label - myNode.label;
+            return myNode.label - otherNode.label;
+        }
+    } 
+
+    public LLString toLowercase() {
+        LLString newLLString = LLString.copyOf(this);
+        LLStringNode node = newLLString.head;
+        while (node != null) {
+            if (node.label >= 65 && node.label <= 90) {
+                node.label = (char) (node.label+32);
             }
         }
+        return newLLString;
     }
 
     public int compareToIgnoreCase(String str) {
-
+        LLString newLLString = this.toLowercase();
+        String newString = new String();
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) >= 65 && str.charAt(i) <= 90) {
+                newString += (char) (str.charAt(i)+32);
+            } else {
+                newString += str.charAt(i);
+            }
+        }
+        return newLLString.compareTo(newString);
     }
 
     public int compareToIgnoreCase(LLString llstring) {
-
+        LLString myNewLLString = this.toLowercase();
+        LLString otherNewLLString = llstring.toLowercase();
+        return myNewLLString.compareTo(otherNewLLString);
     }
 
     public LLString concat(String str) {
-
+        LLString newOtherLLString = new LLString(str); 
+        return this.concat(newOtherLLString);
     }
     
     public LLString concat(LLString llstring) {
-
+        LLString newLLString = LLString.copyOf(this);
+        if (newLLString.head == null) {
+            newLLString.head = llstring.head;
+        } else {
+            LLStringNode node = newLLString.head;
+            while (node.next != null) {
+                node = node.next;
+            }
+            node.next = llstring.head;
+        }
+        return newLLString;
     }
 
     public int indexOf(String str) {
@@ -121,23 +172,48 @@ public class LLString {
     }
 
     public int indexOf(String str, int fromIndex) {
-
+        return fromIndex + this.substring(fromIndex).indexOf(str);
     }
 
     public int length() {
-
+        int count = 0;
+        LLStringNode node = this.head;
+        while (node != null) {
+            node = node.next;
+            count++;
+        }
+        return count;
     }
 
-    LLString replace(char oldChar, char newChar) {
-
+    public LLString replace(char oldChar, char newChar) {
+        LLString newLLString = LLString.copyOf(this);
+        LLStringNode node = newLLString.head;
+        while (node != null) {
+            if (node.label == oldChar) {
+                node.label = newChar;
+            }
+            node = node.next;
+        }
+        return newLLString;
     }
 
-    LLString substring(int beginIndex) {
-
+    public LLString substring(int beginIndex) {
+        LLStringNode node = this.head;
+        for (int i = 0; i < beginIndex; i++) {
+            node = node.next;
+        }
+        LLString newLLString = new LLString(node);
+        return newLLString;
     }
 
-    LLString substring(int beginIndex, int endIndex) {
-
+    public LLString substring(int beginIndex, int endIndex) {
+        LLString newLLString = this.substring(beginIndex);
+        LLStringNode node = newLLString.head;
+        for (int i = 0; i < endIndex - beginIndex - 1; i++) {
+            node = node.next;
+        }
+        node.next = null;
+        return newLLString;
     }
 
     public String toString() {
@@ -145,6 +221,7 @@ public class LLString {
         LLStringNode node = this.head;
         while (node != null) {
             newString += node.label;
+            node = node.next;
         }
         return newString;
     }
