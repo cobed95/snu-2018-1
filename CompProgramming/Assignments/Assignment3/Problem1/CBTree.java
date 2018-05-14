@@ -1,49 +1,47 @@
-public class CBTree {
-	public CBNode root;
+public class CBTree { 
+    public class TreeBuilder {
+        public String st;
+        public String con;
+        public int stIdx;
+        public int conIdx;
 
-    public CBTree(String st, String con) { 
-        this.root = new CBNode();
-        this.root = preorderAdd(this.root, st, con);
-    }
-
-    private CBNode preorderAdd(CBNode root, String st, String con) {
-        if (st.length() > 0) {
+        public TreeBuilder(String st, String con) {
+            this.st = st;
+            this.con = con;
+            stIdx = 0;
+            conIdx = 0;
+        }
+        
+        public CBNode build(CBNode root) {
             if (root == null) {
                 root = new CBNode();
             }
-            if (st.charAt(0) == '0') {
-                root.label = st.charAt(0);
-                st = st.substring(1);
-                
-                root.character = con.charAt(0);
-                con = con.substring(1);
-                    
-                root.left = preorderAdd(root.left, st, con);
-                root.right = preorderAdd(root.left, st, con);
-            } else if (st.charAt(0) == '1') {
-                root.label = st.charAt(0);
-                st = st.substring(1);
+            if (st.charAt(stIdx) == '0') {
+                root.label = st.charAt(stIdx);
+                stIdx++;
+                root.character = con.charAt(conIdx);
+                conIdx++;
+
+                root.left = build(root.left);
+                root.right = build(root.right);
+            } else if (st.charAt(stIdx) == '1') {
+                root.label = st.charAt(stIdx);
+                stIdx++;
             }
+            return root;
         }
-        return root;
     }
+
+	public CBNode root;
+
+    public CBTree(String st, String con) { 
+        TreeBuilder treebuilder = new TreeBuilder(st, con);
+        root = treebuilder.build(root);
+    } 
     
     public CBNode getRoot() {
 		return root;
 	}
-
-    public Integer getLength() {
-        return getLength(root, 0);
-    }
-
-    private Integer getLength(CBNode root, Integer count) {
-        if (root != null) {
-            count++;
-            getLength(root.left, count);
-            getLength(root.right, count);
-        }
-        return count;
-    }
     
     public String postOrderTraversal() {
         return postOrderTraversal(root, "");
@@ -51,8 +49,8 @@ public class CBTree {
 
     private String postOrderTraversal(CBNode root, String prev) {
         if (root != null && root.label != '1') {
-            postOrderTraversal(root.left, prev);
-            postOrderTraversal(root.right, prev);       
+            prev = postOrderTraversal(root.left, prev);
+            prev = postOrderTraversal(root.right, prev);       
             prev += root.character;
         }
         return prev; 
@@ -64,9 +62,9 @@ public class CBTree {
 
     private String inOrderTraversal(CBNode root, String prev) {
         if (root != null && root.label != '1') {
-            inOrderTraversal(root.left, prev);
+            prev = inOrderTraversal(root.left, prev);
             prev += root.character;
-            inOrderTraversal(root.right, prev);
+            prev = inOrderTraversal(root.right, prev);
         }
         return prev;
     }
@@ -77,8 +75,8 @@ public class CBTree {
 
     private String postOrderStructure(CBNode root, String prev) {
         if (root != null) {
-            postOrderStructure(root.left, prev);
-            postOrderStructure(root.right, prev);
+            prev = postOrderStructure(root.left, prev);
+            prev = postOrderStructure(root.right, prev);
             prev += root.label;
         }
         return prev;
@@ -90,9 +88,9 @@ public class CBTree {
 
     private String inOrderStructure(CBNode root, String prev) {
         if (root != null) {
-            inOrderStructure(root.left, prev);
+            prev = inOrderStructure(root.left, prev);
             prev += root.label;
-            inOrderStructure(root.right, prev);
+            prev = inOrderStructure(root.right, prev);
         }
         return prev;
     }
