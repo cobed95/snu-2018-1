@@ -36,8 +36,8 @@ public class LLString {
 	}
     
     public static LLString copyOf(LLString llstring) {
-        LLString newLLString = new LLString();
-        newLLString.head = llstring.head;
+        String copy = llstring.toString();
+        LLString newLLString = new LLString(copy);
         return newLLString;
     }
 
@@ -104,6 +104,7 @@ public class LLString {
             if (node.label >= 65 && node.label <= 90) {
                 node.label = (char) (node.label+32);
             }
+            node = node.next;
         }
         return newLLString;
     }
@@ -146,16 +147,56 @@ public class LLString {
         return newLLString;
     }
 
+    public int indexOf(int ch) {
+        if (this.head == null) {
+            return -1;
+        } else {
+            int nodeIdx = 0;
+            LLStringNode node = this.head;
+            while (node != null) {
+                if (node.label == ch) {
+                    return nodeIdx;
+                }
+                node = node.next;
+                nodeIdx++;
+            }
+            return -1;
+        }
+    }
+
+    public int indexOf(int ch, int fromIndex) {
+        if (this.head == null) {
+            return -1;
+        } else {
+            int nodeIdx = 0;
+            LLStringNode node = this.head;
+            for (int i = 0; i < fromIndex; i++) {
+                node = node.next;
+                nodeIdx++;
+            }
+            while (node != null) {
+                if (node.label == ch) {
+                    return nodeIdx;
+                }
+                node = node.next;
+                nodeIdx++;
+            }
+            return -1;
+        }
+    }
+
     public int indexOf(String str) {
         int nodeIdx = 0;
         LLStringNode node = this.head;
-        while (nodeIdx < this.length() - str.length()) {
+        while (node != null && nodeIdx < this.length() - str.length()) {
             if (node.label == str.charAt(0)) {
                 int i = 1;
                 node = node.next;
-                while (i < str.length() && node.label == str.charAt(0)) {
-                    i += 1;
+                int stringIdx = 1;
+                while (i < str.length() && node.label == str.charAt(stringIdx)) {
+                    i++;;
                     node = node.next;
+                    stringIdx++;
                 }
                 if (i == str.length()) {
                     return nodeIdx;
