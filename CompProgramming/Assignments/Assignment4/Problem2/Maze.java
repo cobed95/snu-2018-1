@@ -91,7 +91,7 @@ public class Maze {
             }
             
             return result;
-        }
+        
 
         public boolean isAtDeadEnd() {
             return true;
@@ -110,7 +110,11 @@ public class Maze {
             
             int[] possibleSteps = getPossibleSteps();
             if (possibleSteps.length == 0) {
-                
+                this.current = new Point(SIZE-1, 0);
+                this.path = new Point[SIZE*SIZE];
+                this.pathTail = 0;
+            } else {
+
             }
         }
     }
