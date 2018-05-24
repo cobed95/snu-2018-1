@@ -18,10 +18,23 @@ typedef struct {
 } Fetch2Decode deriving(Bits, Eq);
 
 typedef struct {
-	DecodedInst dInst;
+	DecodedInst inst;
+    Addr pc;
 	Addr ppc;
 	Bool epoch;
 } Decode2Exec deriving(Bits, Eq);
+
+typedef struct {
+    ExecutedInst inst;
+    Addr ppc;
+    Bool epoch;
+} Exec2Mem deriving(Bits, Eq);
+
+typedef struct {
+    ExecutedInst inst;
+    Addr ppc;
+    Bool epoch;
+} Mem2Write deriving(Bits, Eq);
 
 (*synthesize*)
 module mkProc(Proc);
@@ -34,10 +47,13 @@ module mkProc(Proc);
 	Reg#(CondFlag) 	 	condFlag	<- mkRegU;
 	Reg#(ProcStatus)   	stat		<- mkRegU;
 
-	Fifo#(1, Addr)       execRedirect <- mkCFFifo;
+	Fifo#(1, Addr)       execRedirect <- mkBypassFifo;
 	Fifo#(1, ProcStatus) statRedirect <- mkBypassFifo;
 
-	Fifo#(2, Fetch2Decode)	f2e    	   <- mkCFFifo;
+	Fifo#(2, Fetch2Decode)	f2d     <- mkPipelineFifo;
+    Fifo#(2, Decode2Exec)   d2e     <- mkPipelineFifo;
+    Fifo#(2, Exec2Mem)      e2m     <- mkPipelineFifo;
+    Fifo#(2, Mem2Write)     m2w     <- mkPipelineFifo;
 
 	Reg#(Bool) fEpoch <- mkRegU;
 	Reg#(Bool) eEpoch <- mkRegU;
@@ -63,23 +79,35 @@ module mkProc(Proc);
 			$display("Fetch : from Pc %d , expanded inst : %x, \n", pc, inst, showInst(inst));
 
 			pc <= ppc;
-			f2e.enq(Fetch2Decode{inst:inst, pc:pc, ppc:ppc, epoch:fEpoch});
+			f2d.enq(Fetch2Decode{inst:inst, pc:pc, ppc:ppc, epoch:fEpoch});
 		end
 
 	endrule
 
-	rule doRest(cop.started && stat == AOK);
-		let inst   = f2e.first.inst;
-		let ipc    = f2e.first.pc;
-		let ppc    = f2e.first.ppc;
-		let iEpoch = f2e.first.epoch;
-		f2e.deq;
+	rule doDecode(cop.started && stat == AOK);
+		let inst   = f2d.first.inst;
+		let ipc    = f2d.first.pc;
+		let ppc    = f2d.first.ppc;
+		let iEpoch = f2d.first.epoch;
+		f2d.deq;
 
 		/* Decode */
 		let dInst = decode(inst, ipc);
 		$display("Decode : from Pc %d , expanded inst : %x, \n", ipc, inst, showInst(inst));
 
-		if(iEpoch == eEpoch)
+        if (sb.search1(dInst.regA)) //work from here.
+
+        d2e.enq(Decode2Exec{inst:inst, pc:pc, ppc:ppc, epoch:iEpoch});
+    endrule
+
+    rule doExec(cop.started && stat == AOK)
+        let dInst = d2e.first.inst;
+        let pc = d2e.first.pc;
+        let ppc = d2e.first.ppc;
+        let iEpoch = d2e.first.epoch;
+        d2e.deq;
+    
+        if(iEpoch == eEpoch)
 		begin
 			dInst.valA   = isValid(dInst.regA)? tagged Valid rf.rdA(validRegValue(dInst.regA)) : Invalid;
 			dInst.valB   = isValid(dInst.regB)? tagged Valid rf.rdB(validRegValue(dInst.regB)) : Invalid;
@@ -88,38 +116,8 @@ module mkProc(Proc);
 			/* Execute */
 			let eInst = exec(dInst, condFlag, ppc);
 			condFlag <= eInst.condFlag;
-
-			/* Memory */
-			let iType = eInst.iType;
-			case(iType)
-				MRmov, Pop, Ret :
-				begin
-					let ldData <- (dMem.req(MemReq{op: Ld, addr: eInst.memAddr, data:?}));
-					eInst.valM = Valid(little2BigEndian(ldData));
-					$display("Loaded %d from %d", little2BigEndian(ldData), eInst.memAddr);
-					if(iType == Ret)
-					begin
-						eInst.nextPc = eInst.valM;
-					end
-				end
-
-				RMmov, Call, Push :
-				begin
-					let stData = (iType == Call)? eInst.valP : validValue(eInst.valA);
-					let dummy <- dMem.req(MemReq{op: St, addr: eInst.memAddr, data: big2LittleEndian(stData)});
-					$display("Stored %d into %d", stData, eInst.memAddr);
-				end
-			endcase
-
-			/* Update Status */
-			let newStatus = case(iType)
-								Unsupported : INS;
-								Hlt 		  : HLT;
-								default     : AOK;
-							endcase;
-			statRedirect.enq(newStatus);
-
-			if(eInst.mispredict)
+            
+            if(eInst.mispredict)
 			begin
 				eEpoch <= !eEpoch;
 				let redirPc = validValue(eInst.nextPc);
@@ -127,21 +125,67 @@ module mkProc(Proc);
 				execRedirect.enq(redirPc);
 			end
 
-			/* WriteBack */
-			if(isValid(eInst.dstE))
+            sb.insertE(eInst.dstE);
+            sb.insertM(eInst.dstM);
+            e2m.enq(Exec2Mem{inst:eInst, ppc:ppc, epoch:eEpoch});
+        end
+    endrule
+
+    rule doMem(cop.started && stat == AOK)
+        let eInst = e2m.first.inst;
+        let ppc = e2m.first.ppc;
+        let epoch = e2m.first.epoch;
+        e2m.deq;
+
+        /* Memory */
+		let iType = eInst.iType;
+		case(iType)
+			MRmov, Pop, Ret :
 			begin
-				$display("On %d, writes %d   (wrE)", validRegValue(eInst.dstE), validValue(eInst.valE));
-				rf.wrE(validRegValue(eInst.dstE), validValue(eInst.valE));
-			end
-			if(isValid(eInst.dstM))
-			begin
-				$display("On %d, writes %d   (wrM)", validRegValue(eInst.dstM), validValue(eInst.valM));
-				rf.wrM(validRegValue(eInst.dstM), validValue(eInst.valM));
+				let ldData <- (dMem.req(MemReq{op: Ld, addr: eInst.memAddr, data:?}));
+				eInst.valM = Valid(little2BigEndian(ldData));
+				$display("Loaded %d from %d", little2BigEndian(ldData), eInst.memAddr);
+				if(iType == Ret)
+				begin
+					eInst.nextPc = eInst.valM;
+				end
 			end
 
-			cop.wr(eInst.dstE, validValue(eInst.valE));
+			RMmov, Call, Push :
+			begin
+				let stData = (iType == Call)? eInst.valP : validValue(eInst.valA);
+				let dummy <- dMem.req(MemReq{op: St, addr: eInst.memAddr, data: big2LittleEndian(stData)});
+				$display("Stored %d into %d", stData, eInst.memAddr);
+			end
+		endcase
+
+        m2w.enq(Mem2Write{inst:eInst});
+    endrule
+
+    rule doWrite(cop.started && stat == AOK)
+
+        /* WriteBack */
+		if(isValid(eInst.dstE))
+		begin
+			$display("On %d, writes %d   (wrE)", validRegValue(eInst.dstE), validValue(eInst.valE));
+			rf.wrE(validRegValue(eInst.dstE), validValue(eInst.valE));
 		end
-	endrule
+		if(isValid(eInst.dstM))
+		begin
+			$display("On %d, writes %d   (wrM)", validRegValue(eInst.dstM), validValue(eInst.valM));
+			rf.wrM(validRegValue(eInst.dstM), validValue(eInst.valM));
+		end
+
+		cop.wr(eInst.dstE, validValue(eInst.valE));
+        
+        /* Update Status */
+		let newStatus = case(iType)
+							Unsupported : INS;
+							Hlt 		  : HLT;
+							default     : AOK;
+						endcase;
+		statRedirect.enq(newStatus);
+    endrule
 
 	rule upd_Stat(cop.started);
 		$display("Stat update");
