@@ -9,6 +9,7 @@ public class Maze {
         public int label;
         public int x;
         public int y;
+        public Point prev;
 
         public Point(int label) {
             this.label = label;
@@ -37,6 +38,10 @@ public class Maze {
         public Point getRight() {
             return new Point(x, y+1);
         }
+        
+        public boolean isPath(Point point) {
+            return point.x < SIZE && point.y < SIZE && maze[point.x][point.y] == 1 && !point.equals(this.prev);
+        }
 
         public boolean equals(Object o) {
             if (o instanceof Point) {
@@ -50,75 +55,12 @@ public class Maze {
         public int hashCode() {
             return Objects.hash(label, x, y);
         }
-    }
 
-    private class Runner {
-        public Point current;
-        public Point[] path;
-        public int pathTail;
-
-        public Runner() {
-            this.current = new Point((SIZE*SIZE) - (SIZE-1));
-            this.path = new Point[SIZE*SIZE];
-            this.pathTail = 0;
-        }
-
-        public void updatePath() {
-            this.path[this.pathTail] = current;
-            this.pathTail++;
-        }
-
-        public int[] getPossibleSteps() {
-            int[] possibleSteps = new int[4];
-            int idx = 0;
-            if (isRoad(this.current.getRight()) && !this.current.getRight().equals(this.path[pathTail])) {
-                possibleSteps[idx] = 0;
-                idx++;
-            } else if (isRoad(this.current.getLeft()) && !this.current.getLeft().equals(this.path[pathTail])) {
-                possibleSteps[idx] = 1;
-                idx++;
-            } else if (isRoad(this.current.getLower()) && !this.current.getLower().equals(this.path[pathTail])) {
-                possibleSteps[idx] = 2;
-                idx++;
-            } else if (isRoad(this.current.getUpper()) && !this.current.getUpper().equals(this.path[pathTail])) {
-                possibleSteps[idx] = 3;
-                idx++;
-            }
-            
-            int[] result = new int[idx];
-            for (int i = 0; i < idx; i++) {
-                result[i] = possibleSteps[i];
-            }
-            
-            return result;
-        
-
-        public boolean isAtDeadEnd() {
-            return true;
-        }
-
-        public int getDirection() {
-            Random rand = new Random();
-            return rand.nextInt(4);
-        }
-
-        public void move() {
-            int east = 0;
-            int west = 1;
-            int south = 2;
-            int north = 3;
-            
-            int[] possibleSteps = getPossibleSteps();
-            if (possibleSteps.length == 0) {
-                this.current = new Point(SIZE-1, 0);
-                this.path = new Point[SIZE*SIZE];
-                this.pathTail = 0;
-            } else {
-
-            }
+        public String toString() {
+            return Integer.toString(this.label);
         }
     }
-
+    
     public Maze(int lineCount, Scanner mazeScanner) {
         this.SIZE = lineCount;
         this.maze = new int[SIZE][];
@@ -140,8 +82,53 @@ public class Maze {
         }
     }
 
-    public boolean isRoad(Point point) {
-        return point.x < SIZE && point.y < SIZE && this.maze[point.x][point.y] == 1;
+    public boolean pathExists(Point point) {
+        return point.isPath(point.getRight())
+            || point.isPath(point.getLeft())
+            || point.isPath(point.getLower())
+            || point.isPath(point.getUpper());
+    }
+
+    public void move(Point point) {
+        if (this.pathExists(point)) {
+            Random rand = new Random();
+            int direction = rand.nextInt(4);
+            Point dest;
+            if (direction == 0 && point.isPath(point.getRight())) {
+                dest = point.getRight();
+                dest.prev = point;
+                point = dest;
+            } else if (direction == 1 && point.isPath(point.getLeft())) {
+                dest = point.getLeft();
+                dest.prev = point; 
+                point = dest;
+            } else if (direction == 2 && point.isPath(point.getLower())) {
+                dest = point.getLower();
+                dest.prev = point;
+                point = dest;
+            } else if (direction == 3 && point.isPath(point.getUpper())) {
+                dest = point.getUpper();
+                dest.prev = point;
+                point = dest;
+            } 
+        }
+    }
+
+    public String getPath() {
+        String path = "";
+
+        Point current = new Point(SIZE*(SIZE-1)+1); 
+        Point end = new Point(SIZE);
+        while (!current.equals(end)) {
+            if (!this.pathExists(current)) {
+                current = new Point(SIZE*(SIZE-1)+1);
+            }
+            path += current.toString();
+            path += "-";
+            this.move(current);
+        }
+        path += end.label;
+        return path;
     }
 
     public static int countLines(Scanner lineCounter) {
@@ -159,5 +146,10 @@ public class Maze {
         
         Scanner mazeScanner = new Scanner(new File(args[0]));
         Maze maze = new Maze(lineCount, mazeScanner);
+
+        String path = maze.getPath();
+        
+        PrintStream out = new PrintStream(new File(args[1]));
+        out.println(path);
     }
 }
