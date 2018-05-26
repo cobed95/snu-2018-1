@@ -40,7 +40,12 @@ public class Maze {
         }
         
         public boolean isPath(Point point) {
-            return point.x < SIZE && point.y < SIZE && maze[point.x][point.y] == 1 && !point.equals(this.prev);
+            return point.x >= 0
+                && point.x < SIZE 
+                && point.y >= 0
+                && point.y < SIZE
+                && maze[point.x][point.y] == 1 
+                && !point.equals(this.prev);
         }
 
         public boolean equals(Object o) {
@@ -89,29 +94,23 @@ public class Maze {
             || point.isPath(point.getUpper());
     }
 
-    public void move(Point point) {
-        if (this.pathExists(point)) {
-            Random rand = new Random();
+    public Point move(Point point) {
+        Random rand = new Random();
+        Point dest = point;
+        while (dest.equals(point)) {
             int direction = rand.nextInt(4);
-            Point dest;
             if (direction == 0 && point.isPath(point.getRight())) {
                 dest = point.getRight();
-                dest.prev = point;
-                point = dest;
             } else if (direction == 1 && point.isPath(point.getLeft())) {
                 dest = point.getLeft();
-                dest.prev = point; 
-                point = dest;
             } else if (direction == 2 && point.isPath(point.getLower())) {
                 dest = point.getLower();
-                dest.prev = point;
-                point = dest;
             } else if (direction == 3 && point.isPath(point.getUpper())) {
                 dest = point.getUpper();
-                dest.prev = point;
-                point = dest;
-            } 
+            }
         }
+        dest.prev = point;
+        return dest;
     }
 
     public String getPath() {
@@ -119,15 +118,18 @@ public class Maze {
 
         Point current = new Point(SIZE*(SIZE-1)+1); 
         Point end = new Point(SIZE);
+
         while (!current.equals(end)) {
             if (!this.pathExists(current)) {
                 current = new Point(SIZE*(SIZE-1)+1);
+                path = "";
             }
             path += current.toString();
             path += "-";
-            this.move(current);
+            current = this.move(current); 
         }
-        path += end.label;
+        path += end.toString();
+        
         return path;
     }
 
