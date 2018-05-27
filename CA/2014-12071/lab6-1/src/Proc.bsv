@@ -19,22 +19,16 @@ typedef struct {
 
 typedef struct {
 	DecodedInst inst;
-    Addr pc;
-	Addr ppc;
+    Addr ppc;
 	Bool epoch;
 } Decode2Exec deriving(Bits, Eq);
 
 typedef struct {
-    ExecInst inst;
-    Addr pc;
-    Addr ppc;
-    Bool epoch;
+    Maybe#(ExecInst) inst;
 } Exec2Mem deriving(Bits, Eq);
 
 typedef struct {
-    ExecInst inst;
-    Addr ppc;
-    Bool epoch;
+    Maybe#(ExecInst) inst;
 } Mem2Write deriving(Bits, Eq);
 
 (*synthesize*)
@@ -74,15 +68,16 @@ module mkProc(Proc);
 		end
 		else
 		begin
-			let inst = iMem.req(pc);
-			let ppc = nextAddr(pc, getICode(inst));
+			if (f2d.notFull) 
+			begin
+				let inst = iMem.req(pc);
+				let ppc = nextAddr(pc, getICode(inst));
 
-			$display("Fetch : from Pc %d , expanded inst : %x, \n", pc, inst, showInst(inst));
-
-			pc <= ppc;
-			f2d.enq(Fetch2Decode{inst:inst, pc:pc, ppc:ppc, epoch:fEpoch});
+				$display("Fetch : from Pc %d , expanded inst : %x, \n", pc, inst, showInst(inst));
+				pc <= ppc;
+				f2d.enq(Fetch2Decode{inst:inst, pc:pc, ppc:ppc, epoch:fEpoch});
+			end
 		end
-
 	endrule
 
 	rule doDecode(cop.started && stat == AOK);
@@ -90,60 +85,58 @@ module mkProc(Proc);
 		let ipc    = f2d.first.pc;
 		let ppc    = f2d.first.ppc;
 		let iEpoch = f2d.first.epoch;
-		f2d.deq;
 
 		/* Decode */
 		let dInst = decode(inst, ipc);
-        let stall = sb.search1(regA) || sb.search2(regB) || sb.search3(dstE) || sb.search4(dstM);
+        let stall = sb.search1(dInst.regA) || sb.search2(dInst.regB) || sb.search3(dInst.dstE) || sb.search4(dInst.dstM);
         if (!stall) 
         begin
             dInst.valA   = isValid(dInst.regA)? tagged Valid rf.rdA(validRegValue(dInst.regA)) : Invalid;
 			dInst.valB   = isValid(dInst.regB)? tagged Valid rf.rdB(validRegValue(dInst.regB)) : Invalid;
 			dInst.copVal = isValid(dInst.regA)? tagged Valid cop.rd(validRegValue(dInst.regA)) : Invalid;
             
-		$display("Decode : from Pc %d , expanded inst : %x, \n", ipc, inst, showInst(inst));
+			$display("Decode : from Pc %d , expanded inst : %x, \n", ipc, inst, showInst(inst));
 
-        d2e.enq(Decode2Exec{inst:inst, pc:pc, ppc:ppc, epoch:iEpoch});
-        sb.insertE(dInst.dstE);
-        sb.insertM(dInst.dstM);
+			d2e.enq(Decode2Exec{inst:dInst, ppc:ppc, epoch:iEpoch});
+			sb.insertE(dInst.dstE);
+			sb.insertM(dInst.dstM);
+			f2d.deq;
         end
     endrule
 
-    rule doExec(cop.started && stat == AOK)
+    rule doExec(cop.started && stat == AOK);
         let dInst = d2e.first.inst;
-        let pc = d2e.first.pc;
         let ppc = d2e.first.ppc;
         let iEpoch = d2e.first.epoch;
-        d2e.deq;
     
         if(iEpoch == eEpoch)
 		begin
 			/* Execute */
 			let eInst = exec(dInst, condFlag, ppc);
 			condFlag <= eInst.condFlag;
-            
-            if(eInst.mispredict)
+             
+            e2m.enq(Exec2Mem{inst : Valid(eInst)});
+			
+			if(eInst.mispredict)
 			begin
 				eEpoch <= !eEpoch;
 				let redirPc = validValue(eInst.nextPc);
 				$display("mispredicted, redirect %d ", redirPc);
 				execRedirect.enq(redirPc);
-			end 
-            
-            e2m.enq(Exec2Mem{inst:eInst, pc:pc, ppc:ppc, epoch:iEpoch});
+			end
         end
+			
+		else
+			e2m.enq(Exec2Mem{inst : Invalid});
+		d2e.deq;
     endrule
 
-    rule doMem(cop.started && stat == AOK)
-        let eInst = e2m.first.inst;
-        let pc = e2m.first.pc;
-        let ppc = e2m.first.ppc;
-        let iEpoch = e2m.first.epoch;
-        e2m.deq;
-
-        if(iEpoch == eEpoch)
-        begin
-            /* Memory */ 
+    rule doMem(cop.started && stat == AOK);
+		if (isValid(e2m.first.inst))
+		begin
+			let eInst = validValue(e2m.first.inst);
+		    
+			/* Memory */ 
 		    let iType = eInst.iType;
 		    case(iType)
 			    MRmov, Pop, Ret :
@@ -164,40 +157,43 @@ module mkProc(Proc);
 				    $display("Stored %d into %d", stData, eInst.memAddr);
 			    end
 		    endcase
-
-            m2w.enq(Mem2Write{inst:eInst});
+            m2w.enq(Mem2Write{inst : Valid(eInst)});
         end
+		
+		else
+			m2w.enq(Mem2Write{inst : Invalid});
+		e2m.deq;
     endrule
 
-    rule doWrite(cop.started && stat == AOK)
-        let eInst = m2w.first.inst;
-        let pc = m2w.first.pc;
-        let ppc = m2w.first.ppc;
-        let epoch = m2w.first.epoch;
-        m2w.deq; 
+    rule doWrite(cop.started && stat == AOK);
+		if (isValid(m2w.first.inst))
+		begin
+			let eInst = validValue(m2w.first.inst);
         
-        /* WriteBack */
-		if(isValid(eInst.dstE))
-		begin
-			$display("On %d, writes %d   (wrE)", validRegValue(eInst.dstE), validValue(eInst.valE));
-			rf.wrE(validRegValue(eInst.dstE), validValue(eInst.valE));
-		end
-		if(isValid(eInst.dstM))
-		begin
-			$display("On %d, writes %d   (wrM)", validRegValue(eInst.dstM), validValue(eInst.valM));
-			rf.wrM(validRegValue(eInst.dstM), validValue(eInst.valM));
-		end
+			/* WriteBack */
+			if(isValid(eInst.dstE))
+			begin
+				$display("On %d, writes %d   (wrE)", validRegValue(eInst.dstE), validValue(eInst.valE));
+				rf.wrE(validRegValue(eInst.dstE), validValue(eInst.valE));
+			end
+			if(isValid(eInst.dstM))
+			begin
+				$display("On %d, writes %d   (wrM)", validRegValue(eInst.dstM), validValue(eInst.valM));
+				rf.wrM(validRegValue(eInst.dstM), validValue(eInst.valM));
+			end
 
-		cop.wr(eInst.dstE, validValue(eInst.valE));
-        sb.remove();
+			cop.wr(eInst.dstE, validValue(eInst.valE));
         
-        /* Update Status */
-		let newStatus = case(iType)
-							Unsupported : INS;
-							Hlt 		  : HLT;
-							default     : AOK;
-						endcase;
-		statRedirect.enq(newStatus);
+			/* Update Status */
+			let newStatus = case(eInst.iType)
+								Unsupported : INS;
+								Hlt 		  : HLT;
+								default     : AOK;
+							endcase;
+			statRedirect.enq(newStatus);
+		end
+		m2w.deq;
+		sb.remove;
     endrule
 
 	rule upd_Stat(cop.started);

@@ -1,0 +1,2674 @@
+Warning: file 'memory.vmh' for memory 'dMem' has a gap at addresses 49 to 67108863.
+Warning: file 'memory.vmh' for memory 'iMem' has a gap at addresses 49 to 67108863.
+
+Cycle                    0 ----------------------------------------------------
+
+cycle          0
+Fetch : from Pc                    0 , expanded inst : 30f40002000000000000, 
+irmovq $'h0000000000000200,  %'h4
+
+Cycle                    1 ----------------------------------------------------
+
+cycle          1
+Decode : from Pc                    0 , expanded inst : 30f40002000000000000, 
+irmovq $'h0000000000000200,  %'h4
+Fetch : from Pc                   10 , expanded inst : 80280100000000000030, 
+call 'h0000000000000128
+
+Cycle                    2 ----------------------------------------------------
+
+cycle          2
+Fetch : from Pc                   19 , expanded inst : 30f81002000000000000, 
+irmovq $'h0000000000000210,  %'h8
+
+Cycle                    3 ----------------------------------------------------
+
+cycle          3
+
+Cycle                    4 ----------------------------------------------------
+
+cycle          4
+On  4, writes                  512   (wrE)
+Decode : from Pc                   10 , expanded inst : 80280100000000000030, 
+call 'h0000000000000128
+Fetch : from Pc                   29 , expanded inst : 6180c00e000000000000, 
+subq %'h8, %'h0
+Stat update
+
+Cycle                    5 ----------------------------------------------------
+
+cycle          5
+mispredicted, redirect                  296 
+Decode : from Pc                   19 , expanded inst : 30f81002000000000000, 
+irmovq $'h0000000000000210,  %'h8
+
+Cycle                    6 ----------------------------------------------------
+
+cycle          6
+Stored                   19 into                  504
+Fetch : from Pc                  296 , expanded inst : 30f72800000000000000, 
+irmovq $'h0000000000000028,  %'h7
+
+Cycle                    7 ----------------------------------------------------
+
+cycle          7
+On  4, writes                  504   (wrE)
+Stat update
+
+Cycle                    8 ----------------------------------------------------
+
+cycle          8
+Decode : from Pc                   29 , expanded inst : 6180c00e000000000000, 
+subq %'h8, %'h0
+Fetch : from Pc                  306 , expanded inst : 30f62000000000000000, 
+irmovq $'h0000000000000020,  %'h6
+
+Cycle                    9 ----------------------------------------------------
+
+cycle          9
+Decode : from Pc                  296 , expanded inst : 30f72800000000000000, 
+irmovq $'h0000000000000028,  %'h7
+Fetch : from Pc                  316 , expanded inst : 80460100000000000090, 
+call 'h0000000000000146
+
+Cycle                   10 ----------------------------------------------------
+
+cycle         10
+Decode : from Pc                  306 , expanded inst : 30f62000000000000000, 
+irmovq $'h0000000000000020,  %'h6
+Fetch : from Pc                  325 , expanded inst : 9030f808000000000000, 
+ret
+
+Cycle                   11 ----------------------------------------------------
+
+cycle         11
+Decode : from Pc                  316 , expanded inst : 80460100000000000090, 
+call 'h0000000000000146
+Fetch : from Pc                  326 , expanded inst : 30f80800000000000000, 
+irmovq $'h0000000000000008,  %'h8
+
+Cycle                   12 ----------------------------------------------------
+
+cycle         12
+On  7, writes                   40   (wrE)
+mispredicted, redirect                  326 
+Stat update
+
+Cycle                   13 ----------------------------------------------------
+
+cycle         13
+On  6, writes                   32   (wrE)
+Stored                  325 into                  496
+Stat update
+
+Cycle                   14 ----------------------------------------------------
+
+cycle         14
+On  4, writes                  496   (wrE)
+Decode : from Pc                  325 , expanded inst : 9030f808000000000000, 
+ret
+Fetch : from Pc                  326 , expanded inst : 30f80800000000000000, 
+irmovq $'h0000000000000008,  %'h8
+Stat update
+
+Cycle                   15 ----------------------------------------------------
+
+cycle         15
+Decode : from Pc                  326 , expanded inst : 30f80800000000000000, 
+irmovq $'h0000000000000008,  %'h8
+Fetch : from Pc                  336 , expanded inst : 30f90100000000000000, 
+irmovq $'h0000000000000001,  %'h9
+
+Cycle                   16 ----------------------------------------------------
+
+cycle         16
+
+Cycle                   17 ----------------------------------------------------
+
+cycle         17
+
+Cycle                   18 ----------------------------------------------------
+
+cycle         18
+Decode : from Pc                  326 , expanded inst : 30f80800000000000000, 
+irmovq $'h0000000000000008,  %'h8
+Fetch : from Pc                  346 , expanded inst : 63006266707701000000, 
+xorq %'h0, %'h0
+
+Cycle                   19 ----------------------------------------------------
+
+cycle         19
+Decode : from Pc                  336 , expanded inst : 30f90100000000000000, 
+irmovq $'h0000000000000001,  %'h9
+Fetch : from Pc                  348 , expanded inst : 62667077010000000000, 
+andq %'h6, %'h6
+
+Cycle                   20 ----------------------------------------------------
+
+cycle         20
+Decode : from Pc                  346 , expanded inst : 63006266707701000000, 
+xorq %'h0, %'h0
+Fetch : from Pc                  350 , expanded inst : 70770100000000000050, 
+jmp $'h0000000000000177
+
+Cycle                   21 ----------------------------------------------------
+
+cycle         21
+On  8, writes                    8   (wrE)
+Decode : from Pc                  348 , expanded inst : 62667077010000000000, 
+andq %'h6, %'h6
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                   22 ----------------------------------------------------
+
+cycle         22
+On  9, writes                    1   (wrE)
+Decode : from Pc                  350 , expanded inst : 70770100000000000050, 
+jmp $'h0000000000000177
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                   23 ----------------------------------------------------
+
+cycle         23
+On  0, writes                    0   (wrE)
+mispredicted, redirect                  375 
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                   24 ----------------------------------------------------
+
+cycle         24
+On  6, writes                   32   (wrE)
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Stat update
+
+Cycle                   25 ----------------------------------------------------
+
+cycle         25
+Stat update
+
+Cycle                   26 ----------------------------------------------------
+
+cycle         26
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                   27 ----------------------------------------------------
+
+cycle         27
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+
+Cycle                   28 ----------------------------------------------------
+
+cycle         28
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                   29 ----------------------------------------------------
+
+cycle         29
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+
+Cycle                   30 ----------------------------------------------------
+
+cycle         30
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                   31 ----------------------------------------------------
+
+cycle         31
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                   32 ----------------------------------------------------
+
+cycle         32
+Loaded                    1 from                   40
+
+Cycle                   33 ----------------------------------------------------
+
+cycle         33
+On 10, writes                    1   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                   34 ----------------------------------------------------
+
+cycle         34
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                   35 ----------------------------------------------------
+
+cycle         35
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                   36 ----------------------------------------------------
+
+cycle         36
+On  0, writes                    1   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                   37 ----------------------------------------------------
+
+cycle         37
+On  7, writes                   48   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                   38 ----------------------------------------------------
+
+cycle         38
+On  6, writes                   31   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                   39 ----------------------------------------------------
+
+cycle         39
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                   40 ----------------------------------------------------
+
+cycle         40
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                   41 ----------------------------------------------------
+
+cycle         41
+Loaded                    2 from                   48
+
+Cycle                   42 ----------------------------------------------------
+
+cycle         42
+On 10, writes                    2   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                   43 ----------------------------------------------------
+
+cycle         43
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                   44 ----------------------------------------------------
+
+cycle         44
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                   45 ----------------------------------------------------
+
+cycle         45
+On  0, writes                    3   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                   46 ----------------------------------------------------
+
+cycle         46
+On  7, writes                   56   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                   47 ----------------------------------------------------
+
+cycle         47
+On  6, writes                   30   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                   48 ----------------------------------------------------
+
+cycle         48
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                   49 ----------------------------------------------------
+
+cycle         49
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                   50 ----------------------------------------------------
+
+cycle         50
+Loaded                    3 from                   56
+
+Cycle                   51 ----------------------------------------------------
+
+cycle         51
+On 10, writes                    3   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                   52 ----------------------------------------------------
+
+cycle         52
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                   53 ----------------------------------------------------
+
+cycle         53
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                   54 ----------------------------------------------------
+
+cycle         54
+On  0, writes                    6   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                   55 ----------------------------------------------------
+
+cycle         55
+On  7, writes                   64   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                   56 ----------------------------------------------------
+
+cycle         56
+On  6, writes                   29   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                   57 ----------------------------------------------------
+
+cycle         57
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                   58 ----------------------------------------------------
+
+cycle         58
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                   59 ----------------------------------------------------
+
+cycle         59
+Loaded                    4 from                   64
+
+Cycle                   60 ----------------------------------------------------
+
+cycle         60
+On 10, writes                    4   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                   61 ----------------------------------------------------
+
+cycle         61
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                   62 ----------------------------------------------------
+
+cycle         62
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                   63 ----------------------------------------------------
+
+cycle         63
+On  0, writes                   10   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                   64 ----------------------------------------------------
+
+cycle         64
+On  7, writes                   72   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                   65 ----------------------------------------------------
+
+cycle         65
+On  6, writes                   28   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                   66 ----------------------------------------------------
+
+cycle         66
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                   67 ----------------------------------------------------
+
+cycle         67
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                   68 ----------------------------------------------------
+
+cycle         68
+Loaded                    5 from                   72
+
+Cycle                   69 ----------------------------------------------------
+
+cycle         69
+On 10, writes                    5   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                   70 ----------------------------------------------------
+
+cycle         70
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                   71 ----------------------------------------------------
+
+cycle         71
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                   72 ----------------------------------------------------
+
+cycle         72
+On  0, writes                   15   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                   73 ----------------------------------------------------
+
+cycle         73
+On  7, writes                   80   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                   74 ----------------------------------------------------
+
+cycle         74
+On  6, writes                   27   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                   75 ----------------------------------------------------
+
+cycle         75
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                   76 ----------------------------------------------------
+
+cycle         76
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                   77 ----------------------------------------------------
+
+cycle         77
+Loaded                    6 from                   80
+
+Cycle                   78 ----------------------------------------------------
+
+cycle         78
+On 10, writes                    6   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                   79 ----------------------------------------------------
+
+cycle         79
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                   80 ----------------------------------------------------
+
+cycle         80
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                   81 ----------------------------------------------------
+
+cycle         81
+On  0, writes                   21   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                   82 ----------------------------------------------------
+
+cycle         82
+On  7, writes                   88   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                   83 ----------------------------------------------------
+
+cycle         83
+On  6, writes                   26   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                   84 ----------------------------------------------------
+
+cycle         84
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                   85 ----------------------------------------------------
+
+cycle         85
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                   86 ----------------------------------------------------
+
+cycle         86
+Loaded                    7 from                   88
+
+Cycle                   87 ----------------------------------------------------
+
+cycle         87
+On 10, writes                    7   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                   88 ----------------------------------------------------
+
+cycle         88
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                   89 ----------------------------------------------------
+
+cycle         89
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                   90 ----------------------------------------------------
+
+cycle         90
+On  0, writes                   28   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                   91 ----------------------------------------------------
+
+cycle         91
+On  7, writes                   96   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                   92 ----------------------------------------------------
+
+cycle         92
+On  6, writes                   25   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                   93 ----------------------------------------------------
+
+cycle         93
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                   94 ----------------------------------------------------
+
+cycle         94
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                   95 ----------------------------------------------------
+
+cycle         95
+Loaded                    8 from                   96
+
+Cycle                   96 ----------------------------------------------------
+
+cycle         96
+On 10, writes                    8   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                   97 ----------------------------------------------------
+
+cycle         97
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                   98 ----------------------------------------------------
+
+cycle         98
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                   99 ----------------------------------------------------
+
+cycle         99
+On  0, writes                   36   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  100 ----------------------------------------------------
+
+cycle        100
+On  7, writes                  104   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  101 ----------------------------------------------------
+
+cycle        101
+On  6, writes                   24   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  102 ----------------------------------------------------
+
+cycle        102
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  103 ----------------------------------------------------
+
+cycle        103
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  104 ----------------------------------------------------
+
+cycle        104
+Loaded                    9 from                  104
+
+Cycle                  105 ----------------------------------------------------
+
+cycle        105
+On 10, writes                    9   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  106 ----------------------------------------------------
+
+cycle        106
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  107 ----------------------------------------------------
+
+cycle        107
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  108 ----------------------------------------------------
+
+cycle        108
+On  0, writes                   45   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  109 ----------------------------------------------------
+
+cycle        109
+On  7, writes                  112   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  110 ----------------------------------------------------
+
+cycle        110
+On  6, writes                   23   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  111 ----------------------------------------------------
+
+cycle        111
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  112 ----------------------------------------------------
+
+cycle        112
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  113 ----------------------------------------------------
+
+cycle        113
+Loaded                   10 from                  112
+
+Cycle                  114 ----------------------------------------------------
+
+cycle        114
+On 10, writes                   10   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  115 ----------------------------------------------------
+
+cycle        115
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  116 ----------------------------------------------------
+
+cycle        116
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  117 ----------------------------------------------------
+
+cycle        117
+On  0, writes                   55   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  118 ----------------------------------------------------
+
+cycle        118
+On  7, writes                  120   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  119 ----------------------------------------------------
+
+cycle        119
+On  6, writes                   22   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  120 ----------------------------------------------------
+
+cycle        120
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  121 ----------------------------------------------------
+
+cycle        121
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  122 ----------------------------------------------------
+
+cycle        122
+Loaded                   11 from                  120
+
+Cycle                  123 ----------------------------------------------------
+
+cycle        123
+On 10, writes                   11   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  124 ----------------------------------------------------
+
+cycle        124
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  125 ----------------------------------------------------
+
+cycle        125
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  126 ----------------------------------------------------
+
+cycle        126
+On  0, writes                   66   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  127 ----------------------------------------------------
+
+cycle        127
+On  7, writes                  128   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  128 ----------------------------------------------------
+
+cycle        128
+On  6, writes                   21   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  129 ----------------------------------------------------
+
+cycle        129
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  130 ----------------------------------------------------
+
+cycle        130
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  131 ----------------------------------------------------
+
+cycle        131
+Loaded                   12 from                  128
+
+Cycle                  132 ----------------------------------------------------
+
+cycle        132
+On 10, writes                   12   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  133 ----------------------------------------------------
+
+cycle        133
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  134 ----------------------------------------------------
+
+cycle        134
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  135 ----------------------------------------------------
+
+cycle        135
+On  0, writes                   78   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  136 ----------------------------------------------------
+
+cycle        136
+On  7, writes                  136   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  137 ----------------------------------------------------
+
+cycle        137
+On  6, writes                   20   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  138 ----------------------------------------------------
+
+cycle        138
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  139 ----------------------------------------------------
+
+cycle        139
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  140 ----------------------------------------------------
+
+cycle        140
+Loaded                   13 from                  136
+
+Cycle                  141 ----------------------------------------------------
+
+cycle        141
+On 10, writes                   13   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  142 ----------------------------------------------------
+
+cycle        142
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  143 ----------------------------------------------------
+
+cycle        143
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  144 ----------------------------------------------------
+
+cycle        144
+On  0, writes                   91   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  145 ----------------------------------------------------
+
+cycle        145
+On  7, writes                  144   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  146 ----------------------------------------------------
+
+cycle        146
+On  6, writes                   19   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  147 ----------------------------------------------------
+
+cycle        147
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  148 ----------------------------------------------------
+
+cycle        148
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  149 ----------------------------------------------------
+
+cycle        149
+Loaded                   14 from                  144
+
+Cycle                  150 ----------------------------------------------------
+
+cycle        150
+On 10, writes                   14   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  151 ----------------------------------------------------
+
+cycle        151
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  152 ----------------------------------------------------
+
+cycle        152
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  153 ----------------------------------------------------
+
+cycle        153
+On  0, writes                  105   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  154 ----------------------------------------------------
+
+cycle        154
+On  7, writes                  152   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  155 ----------------------------------------------------
+
+cycle        155
+On  6, writes                   18   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  156 ----------------------------------------------------
+
+cycle        156
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  157 ----------------------------------------------------
+
+cycle        157
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  158 ----------------------------------------------------
+
+cycle        158
+Loaded                   15 from                  152
+
+Cycle                  159 ----------------------------------------------------
+
+cycle        159
+On 10, writes                   15   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  160 ----------------------------------------------------
+
+cycle        160
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  161 ----------------------------------------------------
+
+cycle        161
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  162 ----------------------------------------------------
+
+cycle        162
+On  0, writes                  120   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  163 ----------------------------------------------------
+
+cycle        163
+On  7, writes                  160   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  164 ----------------------------------------------------
+
+cycle        164
+On  6, writes                   17   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  165 ----------------------------------------------------
+
+cycle        165
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  166 ----------------------------------------------------
+
+cycle        166
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  167 ----------------------------------------------------
+
+cycle        167
+Loaded                   16 from                  160
+
+Cycle                  168 ----------------------------------------------------
+
+cycle        168
+On 10, writes                   16   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  169 ----------------------------------------------------
+
+cycle        169
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  170 ----------------------------------------------------
+
+cycle        170
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  171 ----------------------------------------------------
+
+cycle        171
+On  0, writes                  136   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  172 ----------------------------------------------------
+
+cycle        172
+On  7, writes                  168   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  173 ----------------------------------------------------
+
+cycle        173
+On  6, writes                   16   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  174 ----------------------------------------------------
+
+cycle        174
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  175 ----------------------------------------------------
+
+cycle        175
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  176 ----------------------------------------------------
+
+cycle        176
+Loaded                   17 from                  168
+
+Cycle                  177 ----------------------------------------------------
+
+cycle        177
+On 10, writes                   17   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  178 ----------------------------------------------------
+
+cycle        178
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  179 ----------------------------------------------------
+
+cycle        179
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  180 ----------------------------------------------------
+
+cycle        180
+On  0, writes                  153   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  181 ----------------------------------------------------
+
+cycle        181
+On  7, writes                  176   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  182 ----------------------------------------------------
+
+cycle        182
+On  6, writes                   15   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  183 ----------------------------------------------------
+
+cycle        183
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  184 ----------------------------------------------------
+
+cycle        184
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  185 ----------------------------------------------------
+
+cycle        185
+Loaded                   18 from                  176
+
+Cycle                  186 ----------------------------------------------------
+
+cycle        186
+On 10, writes                   18   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  187 ----------------------------------------------------
+
+cycle        187
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  188 ----------------------------------------------------
+
+cycle        188
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  189 ----------------------------------------------------
+
+cycle        189
+On  0, writes                  171   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  190 ----------------------------------------------------
+
+cycle        190
+On  7, writes                  184   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  191 ----------------------------------------------------
+
+cycle        191
+On  6, writes                   14   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  192 ----------------------------------------------------
+
+cycle        192
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  193 ----------------------------------------------------
+
+cycle        193
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  194 ----------------------------------------------------
+
+cycle        194
+Loaded                   19 from                  184
+
+Cycle                  195 ----------------------------------------------------
+
+cycle        195
+On 10, writes                   19   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  196 ----------------------------------------------------
+
+cycle        196
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  197 ----------------------------------------------------
+
+cycle        197
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  198 ----------------------------------------------------
+
+cycle        198
+On  0, writes                  190   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  199 ----------------------------------------------------
+
+cycle        199
+On  7, writes                  192   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  200 ----------------------------------------------------
+
+cycle        200
+On  6, writes                   13   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  201 ----------------------------------------------------
+
+cycle        201
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  202 ----------------------------------------------------
+
+cycle        202
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  203 ----------------------------------------------------
+
+cycle        203
+Loaded                   20 from                  192
+
+Cycle                  204 ----------------------------------------------------
+
+cycle        204
+On 10, writes                   20   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  205 ----------------------------------------------------
+
+cycle        205
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  206 ----------------------------------------------------
+
+cycle        206
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  207 ----------------------------------------------------
+
+cycle        207
+On  0, writes                  210   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  208 ----------------------------------------------------
+
+cycle        208
+On  7, writes                  200   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  209 ----------------------------------------------------
+
+cycle        209
+On  6, writes                   12   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  210 ----------------------------------------------------
+
+cycle        210
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  211 ----------------------------------------------------
+
+cycle        211
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  212 ----------------------------------------------------
+
+cycle        212
+Loaded                   21 from                  200
+
+Cycle                  213 ----------------------------------------------------
+
+cycle        213
+On 10, writes                   21   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  214 ----------------------------------------------------
+
+cycle        214
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  215 ----------------------------------------------------
+
+cycle        215
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  216 ----------------------------------------------------
+
+cycle        216
+On  0, writes                  231   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  217 ----------------------------------------------------
+
+cycle        217
+On  7, writes                  208   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  218 ----------------------------------------------------
+
+cycle        218
+On  6, writes                   11   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  219 ----------------------------------------------------
+
+cycle        219
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  220 ----------------------------------------------------
+
+cycle        220
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  221 ----------------------------------------------------
+
+cycle        221
+Loaded                   22 from                  208
+
+Cycle                  222 ----------------------------------------------------
+
+cycle        222
+On 10, writes                   22   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  223 ----------------------------------------------------
+
+cycle        223
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  224 ----------------------------------------------------
+
+cycle        224
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  225 ----------------------------------------------------
+
+cycle        225
+On  0, writes                  253   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  226 ----------------------------------------------------
+
+cycle        226
+On  7, writes                  216   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  227 ----------------------------------------------------
+
+cycle        227
+On  6, writes                   10   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  228 ----------------------------------------------------
+
+cycle        228
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  229 ----------------------------------------------------
+
+cycle        229
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  230 ----------------------------------------------------
+
+cycle        230
+Loaded                   23 from                  216
+
+Cycle                  231 ----------------------------------------------------
+
+cycle        231
+On 10, writes                   23   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  232 ----------------------------------------------------
+
+cycle        232
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  233 ----------------------------------------------------
+
+cycle        233
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  234 ----------------------------------------------------
+
+cycle        234
+On  0, writes                  276   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  235 ----------------------------------------------------
+
+cycle        235
+On  7, writes                  224   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  236 ----------------------------------------------------
+
+cycle        236
+On  6, writes                    9   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  237 ----------------------------------------------------
+
+cycle        237
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  238 ----------------------------------------------------
+
+cycle        238
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  239 ----------------------------------------------------
+
+cycle        239
+Loaded                   24 from                  224
+
+Cycle                  240 ----------------------------------------------------
+
+cycle        240
+On 10, writes                   24   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  241 ----------------------------------------------------
+
+cycle        241
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  242 ----------------------------------------------------
+
+cycle        242
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  243 ----------------------------------------------------
+
+cycle        243
+On  0, writes                  300   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  244 ----------------------------------------------------
+
+cycle        244
+On  7, writes                  232   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  245 ----------------------------------------------------
+
+cycle        245
+On  6, writes                    8   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  246 ----------------------------------------------------
+
+cycle        246
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  247 ----------------------------------------------------
+
+cycle        247
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  248 ----------------------------------------------------
+
+cycle        248
+Loaded                   25 from                  232
+
+Cycle                  249 ----------------------------------------------------
+
+cycle        249
+On 10, writes                   25   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  250 ----------------------------------------------------
+
+cycle        250
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  251 ----------------------------------------------------
+
+cycle        251
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  252 ----------------------------------------------------
+
+cycle        252
+On  0, writes                  325   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  253 ----------------------------------------------------
+
+cycle        253
+On  7, writes                  240   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  254 ----------------------------------------------------
+
+cycle        254
+On  6, writes                    7   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  255 ----------------------------------------------------
+
+cycle        255
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  256 ----------------------------------------------------
+
+cycle        256
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  257 ----------------------------------------------------
+
+cycle        257
+Loaded                   26 from                  240
+
+Cycle                  258 ----------------------------------------------------
+
+cycle        258
+On 10, writes                   26   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  259 ----------------------------------------------------
+
+cycle        259
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  260 ----------------------------------------------------
+
+cycle        260
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  261 ----------------------------------------------------
+
+cycle        261
+On  0, writes                  351   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  262 ----------------------------------------------------
+
+cycle        262
+On  7, writes                  248   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  263 ----------------------------------------------------
+
+cycle        263
+On  6, writes                    6   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  264 ----------------------------------------------------
+
+cycle        264
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  265 ----------------------------------------------------
+
+cycle        265
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  266 ----------------------------------------------------
+
+cycle        266
+Loaded                   27 from                  248
+
+Cycle                  267 ----------------------------------------------------
+
+cycle        267
+On 10, writes                   27   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  268 ----------------------------------------------------
+
+cycle        268
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  269 ----------------------------------------------------
+
+cycle        269
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  270 ----------------------------------------------------
+
+cycle        270
+On  0, writes                  378   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  271 ----------------------------------------------------
+
+cycle        271
+On  7, writes                  256   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  272 ----------------------------------------------------
+
+cycle        272
+On  6, writes                    5   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  273 ----------------------------------------------------
+
+cycle        273
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  274 ----------------------------------------------------
+
+cycle        274
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  275 ----------------------------------------------------
+
+cycle        275
+Loaded                   28 from                  256
+
+Cycle                  276 ----------------------------------------------------
+
+cycle        276
+On 10, writes                   28   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  277 ----------------------------------------------------
+
+cycle        277
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  278 ----------------------------------------------------
+
+cycle        278
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  279 ----------------------------------------------------
+
+cycle        279
+On  0, writes                  406   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  280 ----------------------------------------------------
+
+cycle        280
+On  7, writes                  264   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  281 ----------------------------------------------------
+
+cycle        281
+On  6, writes                    4   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  282 ----------------------------------------------------
+
+cycle        282
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  283 ----------------------------------------------------
+
+cycle        283
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  284 ----------------------------------------------------
+
+cycle        284
+Loaded                   29 from                  264
+
+Cycle                  285 ----------------------------------------------------
+
+cycle        285
+On 10, writes                   29   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  286 ----------------------------------------------------
+
+cycle        286
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  287 ----------------------------------------------------
+
+cycle        287
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  288 ----------------------------------------------------
+
+cycle        288
+On  0, writes                  435   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  289 ----------------------------------------------------
+
+cycle        289
+On  7, writes                  272   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  290 ----------------------------------------------------
+
+cycle        290
+On  6, writes                    3   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  291 ----------------------------------------------------
+
+cycle        291
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  292 ----------------------------------------------------
+
+cycle        292
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  293 ----------------------------------------------------
+
+cycle        293
+Loaded                   30 from                  272
+
+Cycle                  294 ----------------------------------------------------
+
+cycle        294
+On 10, writes                   30   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  295 ----------------------------------------------------
+
+cycle        295
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  296 ----------------------------------------------------
+
+cycle        296
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  297 ----------------------------------------------------
+
+cycle        297
+On  0, writes                  465   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  298 ----------------------------------------------------
+
+cycle        298
+On  7, writes                  280   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  299 ----------------------------------------------------
+
+cycle        299
+On  6, writes                    2   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  300 ----------------------------------------------------
+
+cycle        300
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  301 ----------------------------------------------------
+
+cycle        301
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  302 ----------------------------------------------------
+
+cycle        302
+Loaded                   31 from                  280
+
+Cycle                  303 ----------------------------------------------------
+
+cycle        303
+On 10, writes                   31   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  304 ----------------------------------------------------
+
+cycle        304
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  305 ----------------------------------------------------
+
+cycle        305
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  306 ----------------------------------------------------
+
+cycle        306
+On  0, writes                  496   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  307 ----------------------------------------------------
+
+cycle        307
+On  7, writes                  288   (wrE)
+mispredicted, redirect                  359 
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Stat update
+
+Cycle                  308 ----------------------------------------------------
+
+cycle        308
+On  6, writes                    1   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Stat update
+
+Cycle                  309 ----------------------------------------------------
+
+cycle        309
+Decode : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Stat update
+
+Cycle                  310 ----------------------------------------------------
+
+cycle        310
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+
+Cycle                  311 ----------------------------------------------------
+
+cycle        311
+Loaded                   32 from                  288
+
+Cycle                  312 ----------------------------------------------------
+
+cycle        312
+On 10, writes                   32   (wrM)
+Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Stat update
+
+Cycle                  313 ----------------------------------------------------
+
+cycle        313
+Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+
+Cycle                  314 ----------------------------------------------------
+
+cycle        314
+Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
+Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+
+Cycle                  315 ----------------------------------------------------
+
+cycle        315
+On  0, writes                  528   (wrE)
+Decode : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  316 ----------------------------------------------------
+
+cycle        316
+On  7, writes                  296   (wrE)
+Decode : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
+ret
+Fetch : from Pc                  386 , expanded inst : 000000000000aaaaaaaa, 
+halt
+Stat update
+
+Cycle                  317 ----------------------------------------------------
+
+cycle        317
+On  6, writes                    0   (wrE)
+mispredicted, redirect                  385 
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  318 ----------------------------------------------------
+
+cycle        318
+Loaded                  325 from                  496
+Decode : from Pc                  386 , expanded inst : 000000000000aaaaaaaa, 
+halt
+Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Stat update
+
+Cycle                  319 ----------------------------------------------------
+
+cycle        319
+On  4, writes                  504   (wrE)
+Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                  386 , expanded inst : 000000000000aaaaaaaa, 
+halt
+Stat update
+
+Cycle                  320 ----------------------------------------------------
+
+cycle        320
+Decode : from Pc                  386 , expanded inst : 000000000000aaaaaaaa, 
+halt
+Fetch : from Pc                  387 , expanded inst : 0000000000aaaaaaaaaa, 
+halt
+
+Cycle                  321 ----------------------------------------------------
+
+cycle        321
+Decode : from Pc                  387 , expanded inst : 0000000000aaaaaaaaaa, 
+halt
+Fetch : from Pc                  388 , expanded inst : 00000000aaaaaaaaaaaa, 
+halt
+
+Cycle                  322 ----------------------------------------------------
+
+cycle        322
+Decode : from Pc                  388 , expanded inst : 00000000aaaaaaaaaaaa, 
+halt
+Fetch : from Pc                  389 , expanded inst : 000000aaaaaaaaaaaaaa, 
+halt
+Stat update
+
+Cycle                  323 ----------------------------------------------------
+
+cycle        323
