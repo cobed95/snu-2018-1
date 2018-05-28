@@ -67,43 +67,40 @@ Cycle                    8 ----------------------------------------------------
 cycle          8
 On  0, writes 18446744073709551615   (wrE)
 Execute.
+mispredicted, redirect                   80 
 Decode : from Pc                   39 , expanded inst : c00e00000000000000aa, 
 mtc0 %'h0, %'he
-Fetch : from Pc                   42 , expanded inst : 000000000000aaaaaaaa, 
-halt
+Fetch : from Pc                   80 , expanded inst : 30f00000000000000000, 
+irmovq $'h0000000000000000,  %'h0
 Stat update
 
 Cycle                    9 ----------------------------------------------------
 
 cycle          9
-Stored                   39 into                  152
-mispredicted, redirect                   80 
 Decode : from Pc                   41 , expanded inst : 00000000000000aaaaaa, 
 halt
+Fetch : from Pc                   90 , expanded inst : 9030f0ffffffffffffff, 
+ret
 
 Cycle                   10 ----------------------------------------------------
 
 cycle         10
-On  4, writes                  152   (wrE)
-Decode : from Pc                   42 , expanded inst : 000000000000aaaaaaaa, 
-halt
-Fetch : from Pc                   80 , expanded inst : 30f00000000000000000, 
-irmovq $'h0000000000000000,  %'h0
-Stat update
-
-Cycle                   11 ----------------------------------------------------
-
-cycle         11
-Fetch : from Pc                   90 , expanded inst : 9030f0ffffffffffffff, 
-ret
-
-Cycle                   12 ----------------------------------------------------
-
-cycle         12
 Decode : from Pc                   80 , expanded inst : 30f00000000000000000, 
 irmovq $'h0000000000000000,  %'h0
 Fetch : from Pc                   91 , expanded inst : 30f0ffffffffffffffff, 
 irmovq $'hffffffffffffffff,  %'h0
+
+Cycle                   11 ----------------------------------------------------
+
+cycle         11
+
+Cycle                   12 ----------------------------------------------------
+
+cycle         12
+Decode : from Pc                   90 , expanded inst : 9030f0ffffffffffffff, 
+ret
+Fetch : from Pc                  101 , expanded inst : c00e00aaaaaaaaaaaaaa, 
+mtc0 %'h0, %'he
 
 Cycle                   13 ----------------------------------------------------
 
@@ -112,10 +109,10 @@ cycle         13
 Cycle                   14 ----------------------------------------------------
 
 cycle         14
-Decode : from Pc                   90 , expanded inst : 9030f0ffffffffffffff, 
-ret
-Fetch : from Pc                  101 , expanded inst : c00e00aaaaaaaaaaaaaa, 
-mtc0 %'h0, %'he
+Decode : from Pc                   91 , expanded inst : 30f0ffffffffffffffff, 
+irmovq $'hffffffffffffffff,  %'h0
+Fetch : from Pc                  103 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
+halt
 
 Cycle                   15 ----------------------------------------------------
 
@@ -129,92 +126,52 @@ Execute.
 Cycle                   17 ----------------------------------------------------
 
 cycle         17
+Loaded 12297829382473034410 from                  160
+mispredicted, redirect 12297829382473034410 
 
 Cycle                   18 ----------------------------------------------------
 
 cycle         18
-On  0, writes                    0   (wrE)
+On  4, writes                  168   (wrE)
 Execute.
-Decode : from Pc                   91 , expanded inst : 30f0ffffffffffffffff, 
-irmovq $'hffffffffffffffff,  %'h0
-Fetch : from Pc                  103 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
-halt
 Stat update
 
 Cycle                   19 ----------------------------------------------------
 
 cycle         19
-Loaded                   39 from                  152
-mispredicted, redirect                   39 
 
 Cycle                   20 ----------------------------------------------------
 
 cycle         20
-On  4, writes                  160   (wrE)
+On  0, writes 18446744073709551615   (wrE)
+Decode : from Pc                  101 , expanded inst : c00e00aaaaaaaaaaaaaa, 
+mtc0 %'h0, %'he
+Fetch : from Pc 12297829382473034410 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
+push %'ha
 Stat update
 
 Cycle                   21 ----------------------------------------------------
 
 cycle         21
+Execute.
+Decode : from Pc                  103 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
+halt
+Fetch : from Pc 12297829382473034412 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
+push %'ha
 
 Cycle                   22 ----------------------------------------------------
 
 cycle         22
-Decode : from Pc                  101 , expanded inst : c00e00aaaaaaaaaaaaaa, 
-mtc0 %'h0, %'he
-Fetch : from Pc                   39 , expanded inst : c00e00000000000000aa, 
-mtc0 %'h0, %'he
+Decode : from Pc 12297829382473034410 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
+push %'ha
+Fetch : from Pc 12297829382473034414 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
+push %'ha
 
 Cycle                   23 ----------------------------------------------------
 
 cycle         23
-Decode : from Pc                  103 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
-halt
-Fetch : from Pc                   41 , expanded inst : 00000000000000aaaaaa, 
-halt
-
-Cycle                   24 ----------------------------------------------------
-
-cycle         24
-
-Cycle                   25 ----------------------------------------------------
-
-cycle         25
-Decode : from Pc                   39 , expanded inst : c00e00000000000000aa, 
-mtc0 %'h0, %'he
-Fetch : from Pc                   42 , expanded inst : 000000000000aaaaaaaa, 
-halt
-
-Cycle                   26 ----------------------------------------------------
-
-cycle         26
-Decode : from Pc                   41 , expanded inst : 00000000000000aaaaaa, 
-halt
-Fetch : from Pc                   43 , expanded inst : 0000000000aaaaaaaaaa, 
-halt
-
-Cycle                   27 ----------------------------------------------------
-
-cycle         27
+On 14, writes 18446744073709551615   (wrE)
 Execute.
-Decode : from Pc                   42 , expanded inst : 000000000000aaaaaaaa, 
-halt
-Fetch : from Pc                   44 , expanded inst : 00000000aaaaaaaaaaaa, 
-halt
-
-Cycle                   28 ----------------------------------------------------
-
-cycle         28
-
-Cycle                   29 ----------------------------------------------------
-
-cycle         29
-On 14, writes                    0   (wrE)
-Execute.
-Decode : from Pc                   43 , expanded inst : 0000000000aaaaaaaaaa, 
-halt
-Fetch : from Pc                   45 , expanded inst : 000000aaaaaaaaaaaaaa, 
-halt
 Stat update
 
-Cycle                   30 ----------------------------------------------------
+Cycle                   24 ----------------------------------------------------

@@ -18,6 +18,8 @@ Cycle                    1 ----------------------------------------------------
 cycle          1
 Decode : from Pc                    0 , expanded inst : 30f50002000000000000, 
 irmovq $'h0000000000000200,  %'h5
+valA: 12297829382473034410
+valB: $d                   0
 Fetch : from Pc                   10 , expanded inst : 30f40002000000000000, 
 irmovq $'h0000000000000200,  %'h4
 
@@ -27,6 +29,8 @@ cycle          2
 Execute.
 Decode : from Pc                   10 , expanded inst : 30f40002000000000000, 
 irmovq $'h0000000000000200,  %'h4
+valA: 12297829382473034410
+valB: $d                   0
 Fetch : from Pc                   20 , expanded inst : 70000100000000000000, 
 jmp $'h0000000000000100
 
@@ -35,6 +39,8 @@ Cycle                    3 ----------------------------------------------------
 cycle          3
 Decode : from Pc                   20 , expanded inst : 70000100000000000000, 
 jmp $'h0000000000000100
+valA:                    0
+valB: $d                   0
 Fetch : from Pc                   29 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
 
@@ -45,6 +51,8 @@ On  5, writes                  512   (wrE)
 Execute.
 Decode : from Pc                   29 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
+valA:                    0
+valB: $d                   0
 Fetch : from Pc                   30 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt
 Stat update
@@ -62,6 +70,8 @@ On  4, writes                  512   (wrE)
 Execute.
 Decode : from Pc                   30 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt
+valA:                    0
+valB: $d                 512
 Fetch : from Pc                   32 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
 push %'ha
 Stat update
@@ -76,6 +86,8 @@ Cycle                    8 ----------------------------------------------------
 cycle          8
 Decode : from Pc                   31 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
 halt
+valA:                    0
+valB: $d                 512
 Fetch : from Pc                  256 , expanded inst : a05f204530f70f000000, 
 push %'h5
 Stat update
@@ -89,6 +101,8 @@ Cycle                   10 ----------------------------------------------------
 cycle         10
 Decode : from Pc                   32 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
 push %'ha
+valA: 18446744073709551616
+valB: $d18446744073709552128
 Fetch : from Pc                  258 , expanded inst : 204530f70f0000000000, 
 rrmovq %'h4, %'h5
 
@@ -101,6 +115,8 @@ Cycle                   12 ----------------------------------------------------
 cycle         12
 Decode : from Pc                  256 , expanded inst : a05f204530f70f000000, 
 push %'h5
+valA: 18446744073709552128
+valB: $d18446744073709552128
 Fetch : from Pc                  260 , expanded inst : 30f70f00000000000000, 
 irmovq $'h000000000000000f,  %'h7
 
@@ -113,6 +129,8 @@ Cycle                   14 ----------------------------------------------------
 cycle         14
 Decode : from Pc                  258 , expanded inst : 204530f70f0000000000, 
 rrmovq %'h4, %'h5
+valA: 18446744073709552128
+valB: $d                 512
 Fetch : from Pc                  270 , expanded inst : 30f64000000000000000, 
 irmovq $'h0000000000000040,  %'h6
 
@@ -126,6 +144,8 @@ cycle         16
 Execute.
 Decode : from Pc                  260 , expanded inst : 30f70f00000000000000, 
 irmovq $'h000000000000000f,  %'h7
+valA: 12297829382473034410
+valB: $d                 512
 Fetch : from Pc                  280 , expanded inst : 80000200000000000030, 
 call 'h0000000000000200
 
@@ -141,6 +161,8 @@ On  4, writes                  504   (wrE)
 Execute.
 Decode : from Pc                  270 , expanded inst : 30f64000000000000000, 
 irmovq $'h0000000000000040,  %'h6
+valA: 12297829382473034410
+valB: $d                 504
 Fetch : from Pc                  289 , expanded inst : 30fa4000000000000000, 
 irmovq $'h0000000000000040,  %'ha
 Stat update
@@ -156,6 +178,8 @@ On  5, writes                  512   (wrE)
 Execute.
 Decode : from Pc                  280 , expanded inst : 80000200000000000030, 
 call 'h0000000000000200
+valA:                  504
+valB: $d18446744073709552120
 Fetch : from Pc                  299 , expanded inst : 30f00100000000000000, 
 irmovq $'h0000000000000001,  %'h0
 Stat update
@@ -171,6 +195,8 @@ On  7, writes                   15   (wrE)
 Execute.
 Decode : from Pc                  289 , expanded inst : 30fa4000000000000000, 
 irmovq $'h0000000000000040,  %'ha
+valA: 12297829382473034410
+valB: $d                 504
 Fetch : from Pc                  309 , expanded inst : 30fb0800000000000000, 
 irmovq $'h0000000000000008,  %'hb
 Stat update
@@ -186,6 +212,8 @@ On  6, writes                   64   (wrE)
 Execute.
 Decode : from Pc                  299 , expanded inst : 30f00100000000000000, 
 irmovq $'h0000000000000001,  %'h0
+valA: 12297829382473034410
+valB: $d                 504
 Fetch : from Pc                  319 , expanded inst : 30f30500000000000000, 
 irmovq $'h0000000000000005,  %'h3
 Stat update
@@ -202,6 +230,8 @@ cycle         26
 On  4, writes                  496   (wrE)
 Decode : from Pc                  309 , expanded inst : 30fb0800000000000000, 
 irmovq $'h0000000000000008,  %'hb
+valA: 12297829382473034410
+valB: $d                 496
 Fetch : from Pc                  512 , expanded inst : a05f2045a03fa0cf2070, 
 push %'h5
 Stat update
@@ -215,6 +245,8 @@ Cycle                   28 ----------------------------------------------------
 cycle         28
 Decode : from Pc                  319 , expanded inst : 30f30500000000000000, 
 irmovq $'h0000000000000005,  %'h3
+valA: 12297829382473034410
+valB: $d                 496
 Fetch : from Pc                  514 , expanded inst : 2045a03fa0cf20706000, 
 rrmovq %'h4, %'h5
 
@@ -227,6 +259,8 @@ Cycle                   30 ----------------------------------------------------
 cycle         30
 Decode : from Pc                  512 , expanded inst : a05f2045a03fa0cf2070, 
 push %'h5
+valA: 18446744073709552128
+valB: $d18446744073709552112
 Fetch : from Pc                  516 , expanded inst : a03fa0cf207060006000, 
 push %'h3
 
@@ -239,6 +273,8 @@ Cycle                   32 ----------------------------------------------------
 cycle         32
 Decode : from Pc                  514 , expanded inst : 2045a03fa0cf20706000, 
 rrmovq %'h4, %'h5
+valA: 18446744073709552112
+valB: $d                 496
 Fetch : from Pc                  518 , expanded inst : a0cf2070600060006000, 
 push %'hc
 
@@ -252,6 +288,8 @@ cycle         34
 Execute.
 Decode : from Pc                  516 , expanded inst : a03fa0cf207060006000, 
 push %'h3
+valA: 18446744073709551616
+valB: $d18446744073709552104
 Fetch : from Pc                  520 , expanded inst : 20706000600060006060, 
 rrmovq %'h7, %'h0
 
@@ -267,6 +305,8 @@ On  4, writes                  488   (wrE)
 Execute.
 Decode : from Pc                  518 , expanded inst : a0cf2070600060006000, 
 push %'hc
+valA: 18446744073709551616
+valB: $d18446744073709552104
 Fetch : from Pc                  522 , expanded inst : 60006000600060602003, 
 addq %'h0, %'h0
 Stat update
@@ -282,6 +322,8 @@ On  5, writes                  496   (wrE)
 Execute.
 Decode : from Pc                  520 , expanded inst : 20706000600060006060, 
 rrmovq %'h7, %'h0
+valA: 18446744073709551631
+valB: $d                 488
 Fetch : from Pc                  524 , expanded inst : 600060006060200330f1, 
 addq %'h0, %'h0
 Stat update
@@ -298,6 +340,8 @@ On  4, writes                  480   (wrE)
 Execute.
 Decode : from Pc                  522 , expanded inst : 60006000600060602003, 
 addq %'h0, %'h0
+valA: 18446744073709551616
+valB: $d18446744073709551616
 Fetch : from Pc                  526 , expanded inst : 60006060200330f10800, 
 addq %'h0, %'h0
 Stat update
@@ -314,6 +358,8 @@ On  4, writes                  480   (wrE)
 Execute.
 Decode : from Pc                  524 , expanded inst : 600060006060200330f1, 
 addq %'h0, %'h0
+valA: 18446744073709551631
+valB: $d18446744073709551631
 Fetch : from Pc                  528 , expanded inst : 6060200330f108000000, 
 addq %'h6, %'h0
 Stat update
@@ -329,6 +375,8 @@ On  0, writes                   15   (wrE)
 Execute.
 Decode : from Pc                  526 , expanded inst : 60006060200330f10800, 
 addq %'h0, %'h0
+valA: 18446744073709551616
+valB: $d18446744073709551616
 Fetch : from Pc                  530 , expanded inst : 200330f1080000000000, 
 rrmovq %'h0, %'h3
 Stat update
@@ -344,6 +392,8 @@ On  0, writes                    0   (wrE)
 Execute.
 Decode : from Pc                  528 , expanded inst : 6060200330f108000000, 
 addq %'h6, %'h0
+valA: 18446744073709551680
+valB: $d18446744073709551646
 Fetch : from Pc                  532 , expanded inst : 30f10800000000000000, 
 irmovq $'h0000000000000008,  %'h1
 Stat update
@@ -359,6 +409,8 @@ On  0, writes                   30   (wrE)
 Execute.
 Decode : from Pc                  530 , expanded inst : 200330f1080000000000, 
 rrmovq %'h0, %'h3
+valA: 18446744073709551616
+valB: $d                 480
 Fetch : from Pc                  542 , expanded inst : 61132031616171940200, 
 subq %'h1, %'h3
 Stat update
@@ -374,6 +426,8 @@ On  0, writes                    0   (wrE)
 Execute.
 Decode : from Pc                  532 , expanded inst : 30f10800000000000000, 
 irmovq $'h0000000000000008,  %'h1
+valA: 12297829382473034410
+valB: $d                 480
 Fetch : from Pc                  544 , expanded inst : 20316161719402000000, 
 rrmovq %'h3, %'h1
 Stat update
@@ -389,6 +443,8 @@ On  0, writes                   94   (wrE)
 Execute.
 Decode : from Pc                  542 , expanded inst : 61132031616171940200, 
 subq %'h1, %'h3
+valA: 18446744073709551616
+valB: $d18446744073709551616
 Fetch : from Pc                  546 , expanded inst : 61617194020000000000, 
 subq %'h6, %'h1
 Stat update
@@ -404,6 +460,8 @@ On  3, writes                    0   (wrE)
 Execute.
 Decode : from Pc                  544 , expanded inst : 20316161719402000000, 
 rrmovq %'h3, %'h1
+valA: 18446744073709551616
+valB: $d                 480
 Fetch : from Pc                  548 , expanded inst : 71940200000000000030, 
 jle $'h0000000000000294
 Stat update
@@ -419,6 +477,8 @@ On  1, writes                    8   (wrE)
 Execute.
 Decode : from Pc                  546 , expanded inst : 61617194020000000000, 
 subq %'h6, %'h1
+valA: 18446744073709551680
+valB: $d18446744073709551624
 Fetch : from Pc                  557 , expanded inst : 30f10800000000000000, 
 irmovq $'h0000000000000008,  %'h1
 Stat update
@@ -434,6 +494,8 @@ On  3, writes                    0   (wrE)
 Execute.
 Decode : from Pc                  548 , expanded inst : 71940200000000000030, 
 jle $'h0000000000000294
+valA:                    0
+valB: $d                 480
 Fetch : from Pc                  567 , expanded inst : 206250a2000000000000, 
 rrmovq %'h6, %'h2
 Stat update
@@ -449,6 +511,8 @@ On  1, writes                    0   (wrE)
 Execute.
 Decode : from Pc                  557 , expanded inst : 30f10800000000000000, 
 irmovq $'h0000000000000008,  %'h1
+valA: 12297829382473034410
+valB: $d                 480
 Fetch : from Pc                  569 , expanded inst : 50a20000000000000000, 
 mrmovq 'h0000000000000000(%'h2), %'ha
 Stat update
@@ -464,6 +528,8 @@ On  1, writes 18446744073709551560   (wrE)
 Execute.
 Decode : from Pc                  567 , expanded inst : 206250a2000000000000, 
 rrmovq %'h6, %'h2
+valA: 18446744073709551680
+valB: $d                 480
 Fetch : from Pc                  579 , expanded inst : 50b20800000000000000, 
 mrmovq 'h0000000000000008(%'h2), %'hb
 Stat update
@@ -478,6 +544,8 @@ Cycle                   64 ----------------------------------------------------
 cycle         64
 Decode : from Pc                  569 , expanded inst : 50a20000000000000000, 
 mrmovq 'h0000000000000000(%'h2), %'ha
+valA:                    0
+valB: $d18446744073709551616
 Fetch : from Pc                  660 , expanded inst : b0cfb03f2054b05f9000, 
 pop %'hc
 Stat update
@@ -491,6 +559,8 @@ Cycle                   66 ----------------------------------------------------
 cycle         66
 Decode : from Pc                  579 , expanded inst : 50b20800000000000000, 
 mrmovq 'h0000000000000008(%'h2), %'hb
+valA:                    0
+valB: $d18446744073709551616
 Fetch : from Pc                  662 , expanded inst : b03f2054b05f90000000, 
 pop %'h3
 
@@ -503,6 +573,8 @@ Cycle                   68 ----------------------------------------------------
 cycle         68
 Decode : from Pc                  660 , expanded inst : b0cfb03f2054b05f9000, 
 pop %'hc
+valA: 18446744073709552096
+valB: $d18446744073709552096
 Fetch : from Pc                  664 , expanded inst : 2054b05f90000000aaaa, 
 rrmovq %'h5, %'h4
 
@@ -515,6 +587,8 @@ Cycle                   70 ----------------------------------------------------
 cycle         70
 Decode : from Pc                  662 , expanded inst : b03f2054b05f90000000, 
 pop %'h3
+valA: 18446744073709552096
+valB: $d18446744073709552096
 Fetch : from Pc                  666 , expanded inst : b05f90000000aaaaaaaa, 
 pop %'h5
 
@@ -528,6 +602,8 @@ cycle         72
 Execute.
 Decode : from Pc                  664 , expanded inst : 2054b05f90000000aaaa, 
 rrmovq %'h5, %'h4
+valA: 18446744073709552112
+valB: $d                 480
 Fetch : from Pc                  668 , expanded inst : 90000000aaaaaaaaaaaa, 
 ret
 
@@ -544,6 +620,8 @@ On 12, writes                    0   (wrM)
 Execute.
 Decode : from Pc                  666 , expanded inst : b05f90000000aaaaaaaa, 
 pop %'h5
+valA: 18446744073709552104
+valB: $d18446744073709552104
 Fetch : from Pc                  669 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
 Stat update
@@ -561,6 +639,8 @@ On  3, writes                    0   (wrM)
 Execute.
 Decode : from Pc                  668 , expanded inst : 90000000aaaaaaaaaaaa, 
 ret
+valA: 18446744073709552112
+valB: $d18446744073709552112
 Fetch : from Pc                  670 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt
 Stat update
@@ -576,6 +656,8 @@ On  4, writes                  496   (wrE)
 Execute.
 Decode : from Pc                  669 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
+valA:                   94
+valB: $d                 496
 Fetch : from Pc                  671 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
 halt
 Stat update
@@ -593,6 +675,8 @@ On  5, writes                  512   (wrM)
 Execute.
 Decode : from Pc                  670 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt
+valA:                   94
+valB: $d                 496
 Fetch : from Pc                  672 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
 push %'ha
 Stat update
@@ -609,6 +693,8 @@ cycle         82
 On  4, writes                  504   (wrE)
 Decode : from Pc                  671 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
 halt
+valA:                    0
+valB: $d                 504
 Fetch : from Pc                  289 , expanded inst : 30fa4000000000000000, 
 irmovq $'h0000000000000040,  %'ha
 Stat update
@@ -622,6 +708,8 @@ Cycle                   84 ----------------------------------------------------
 cycle         84
 Decode : from Pc                  672 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
 push %'ha
+valA: 18446744073709551616
+valB: $d18446744073709552120
 Fetch : from Pc                  299 , expanded inst : 30f00100000000000000, 
 irmovq $'h0000000000000001,  %'h0
 
@@ -634,6 +722,8 @@ Cycle                   86 ----------------------------------------------------
 cycle         86
 Decode : from Pc                  289 , expanded inst : 30fa4000000000000000, 
 irmovq $'h0000000000000040,  %'ha
+valA: 12297829382473034410
+valB: $d                 504
 Fetch : from Pc                  309 , expanded inst : 30fb0800000000000000, 
 irmovq $'h0000000000000008,  %'hb
 
@@ -646,6 +736,8 @@ Cycle                   88 ----------------------------------------------------
 cycle         88
 Decode : from Pc                  299 , expanded inst : 30f00100000000000000, 
 irmovq $'h0000000000000001,  %'h0
+valA: 12297829382473034410
+valB: $d                 504
 Fetch : from Pc                  319 , expanded inst : 30f30500000000000000, 
 irmovq $'h0000000000000005,  %'h3
 
@@ -659,6 +751,8 @@ cycle         90
 Execute.
 Decode : from Pc                  309 , expanded inst : 30fb0800000000000000, 
 irmovq $'h0000000000000008,  %'hb
+valA: 12297829382473034410
+valB: $d                 504
 Fetch : from Pc                  329 , expanded inst : 50ca0000000000000000, 
 mrmovq 'h0000000000000000(%'ha), %'hc
 
@@ -673,6 +767,8 @@ On 10, writes                   64   (wrE)
 Execute.
 Decode : from Pc                  319 , expanded inst : 30f30500000000000000, 
 irmovq $'h0000000000000005,  %'h3
+valA: 12297829382473034410
+valB: $d                 504
 Fetch : from Pc                  339 , expanded inst : 50da0800000000000000, 
 mrmovq 'h0000000000000008(%'ha), %'hd
 Stat update
@@ -688,6 +784,8 @@ On  0, writes                    1   (wrE)
 Execute.
 Decode : from Pc                  329 , expanded inst : 50ca0000000000000000, 
 mrmovq 'h0000000000000000(%'ha), %'hc
+valA:                    0
+valB: $d18446744073709551680
 Fetch : from Pc                  349 , expanded inst : 61dc767f010000000000, 
 subq %'hd, %'hc
 Stat update
@@ -703,6 +801,8 @@ On 11, writes                    8   (wrE)
 Execute.
 Decode : from Pc                  339 , expanded inst : 50da0800000000000000, 
 mrmovq 'h0000000000000008(%'ha), %'hd
+valA:                    0
+valB: $d18446744073709551680
 Fetch : from Pc                  351 , expanded inst : 767f0100000000000060, 
 jg $'h000000000000017f
 Stat update
@@ -718,6 +818,8 @@ On  3, writes                    5   (wrE)
 Execute.
 Decode : from Pc                  349 , expanded inst : 61dc767f010000000000, 
 subq %'hd, %'hc
+valA: 18446744073709551616
+valB: $d18446744073709551616
 Fetch : from Pc                  360 , expanded inst : 60ba6103764901000000, 
 addq %'hb, %'ha
 Stat update
@@ -734,6 +836,8 @@ On 12, writes                   15   (wrM)
 Execute.
 Decode : from Pc                  351 , expanded inst : 767f0100000000000060, 
 jg $'h000000000000017f
+valA:                   15
+valB: $d                 504
 Fetch : from Pc                  362 , expanded inst : 61037649010000000000, 
 subq %'h0, %'h3
 Stat update
@@ -750,6 +854,8 @@ On 13, writes                   14   (wrM)
 Execute.
 Decode : from Pc                  360 , expanded inst : 60ba6103764901000000, 
 addq %'hb, %'ha
+valA: 18446744073709551624
+valB: $d18446744073709551680
 Fetch : from Pc                  364 , expanded inst : 76490100000000000030, 
 jg $'h0000000000000149
 Stat update
@@ -761,10 +867,12 @@ cycle        103
 Cycle                  104 ----------------------------------------------------
 
 cycle        104
-On 12, writes                    0   (wrE)
+On 12, writes 18446744073709551602   (wrE)
 Execute.
 Decode : from Pc                  362 , expanded inst : 61037649010000000000, 
 subq %'h0, %'h3
+valA: 18446744073709551617
+valB: $d18446744073709551621
 Fetch : from Pc                  373 , expanded inst : 30f00000000000000000, 
 irmovq $'h0000000000000000,  %'h0
 Stat update
@@ -779,6 +887,8 @@ cycle        106
 Execute.
 Decode : from Pc                  364 , expanded inst : 76490100000000000030, 
 jg $'h0000000000000149
+valA:                  504
+valB: $d                 504
 Fetch : from Pc                  383 , expanded inst : c00e00000000000000aa, 
 mtc0 %'h0, %'he
 Stat update
@@ -794,6 +904,8 @@ On 10, writes                   72   (wrE)
 Execute.
 Decode : from Pc                  373 , expanded inst : 30f00000000000000000, 
 irmovq $'h0000000000000000,  %'h0
+valA: 12297829382473034410
+valB: $d                 504
 Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
 halt
 Stat update
@@ -809,6 +921,8 @@ On  3, writes                    4   (wrE)
 Execute.
 Decode : from Pc                  383 , expanded inst : c00e00000000000000aa, 
 mtc0 %'h0, %'he
+valA: 18446744073709551617
+valB: $d                 504
 Fetch : from Pc                  386 , expanded inst : 000000000000aaaaaaaa, 
 halt
 Stat update
@@ -823,6 +937,8 @@ Cycle                  112 ----------------------------------------------------
 cycle        112
 Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
 halt
+valA:                    1
+valB: $d                 504
 Fetch : from Pc                  329 , expanded inst : 50ca0000000000000000, 
 mrmovq 'h0000000000000000(%'ha), %'hc
 Stat update
@@ -836,6 +952,8 @@ Cycle                  114 ----------------------------------------------------
 cycle        114
 Decode : from Pc                  386 , expanded inst : 000000000000aaaaaaaa, 
 halt
+valA:                    1
+valB: $d                 504
 Fetch : from Pc                  339 , expanded inst : 50da0800000000000000, 
 mrmovq 'h0000000000000008(%'ha), %'hd
 
@@ -848,6 +966,8 @@ Cycle                  116 ----------------------------------------------------
 cycle        116
 Decode : from Pc                  329 , expanded inst : 50ca0000000000000000, 
 mrmovq 'h0000000000000000(%'ha), %'hc
+valA: 18446744073709551602
+valB: $d18446744073709551688
 Fetch : from Pc                  349 , expanded inst : 61dc767f010000000000, 
 subq %'hd, %'hc
 
@@ -860,6 +980,8 @@ Cycle                  118 ----------------------------------------------------
 cycle        118
 Decode : from Pc                  339 , expanded inst : 50da0800000000000000, 
 mrmovq 'h0000000000000008(%'ha), %'hd
+valA:                   14
+valB: $d18446744073709551688
 Fetch : from Pc                  351 , expanded inst : 767f0100000000000060, 
 jg $'h000000000000017f
 
@@ -873,6 +995,8 @@ cycle        120
 Execute.
 Decode : from Pc                  349 , expanded inst : 61dc767f010000000000, 
 subq %'hd, %'hc
+valA: 18446744073709551630
+valB: $d36893488147419103218
 Fetch : from Pc                  360 , expanded inst : 60ba6103764901000000, 
 addq %'hb, %'ha
 
@@ -888,6 +1012,8 @@ On 12, writes                   14   (wrM)
 Execute.
 Decode : from Pc                  351 , expanded inst : 767f0100000000000060, 
 jg $'h000000000000017f
+valA:                   15
+valB: $d                 504
 Fetch : from Pc                  362 , expanded inst : 61037649010000000000, 
 subq %'h0, %'h3
 Stat update
@@ -904,6 +1030,8 @@ On 13, writes                   13   (wrM)
 Execute.
 Decode : from Pc                  360 , expanded inst : 60ba6103764901000000, 
 addq %'hb, %'ha
+valA: 18446744073709551624
+valB: $d18446744073709551688
 Fetch : from Pc                  364 , expanded inst : 76490100000000000030, 
 jg $'h0000000000000149
 Stat update
@@ -915,10 +1043,12 @@ cycle        125
 Cycle                  126 ----------------------------------------------------
 
 cycle        126
-On 12, writes 18446744073709551602   (wrE)
+On 12, writes 18446744073709551589   (wrE)
 Execute.
 Decode : from Pc                  362 , expanded inst : 61037649010000000000, 
 subq %'h0, %'h3
+valA: 18446744073709551617
+valB: $d18446744073709551620
 Fetch : from Pc                  373 , expanded inst : 30f00000000000000000, 
 irmovq $'h0000000000000000,  %'h0
 Stat update
@@ -933,6 +1063,8 @@ cycle        128
 Execute.
 Decode : from Pc                  364 , expanded inst : 76490100000000000030, 
 jg $'h0000000000000149
+valA:                  504
+valB: $d                 504
 Fetch : from Pc                  383 , expanded inst : c00e00000000000000aa, 
 mtc0 %'h0, %'he
 Stat update
@@ -948,6 +1080,8 @@ On 10, writes                   80   (wrE)
 Execute.
 Decode : from Pc                  373 , expanded inst : 30f00000000000000000, 
 irmovq $'h0000000000000000,  %'h0
+valA: 12297829382473034410
+valB: $d                 504
 Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
 halt
 Stat update
@@ -963,6 +1097,8 @@ On  3, writes                    3   (wrE)
 Execute.
 Decode : from Pc                  383 , expanded inst : c00e00000000000000aa, 
 mtc0 %'h0, %'he
+valA: 18446744073709551617
+valB: $d                 504
 Fetch : from Pc                  386 , expanded inst : 000000000000aaaaaaaa, 
 halt
 Stat update
@@ -977,6 +1113,8 @@ Cycle                  134 ----------------------------------------------------
 cycle        134
 Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
 halt
+valA:                    1
+valB: $d                 504
 Fetch : from Pc                  329 , expanded inst : 50ca0000000000000000, 
 mrmovq 'h0000000000000000(%'ha), %'hc
 Stat update
@@ -990,6 +1128,8 @@ Cycle                  136 ----------------------------------------------------
 cycle        136
 Decode : from Pc                  386 , expanded inst : 000000000000aaaaaaaa, 
 halt
+valA:                    1
+valB: $d                 504
 Fetch : from Pc                  339 , expanded inst : 50da0800000000000000, 
 mrmovq 'h0000000000000008(%'ha), %'hd
 
@@ -1002,6 +1142,8 @@ Cycle                  138 ----------------------------------------------------
 cycle        138
 Decode : from Pc                  329 , expanded inst : 50ca0000000000000000, 
 mrmovq 'h0000000000000000(%'ha), %'hc
+valA: 18446744073709551589
+valB: $d18446744073709551696
 Fetch : from Pc                  349 , expanded inst : 61dc767f010000000000, 
 subq %'hd, %'hc
 
@@ -1014,6 +1156,8 @@ Cycle                  140 ----------------------------------------------------
 cycle        140
 Decode : from Pc                  339 , expanded inst : 50da0800000000000000, 
 mrmovq 'h0000000000000008(%'ha), %'hd
+valA:                   13
+valB: $d18446744073709551696
 Fetch : from Pc                  351 , expanded inst : 767f0100000000000060, 
 jg $'h000000000000017f
 
@@ -1027,6 +1171,8 @@ cycle        142
 Execute.
 Decode : from Pc                  349 , expanded inst : 61dc767f010000000000, 
 subq %'hd, %'hc
+valA: 18446744073709551629
+valB: $d36893488147419103205
 Fetch : from Pc                  360 , expanded inst : 60ba6103764901000000, 
 addq %'hb, %'ha
 
@@ -1042,6 +1188,8 @@ On 12, writes                   13   (wrM)
 Execute.
 Decode : from Pc                  351 , expanded inst : 767f0100000000000060, 
 jg $'h000000000000017f
+valA:                   15
+valB: $d                 504
 Fetch : from Pc                  362 , expanded inst : 61037649010000000000, 
 subq %'h0, %'h3
 Stat update
@@ -1058,6 +1206,8 @@ On 13, writes                   12   (wrM)
 Execute.
 Decode : from Pc                  360 , expanded inst : 60ba6103764901000000, 
 addq %'hb, %'ha
+valA: 18446744073709551624
+valB: $d18446744073709551696
 Fetch : from Pc                  364 , expanded inst : 76490100000000000030, 
 jg $'h0000000000000149
 Stat update
@@ -1069,10 +1219,12 @@ cycle        147
 Cycle                  148 ----------------------------------------------------
 
 cycle        148
-On 12, writes 18446744073709551589   (wrE)
+On 12, writes 18446744073709551577   (wrE)
 Execute.
 Decode : from Pc                  362 , expanded inst : 61037649010000000000, 
 subq %'h0, %'h3
+valA: 18446744073709551617
+valB: $d18446744073709551619
 Fetch : from Pc                  373 , expanded inst : 30f00000000000000000, 
 irmovq $'h0000000000000000,  %'h0
 Stat update
@@ -1087,6 +1239,8 @@ cycle        150
 Execute.
 Decode : from Pc                  364 , expanded inst : 76490100000000000030, 
 jg $'h0000000000000149
+valA:                  504
+valB: $d                 504
 Fetch : from Pc                  383 , expanded inst : c00e00000000000000aa, 
 mtc0 %'h0, %'he
 Stat update
@@ -1102,6 +1256,8 @@ On 10, writes                   88   (wrE)
 Execute.
 Decode : from Pc                  373 , expanded inst : 30f00000000000000000, 
 irmovq $'h0000000000000000,  %'h0
+valA: 12297829382473034410
+valB: $d                 504
 Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
 halt
 Stat update
@@ -1117,6 +1273,8 @@ On  3, writes                    2   (wrE)
 Execute.
 Decode : from Pc                  383 , expanded inst : c00e00000000000000aa, 
 mtc0 %'h0, %'he
+valA: 18446744073709551617
+valB: $d                 504
 Fetch : from Pc                  386 , expanded inst : 000000000000aaaaaaaa, 
 halt
 Stat update
@@ -1131,6 +1289,8 @@ Cycle                  156 ----------------------------------------------------
 cycle        156
 Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
 halt
+valA:                    1
+valB: $d                 504
 Fetch : from Pc                  329 , expanded inst : 50ca0000000000000000, 
 mrmovq 'h0000000000000000(%'ha), %'hc
 Stat update
@@ -1144,6 +1304,8 @@ Cycle                  158 ----------------------------------------------------
 cycle        158
 Decode : from Pc                  386 , expanded inst : 000000000000aaaaaaaa, 
 halt
+valA:                    1
+valB: $d                 504
 Fetch : from Pc                  339 , expanded inst : 50da0800000000000000, 
 mrmovq 'h0000000000000008(%'ha), %'hd
 
@@ -1156,6 +1318,8 @@ Cycle                  160 ----------------------------------------------------
 cycle        160
 Decode : from Pc                  329 , expanded inst : 50ca0000000000000000, 
 mrmovq 'h0000000000000000(%'ha), %'hc
+valA: 18446744073709551577
+valB: $d18446744073709551704
 Fetch : from Pc                  349 , expanded inst : 61dc767f010000000000, 
 subq %'hd, %'hc
 
@@ -1168,6 +1332,8 @@ Cycle                  162 ----------------------------------------------------
 cycle        162
 Decode : from Pc                  339 , expanded inst : 50da0800000000000000, 
 mrmovq 'h0000000000000008(%'ha), %'hd
+valA:                   12
+valB: $d18446744073709551704
 Fetch : from Pc                  351 , expanded inst : 767f0100000000000060, 
 jg $'h000000000000017f
 
@@ -1181,6 +1347,8 @@ cycle        164
 Execute.
 Decode : from Pc                  349 , expanded inst : 61dc767f010000000000, 
 subq %'hd, %'hc
+valA: 18446744073709551628
+valB: $d36893488147419103193
 Fetch : from Pc                  360 , expanded inst : 60ba6103764901000000, 
 addq %'hb, %'ha
 
@@ -1196,6 +1364,8 @@ On 12, writes                   12   (wrM)
 Execute.
 Decode : from Pc                  351 , expanded inst : 767f0100000000000060, 
 jg $'h000000000000017f
+valA:                   15
+valB: $d                 504
 Fetch : from Pc                  362 , expanded inst : 61037649010000000000, 
 subq %'h0, %'h3
 Stat update
@@ -1212,6 +1382,8 @@ On 13, writes                   11   (wrM)
 Execute.
 Decode : from Pc                  360 , expanded inst : 60ba6103764901000000, 
 addq %'hb, %'ha
+valA: 18446744073709551624
+valB: $d18446744073709551704
 Fetch : from Pc                  364 , expanded inst : 76490100000000000030, 
 jg $'h0000000000000149
 Stat update
@@ -1223,10 +1395,12 @@ cycle        169
 Cycle                  170 ----------------------------------------------------
 
 cycle        170
-On 12, writes 18446744073709551577   (wrE)
+On 12, writes 18446744073709551566   (wrE)
 Execute.
 Decode : from Pc                  362 , expanded inst : 61037649010000000000, 
 subq %'h0, %'h3
+valA: 18446744073709551617
+valB: $d18446744073709551618
 Fetch : from Pc                  373 , expanded inst : 30f00000000000000000, 
 irmovq $'h0000000000000000,  %'h0
 Stat update
@@ -1241,6 +1415,8 @@ cycle        172
 Execute.
 Decode : from Pc                  364 , expanded inst : 76490100000000000030, 
 jg $'h0000000000000149
+valA:                  504
+valB: $d                 504
 Fetch : from Pc                  383 , expanded inst : c00e00000000000000aa, 
 mtc0 %'h0, %'he
 Stat update
@@ -1256,6 +1432,8 @@ On 10, writes                   96   (wrE)
 Execute.
 Decode : from Pc                  373 , expanded inst : 30f00000000000000000, 
 irmovq $'h0000000000000000,  %'h0
+valA: 12297829382473034410
+valB: $d                 504
 Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
 halt
 Stat update
@@ -1271,6 +1449,8 @@ On  3, writes                    1   (wrE)
 Execute.
 Decode : from Pc                  383 , expanded inst : c00e00000000000000aa, 
 mtc0 %'h0, %'he
+valA: 18446744073709551617
+valB: $d                 504
 Fetch : from Pc                  386 , expanded inst : 000000000000aaaaaaaa, 
 halt
 Stat update
@@ -1285,6 +1465,8 @@ Cycle                  178 ----------------------------------------------------
 cycle        178
 Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
 halt
+valA:                    1
+valB: $d                 504
 Fetch : from Pc                  329 , expanded inst : 50ca0000000000000000, 
 mrmovq 'h0000000000000000(%'ha), %'hc
 Stat update
@@ -1298,6 +1480,8 @@ Cycle                  180 ----------------------------------------------------
 cycle        180
 Decode : from Pc                  386 , expanded inst : 000000000000aaaaaaaa, 
 halt
+valA:                    1
+valB: $d                 504
 Fetch : from Pc                  339 , expanded inst : 50da0800000000000000, 
 mrmovq 'h0000000000000008(%'ha), %'hd
 
@@ -1310,6 +1494,8 @@ Cycle                  182 ----------------------------------------------------
 cycle        182
 Decode : from Pc                  329 , expanded inst : 50ca0000000000000000, 
 mrmovq 'h0000000000000000(%'ha), %'hc
+valA: 18446744073709551566
+valB: $d18446744073709551712
 Fetch : from Pc                  349 , expanded inst : 61dc767f010000000000, 
 subq %'hd, %'hc
 
@@ -1322,6 +1508,8 @@ Cycle                  184 ----------------------------------------------------
 cycle        184
 Decode : from Pc                  339 , expanded inst : 50da0800000000000000, 
 mrmovq 'h0000000000000008(%'ha), %'hd
+valA:                   11
+valB: $d18446744073709551712
 Fetch : from Pc                  351 , expanded inst : 767f0100000000000060, 
 jg $'h000000000000017f
 
@@ -1335,6 +1523,8 @@ cycle        186
 Execute.
 Decode : from Pc                  349 , expanded inst : 61dc767f010000000000, 
 subq %'hd, %'hc
+valA: 18446744073709551627
+valB: $d36893488147419103182
 Fetch : from Pc                  360 , expanded inst : 60ba6103764901000000, 
 addq %'hb, %'ha
 
@@ -1350,6 +1540,8 @@ On 12, writes                   11   (wrM)
 Execute.
 Decode : from Pc                  351 , expanded inst : 767f0100000000000060, 
 jg $'h000000000000017f
+valA:                   15
+valB: $d                 504
 Fetch : from Pc                  362 , expanded inst : 61037649010000000000, 
 subq %'h0, %'h3
 Stat update
@@ -1366,6 +1558,8 @@ On 13, writes                   10   (wrM)
 Execute.
 Decode : from Pc                  360 , expanded inst : 60ba6103764901000000, 
 addq %'hb, %'ha
+valA: 18446744073709551624
+valB: $d18446744073709551712
 Fetch : from Pc                  364 , expanded inst : 76490100000000000030, 
 jg $'h0000000000000149
 Stat update
@@ -1377,10 +1571,12 @@ cycle        191
 Cycle                  192 ----------------------------------------------------
 
 cycle        192
-On 12, writes 18446744073709551566   (wrE)
+On 12, writes 18446744073709551556   (wrE)
 Execute.
 Decode : from Pc                  362 , expanded inst : 61037649010000000000, 
 subq %'h0, %'h3
+valA: 18446744073709551617
+valB: $d18446744073709551617
 Fetch : from Pc                  373 , expanded inst : 30f00000000000000000, 
 irmovq $'h0000000000000000,  %'h0
 Stat update
@@ -1395,6 +1591,8 @@ cycle        194
 Execute.
 Decode : from Pc                  364 , expanded inst : 76490100000000000030, 
 jg $'h0000000000000149
+valA:                  504
+valB: $d                 504
 Fetch : from Pc                  383 , expanded inst : c00e00000000000000aa, 
 mtc0 %'h0, %'he
 Stat update
@@ -1410,6 +1608,8 @@ On 10, writes                  104   (wrE)
 Execute.
 Decode : from Pc                  373 , expanded inst : 30f00000000000000000, 
 irmovq $'h0000000000000000,  %'h0
+valA: 12297829382473034410
+valB: $d                 504
 Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
 halt
 Stat update
@@ -1425,6 +1625,8 @@ On  3, writes                    0   (wrE)
 Execute.
 Decode : from Pc                  383 , expanded inst : c00e00000000000000aa, 
 mtc0 %'h0, %'he
+valA: 18446744073709551617
+valB: $d                 504
 Fetch : from Pc                  386 , expanded inst : 000000000000aaaaaaaa, 
 halt
 Stat update
@@ -1439,6 +1641,8 @@ cycle        200
 Execute.
 Decode : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
 halt
+valA:                    1
+valB: $d                 504
 Fetch : from Pc                  387 , expanded inst : 0000000000aaaaaaaaaa, 
 halt
 Stat update
@@ -1454,6 +1658,8 @@ On  0, writes                    0   (wrE)
 Execute.
 Decode : from Pc                  386 , expanded inst : 000000000000aaaaaaaa, 
 halt
+valA:                    0
+valB: $d                 504
 Fetch : from Pc                  388 , expanded inst : 00000000aaaaaaaaaaaa, 
 halt
 Stat update
@@ -1469,6 +1675,8 @@ On 14, writes                    1   (wrE)
 Execute.
 Decode : from Pc                  387 , expanded inst : 0000000000aaaaaaaaaa, 
 halt
+valA:                    0
+valB: $d                 504
 Fetch : from Pc                  389 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
 Stat update

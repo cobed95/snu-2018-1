@@ -49,7 +49,9 @@ module mkProc(Proc);
 	Reg#(ProcStatus)   	stat		<- mkRegU;
 
 	Fifo#(1, Bypassed)	e2d			<- mkBypassFifo;
-	Fifo#(1, Bypassed)	m2d			<- mkBypassFifo;
+	Fifo#(1, Bypassed)	m2dMemory	<- mkBypassFifo;
+	Fifo#(1, Bypassed)	m2dReg		<- mkBypassFifo;
+	Fifo#(1, Bypassed)	m2e			<- mkBypassFifo;
 
 	Fifo#(1, Addr)       execRedirect <- mkBypassFifo;
 	Fifo#(1, ProcStatus) statRedirect <- mkBypassFifo;
@@ -110,14 +112,14 @@ module mkProc(Proc);
 					if(isValid(dInst.regA) && validRegValue(dInst.regA) == validRegValue(bypassed.rIndx))
 						dInst.valA = bypassed.data;
 					else if(isValid(dInst.regA))
-						dInst.valA = tagged Valid rf.rdA(validRegValue(dInst.regA));
+						dInst.valA = Valid(rf.rdA(validRegValue(dInst.regA)));
 					else
 						dInst.valA = Invalid;
 					
 					if(isValid(dInst.regB) && validRegValue(dInst.regB) == validRegValue(bypassed.rIndx))
 						dInst.valB = bypassed.data;                
 					else if(isValid(dInst.regB))
-						dInst.valB = tagged Valid rf.rdB(validRegValue(dInst.regB));
+						dInst.valB = Valid(rf.rdB(validRegValue(dInst.regB)));
 					else
 						dInst.valB = Invalid;
                     e2d.deq;
@@ -130,14 +132,14 @@ module mkProc(Proc);
 					if(isValid(dInst.regA) && validRegValue(dInst.regA) == validRegValue(bypassed.rIndx))
 						dInst.valA = bypassed.data;
 					else if (isValid(dInst.regA))
-						dInst.valA = tagged Valid rf.rdA(validRegValue(dInst.regA));
+						dInst.valA = Valid(rf.rdA(validRegValue(dInst.regA)));
 					else
 						dInst.valA = Invalid;
 					
 					if(isValid(dInst.regB) && validRegValue(dInst.regB) == validRegValue(bypassed.rIndx))
 						dInst.valB = bypassed.data;
 					else if (isValid(dInst.regB))
-						dInst.valB = tagged Valid rf.rdB(validRegValue(dInst.regB));
+						dInst.valB = Valid(rf.rdB(validRegValue(dInst.regB)));
 					else
 						dInst.valB = Invalid;
 					e2d.deq;
@@ -149,14 +151,14 @@ module mkProc(Proc);
 					if(isValid(dInst.regA) && validRegValue(dInst.regA) == validRegValue(bypassed.rIndx))
 						dInst.valA = bypassed.data;
 					else if (isValid(dInst.regA))
-						dInst.valA = tagged Valid rf.rdA(validRegValue(dInst.regA));
+						dInst.valA = Valid(rf.rdA(validRegValue(dInst.regA)));
 					else 
 						dInst.valA = Invalid;
 
 					if(isValid(dInst.regB) && validRegValue(dInst.regB) == validRegValue(bypassed.rIndx))
 						dInst.valB = bypassed.data;
 					else if (isValid(dInst.regB))
-						dInst.valB = tagged Valid rf.rdB(validRegValue(dInst.regB));
+						dInst.valB = Valid(rf.rdB(validRegValue(dInst.regB)));
 					else
 						dInst.valB = Invalid;
                     m2d.deq;
@@ -186,6 +188,15 @@ module mkProc(Proc);
 
         if(iEpoch == eEpoch)
 		begin
+			if(m2e.notEmpty)
+			begin
+				let bypassed = m2e.first;
+				if(isValid(dInst.regA) && validRegValue(dInst.regA) == validRegValue(bypassed.rIndx))
+					dInst.valA = bypassed.data;	
+				if(isValid(dInst.regB) && validRegValue(dInst.regB) == validRegValue(bypassed.rIndx))
+					dInst.valB = bypassed.data;
+				m2e.deq;
+			end
 			/* Execute */
 			let eInst = exec(dInst, condFlag, ppc);
 			condFlag <= eInst.condFlag;
@@ -208,7 +219,7 @@ module mkProc(Proc);
 		begin
 			let eInst = validValue(e2m.first.inst);
 			if(eInst.iType != MRmov && isValid(eInst.dstE))
-				m2d.enq(Bypassed{rIndx : eInst.dstE, data : eInst.valE});
+				m2dReg.enq(Bypassed{rIndx : eInst.dstE, data : eInst.valE});
 		    
 			/* Memory */ 
 		    let iType = eInst.iType;
@@ -224,7 +235,8 @@ module mkProc(Proc);
 				    end
                     if(iType == MRmov && isValid(eInst.dstM))
                     begin
-						m2d.enq(Bypassed{rIndx : eInst.dstM, data : eInst.valM});
+						m2dMemory.enq(Bypassed{rIndx : eInst.dstM, data : eInst.valM});
+						m2e.enq(Bypassed{rIndx : eInst.dstM, data : eInst.valM});
                     end
 			    end
 

@@ -14,6 +14,8 @@ Cycle                    1 ----------------------------------------------------
 cycle          1
 Decode : from Pc                    0 , expanded inst : 30f0ffffffffffffffff, 
 irmovq $'hffffffffffffffff,  %'h0
+valA: 12297829382473034410
+valB: $d                   0
 Fetch : from Pc                   10 , expanded inst : 63337338000000000000, 
 xorq %'h3, %'h3
 
@@ -23,6 +25,8 @@ cycle          2
 Execute.
 Decode : from Pc                   10 , expanded inst : 63337338000000000000, 
 xorq %'h3, %'h3
+valA: 18446744073709551616
+valB: $d18446744073709551616
 Fetch : from Pc                   12 , expanded inst : 733800000000000000c0, 
 je $'h0000000000000038
 
@@ -31,6 +35,8 @@ Cycle                    3 ----------------------------------------------------
 cycle          3
 Decode : from Pc                   12 , expanded inst : 733800000000000000c0, 
 je $'h0000000000000038
+valA:                    0
+valB: $d                   0
 Fetch : from Pc                   21 , expanded inst : c00e00aaaaaaaaaaaaaa, 
 mtc0 %'h0, %'he
 
@@ -41,6 +47,8 @@ On  0, writes 18446744073709551615   (wrE)
 Execute.
 Decode : from Pc                   21 , expanded inst : c00e00aaaaaaaaaaaaaa, 
 mtc0 %'h0, %'he
+valA: 36893488147419103231
+valB: $d                   0
 Fetch : from Pc                   23 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
 halt
 Stat update
@@ -58,6 +66,8 @@ On  3, writes                    0   (wrE)
 Execute.
 Decode : from Pc                   23 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
 halt
+valA:                    0
+valB: $d                   0
 Fetch : from Pc                   26 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
 push %'ha
 Stat update
@@ -72,6 +82,8 @@ Cycle                    8 ----------------------------------------------------
 cycle          8
 Decode : from Pc                   24 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
 push %'ha
+valA: 18446744073709551616
+valB: $d18446744073709551616
 Fetch : from Pc                   56 , expanded inst : 30f00000000000000000, 
 irmovq $'h0000000000000000,  %'h0
 Stat update
@@ -85,6 +97,8 @@ Cycle                   10 ----------------------------------------------------
 cycle         10
 Decode : from Pc                   26 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
 push %'ha
+valA: 18446744073709551616
+valB: $d18446744073709551616
 Fetch : from Pc                   66 , expanded inst : c00e00000000aaaaaaaa, 
 mtc0 %'h0, %'he
 
@@ -97,6 +111,8 @@ Cycle                   12 ----------------------------------------------------
 cycle         12
 Decode : from Pc                   56 , expanded inst : 30f00000000000000000, 
 irmovq $'h0000000000000000,  %'h0
+valA: 12297829382473034410
+valB: $d                   0
 Fetch : from Pc                   68 , expanded inst : 00000000aaaaaaaaaaaa, 
 halt
 
@@ -109,6 +125,8 @@ Cycle                   14 ----------------------------------------------------
 cycle         14
 Decode : from Pc                   66 , expanded inst : c00e00000000aaaaaaaa, 
 mtc0 %'h0, %'he
+valA: 36893488147419103231
+valB: $d                   0
 Fetch : from Pc                   69 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
 
@@ -122,6 +140,8 @@ cycle         16
 Execute.
 Decode : from Pc                   68 , expanded inst : 00000000aaaaaaaaaaaa, 
 halt
+valA: 18446744073709551615
+valB: $d                   0
 Fetch : from Pc                   70 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt
 
@@ -136,6 +156,8 @@ On  0, writes                    0   (wrE)
 Execute.
 Decode : from Pc                   69 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
+valA:                    0
+valB: $d                   0
 Fetch : from Pc                   71 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
 halt
 Stat update
@@ -151,6 +173,8 @@ On 14, writes 18446744073709551615   (wrE)
 Execute.
 Decode : from Pc                   70 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt
+valA:                    0
+valB: $d                   0
 Fetch : from Pc                   72 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
 push %'ha
 Stat update

@@ -14,6 +14,8 @@ Cycle                    1 ----------------------------------------------------
 cycle          1
 Decode : from Pc                    0 , expanded inst : 30f4a000000000000000, 
 irmovq $'h00000000000000a0,  %'h4
+valA: 12297829382473034410
+valB: $d                   0
 Fetch : from Pc                   10 , expanded inst : 30f5a000000000000000, 
 irmovq $'h00000000000000a0,  %'h5
 
@@ -23,6 +25,8 @@ cycle          2
 Execute.
 Decode : from Pc                   10 , expanded inst : 30f5a000000000000000, 
 irmovq $'h00000000000000a0,  %'h5
+valA: 12297829382473034410
+valB: $d                   0
 Fetch : from Pc                   20 , expanded inst : 30f0ffffffffffffffff, 
 irmovq $'hffffffffffffffff,  %'h0
 
@@ -31,6 +35,8 @@ Cycle                    3 ----------------------------------------------------
 cycle          3
 Decode : from Pc                   20 , expanded inst : 30f0ffffffffffffffff, 
 irmovq $'hffffffffffffffff,  %'h0
+valA: 12297829382473034410
+valB: $d                   0
 Fetch : from Pc                   30 , expanded inst : 805000000000000000c0, 
 call 'h0000000000000050
 
@@ -41,6 +47,8 @@ On  4, writes                  160   (wrE)
 Execute.
 Decode : from Pc                   30 , expanded inst : 805000000000000000c0, 
 call 'h0000000000000050
+valA:                  160
+valB: $d18446744073709551776
 Fetch : from Pc                   39 , expanded inst : c00e00000000000000aa, 
 mtc0 %'h0, %'he
 Stat update
@@ -58,6 +66,8 @@ On  5, writes                  160   (wrE)
 Execute.
 Decode : from Pc                   39 , expanded inst : c00e00000000000000aa, 
 mtc0 %'h0, %'he
+valA: 36893488147419103231
+valB: $d                 160
 Fetch : from Pc                   42 , expanded inst : 000000000000aaaaaaaa, 
 halt
 Stat update
@@ -73,6 +83,8 @@ On  0, writes 18446744073709551615   (wrE)
 Execute.
 Decode : from Pc                   41 , expanded inst : 00000000000000aaaaaa, 
 halt
+valA: 18446744073709551615
+valB: $d                 160
 Fetch : from Pc                   43 , expanded inst : 0000000000aaaaaaaaaa, 
 halt
 Stat update
@@ -89,6 +101,8 @@ cycle         10
 On  4, writes                  152   (wrE)
 Decode : from Pc                   42 , expanded inst : 000000000000aaaaaaaa, 
 halt
+valA: 18446744073709551615
+valB: $d                 152
 Fetch : from Pc                   80 , expanded inst : 30f00000000000000000, 
 irmovq $'h0000000000000000,  %'h0
 Stat update
@@ -102,6 +116,8 @@ Cycle                   12 ----------------------------------------------------
 cycle         12
 Decode : from Pc                   43 , expanded inst : 0000000000aaaaaaaaaa, 
 halt
+valA: 18446744073709551615
+valB: $d                 152
 Fetch : from Pc                   90 , expanded inst : 9030f0ffffffffffffff, 
 ret
 
@@ -114,6 +130,8 @@ Cycle                   14 ----------------------------------------------------
 cycle         14
 Decode : from Pc                   80 , expanded inst : 30f00000000000000000, 
 irmovq $'h0000000000000000,  %'h0
+valA: 12297829382473034410
+valB: $d                 152
 Fetch : from Pc                   91 , expanded inst : 30f0ffffffffffffffff, 
 irmovq $'hffffffffffffffff,  %'h0
 
@@ -126,6 +144,8 @@ Cycle                   16 ----------------------------------------------------
 cycle         16
 Decode : from Pc                   90 , expanded inst : 9030f0ffffffffffffff, 
 ret
+valA: 18446744073709551768
+valB: $d18446744073709551768
 Fetch : from Pc                  101 , expanded inst : c00e00aaaaaaaaaaaaaa, 
 mtc0 %'h0, %'he
 
@@ -139,6 +159,8 @@ cycle         18
 Execute.
 Decode : from Pc                   91 , expanded inst : 30f0ffffffffffffffff, 
 irmovq $'hffffffffffffffff,  %'h0
+valA: 12297829382473034410
+valB: $d                 152
 Fetch : from Pc                  103 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
 halt
 
@@ -153,6 +175,8 @@ On  0, writes                    0   (wrE)
 Execute.
 Decode : from Pc                  101 , expanded inst : c00e00aaaaaaaaaaaaaa, 
 mtc0 %'h0, %'he
+valA: 18446744073709551616
+valB: $d                 152
 Fetch : from Pc                  104 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
 push %'ha
 Stat update
@@ -169,6 +193,8 @@ cycle         22
 On  4, writes                  160   (wrE)
 Decode : from Pc                  103 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
 halt
+valA:                    0
+valB: $d                 160
 Fetch : from Pc                   39 , expanded inst : c00e00000000000000aa, 
 mtc0 %'h0, %'he
 Stat update
@@ -182,6 +208,8 @@ Cycle                   24 ----------------------------------------------------
 cycle         24
 Decode : from Pc                  104 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
 push %'ha
+valA: 18446744073709551616
+valB: $d18446744073709551776
 Fetch : from Pc                   41 , expanded inst : 00000000000000aaaaaa, 
 halt
 
@@ -194,6 +222,8 @@ Cycle                   26 ----------------------------------------------------
 cycle         26
 Decode : from Pc                   39 , expanded inst : c00e00000000000000aa, 
 mtc0 %'h0, %'he
+valA: 18446744073709551616
+valB: $d                 160
 Fetch : from Pc                   42 , expanded inst : 000000000000aaaaaaaa, 
 halt
 
@@ -206,6 +236,8 @@ Cycle                   28 ----------------------------------------------------
 cycle         28
 Decode : from Pc                   41 , expanded inst : 00000000000000aaaaaa, 
 halt
+valA:                    0
+valB: $d                 160
 Fetch : from Pc                   43 , expanded inst : 0000000000aaaaaaaaaa, 
 halt
 
@@ -219,6 +251,8 @@ cycle         30
 Execute.
 Decode : from Pc                   42 , expanded inst : 000000000000aaaaaaaa, 
 halt
+valA:                    0
+valB: $d                 160
 Fetch : from Pc                   44 , expanded inst : 00000000aaaaaaaaaaaa, 
 halt
 
@@ -233,6 +267,8 @@ On 14, writes                    0   (wrE)
 Execute.
 Decode : from Pc                   43 , expanded inst : 0000000000aaaaaaaaaa, 
 halt
+valA:                    0
+valB: $d                 160
 Fetch : from Pc                   45 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
 Stat update

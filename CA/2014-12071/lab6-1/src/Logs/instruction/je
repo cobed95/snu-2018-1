@@ -56,25 +56,24 @@ Cycle                    6 ----------------------------------------------------
 cycle          6
 On  3, writes                    0   (wrE)
 Execute.
+mispredicted, redirect                   56 
 Decode : from Pc                   23 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
 halt
-Fetch : from Pc                   26 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
-push %'ha
+Fetch : from Pc                   56 , expanded inst : 30f00000000000000000, 
+irmovq $'h0000000000000000,  %'h0
 Stat update
 
 Cycle                    7 ----------------------------------------------------
 
 cycle          7
-mispredicted, redirect                   56 
 
 Cycle                    8 ----------------------------------------------------
 
 cycle          8
 Decode : from Pc                   24 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
 push %'ha
-Fetch : from Pc                   56 , expanded inst : 30f00000000000000000, 
-irmovq $'h0000000000000000,  %'h0
-Stat update
+Fetch : from Pc                   66 , expanded inst : c00e00000000aaaaaaaa, 
+mtc0 %'h0, %'he
 
 Cycle                    9 ----------------------------------------------------
 
@@ -83,6 +82,10 @@ cycle          9
 Cycle                   10 ----------------------------------------------------
 
 cycle         10
+Decode : from Pc                   56 , expanded inst : 30f00000000000000000, 
+irmovq $'h0000000000000000,  %'h0
+Fetch : from Pc                   68 , expanded inst : 00000000aaaaaaaaaaaa, 
+halt
 
 Cycle                   11 ----------------------------------------------------
 
@@ -99,63 +102,40 @@ cycle         13
 Cycle                   14 ----------------------------------------------------
 
 cycle         14
-Decode : from Pc                   26 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
-push %'ha
-Fetch : from Pc                   66 , expanded inst : c00e00000000aaaaaaaa, 
-mtc0 %'h0, %'he
 
 Cycle                   15 ----------------------------------------------------
 
 cycle         15
-Decode : from Pc                   56 , expanded inst : 30f00000000000000000, 
-irmovq $'h0000000000000000,  %'h0
-Fetch : from Pc                   68 , expanded inst : 00000000aaaaaaaaaaaa, 
-halt
 
 Cycle                   16 ----------------------------------------------------
 
 cycle         16
-
-Cycle                   17 ----------------------------------------------------
-
-cycle         17
-Execute.
-
-Cycle                   18 ----------------------------------------------------
-
-cycle         18
-
-Cycle                   19 ----------------------------------------------------
-
-cycle         19
-On  0, writes                    0   (wrE)
 Decode : from Pc                   66 , expanded inst : c00e00000000aaaaaaaa, 
 mtc0 %'h0, %'he
 Fetch : from Pc                   69 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
-Stat update
 
-Cycle                   20 ----------------------------------------------------
+Cycle                   17 ----------------------------------------------------
 
-cycle         20
+cycle         17
 Execute.
 Decode : from Pc                   68 , expanded inst : 00000000aaaaaaaaaaaa, 
 halt
 Fetch : from Pc                   70 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt
 
-Cycle                   21 ----------------------------------------------------
+Cycle                   18 ----------------------------------------------------
 
-cycle         21
+cycle         18
 Decode : from Pc                   69 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
 Fetch : from Pc                   71 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
 halt
 
-Cycle                   22 ----------------------------------------------------
+Cycle                   19 ----------------------------------------------------
 
-cycle         22
-On 14, writes                    0   (wrE)
+cycle         19
+On 14, writes 18446744073709551615   (wrE)
 Execute.
 Decode : from Pc                   70 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt
@@ -163,4 +143,4 @@ Fetch : from Pc                   72 , expanded inst : aaaaaaaaaaaaaaaaaaaa,
 push %'ha
 Stat update
 
-Cycle                   23 ----------------------------------------------------
+Cycle                   20 ----------------------------------------------------

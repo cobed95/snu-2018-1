@@ -12,6 +12,8 @@ Cycle                    1 ----------------------------------------------------
 cycle          1
 Decode : from Pc                    0 , expanded inst : 30f60300000000000000, 
 irmovq $'h0000000000000003,  %'h6
+valA: 12297829382473034410
+valB: $d                   0
 Fetch : from Pc                   10 , expanded inst : 30f3ffffffffffffffff, 
 irmovq $'hffffffffffffffff,  %'h3
 
@@ -21,6 +23,8 @@ cycle          2
 Execute.
 Decode : from Pc                   10 , expanded inst : 30f3ffffffffffffffff, 
 irmovq $'hffffffffffffffff,  %'h3
+valA: 12297829382473034410
+valB: $d                   0
 Fetch : from Pc                   20 , expanded inst : 30f10000000000000000, 
 irmovq $'h0000000000000000,  %'h1
 
@@ -29,6 +33,8 @@ Cycle                    3 ----------------------------------------------------
 cycle          3
 Decode : from Pc                   20 , expanded inst : 30f10000000000000000, 
 irmovq $'h0000000000000000,  %'h1
+valA: 12297829382473034410
+valB: $d                   0
 Fetch : from Pc                   30 , expanded inst : 30f0ffffffffffffffff, 
 irmovq $'hffffffffffffffff,  %'h0
 
@@ -39,6 +45,8 @@ On  6, writes                    3   (wrE)
 Execute.
 Decode : from Pc                   30 , expanded inst : 30f0ffffffffffffffff, 
 irmovq $'hffffffffffffffff,  %'h0
+valA: 12297829382473034410
+valB: $d                   0
 Fetch : from Pc                   40 , expanded inst : 6266251363112530c00e, 
 andq %'h6, %'h6
 Stat update
@@ -56,6 +64,8 @@ On  3, writes 18446744073709551615   (wrE)
 Execute.
 Decode : from Pc                   40 , expanded inst : 6266251363112530c00e, 
 andq %'h6, %'h6
+valA: 18446744073709551619
+valB: $d18446744073709551619
 Fetch : from Pc                   44 , expanded inst : 63112530c00e00000000, 
 xorq %'h1, %'h1
 Stat update
@@ -71,6 +81,8 @@ On  1, writes                    0   (wrE)
 Execute.
 Decode : from Pc                   42 , expanded inst : 251363112530c00e0000, 
 cmovge %'h1, %'h3
+valA: 18446744073709551616
+valB: $d                   0
 Fetch : from Pc                   46 , expanded inst : 2530c00e000000000000, 
 cmovge %'h3, %'h0
 Stat update
@@ -86,6 +98,8 @@ On  0, writes 18446744073709551615   (wrE)
 Execute.
 Decode : from Pc                   44 , expanded inst : 63112530c00e00000000, 
 xorq %'h1, %'h1
+valA: 18446744073709551616
+valB: $d18446744073709551616
 Fetch : from Pc                   48 , expanded inst : c00e000000000000aaaa, 
 mtc0 %'h0, %'he
 Stat update
@@ -101,6 +115,8 @@ On  6, writes                    3   (wrE)
 Execute.
 Decode : from Pc                   46 , expanded inst : 2530c00e000000000000, 
 cmovge %'h3, %'h0
+valA: 18446744073709551616
+valB: $d                   0
 Fetch : from Pc                   50 , expanded inst : 000000000000aaaaaaaa, 
 halt
 Stat update
@@ -116,6 +132,8 @@ On  3, writes                    0   (wrE)
 Execute.
 Decode : from Pc                   48 , expanded inst : c00e000000000000aaaa, 
 mtc0 %'h0, %'he
+valA: 36893488147419103231
+valB: $d                   0
 Fetch : from Pc                   51 , expanded inst : 0000000000aaaaaaaaaa, 
 halt
 Stat update
@@ -131,6 +149,8 @@ On  1, writes                    0   (wrE)
 Execute.
 Decode : from Pc                   50 , expanded inst : 000000000000aaaaaaaa, 
 halt
+valA: 18446744073709551615
+valB: $d                   0
 Fetch : from Pc                   52 , expanded inst : 00000000aaaaaaaaaaaa, 
 halt
 Stat update
@@ -146,6 +166,8 @@ On  0, writes                    0   (wrE)
 Execute.
 Decode : from Pc                   51 , expanded inst : 0000000000aaaaaaaaaa, 
 halt
+valA:                    0
+valB: $d                   0
 Fetch : from Pc                   53 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
 Stat update
@@ -161,6 +183,8 @@ On 14, writes 18446744073709551615   (wrE)
 Execute.
 Decode : from Pc                   52 , expanded inst : 00000000aaaaaaaaaaaa, 
 halt
+valA:                    0
+valB: $d                   0
 Fetch : from Pc                   54 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt
 Stat update

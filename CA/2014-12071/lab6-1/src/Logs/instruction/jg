@@ -71,25 +71,24 @@ Cycle                    8 ----------------------------------------------------
 cycle          8
 On  3, writes                    3   (wrE)
 Execute.
+mispredicted, redirect                   64 
 Decode : from Pc                   33 , expanded inst : 00000000000000aaaaaa, 
 halt
-Fetch : from Pc                   35 , expanded inst : 0000000000aaaaaaaaaa, 
-halt
+Fetch : from Pc                   64 , expanded inst : 30f00000000000000000, 
+irmovq $'h0000000000000000,  %'h0
 Stat update
 
 Cycle                    9 ----------------------------------------------------
 
 cycle          9
-mispredicted, redirect                   64 
 
 Cycle                   10 ----------------------------------------------------
 
 cycle         10
 Decode : from Pc                   34 , expanded inst : 000000000000aaaaaaaa, 
 halt
-Fetch : from Pc                   64 , expanded inst : 30f00000000000000000, 
-irmovq $'h0000000000000000,  %'h0
-Stat update
+Fetch : from Pc                   74 , expanded inst : c00e00000000aaaaaaaa, 
+mtc0 %'h0, %'he
 
 Cycle                   11 ----------------------------------------------------
 
@@ -98,10 +97,10 @@ cycle         11
 Cycle                   12 ----------------------------------------------------
 
 cycle         12
-Decode : from Pc                   35 , expanded inst : 0000000000aaaaaaaaaa, 
+Decode : from Pc                   64 , expanded inst : 30f00000000000000000, 
+irmovq $'h0000000000000000,  %'h0
+Fetch : from Pc                   76 , expanded inst : 00000000aaaaaaaaaaaa, 
 halt
-Fetch : from Pc                   74 , expanded inst : c00e00000000aaaaaaaa, 
-mtc0 %'h0, %'he
 
 Cycle                   13 ----------------------------------------------------
 
@@ -110,10 +109,6 @@ cycle         13
 Cycle                   14 ----------------------------------------------------
 
 cycle         14
-Decode : from Pc                   64 , expanded inst : 30f00000000000000000, 
-irmovq $'h0000000000000000,  %'h0
-Fetch : from Pc                   76 , expanded inst : 00000000aaaaaaaaaaaa, 
-halt
 
 Cycle                   15 ----------------------------------------------------
 
@@ -130,43 +125,32 @@ cycle         17
 Cycle                   18 ----------------------------------------------------
 
 cycle         18
-Execute.
-
-Cycle                   19 ----------------------------------------------------
-
-cycle         19
-
-Cycle                   20 ----------------------------------------------------
-
-cycle         20
-On  0, writes                    0   (wrE)
 Decode : from Pc                   74 , expanded inst : c00e00000000aaaaaaaa, 
 mtc0 %'h0, %'he
 Fetch : from Pc                   77 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
-Stat update
 
-Cycle                   21 ----------------------------------------------------
+Cycle                   19 ----------------------------------------------------
 
-cycle         21
+cycle         19
 Execute.
 Decode : from Pc                   76 , expanded inst : 00000000aaaaaaaaaaaa, 
 halt
 Fetch : from Pc                   78 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt
 
-Cycle                   22 ----------------------------------------------------
+Cycle                   20 ----------------------------------------------------
 
-cycle         22
+cycle         20
 Decode : from Pc                   77 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
 Fetch : from Pc                   79 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
 halt
 
-Cycle                   23 ----------------------------------------------------
+Cycle                   21 ----------------------------------------------------
 
-cycle         23
-On 14, writes                    0   (wrE)
+cycle         21
+On 14, writes 18446744073709551615   (wrE)
 Execute.
 Decode : from Pc                   78 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt
@@ -174,4 +158,4 @@ Fetch : from Pc                   80 , expanded inst : aaaaaaaaaaaaaaaaaaaa,
 push %'ha
 Stat update
 
-Cycle                   24 ----------------------------------------------------
+Cycle                   22 ----------------------------------------------------

@@ -61,21 +61,24 @@ module mkProc(Proc);
 
 	rule doFetch(cop.started && stat == AOK);
 		/* Fetch */
+		Addr realPc;
 		if(execRedirect.notEmpty)
 		begin
 			fEpoch <= !fEpoch;
 			execRedirect.deq;
-			pc <= execRedirect.first;
+			realPc = execRedirect.first;
 		end
+		
 		else
-		begin
-			let inst = iMem.req(pc);
-			let ppc = nextAddr(pc, getICode(inst));
-
-			$display("Fetch : from Pc %d , expanded inst : %x, \n", pc, inst, showInst(inst));
-			pc <= ppc;
-			f2d.enq(Fetch2Decode{inst:inst, pc:pc, ppc:ppc, epoch:fEpoch});
+		begin	
+			realPc = pc;	
 		end
+
+		let inst = iMem.req(realPc);
+		let ppc = nextAddr(realPc, getICode(inst));
+		$display("Fetch : from Pc %d , expanded inst : %x, \n", realPc, inst, showInst(inst));
+		pc <= ppc;
+		f2d.enq(Fetch2Decode{inst:inst, pc:realPc, ppc:ppc, epoch:fEpoch});
 	endrule
 
 	rule doDecode(cop.started && stat == AOK);
@@ -86,7 +89,7 @@ module mkProc(Proc);
 
 		/* Decode */
 		let dInst = decode(inst, ipc);
-        let stall = sb.search1(dInst.regA) || sb.search2(dInst.regB) || sb.search3(dInst.dstE) || sb.search4(dInst.dstM);
+        let stall = sb.search1(dInst.regA) || sb.search2(dInst.regB);
         if (!stall) 
         begin
             dInst.valA   = isValid(dInst.regA)? tagged Valid rf.rdA(validRegValue(dInst.regA)) : Invalid;
@@ -113,6 +116,15 @@ module mkProc(Proc);
 			let eInst = exec(dInst, condFlag, ppc);
 			condFlag <= eInst.condFlag;
 			$display("Execute.");	
+
+			if(eInst.mispredict && eInst.iType != Ret)
+			begin
+				eEpoch <= !eEpoch;
+				let redirPc = validValue(eInst.nextPc);
+				$display("mispredicted, redirect %d ", redirPc);
+				execRedirect.enq(redirPc);
+				eInst.mispredict = !eInst.mispredict;
+			end
 			     
             e2m.enq(Exec2Mem{inst : Valid(eInst), epoch:iEpoch});	
         end
@@ -152,7 +164,6 @@ module mkProc(Proc);
 			
 			if(eInst.mispredict)
 			begin
-				eEpoch <= !eEpoch;
 				let redirPc = validValue(eInst.nextPc);
 				$display("mispredicted, redirect %d ", redirPc);
 				execRedirect.enq(redirPc);
