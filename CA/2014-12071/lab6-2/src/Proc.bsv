@@ -171,6 +171,8 @@ module mkProc(Proc);
 		    dInst.copVal = isValid(dInst.regA)? tagged Valid cop.rd(validRegValue(dInst.regA)) : Invalid;
             
 		    $display("Decode : from Pc %d , expanded inst : %x, \n", ipc, inst, showInst(inst));
+            $display("valA: %d", dInst.valA);
+            $display("valB: $d", dInst.valB);
 
 		    d2e.enq(Decode2Exec{inst:dInst, ppc:ppc, epoch:iEpoch});
 		    f2d.deq;
