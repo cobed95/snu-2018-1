@@ -27,6 +27,7 @@ irmovq $'hfffffffffffffffe,  %'h0
 Cycle                    3 ----------------------------------------------------
 
 cycle          3
+Mem done with pc:                    0
 Decode : from Pc                   20 , expanded inst : 30f0feffffffffffffff, 
 irmovq $'hfffffffffffffffe,  %'h0
 Fetch : from Pc                   30 , expanded inst : 61126120c00e00000000, 
@@ -36,7 +37,9 @@ Cycle                    4 ----------------------------------------------------
 
 cycle          4
 On  1, writes                    3   (wrE)
+wrE with                    0: 
 Execute.
+STALL
 Fetch : from Pc                   32 , expanded inst : 6120c00e00000000aaaa, 
 subq %'h2, %'h0
 Stat update
@@ -44,11 +47,14 @@ Stat update
 Cycle                    5 ----------------------------------------------------
 
 cycle          5
+Mem done with pc:                   10
+STALL
 
 Cycle                    6 ----------------------------------------------------
 
 cycle          6
 On  2, writes                    1   (wrE)
+wrE with                   10: 
 Execute.
 Decode : from Pc                   30 , expanded inst : 61126120c00e00000000, 
 subq %'h1, %'h2
@@ -59,22 +65,29 @@ Stat update
 Cycle                    7 ----------------------------------------------------
 
 cycle          7
+Mem done with pc:                   20
+STALL
 
 Cycle                    8 ----------------------------------------------------
 
 cycle          8
 On  0, writes 18446744073709551614   (wrE)
+wrE with                   20: 
 Execute.
+STALL
 Stat update
 
 Cycle                    9 ----------------------------------------------------
 
 cycle          9
+Mem done with pc:                   30
+STALL
 
 Cycle                   10 ----------------------------------------------------
 
 cycle         10
 On  2, writes 18446744073709551614   (wrE)
+wrE with                   30: 
 Decode : from Pc                   32 , expanded inst : 6120c00e00000000aaaa, 
 subq %'h2, %'h0
 Fetch : from Pc                   36 , expanded inst : 00000000aaaaaaaaaaaa, 
@@ -85,15 +98,19 @@ Cycle                   11 ----------------------------------------------------
 
 cycle         11
 Execute.
+STALL
 
 Cycle                   12 ----------------------------------------------------
 
 cycle         12
+Mem done with pc:                   32
+STALL
 
 Cycle                   13 ----------------------------------------------------
 
 cycle         13
 On  0, writes                    0   (wrE)
+wrE with                   32: 
 Decode : from Pc                   34 , expanded inst : c00e00000000aaaaaaaa, 
 mtc0 %'h0, %'he
 Fetch : from Pc                   37 , expanded inst : 000000aaaaaaaaaaaaaa, 
@@ -112,6 +129,7 @@ halt
 Cycle                   15 ----------------------------------------------------
 
 cycle         15
+Mem done with pc:                   34
 Decode : from Pc                   37 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
 Fetch : from Pc                   39 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
@@ -121,6 +139,7 @@ Cycle                   16 ----------------------------------------------------
 
 cycle         16
 On 14, writes                    0   (wrE)
+wrE with                   34: 
 Execute.
 Decode : from Pc                   38 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt

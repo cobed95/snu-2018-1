@@ -19,17 +19,21 @@ Cycle                    2 ----------------------------------------------------
 
 cycle          2
 Execute.
+STALL
 Fetch : from Pc                   12 , expanded inst : 00000000aaaaaaaaaaaa, 
 halt
 
 Cycle                    3 ----------------------------------------------------
 
 cycle          3
+Mem done with pc:                    0
+STALL
 
 Cycle                    4 ----------------------------------------------------
 
 cycle          4
 On  0, writes                    0   (wrE)
+wrE with                    0: 
 Decode : from Pc                   10 , expanded inst : c00e00000000aaaaaaaa, 
 mtc0 %'h0, %'he
 Fetch : from Pc                   13 , expanded inst : 000000aaaaaaaaaaaaaa, 
@@ -48,6 +52,7 @@ halt
 Cycle                    6 ----------------------------------------------------
 
 cycle          6
+Mem done with pc:                   10
 Decode : from Pc                   13 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
 Fetch : from Pc                   15 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
@@ -57,6 +62,7 @@ Cycle                    7 ----------------------------------------------------
 
 cycle          7
 On 14, writes                    0   (wrE)
+wrE with                   10: 
 Execute.
 Decode : from Pc                   14 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt

@@ -29,6 +29,8 @@ mtc0 %'h0, %'he
 Cycle                    3 ----------------------------------------------------
 
 cycle          3
+Mem done with pc:                    0
+STALL
 Fetch : from Pc                   21 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
 
@@ -36,6 +38,7 @@ Cycle                    4 ----------------------------------------------------
 
 cycle          4
 On  0, writes 18446744073709551615   (wrE)
+wrE with                    0: 
 Execute.
 mispredicted, redirect                   72 
 Decode : from Pc                   19 , expanded inst : c00e000000aaaaaaaaaa, 
@@ -47,6 +50,7 @@ Stat update
 Cycle                    5 ----------------------------------------------------
 
 cycle          5
+Mem cancelled with pc:                   10
 Decode : from Pc                   21 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
 Fetch : from Pc                   82 , expanded inst : c00e00000000aaaaaaaa, 
@@ -55,6 +59,7 @@ mtc0 %'h0, %'he
 Cycle                    6 ----------------------------------------------------
 
 cycle          6
+Not Executed because epoch is different:                   19 
 Decode : from Pc                   72 , expanded inst : 30f00000000000000000, 
 irmovq $'h0000000000000000,  %'h0
 Fetch : from Pc                   84 , expanded inst : 00000000aaaaaaaaaaaa, 
@@ -63,30 +68,43 @@ halt
 Cycle                    7 ----------------------------------------------------
 
 cycle          7
+Mem cancelled with pc:                   19
+STALL
 
 Cycle                    8 ----------------------------------------------------
 
 cycle          8
+Not Executed because epoch is different:                   21 
+STALL
 
 Cycle                    9 ----------------------------------------------------
 
 cycle          9
+Mem cancelled with pc:                   21
+STALL
 
 Cycle                   10 ----------------------------------------------------
 
 cycle         10
+Execute.
+STALL
 
 Cycle                   11 ----------------------------------------------------
 
 cycle         11
+Mem done with pc:                   72
+STALL
 
 Cycle                   12 ----------------------------------------------------
 
 cycle         12
+On  0, writes                    0   (wrE)
+wrE with                   72: 
 Decode : from Pc                   82 , expanded inst : c00e00000000aaaaaaaa, 
 mtc0 %'h0, %'he
 Fetch : from Pc                   85 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
+Stat update
 
 Cycle                   13 ----------------------------------------------------
 
@@ -100,6 +118,7 @@ halt
 Cycle                   14 ----------------------------------------------------
 
 cycle         14
+Mem done with pc:                   82
 Decode : from Pc                   85 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
 Fetch : from Pc                   87 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
@@ -108,7 +127,8 @@ halt
 Cycle                   15 ----------------------------------------------------
 
 cycle         15
-On 14, writes 18446744073709551615   (wrE)
+On 14, writes                    0   (wrE)
+wrE with                   82: 
 Execute.
 Decode : from Pc                   86 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt

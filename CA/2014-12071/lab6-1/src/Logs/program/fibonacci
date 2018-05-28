@@ -33,6 +33,8 @@ call 'h0000000000000020
 Cycle                    3 ----------------------------------------------------
 
 cycle          3
+Mem done with pc:                    0
+STALL
 Fetch : from Pc                   29 , expanded inst : c00e00a05f204530fa0c, 
 mtc0 %'h0, %'he
 
@@ -40,17 +42,22 @@ Cycle                    4 ----------------------------------------------------
 
 cycle          4
 On  4, writes                 1200   (wrE)
+wrE with                    0: 
 Execute.
+STALL
 Stat update
 
 Cycle                    5 ----------------------------------------------------
 
 cycle          5
+Mem done with pc:                   10
+STALL
 
 Cycle                    6 ----------------------------------------------------
 
 cycle          6
 On  4, writes                 1200   (wrE)
+wrE with                   10: 
 Decode : from Pc                   20 , expanded inst : 802000000000000000c0, 
 call 'h0000000000000020
 Fetch : from Pc                   31 , expanded inst : 00a05f204530fa0c0000, 
@@ -70,6 +77,7 @@ push %'h5
 Cycle                    8 ----------------------------------------------------
 
 cycle          8
+Mem cancelled with pc:                   20
 Decode : from Pc                   31 , expanded inst : 00a05f204530fa0c0000, 
 halt
 Fetch : from Pc                   34 , expanded inst : 204530fa0c0000000000, 
@@ -78,6 +86,7 @@ rrmovq %'h4, %'h5
 Cycle                    9 ----------------------------------------------------
 
 cycle          9
+Not Executed because epoch is different:                   29 
 Decode : from Pc                   32 , expanded inst : a05f204530fa0c000000, 
 push %'h5
 Fetch : from Pc                   36 , expanded inst : 30fa0c00000000000000, 
@@ -86,30 +95,44 @@ irmovq $'h000000000000000c,  %'ha
 Cycle                   10 ----------------------------------------------------
 
 cycle         10
+Mem cancelled with pc:                   29
+STALL
 
 Cycle                   11 ----------------------------------------------------
 
 cycle         11
+Not Executed because epoch is different:                   31 
+STALL
 
 Cycle                   12 ----------------------------------------------------
 
 cycle         12
+Mem cancelled with pc:                   31
+STALL
 
 Cycle                   13 ----------------------------------------------------
 
 cycle         13
+Execute.
+STALL
 
 Cycle                   14 ----------------------------------------------------
 
 cycle         14
+Stored                    0 into                 1192
+Mem done with pc:                   32
+STALL
 
 Cycle                   15 ----------------------------------------------------
 
 cycle         15
+On  4, writes                 1192   (wrE)
+wrE with                   32: 
 Decode : from Pc                   34 , expanded inst : 204530fa0c0000000000, 
 rrmovq %'h4, %'h5
 Fetch : from Pc                   46 , expanded inst : 30fb5802000000000000, 
 irmovq $'h0000000000000258,  %'hb
+Stat update
 
 Cycle                   16 ----------------------------------------------------
 
@@ -123,6 +146,7 @@ irmovq $'h0000000000000001,  %'hc
 Cycle                   17 ----------------------------------------------------
 
 cycle         17
+Mem done with pc:                   34
 Decode : from Pc                   46 , expanded inst : 30fb5802000000000000, 
 irmovq $'h0000000000000258,  %'hb
 Fetch : from Pc                   66 , expanded inst : 30fd0800000000000000, 
@@ -131,7 +155,8 @@ irmovq $'h0000000000000008,  %'hd
 Cycle                   18 ----------------------------------------------------
 
 cycle         18
-On  5, writes                 1200   (wrE)
+On  5, writes                 1192   (wrE)
+wrE with                   34: 
 Execute.
 Decode : from Pc                   56 , expanded inst : 30fc0100000000000000, 
 irmovq $'h0000000000000001,  %'hc
@@ -142,11 +167,13 @@ Stat update
 Cycle                   19 ----------------------------------------------------
 
 cycle         19
+Mem done with pc:                   36
 
 Cycle                   20 ----------------------------------------------------
 
 cycle         20
 On 10, writes                   12   (wrE)
+wrE with                   36: 
 Execute.
 Decode : from Pc                   66 , expanded inst : 30fd0800000000000000, 
 irmovq $'h0000000000000008,  %'hd
@@ -157,11 +184,13 @@ Stat update
 Cycle                   21 ----------------------------------------------------
 
 cycle         21
+Mem done with pc:                   46
 
 Cycle                   22 ----------------------------------------------------
 
 cycle         22
 On 11, writes                  600   (wrE)
+wrE with                   46: 
 Execute.
 Decode : from Pc                   76 , expanded inst : 20a78000010000000000, 
 rrmovq %'ha, %'h7
@@ -172,11 +201,13 @@ Stat update
 Cycle                   23 ----------------------------------------------------
 
 cycle         23
+Mem done with pc:                   56
 
 Cycle                   24 ----------------------------------------------------
 
 cycle         24
 On 12, writes                    1   (wrE)
+wrE with                   56: 
 Execute.
 Decode : from Pc                   78 , expanded inst : 80000100000000000040, 
 call 'h0000000000000100
@@ -187,11 +218,13 @@ Stat update
 Cycle                   25 ----------------------------------------------------
 
 cycle         25
+Mem done with pc:                   66
 
 Cycle                   26 ----------------------------------------------------
 
 cycle         26
 On 13, writes                    8   (wrE)
+wrE with                   66: 
 Execute.
 Decode : from Pc                   87 , expanded inst : 400b0000000000000000, 
 rmmovq %'h0, 'h0000000000000000(%'hb)
@@ -202,11 +235,13 @@ Stat update
 Cycle                   27 ----------------------------------------------------
 
 cycle         27
+Mem done with pc:                   76
 
 Cycle                   28 ----------------------------------------------------
 
 cycle         28
 On  7, writes                   12   (wrE)
+wrE with                   76: 
 Execute.
 mispredicted, redirect                  256 
 Decode : from Pc                   97 , expanded inst : 60db61ca744c00000000, 
@@ -218,10 +253,12 @@ Stat update
 Cycle                   29 ----------------------------------------------------
 
 cycle         29
+Mem cancelled with pc:                   78
 
 Cycle                   30 ----------------------------------------------------
 
 cycle         30
+Not Executed because epoch is different:                   87 
 Decode : from Pc                   99 , expanded inst : 61ca744c000000000000, 
 subq %'hc, %'ha
 Fetch : from Pc                  258 , expanded inst : 20456277734b01000000, 
@@ -230,10 +267,12 @@ rrmovq %'h4, %'h5
 Cycle                   31 ----------------------------------------------------
 
 cycle         31
+Mem cancelled with pc:                   87
 
 Cycle                   32 ----------------------------------------------------
 
 cycle         32
+Not Executed because epoch is different:                   97 
 Decode : from Pc                  256 , expanded inst : a05f20456277734b0100, 
 push %'h5
 Fetch : from Pc                  260 , expanded inst : 6277734b010000000000, 
@@ -242,30 +281,44 @@ andq %'h7, %'h7
 Cycle                   33 ----------------------------------------------------
 
 cycle         33
+Mem cancelled with pc:                   97
+STALL
 
 Cycle                   34 ----------------------------------------------------
 
 cycle         34
+Not Executed because epoch is different:                   99 
+STALL
 
 Cycle                   35 ----------------------------------------------------
 
 cycle         35
+Mem cancelled with pc:                   99
+STALL
 
 Cycle                   36 ----------------------------------------------------
 
 cycle         36
+Execute.
+STALL
 
 Cycle                   37 ----------------------------------------------------
 
 cycle         37
+Stored                 1192 into                 1184
+Mem done with pc:                  256
+STALL
 
 Cycle                   38 ----------------------------------------------------
 
 cycle         38
+On  4, writes                 1184   (wrE)
+wrE with                  256: 
 Decode : from Pc                  258 , expanded inst : 20456277734b01000000, 
 rrmovq %'h4, %'h5
 Fetch : from Pc                  262 , expanded inst : 734b0100000000000030, 
 je $'h000000000000014b
+Stat update
 
 Cycle                   39 ----------------------------------------------------
 
@@ -279,6 +332,7 @@ irmovq $'h0000000000000001,  %'h1
 Cycle                   40 ----------------------------------------------------
 
 cycle         40
+Mem done with pc:                  258
 Decode : from Pc                  262 , expanded inst : 734b0100000000000030, 
 je $'h000000000000014b
 Fetch : from Pc                  281 , expanded inst : 6117735e010000000000, 
@@ -287,7 +341,8 @@ subq %'h1, %'h7
 Cycle                   41 ----------------------------------------------------
 
 cycle         41
-On  5, writes                 1200   (wrE)
+On  5, writes                 1184   (wrE)
+wrE with                  258: 
 Execute.
 Decode : from Pc                  271 , expanded inst : 30f10100000000000000, 
 irmovq $'h0000000000000001,  %'h1
@@ -298,32 +353,42 @@ Stat update
 Cycle                   42 ----------------------------------------------------
 
 cycle         42
+Mem done with pc:                  260
+STALL
 
 Cycle                   43 ----------------------------------------------------
 
 cycle         43
 On  7, writes                   12   (wrE)
+wrE with                  260: 
 Execute.
+STALL
 Stat update
 
 Cycle                   44 ----------------------------------------------------
 
 cycle         44
+Mem done with pc:                  262
+STALL
 
 Cycle                   45 ----------------------------------------------------
 
 cycle         45
 Execute.
+STALL
 Stat update
 
 Cycle                   46 ----------------------------------------------------
 
 cycle         46
+Mem done with pc:                  271
+STALL
 
 Cycle                   47 ----------------------------------------------------
 
 cycle         47
 On  1, writes                    1   (wrE)
+wrE with                  271: 
 Decode : from Pc                  281 , expanded inst : 6117735e010000000000, 
 subq %'h1, %'h7
 Fetch : from Pc                  292 , expanded inst : a07f6117800001000000, 
@@ -342,11 +407,14 @@ subq %'h1, %'h7
 Cycle                   49 ----------------------------------------------------
 
 cycle         49
+Mem done with pc:                  281
+STALL
 
 Cycle                   50 ----------------------------------------------------
 
 cycle         50
 On  7, writes                   11   (wrE)
+wrE with                  281: 
 Execute.
 Decode : from Pc                  292 , expanded inst : a07f6117800001000000, 
 push %'h7
@@ -357,6 +425,7 @@ Stat update
 Cycle                   51 ----------------------------------------------------
 
 cycle         51
+Mem done with pc:                  283
 Decode : from Pc                  294 , expanded inst : 61178000010000000000, 
 subq %'h1, %'h7
 Fetch : from Pc                  305 , expanded inst : b07fa00f800001000000, 
@@ -366,17 +435,21 @@ Cycle                   52 ----------------------------------------------------
 
 cycle         52
 Execute.
+STALL
 Stat update
 
 Cycle                   53 ----------------------------------------------------
 
 cycle         53
-Stored                   11 into                 1192
+Stored                   11 into                 1176
+Mem done with pc:                  292
+STALL
 
 Cycle                   54 ----------------------------------------------------
 
 cycle         54
-On  4, writes                 1192   (wrE)
+On  4, writes                 1176   (wrE)
+wrE with                  292: 
 Execute.
 Decode : from Pc                  296 , expanded inst : 800001000000000000b0, 
 call 'h0000000000000100
@@ -387,18 +460,24 @@ Stat update
 Cycle                   55 ----------------------------------------------------
 
 cycle         55
+Mem done with pc:                  294
+STALL
 
 Cycle                   56 ----------------------------------------------------
 
 cycle         56
 On  7, writes                   10   (wrE)
+wrE with                  294: 
 Execute.
 mispredicted, redirect                  256 
+STALL
 Stat update
 
 Cycle                   57 ----------------------------------------------------
 
 cycle         57
+Mem cancelled with pc:                  296
+STALL
 
 Cycle                   58 ----------------------------------------------------
 
@@ -411,10 +490,14 @@ push %'h5
 Cycle                   59 ----------------------------------------------------
 
 cycle         59
+Not Executed because epoch is different:                  305 
+STALL
 
 Cycle                   60 ----------------------------------------------------
 
 cycle         60
+Mem cancelled with pc:                  305
+STALL
 
 Cycle                   61 ----------------------------------------------------
 
@@ -427,10 +510,14 @@ rrmovq %'h4, %'h5
 Cycle                   62 ----------------------------------------------------
 
 cycle         62
+Not Executed because epoch is different:                  307 
+STALL
 
 Cycle                   63 ----------------------------------------------------
 
 cycle         63
+Mem cancelled with pc:                  307
+STALL
 
 Cycle                   64 ----------------------------------------------------
 
@@ -443,18 +530,26 @@ andq %'h7, %'h7
 Cycle                   65 ----------------------------------------------------
 
 cycle         65
+Execute.
+STALL
 
 Cycle                   66 ----------------------------------------------------
 
 cycle         66
+Stored                 1184 into                 1168
+Mem done with pc:                  256
+STALL
 
 Cycle                   67 ----------------------------------------------------
 
 cycle         67
+On  4, writes                 1168   (wrE)
+wrE with                  256: 
 Decode : from Pc                  258 , expanded inst : 20456277734b01000000, 
 rrmovq %'h4, %'h5
 Fetch : from Pc                  262 , expanded inst : 734b0100000000000030, 
 je $'h000000000000014b
+Stat update
 
 Cycle                   68 ----------------------------------------------------
 
@@ -468,6 +563,7 @@ irmovq $'h0000000000000001,  %'h1
 Cycle                   69 ----------------------------------------------------
 
 cycle         69
+Mem done with pc:                  258
 Decode : from Pc                  262 , expanded inst : 734b0100000000000030, 
 je $'h000000000000014b
 Fetch : from Pc                  281 , expanded inst : 6117735e010000000000, 
@@ -476,7 +572,8 @@ subq %'h1, %'h7
 Cycle                   70 ----------------------------------------------------
 
 cycle         70
-On  5, writes                 1192   (wrE)
+On  5, writes                 1168   (wrE)
+wrE with                  258: 
 Execute.
 Decode : from Pc                  271 , expanded inst : 30f10100000000000000, 
 irmovq $'h0000000000000001,  %'h1
@@ -487,32 +584,42 @@ Stat update
 Cycle                   71 ----------------------------------------------------
 
 cycle         71
+Mem done with pc:                  260
+STALL
 
 Cycle                   72 ----------------------------------------------------
 
 cycle         72
 On  7, writes                   10   (wrE)
+wrE with                  260: 
 Execute.
+STALL
 Stat update
 
 Cycle                   73 ----------------------------------------------------
 
 cycle         73
+Mem done with pc:                  262
+STALL
 
 Cycle                   74 ----------------------------------------------------
 
 cycle         74
 Execute.
+STALL
 Stat update
 
 Cycle                   75 ----------------------------------------------------
 
 cycle         75
+Mem done with pc:                  271
+STALL
 
 Cycle                   76 ----------------------------------------------------
 
 cycle         76
 On  1, writes                    1   (wrE)
+wrE with                  271: 
 Decode : from Pc                  281 , expanded inst : 6117735e010000000000, 
 subq %'h1, %'h7
 Fetch : from Pc                  292 , expanded inst : a07f6117800001000000, 
@@ -531,11 +638,14 @@ subq %'h1, %'h7
 Cycle                   78 ----------------------------------------------------
 
 cycle         78
+Mem done with pc:                  281
+STALL
 
 Cycle                   79 ----------------------------------------------------
 
 cycle         79
 On  7, writes                    9   (wrE)
+wrE with                  281: 
 Execute.
 Decode : from Pc                  292 , expanded inst : a07f6117800001000000, 
 push %'h7
@@ -546,6 +656,7 @@ Stat update
 Cycle                   80 ----------------------------------------------------
 
 cycle         80
+Mem done with pc:                  283
 Decode : from Pc                  294 , expanded inst : 61178000010000000000, 
 subq %'h1, %'h7
 Fetch : from Pc                  305 , expanded inst : b07fa00f800001000000, 
@@ -555,17 +666,21 @@ Cycle                   81 ----------------------------------------------------
 
 cycle         81
 Execute.
+STALL
 Stat update
 
 Cycle                   82 ----------------------------------------------------
 
 cycle         82
-Stored                    9 into                 1184
+Stored                    9 into                 1160
+Mem done with pc:                  292
+STALL
 
 Cycle                   83 ----------------------------------------------------
 
 cycle         83
-On  4, writes                 1184   (wrE)
+On  4, writes                 1160   (wrE)
+wrE with                  292: 
 Execute.
 Decode : from Pc                  296 , expanded inst : 800001000000000000b0, 
 call 'h0000000000000100
@@ -576,18 +691,24 @@ Stat update
 Cycle                   84 ----------------------------------------------------
 
 cycle         84
+Mem done with pc:                  294
+STALL
 
 Cycle                   85 ----------------------------------------------------
 
 cycle         85
 On  7, writes                    8   (wrE)
+wrE with                  294: 
 Execute.
 mispredicted, redirect                  256 
+STALL
 Stat update
 
 Cycle                   86 ----------------------------------------------------
 
 cycle         86
+Mem cancelled with pc:                  296
+STALL
 
 Cycle                   87 ----------------------------------------------------
 
@@ -600,10 +721,14 @@ push %'h5
 Cycle                   88 ----------------------------------------------------
 
 cycle         88
+Not Executed because epoch is different:                  305 
+STALL
 
 Cycle                   89 ----------------------------------------------------
 
 cycle         89
+Mem cancelled with pc:                  305
+STALL
 
 Cycle                   90 ----------------------------------------------------
 
@@ -616,10 +741,14 @@ rrmovq %'h4, %'h5
 Cycle                   91 ----------------------------------------------------
 
 cycle         91
+Not Executed because epoch is different:                  307 
+STALL
 
 Cycle                   92 ----------------------------------------------------
 
 cycle         92
+Mem cancelled with pc:                  307
+STALL
 
 Cycle                   93 ----------------------------------------------------
 
@@ -632,18 +761,26 @@ andq %'h7, %'h7
 Cycle                   94 ----------------------------------------------------
 
 cycle         94
+Execute.
+STALL
 
 Cycle                   95 ----------------------------------------------------
 
 cycle         95
+Stored                 1168 into                 1152
+Mem done with pc:                  256
+STALL
 
 Cycle                   96 ----------------------------------------------------
 
 cycle         96
+On  4, writes                 1152   (wrE)
+wrE with                  256: 
 Decode : from Pc                  258 , expanded inst : 20456277734b01000000, 
 rrmovq %'h4, %'h5
 Fetch : from Pc                  262 , expanded inst : 734b0100000000000030, 
 je $'h000000000000014b
+Stat update
 
 Cycle                   97 ----------------------------------------------------
 
@@ -657,6 +794,7 @@ irmovq $'h0000000000000001,  %'h1
 Cycle                   98 ----------------------------------------------------
 
 cycle         98
+Mem done with pc:                  258
 Decode : from Pc                  262 , expanded inst : 734b0100000000000030, 
 je $'h000000000000014b
 Fetch : from Pc                  281 , expanded inst : 6117735e010000000000, 
@@ -665,7 +803,8 @@ subq %'h1, %'h7
 Cycle                   99 ----------------------------------------------------
 
 cycle         99
-On  5, writes                 1184   (wrE)
+On  5, writes                 1152   (wrE)
+wrE with                  258: 
 Execute.
 Decode : from Pc                  271 , expanded inst : 30f10100000000000000, 
 irmovq $'h0000000000000001,  %'h1
@@ -676,32 +815,42 @@ Stat update
 Cycle                  100 ----------------------------------------------------
 
 cycle        100
+Mem done with pc:                  260
+STALL
 
 Cycle                  101 ----------------------------------------------------
 
 cycle        101
 On  7, writes                    8   (wrE)
+wrE with                  260: 
 Execute.
+STALL
 Stat update
 
 Cycle                  102 ----------------------------------------------------
 
 cycle        102
+Mem done with pc:                  262
+STALL
 
 Cycle                  103 ----------------------------------------------------
 
 cycle        103
 Execute.
+STALL
 Stat update
 
 Cycle                  104 ----------------------------------------------------
 
 cycle        104
+Mem done with pc:                  271
+STALL
 
 Cycle                  105 ----------------------------------------------------
 
 cycle        105
 On  1, writes                    1   (wrE)
+wrE with                  271: 
 Decode : from Pc                  281 , expanded inst : 6117735e010000000000, 
 subq %'h1, %'h7
 Fetch : from Pc                  292 , expanded inst : a07f6117800001000000, 
@@ -720,11 +869,14 @@ subq %'h1, %'h7
 Cycle                  107 ----------------------------------------------------
 
 cycle        107
+Mem done with pc:                  281
+STALL
 
 Cycle                  108 ----------------------------------------------------
 
 cycle        108
 On  7, writes                    7   (wrE)
+wrE with                  281: 
 Execute.
 Decode : from Pc                  292 , expanded inst : a07f6117800001000000, 
 push %'h7
@@ -735,6 +887,7 @@ Stat update
 Cycle                  109 ----------------------------------------------------
 
 cycle        109
+Mem done with pc:                  283
 Decode : from Pc                  294 , expanded inst : 61178000010000000000, 
 subq %'h1, %'h7
 Fetch : from Pc                  305 , expanded inst : b07fa00f800001000000, 
@@ -744,17 +897,21 @@ Cycle                  110 ----------------------------------------------------
 
 cycle        110
 Execute.
+STALL
 Stat update
 
 Cycle                  111 ----------------------------------------------------
 
 cycle        111
-Stored                    7 into                 1176
+Stored                    7 into                 1144
+Mem done with pc:                  292
+STALL
 
 Cycle                  112 ----------------------------------------------------
 
 cycle        112
-On  4, writes                 1176   (wrE)
+On  4, writes                 1144   (wrE)
+wrE with                  292: 
 Execute.
 Decode : from Pc                  296 , expanded inst : 800001000000000000b0, 
 call 'h0000000000000100
@@ -765,18 +922,24 @@ Stat update
 Cycle                  113 ----------------------------------------------------
 
 cycle        113
+Mem done with pc:                  294
+STALL
 
 Cycle                  114 ----------------------------------------------------
 
 cycle        114
 On  7, writes                    6   (wrE)
+wrE with                  294: 
 Execute.
 mispredicted, redirect                  256 
+STALL
 Stat update
 
 Cycle                  115 ----------------------------------------------------
 
 cycle        115
+Mem cancelled with pc:                  296
+STALL
 
 Cycle                  116 ----------------------------------------------------
 
@@ -789,10 +952,14 @@ push %'h5
 Cycle                  117 ----------------------------------------------------
 
 cycle        117
+Not Executed because epoch is different:                  305 
+STALL
 
 Cycle                  118 ----------------------------------------------------
 
 cycle        118
+Mem cancelled with pc:                  305
+STALL
 
 Cycle                  119 ----------------------------------------------------
 
@@ -805,10 +972,14 @@ rrmovq %'h4, %'h5
 Cycle                  120 ----------------------------------------------------
 
 cycle        120
+Not Executed because epoch is different:                  307 
+STALL
 
 Cycle                  121 ----------------------------------------------------
 
 cycle        121
+Mem cancelled with pc:                  307
+STALL
 
 Cycle                  122 ----------------------------------------------------
 
@@ -821,18 +992,26 @@ andq %'h7, %'h7
 Cycle                  123 ----------------------------------------------------
 
 cycle        123
+Execute.
+STALL
 
 Cycle                  124 ----------------------------------------------------
 
 cycle        124
+Stored                 1152 into                 1136
+Mem done with pc:                  256
+STALL
 
 Cycle                  125 ----------------------------------------------------
 
 cycle        125
+On  4, writes                 1136   (wrE)
+wrE with                  256: 
 Decode : from Pc                  258 , expanded inst : 20456277734b01000000, 
 rrmovq %'h4, %'h5
 Fetch : from Pc                  262 , expanded inst : 734b0100000000000030, 
 je $'h000000000000014b
+Stat update
 
 Cycle                  126 ----------------------------------------------------
 
@@ -846,6 +1025,7 @@ irmovq $'h0000000000000001,  %'h1
 Cycle                  127 ----------------------------------------------------
 
 cycle        127
+Mem done with pc:                  258
 Decode : from Pc                  262 , expanded inst : 734b0100000000000030, 
 je $'h000000000000014b
 Fetch : from Pc                  281 , expanded inst : 6117735e010000000000, 
@@ -854,7 +1034,8 @@ subq %'h1, %'h7
 Cycle                  128 ----------------------------------------------------
 
 cycle        128
-On  5, writes                 1176   (wrE)
+On  5, writes                 1136   (wrE)
+wrE with                  258: 
 Execute.
 Decode : from Pc                  271 , expanded inst : 30f10100000000000000, 
 irmovq $'h0000000000000001,  %'h1
@@ -865,32 +1046,42 @@ Stat update
 Cycle                  129 ----------------------------------------------------
 
 cycle        129
+Mem done with pc:                  260
+STALL
 
 Cycle                  130 ----------------------------------------------------
 
 cycle        130
 On  7, writes                    6   (wrE)
+wrE with                  260: 
 Execute.
+STALL
 Stat update
 
 Cycle                  131 ----------------------------------------------------
 
 cycle        131
+Mem done with pc:                  262
+STALL
 
 Cycle                  132 ----------------------------------------------------
 
 cycle        132
 Execute.
+STALL
 Stat update
 
 Cycle                  133 ----------------------------------------------------
 
 cycle        133
+Mem done with pc:                  271
+STALL
 
 Cycle                  134 ----------------------------------------------------
 
 cycle        134
 On  1, writes                    1   (wrE)
+wrE with                  271: 
 Decode : from Pc                  281 , expanded inst : 6117735e010000000000, 
 subq %'h1, %'h7
 Fetch : from Pc                  292 , expanded inst : a07f6117800001000000, 
@@ -909,11 +1100,14 @@ subq %'h1, %'h7
 Cycle                  136 ----------------------------------------------------
 
 cycle        136
+Mem done with pc:                  281
+STALL
 
 Cycle                  137 ----------------------------------------------------
 
 cycle        137
 On  7, writes                    5   (wrE)
+wrE with                  281: 
 Execute.
 Decode : from Pc                  292 , expanded inst : a07f6117800001000000, 
 push %'h7
@@ -924,6 +1118,7 @@ Stat update
 Cycle                  138 ----------------------------------------------------
 
 cycle        138
+Mem done with pc:                  283
 Decode : from Pc                  294 , expanded inst : 61178000010000000000, 
 subq %'h1, %'h7
 Fetch : from Pc                  305 , expanded inst : b07fa00f800001000000, 
@@ -933,17 +1128,21 @@ Cycle                  139 ----------------------------------------------------
 
 cycle        139
 Execute.
+STALL
 Stat update
 
 Cycle                  140 ----------------------------------------------------
 
 cycle        140
-Stored                    5 into                 1168
+Stored                    5 into                 1128
+Mem done with pc:                  292
+STALL
 
 Cycle                  141 ----------------------------------------------------
 
 cycle        141
-On  4, writes                 1168   (wrE)
+On  4, writes                 1128   (wrE)
+wrE with                  292: 
 Execute.
 Decode : from Pc                  296 , expanded inst : 800001000000000000b0, 
 call 'h0000000000000100
@@ -954,18 +1153,24 @@ Stat update
 Cycle                  142 ----------------------------------------------------
 
 cycle        142
+Mem done with pc:                  294
+STALL
 
 Cycle                  143 ----------------------------------------------------
 
 cycle        143
 On  7, writes                    4   (wrE)
+wrE with                  294: 
 Execute.
 mispredicted, redirect                  256 
+STALL
 Stat update
 
 Cycle                  144 ----------------------------------------------------
 
 cycle        144
+Mem cancelled with pc:                  296
+STALL
 
 Cycle                  145 ----------------------------------------------------
 
@@ -978,10 +1183,14 @@ push %'h5
 Cycle                  146 ----------------------------------------------------
 
 cycle        146
+Not Executed because epoch is different:                  305 
+STALL
 
 Cycle                  147 ----------------------------------------------------
 
 cycle        147
+Mem cancelled with pc:                  305
+STALL
 
 Cycle                  148 ----------------------------------------------------
 
@@ -994,10 +1203,14 @@ rrmovq %'h4, %'h5
 Cycle                  149 ----------------------------------------------------
 
 cycle        149
+Not Executed because epoch is different:                  307 
+STALL
 
 Cycle                  150 ----------------------------------------------------
 
 cycle        150
+Mem cancelled with pc:                  307
+STALL
 
 Cycle                  151 ----------------------------------------------------
 
@@ -1010,18 +1223,26 @@ andq %'h7, %'h7
 Cycle                  152 ----------------------------------------------------
 
 cycle        152
+Execute.
+STALL
 
 Cycle                  153 ----------------------------------------------------
 
 cycle        153
+Stored                 1136 into                 1120
+Mem done with pc:                  256
+STALL
 
 Cycle                  154 ----------------------------------------------------
 
 cycle        154
+On  4, writes                 1120   (wrE)
+wrE with                  256: 
 Decode : from Pc                  258 , expanded inst : 20456277734b01000000, 
 rrmovq %'h4, %'h5
 Fetch : from Pc                  262 , expanded inst : 734b0100000000000030, 
 je $'h000000000000014b
+Stat update
 
 Cycle                  155 ----------------------------------------------------
 
@@ -1035,6 +1256,7 @@ irmovq $'h0000000000000001,  %'h1
 Cycle                  156 ----------------------------------------------------
 
 cycle        156
+Mem done with pc:                  258
 Decode : from Pc                  262 , expanded inst : 734b0100000000000030, 
 je $'h000000000000014b
 Fetch : from Pc                  281 , expanded inst : 6117735e010000000000, 
@@ -1043,7 +1265,8 @@ subq %'h1, %'h7
 Cycle                  157 ----------------------------------------------------
 
 cycle        157
-On  5, writes                 1168   (wrE)
+On  5, writes                 1120   (wrE)
+wrE with                  258: 
 Execute.
 Decode : from Pc                  271 , expanded inst : 30f10100000000000000, 
 irmovq $'h0000000000000001,  %'h1
@@ -1054,32 +1277,42 @@ Stat update
 Cycle                  158 ----------------------------------------------------
 
 cycle        158
+Mem done with pc:                  260
+STALL
 
 Cycle                  159 ----------------------------------------------------
 
 cycle        159
 On  7, writes                    4   (wrE)
+wrE with                  260: 
 Execute.
+STALL
 Stat update
 
 Cycle                  160 ----------------------------------------------------
 
 cycle        160
+Mem done with pc:                  262
+STALL
 
 Cycle                  161 ----------------------------------------------------
 
 cycle        161
 Execute.
+STALL
 Stat update
 
 Cycle                  162 ----------------------------------------------------
 
 cycle        162
+Mem done with pc:                  271
+STALL
 
 Cycle                  163 ----------------------------------------------------
 
 cycle        163
 On  1, writes                    1   (wrE)
+wrE with                  271: 
 Decode : from Pc                  281 , expanded inst : 6117735e010000000000, 
 subq %'h1, %'h7
 Fetch : from Pc                  292 , expanded inst : a07f6117800001000000, 
@@ -1098,11 +1331,14 @@ subq %'h1, %'h7
 Cycle                  165 ----------------------------------------------------
 
 cycle        165
+Mem done with pc:                  281
+STALL
 
 Cycle                  166 ----------------------------------------------------
 
 cycle        166
 On  7, writes                    3   (wrE)
+wrE with                  281: 
 Execute.
 Decode : from Pc                  292 , expanded inst : a07f6117800001000000, 
 push %'h7
@@ -1113,6 +1349,7 @@ Stat update
 Cycle                  167 ----------------------------------------------------
 
 cycle        167
+Mem done with pc:                  283
 Decode : from Pc                  294 , expanded inst : 61178000010000000000, 
 subq %'h1, %'h7
 Fetch : from Pc                  305 , expanded inst : b07fa00f800001000000, 
@@ -1122,17 +1359,21 @@ Cycle                  168 ----------------------------------------------------
 
 cycle        168
 Execute.
+STALL
 Stat update
 
 Cycle                  169 ----------------------------------------------------
 
 cycle        169
-Stored                    3 into                 1160
+Stored                    3 into                 1112
+Mem done with pc:                  292
+STALL
 
 Cycle                  170 ----------------------------------------------------
 
 cycle        170
-On  4, writes                 1160   (wrE)
+On  4, writes                 1112   (wrE)
+wrE with                  292: 
 Execute.
 Decode : from Pc                  296 , expanded inst : 800001000000000000b0, 
 call 'h0000000000000100
@@ -1143,18 +1384,24 @@ Stat update
 Cycle                  171 ----------------------------------------------------
 
 cycle        171
+Mem done with pc:                  294
+STALL
 
 Cycle                  172 ----------------------------------------------------
 
 cycle        172
 On  7, writes                    2   (wrE)
+wrE with                  294: 
 Execute.
 mispredicted, redirect                  256 
+STALL
 Stat update
 
 Cycle                  173 ----------------------------------------------------
 
 cycle        173
+Mem cancelled with pc:                  296
+STALL
 
 Cycle                  174 ----------------------------------------------------
 
@@ -1167,10 +1414,14 @@ push %'h5
 Cycle                  175 ----------------------------------------------------
 
 cycle        175
+Not Executed because epoch is different:                  305 
+STALL
 
 Cycle                  176 ----------------------------------------------------
 
 cycle        176
+Mem cancelled with pc:                  305
+STALL
 
 Cycle                  177 ----------------------------------------------------
 
@@ -1183,10 +1434,14 @@ rrmovq %'h4, %'h5
 Cycle                  178 ----------------------------------------------------
 
 cycle        178
+Not Executed because epoch is different:                  307 
+STALL
 
 Cycle                  179 ----------------------------------------------------
 
 cycle        179
+Mem cancelled with pc:                  307
+STALL
 
 Cycle                  180 ----------------------------------------------------
 
@@ -1199,18 +1454,26 @@ andq %'h7, %'h7
 Cycle                  181 ----------------------------------------------------
 
 cycle        181
+Execute.
+STALL
 
 Cycle                  182 ----------------------------------------------------
 
 cycle        182
+Stored                 1120 into                 1104
+Mem done with pc:                  256
+STALL
 
 Cycle                  183 ----------------------------------------------------
 
 cycle        183
+On  4, writes                 1104   (wrE)
+wrE with                  256: 
 Decode : from Pc                  258 , expanded inst : 20456277734b01000000, 
 rrmovq %'h4, %'h5
 Fetch : from Pc                  262 , expanded inst : 734b0100000000000030, 
 je $'h000000000000014b
+Stat update
 
 Cycle                  184 ----------------------------------------------------
 
@@ -1224,6 +1487,7 @@ irmovq $'h0000000000000001,  %'h1
 Cycle                  185 ----------------------------------------------------
 
 cycle        185
+Mem done with pc:                  258
 Decode : from Pc                  262 , expanded inst : 734b0100000000000030, 
 je $'h000000000000014b
 Fetch : from Pc                  281 , expanded inst : 6117735e010000000000, 
@@ -1232,7 +1496,8 @@ subq %'h1, %'h7
 Cycle                  186 ----------------------------------------------------
 
 cycle        186
-On  5, writes                 1160   (wrE)
+On  5, writes                 1104   (wrE)
+wrE with                  258: 
 Execute.
 Decode : from Pc                  271 , expanded inst : 30f10100000000000000, 
 irmovq $'h0000000000000001,  %'h1
@@ -1243,32 +1508,42 @@ Stat update
 Cycle                  187 ----------------------------------------------------
 
 cycle        187
+Mem done with pc:                  260
+STALL
 
 Cycle                  188 ----------------------------------------------------
 
 cycle        188
 On  7, writes                    2   (wrE)
+wrE with                  260: 
 Execute.
+STALL
 Stat update
 
 Cycle                  189 ----------------------------------------------------
 
 cycle        189
+Mem done with pc:                  262
+STALL
 
 Cycle                  190 ----------------------------------------------------
 
 cycle        190
 Execute.
+STALL
 Stat update
 
 Cycle                  191 ----------------------------------------------------
 
 cycle        191
+Mem done with pc:                  271
+STALL
 
 Cycle                  192 ----------------------------------------------------
 
 cycle        192
 On  1, writes                    1   (wrE)
+wrE with                  271: 
 Decode : from Pc                  281 , expanded inst : 6117735e010000000000, 
 subq %'h1, %'h7
 Fetch : from Pc                  292 , expanded inst : a07f6117800001000000, 
@@ -1287,11 +1562,14 @@ subq %'h1, %'h7
 Cycle                  194 ----------------------------------------------------
 
 cycle        194
+Mem done with pc:                  281
+STALL
 
 Cycle                  195 ----------------------------------------------------
 
 cycle        195
 On  7, writes                    1   (wrE)
+wrE with                  281: 
 Execute.
 Decode : from Pc                  292 , expanded inst : a07f6117800001000000, 
 push %'h7
@@ -1302,6 +1580,7 @@ Stat update
 Cycle                  196 ----------------------------------------------------
 
 cycle        196
+Mem done with pc:                  283
 Decode : from Pc                  294 , expanded inst : 61178000010000000000, 
 subq %'h1, %'h7
 Fetch : from Pc                  305 , expanded inst : b07fa00f800001000000, 
@@ -1311,17 +1590,21 @@ Cycle                  197 ----------------------------------------------------
 
 cycle        197
 Execute.
+STALL
 Stat update
 
 Cycle                  198 ----------------------------------------------------
 
 cycle        198
-Stored                    1 into                 1152
+Stored                    1 into                 1096
+Mem done with pc:                  292
+STALL
 
 Cycle                  199 ----------------------------------------------------
 
 cycle        199
-On  4, writes                 1152   (wrE)
+On  4, writes                 1096   (wrE)
+wrE with                  292: 
 Execute.
 Decode : from Pc                  296 , expanded inst : 800001000000000000b0, 
 call 'h0000000000000100
@@ -1332,18 +1615,24 @@ Stat update
 Cycle                  200 ----------------------------------------------------
 
 cycle        200
+Mem done with pc:                  294
+STALL
 
 Cycle                  201 ----------------------------------------------------
 
 cycle        201
 On  7, writes                    0   (wrE)
+wrE with                  294: 
 Execute.
 mispredicted, redirect                  256 
+STALL
 Stat update
 
 Cycle                  202 ----------------------------------------------------
 
 cycle        202
+Mem cancelled with pc:                  296
+STALL
 
 Cycle                  203 ----------------------------------------------------
 
@@ -1356,10 +1645,14 @@ push %'h5
 Cycle                  204 ----------------------------------------------------
 
 cycle        204
+Not Executed because epoch is different:                  305 
+STALL
 
 Cycle                  205 ----------------------------------------------------
 
 cycle        205
+Mem cancelled with pc:                  305
+STALL
 
 Cycle                  206 ----------------------------------------------------
 
@@ -1372,10 +1665,14 @@ rrmovq %'h4, %'h5
 Cycle                  207 ----------------------------------------------------
 
 cycle        207
+Not Executed because epoch is different:                  307 
+STALL
 
 Cycle                  208 ----------------------------------------------------
 
 cycle        208
+Mem cancelled with pc:                  307
+STALL
 
 Cycle                  209 ----------------------------------------------------
 
@@ -1388,18 +1685,26 @@ andq %'h7, %'h7
 Cycle                  210 ----------------------------------------------------
 
 cycle        210
+Execute.
+STALL
 
 Cycle                  211 ----------------------------------------------------
 
 cycle        211
+Stored                 1104 into                 1088
+Mem done with pc:                  256
+STALL
 
 Cycle                  212 ----------------------------------------------------
 
 cycle        212
+On  4, writes                 1088   (wrE)
+wrE with                  256: 
 Decode : from Pc                  258 , expanded inst : 20456277734b01000000, 
 rrmovq %'h4, %'h5
 Fetch : from Pc                  262 , expanded inst : 734b0100000000000030, 
 je $'h000000000000014b
+Stat update
 
 Cycle                  213 ----------------------------------------------------
 
@@ -1413,6 +1718,7 @@ irmovq $'h0000000000000001,  %'h1
 Cycle                  214 ----------------------------------------------------
 
 cycle        214
+Mem done with pc:                  258
 Decode : from Pc                  262 , expanded inst : 734b0100000000000030, 
 je $'h000000000000014b
 Fetch : from Pc                  281 , expanded inst : 6117735e010000000000, 
@@ -1421,7 +1727,8 @@ subq %'h1, %'h7
 Cycle                  215 ----------------------------------------------------
 
 cycle        215
-On  5, writes                 1152   (wrE)
+On  5, writes                 1088   (wrE)
+wrE with                  258: 
 Execute.
 Decode : from Pc                  271 , expanded inst : 30f10100000000000000, 
 irmovq $'h0000000000000001,  %'h1
@@ -1432,26 +1739,36 @@ Stat update
 Cycle                  216 ----------------------------------------------------
 
 cycle        216
+Mem done with pc:                  260
+STALL
 
 Cycle                  217 ----------------------------------------------------
 
 cycle        217
 On  7, writes                    0   (wrE)
+wrE with                  260: 
 Execute.
 mispredicted, redirect                  331 
+STALL
 Stat update
 
 Cycle                  218 ----------------------------------------------------
 
 cycle        218
+Mem cancelled with pc:                  262
+STALL
 
 Cycle                  219 ----------------------------------------------------
 
 cycle        219
+Not Executed because epoch is different:                  271 
+STALL
 
 Cycle                  220 ----------------------------------------------------
 
 cycle        220
+Mem cancelled with pc:                  271
+STALL
 
 Cycle                  221 ----------------------------------------------------
 
@@ -1464,6 +1781,7 @@ irmovq $'h0000000000000000,  %'h0
 Cycle                  222 ----------------------------------------------------
 
 cycle        222
+Not Executed because epoch is different:                  281 
 Decode : from Pc                  283 , expanded inst : 735e01000000000000a0, 
 je $'h000000000000015e
 Fetch : from Pc                  341 , expanded inst : 70680100000000000030, 
@@ -1472,6 +1790,7 @@ jmp $'h0000000000000168
 Cycle                  223 ----------------------------------------------------
 
 cycle        223
+Mem cancelled with pc:                  281
 Decode : from Pc                  331 , expanded inst : 30f00000000000000000, 
 irmovq $'h0000000000000000,  %'h0
 Fetch : from Pc                  350 , expanded inst : 30f00100000000000000, 
@@ -1480,6 +1799,7 @@ irmovq $'h0000000000000001,  %'h0
 Cycle                  224 ----------------------------------------------------
 
 cycle        224
+Not Executed because epoch is different:                  283 
 Decode : from Pc                  341 , expanded inst : 70680100000000000030, 
 jmp $'h0000000000000168
 Fetch : from Pc                  360 , expanded inst : 2054b05f90000000aaaa, 
@@ -1488,10 +1808,12 @@ rrmovq %'h5, %'h4
 Cycle                  225 ----------------------------------------------------
 
 cycle        225
+Mem cancelled with pc:                  283
 
 Cycle                  226 ----------------------------------------------------
 
 cycle        226
+Execute.
 Decode : from Pc                  350 , expanded inst : 30f00100000000000000, 
 irmovq $'h0000000000000001,  %'h0
 Fetch : from Pc                  362 , expanded inst : b05f90000000aaaaaaaa, 
@@ -1500,36 +1822,50 @@ pop %'h5
 Cycle                  227 ----------------------------------------------------
 
 cycle        227
+Mem done with pc:                  331
 
 Cycle                  228 ----------------------------------------------------
 
 cycle        228
+On  0, writes                    0   (wrE)
+wrE with                  331: 
 Execute.
 mispredicted, redirect                  360 
 Decode : from Pc                  360 , expanded inst : 2054b05f90000000aaaa, 
 rrmovq %'h5, %'h4
 Fetch : from Pc                  360 , expanded inst : 2054b05f90000000aaaa, 
 rrmovq %'h5, %'h4
+Stat update
 
 Cycle                  229 ----------------------------------------------------
 
 cycle        229
+Mem cancelled with pc:                  341
+STALL
 
 Cycle                  230 ----------------------------------------------------
 
 cycle        230
+Not Executed because epoch is different:                  350 
+STALL
 
 Cycle                  231 ----------------------------------------------------
 
 cycle        231
+Mem cancelled with pc:                  350
+STALL
 
 Cycle                  232 ----------------------------------------------------
 
 cycle        232
+Not Executed because epoch is different:                  360 
+STALL
 
 Cycle                  233 ----------------------------------------------------
 
 cycle        233
+Mem cancelled with pc:                  360
+STALL
 
 Cycle                  234 ----------------------------------------------------
 
@@ -1542,10 +1878,14 @@ pop %'h5
 Cycle                  235 ----------------------------------------------------
 
 cycle        235
+Not Executed because epoch is different:                  362 
+STALL
 
 Cycle                  236 ----------------------------------------------------
 
 cycle        236
+Mem cancelled with pc:                  362
+STALL
 
 Cycle                  237 ----------------------------------------------------
 
@@ -1558,34 +1898,46 @@ ret
 Cycle                  238 ----------------------------------------------------
 
 cycle        238
+Execute.
+STALL
 
 Cycle                  239 ----------------------------------------------------
 
 cycle        239
+Mem done with pc:                  360
+STALL
 
 Cycle                  240 ----------------------------------------------------
 
 cycle        240
+On  4, writes                 1088   (wrE)
+wrE with                  360: 
 Decode : from Pc                  362 , expanded inst : b05f90000000aaaaaaaa, 
 pop %'h5
 Fetch : from Pc                  365 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
+Stat update
 
 Cycle                  241 ----------------------------------------------------
 
 cycle        241
 Execute.
+STALL
 
 Cycle                  242 ----------------------------------------------------
 
 cycle        242
-Loaded                    1 from                 1152
+Loaded                 1104 from                 1088
+Mem done with pc:                  362
+STALL
 
 Cycle                  243 ----------------------------------------------------
 
 cycle        243
-On  4, writes                 1160   (wrE)
-On  5, writes                    1   (wrM)
+On  4, writes                 1096   (wrE)
+wrE with                  362: 
+On  5, writes                 1104   (wrM)
+wrM with $d:                  362
 Decode : from Pc                  364 , expanded inst : 90000000aaaaaaaaaaaa, 
 ret
 Fetch : from Pc                  366 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
@@ -1604,38 +1956,80 @@ halt
 Cycle                  245 ----------------------------------------------------
 
 cycle        245
-Loaded                    3 from                 1160
-mispredicted, redirect                    3 
+Loaded                    1 from                 1096
+mispredicted, redirect                    1 
+Mem done with pc:                  364
 Decode : from Pc                  366 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt
-Fetch : from Pc                    3 , expanded inst : 0400000000000030f4b0, 
-halt
+Fetch : from Pc                    1 , expanded inst : f4b00400000000000030, 
+Unsupported Instruction
 
 Cycle                  246 ----------------------------------------------------
 
 cycle        246
-On  4, writes                 1168   (wrE)
-Execute.
+Not Executed because epoch is different:                  365 
 Decode : from Pc                  367 , expanded inst : 00aaaaaaaaaaaaaaaaa0, 
 halt
-Fetch : from Pc                    4 , expanded inst : 00000000000030f4b004, 
-halt
-Stat update
+Fetch : from Pc                    2 , expanded inst : b00400000000000030f4, 
+pop %'h0
 
 Cycle                  247 ----------------------------------------------------
 
 cycle        247
+Mem cancelled with pc:                  365
 
 Cycle                  248 ----------------------------------------------------
 
 cycle        248
-Execute.
-Decode : from Pc                    3 , expanded inst : 0400000000000030f4b0, 
+Not Executed because epoch is different:                  366 
+Decode : from Pc                    1 , expanded inst : f4b00400000000000030, 
+Unsupported Instruction
+Fetch : from Pc                    4 , expanded inst : 00000000000030f4b004, 
 halt
-Fetch : from Pc                    5 , expanded inst : 000000000030f4b00400, 
-halt
-Stat update
 
 Cycle                  249 ----------------------------------------------------
 
 cycle        249
+Mem cancelled with pc:                  366
+
+Cycle                  250 ----------------------------------------------------
+
+cycle        250
+Not Executed because epoch is different:                  367 
+Decode : from Pc                    2 , expanded inst : b00400000000000030f4, 
+pop %'h0
+Fetch : from Pc                    5 , expanded inst : 000000000030f4b00400, 
+halt
+
+Cycle                  251 ----------------------------------------------------
+
+cycle        251
+Mem cancelled with pc:                  367
+
+Cycle                  252 ----------------------------------------------------
+
+cycle        252
+Execute.
+Decode : from Pc                    4 , expanded inst : 00000000000030f4b004, 
+halt
+Fetch : from Pc                    6 , expanded inst : 0000000030f4b0040000, 
+halt
+
+Cycle                  253 ----------------------------------------------------
+
+cycle        253
+Mem done with pc:                    1
+
+Cycle                  254 ----------------------------------------------------
+
+cycle        254
+Execute.
+Decode : from Pc                    5 , expanded inst : 000000000030f4b00400, 
+halt
+Fetch : from Pc                    7 , expanded inst : 00000030f4b004000000, 
+halt
+Stat update
+
+Cycle                  255 ----------------------------------------------------
+
+cycle        255
