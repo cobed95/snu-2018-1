@@ -18,6 +18,7 @@ mtc0 %'h0, %'he
 Cycle                    2 ----------------------------------------------------
 
 cycle          2
+Execute.
 Fetch : from Pc                   12 , expanded inst : 00000000aaaaaaaaaaaa, 
 halt
 
@@ -38,6 +39,7 @@ Stat update
 Cycle                    5 ----------------------------------------------------
 
 cycle          5
+Execute.
 Decode : from Pc                   12 , expanded inst : 00000000aaaaaaaaaaaa, 
 halt
 Fetch : from Pc                   14 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
@@ -55,6 +57,7 @@ Cycle                    7 ----------------------------------------------------
 
 cycle          7
 On 14, writes                    0   (wrE)
+Execute.
 Decode : from Pc                   14 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt
 Fetch : from Pc                   16 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 

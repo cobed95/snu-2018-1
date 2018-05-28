@@ -25,6 +25,7 @@ typedef struct {
 
 typedef struct {
     Maybe#(ExecInst) inst;
+	Bool epoch;
 } Exec2Mem deriving(Bits, Eq);
 
 typedef struct {
@@ -68,15 +69,12 @@ module mkProc(Proc);
 		end
 		else
 		begin
-			if (f2d.notFull) 
-			begin
-				let inst = iMem.req(pc);
-				let ppc = nextAddr(pc, getICode(inst));
+			let inst = iMem.req(pc);
+			let ppc = nextAddr(pc, getICode(inst));
 
-				$display("Fetch : from Pc %d , expanded inst : %x, \n", pc, inst, showInst(inst));
-				pc <= ppc;
-				f2d.enq(Fetch2Decode{inst:inst, pc:pc, ppc:ppc, epoch:fEpoch});
-			end
+			$display("Fetch : from Pc %d , expanded inst : %x, \n", pc, inst, showInst(inst));
+			pc <= ppc;
+			f2d.enq(Fetch2Decode{inst:inst, pc:pc, ppc:ppc, epoch:fEpoch});
 		end
 	endrule
 
@@ -114,25 +112,19 @@ module mkProc(Proc);
 			/* Execute */
 			let eInst = exec(dInst, condFlag, ppc);
 			condFlag <= eInst.condFlag;
-             
-            e2m.enq(Exec2Mem{inst : Valid(eInst)});
-			
-			if(eInst.mispredict)
-			begin
-				eEpoch <= !eEpoch;
-				let redirPc = validValue(eInst.nextPc);
-				$display("mispredicted, redirect %d ", redirPc);
-				execRedirect.enq(redirPc);
-			end
+			$display("Execute.");	
+			     
+            e2m.enq(Exec2Mem{inst : Valid(eInst), epoch:iEpoch});	
         end
 			
 		else
-			e2m.enq(Exec2Mem{inst : Invalid});
+			e2m.enq(Exec2Mem{inst : Invalid, epoch:iEpoch});
 		d2e.deq;
     endrule
 
     rule doMem(cop.started && stat == AOK);
-		if (isValid(e2m.first.inst))
+		let iEpoch = e2m.first.epoch;
+		if (isValid(e2m.first.inst) && iEpoch == eEpoch)
 		begin
 			let eInst = validValue(e2m.first.inst);
 		    
@@ -146,7 +138,7 @@ module mkProc(Proc);
 				    $display("Loaded %d from %d", little2BigEndian(ldData), eInst.memAddr);
 				    if(iType == Ret)
 				    begin
-					    eInst.nextPc = eInst.valM;
+					    eInst.nextPc = eInst.valM;	
 				    end
 			    end
 
@@ -157,7 +149,16 @@ module mkProc(Proc);
 				    $display("Stored %d into %d", stData, eInst.memAddr);
 			    end
 		    endcase
-            m2w.enq(Mem2Write{inst : Valid(eInst)});
+			
+			if(eInst.mispredict)
+			begin
+				eEpoch <= !eEpoch;
+				let redirPc = validValue(eInst.nextPc);
+				$display("mispredicted, redirect %d ", redirPc);
+				execRedirect.enq(redirPc);
+			end
+		    
+			m2w.enq(Mem2Write{inst : Valid(eInst)});
         end
 		
 		else
