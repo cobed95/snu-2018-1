@@ -36,6 +36,9 @@ Cycle                    4 ----------------------------------------------------
 
 cycle          4
 On  0, writes 18446744073709551615   (wrE)
+Execute.
+Decode : from Pc                   22 , expanded inst : 2330c00e000000000000, 
+cmove %'h3, %'h0
 Fetch : from Pc                   24 , expanded inst : c00e000000000000aaaa, 
 mtc0 %'h0, %'he
 Stat update
@@ -43,30 +46,34 @@ Stat update
 Cycle                    5 ----------------------------------------------------
 
 cycle          5
-Execute.
-Decode : from Pc                   22 , expanded inst : 2330c00e000000000000, 
-cmove %'h3, %'h0
 Fetch : from Pc                   26 , expanded inst : 000000000000aaaaaaaa, 
 halt
 
 Cycle                    6 ----------------------------------------------------
 
 cycle          6
-
-Cycle                    7 ----------------------------------------------------
-
-cycle          7
 On  3, writes                    0   (wrE)
-Stat update
-
-Cycle                    8 ----------------------------------------------------
-
-cycle          8
 Execute.
 Decode : from Pc                   24 , expanded inst : c00e000000000000aaaa, 
 mtc0 %'h0, %'he
 Fetch : from Pc                   27 , expanded inst : 0000000000aaaaaaaaaa, 
 halt
+Stat update
+
+Cycle                    7 ----------------------------------------------------
+
+cycle          7
+
+Cycle                    8 ----------------------------------------------------
+
+cycle          8
+On  1, writes                    0   (wrE)
+Execute.
+Decode : from Pc                   26 , expanded inst : 000000000000aaaaaaaa, 
+halt
+Fetch : from Pc                   28 , expanded inst : 00000000aaaaaaaaaaaa, 
+halt
+Stat update
 
 Cycle                    9 ----------------------------------------------------
 
@@ -75,45 +82,27 @@ cycle          9
 Cycle                   10 ----------------------------------------------------
 
 cycle         10
-On  1, writes                    0   (wrE)
-Stat update
-
-Cycle                   11 ----------------------------------------------------
-
-cycle         11
-Execute.
-Decode : from Pc                   26 , expanded inst : 000000000000aaaaaaaa, 
-halt
-Fetch : from Pc                   28 , expanded inst : 00000000aaaaaaaaaaaa, 
-halt
-
-Cycle                   12 ----------------------------------------------------
-
-cycle         12
-
-Cycle                   13 ----------------------------------------------------
-
-cycle         13
 On  0, writes                    0   (wrE)
-Stat update
-
-Cycle                   14 ----------------------------------------------------
-
-cycle         14
 Execute.
 Decode : from Pc                   27 , expanded inst : 0000000000aaaaaaaaaa, 
 halt
 Fetch : from Pc                   29 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
-
-Cycle                   15 ----------------------------------------------------
-
-cycle         15
-
-Cycle                   16 ----------------------------------------------------
-
-cycle         16
-On 14, writes 18446744073709551615   (wrE)
 Stat update
 
-Cycle                   17 ----------------------------------------------------
+Cycle                   11 ----------------------------------------------------
+
+cycle         11
+
+Cycle                   12 ----------------------------------------------------
+
+cycle         12
+On 14, writes 18446744073709551615   (wrE)
+Execute.
+Decode : from Pc                   28 , expanded inst : 00000000aaaaaaaaaaaa, 
+halt
+Fetch : from Pc                   30 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
+halt
+Stat update
+
+Cycle                   13 ----------------------------------------------------

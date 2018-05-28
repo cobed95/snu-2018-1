@@ -34,13 +34,8 @@ typedef struct {
 
 typedef struct {
 	Maybe#(FullIndx) rIndx;
-	Maybe#(Data)	  data;
-} Exec2Decode deriving(Bits, Eq);
-
-typedef struct {
-	Maybe#(FullIndx) rIndx;
-	Maybe#(Data)	  data;
-} Mem2Decode deriving(Bits, Eq);
+	Maybe#(Data)	 data;
+} Bypassed deriving(Bits, Eq);
 
 (*synthesize*)
 module mkProc(Proc);
@@ -53,8 +48,8 @@ module mkProc(Proc);
 	Reg#(CondFlag) 	 	condFlag	<- mkRegU;
 	Reg#(ProcStatus)   	stat		<- mkRegU;
 
-	Fifo#(1, Exec2Decode)	e2d		<- mkBypassFifo;
-	Fifo#(1, Mem2Decode)	m2d		<- mkBypassFifo;
+	Fifo#(1, Bypassed)	e2d			<- mkBypassFifo;
+	Fifo#(1, Bypassed)	m2d			<- mkBypassFifo;
 
 	Fifo#(1, Addr)       execRedirect <- mkBypassFifo;
 	Fifo#(1, ProcStatus) statRedirect <- mkBypassFifo;
@@ -101,17 +96,30 @@ module mkProc(Proc);
 		/* Decode */
 		let dInst = decode(inst, ipc);
 
-        if(dInst.iType == MRmov)
-            stall <= True;
         if(stall)
             stall <= !stall;
         else
         begin
+			if(dInst.iType == MRmov)
+				stall <= True;
 		    if(e2d.notEmpty || m2d.notEmpty) 
 		    begin
 			    if(e2d.notEmpty && m2d.notEmpty)
                 begin
-                    let bypassed = e2d.first;                
+                    let bypassed = e2d.first;
+					if(isValid(dInst.regA) && validRegValue(dInst.regA) == validRegValue(bypassed.rIndx))
+						dInst.valA = bypassed.data;
+					else if(isValid(dInst.regA))
+						dInst.valA = tagged Valid rf.rdA(validRegValue(dInst.regA));
+					else
+						dInst.valA = Invalid;
+					
+					if(isValid(dInst.regB) && validRegValue(dInst.regB) == validRegValue(bypassed.rIndx))
+						dInst.valB = bypassed.data;                
+					else if(isValid(dInst.regB))
+						dInst.valB = tagged Valid rf.rdB(validRegValue(dInst.regB));
+					else
+						dInst.valB = Invalid;
                     e2d.deq;
                     m2d.deq;
                 end
@@ -119,19 +127,40 @@ module mkProc(Proc);
 			    else if(e2d.notEmpty)
                 begin
                     let bypassed = e2d.first;
-                    e2d.deq;
+					if(isValid(dInst.regA) && validRegValue(dInst.regA) == validRegValue(bypassed.rIndx))
+						dInst.valA = bypassed.data;
+					else if (isValid(dInst.regA))
+						dInst.valA = tagged Valid rf.rdA(validRegValue(dInst.regA));
+					else
+						dInst.valA = Invalid;
+					
+					if(isValid(dInst.regB) && validRegValue(dInst.regB) == validRegValue(bypassed.rIndx))
+						dInst.valB = bypassed.data;
+					else if (isValid(dInst.regB))
+						dInst.valB = tagged Valid rf.rdB(validRegValue(dInst.regB));
+					else
+						dInst.valB = Invalid;
+					e2d.deq;
                 end
 
                 else if(m2d.notEmpty)
                 begin
                     let bypassed = m2d.first;
+					if(isValid(dInst.regA) && validRegValue(dInst.regA) == validRegValue(bypassed.rIndx))
+						dInst.valA = bypassed.data;
+					else if (isValid(dInst.regA))
+						dInst.valA = tagged Valid rf.rdA(validRegValue(dInst.regA));
+					else 
+						dInst.valA = Invalid;
+
+					if(isValid(dInst.regB) && validRegValue(dInst.regB) == validRegValue(bypassed.rIndx))
+						dInst.valB = bypassed.data;
+					else if (isValid(dInst.regB))
+						dInst.valB = tagged Valid rf.rdB(validRegValue(dInst.regB));
+					else
+						dInst.valB = Invalid;
                     m2d.deq;
-                end
-                 
-                if(isValid(dInst.regA) && validRegValue(dInst.regA) == validRegValue(bypassed.rIndx))
-                    dInst.valA = bypassed.data;
-                if(isValid(dInst.regB) && validRegValue(dInst.regB) == validRegValue(bypassed.rIndx))
-                    dInst.valB = bypassed.data;
+                end 
 		    end
         
             else
@@ -161,9 +190,7 @@ module mkProc(Proc);
 			$display("Execute.");
 			
             if(isValid(eInst.dstE))
-            begin
-				e2d.enq(Exec2Decode{rIndx : eInst.dstE, data : eInst.valE});
-            end
+				e2d.enq(Bypassed{rIndx : eInst.dstE, data : eInst.valE});
 
             e2m.enq(Exec2Mem{inst : Valid(eInst), epoch:iEpoch});	
         end
@@ -178,8 +205,8 @@ module mkProc(Proc);
 		if (isValid(e2m.first.inst) && iEpoch == eEpoch)
 		begin
 			let eInst = validValue(e2m.first.inst);
-            if(isValid(eInst.dstE))
-                e2d.enq(Exec2Decode{rIndx : eInst.dstE, data : eInst.valE});
+			if(eInst.iType != MRmov && isValid(eInst.dstE))
+				m2d.enq(Bypassed{rIndx : eInst.dstE, data : eInst.valE});
 		    
 			/* Memory */ 
 		    let iType = eInst.iType;
@@ -193,9 +220,9 @@ module mkProc(Proc);
 				    begin
 					    eInst.nextPc = eInst.valM;	
 				    end
-                    if(iType == MRmov)
+                    if(iType == MRmov && isValid(eInst.dstM))
                     begin
-						m2d.enq(Mem2Decode{rIndx : eInst.dstM, data : eInst.valM});
+						m2d.enq(Bypassed{rIndx : eInst.dstM, data : eInst.valM});
                     end
 			    end
 

@@ -36,6 +36,9 @@ Cycle                    4 ----------------------------------------------------
 
 cycle          4
 On  0, writes                    0   (wrE)
+Execute.
+Decode : from Pc                   13 , expanded inst : 000000aaaaaaaaaaaaaa, 
+halt
 Fetch : from Pc                   14 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt
 Stat update
@@ -43,20 +46,18 @@ Stat update
 Cycle                    5 ----------------------------------------------------
 
 cycle          5
-Execute.
-Decode : from Pc                   13 , expanded inst : 000000aaaaaaaaaaaaaa, 
-halt
 Fetch : from Pc                   15 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
 halt
 
 Cycle                    6 ----------------------------------------------------
 
 cycle          6
-
-Cycle                    7 ----------------------------------------------------
-
-cycle          7
 On 14, writes                    0   (wrE)
+Execute.
+Decode : from Pc                   14 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
+halt
+Fetch : from Pc                   16 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
+push %'ha
 Stat update
 
-Cycle                    8 ----------------------------------------------------
+Cycle                    7 ----------------------------------------------------
