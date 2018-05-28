@@ -1,0 +1,204 @@
+Warning: file 'memory.vmh' for memory 'dMem' has a gap at address 5.
+Warning: file 'memory.vmh' for memory 'dMem' has a gap at addresses 8 to 67108863.
+Warning: file 'memory.vmh' for memory 'iMem' has a gap at address 5.
+Warning: file 'memory.vmh' for memory 'iMem' has a gap at addresses 8 to 67108863.
+
+Cycle                    0 ----------------------------------------------------
+
+cycle          0
+Fetch : from Pc                    0 , expanded inst : 30f30300000000000000, 
+irmovq $'h0000000000000003,  %'h3
+
+Cycle                    1 ----------------------------------------------------
+
+cycle          1
+Decode : from Pc                    0 , expanded inst : 30f30300000000000000, 
+irmovq $'h0000000000000003,  %'h3
+Fetch : from Pc                   10 , expanded inst : 30f0ffffffffffffffff, 
+irmovq $'hffffffffffffffff,  %'h0
+
+Cycle                    2 ----------------------------------------------------
+
+cycle          2
+Execute.
+Decode : from Pc                   10 , expanded inst : 30f0ffffffffffffffff, 
+irmovq $'hffffffffffffffff,  %'h0
+Fetch : from Pc                   20 , expanded inst : 62337430000000000000, 
+andq %'h3, %'h3
+
+Cycle                    3 ----------------------------------------------------
+
+cycle          3
+Decode : from Pc                   20 , expanded inst : 62337430000000000000, 
+andq %'h3, %'h3
+Fetch : from Pc                   22 , expanded inst : 743000000000000000c0, 
+jne $'h0000000000000030
+
+Cycle                    4 ----------------------------------------------------
+
+cycle          4
+On  3, writes                    3   (wrE)
+Fetch : from Pc                   31 , expanded inst : c00e00000000000000aa, 
+mtc0 %'h0, %'he
+Stat update
+
+Cycle                    5 ----------------------------------------------------
+
+cycle          5
+Execute.
+Decode : from Pc                   22 , expanded inst : 743000000000000000c0, 
+jne $'h0000000000000030
+Fetch : from Pc                   33 , expanded inst : 00000000000000aaaaaa, 
+halt
+
+Cycle                    6 ----------------------------------------------------
+
+cycle          6
+
+Cycle                    7 ----------------------------------------------------
+
+cycle          7
+On  0, writes 18446744073709551615   (wrE)
+Stat update
+
+Cycle                    8 ----------------------------------------------------
+
+cycle          8
+Execute.
+Decode : from Pc                   31 , expanded inst : c00e00000000000000aa, 
+mtc0 %'h0, %'he
+Fetch : from Pc                   34 , expanded inst : 000000000000aaaaaaaa, 
+halt
+
+Cycle                    9 ----------------------------------------------------
+
+cycle          9
+
+Cycle                   10 ----------------------------------------------------
+
+cycle         10
+On  3, writes                    3   (wrE)
+Stat update
+
+Cycle                   11 ----------------------------------------------------
+
+cycle         11
+Execute.
+Decode : from Pc                   33 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                   35 , expanded inst : 0000000000aaaaaaaaaa, 
+halt
+
+Cycle                   12 ----------------------------------------------------
+
+cycle         12
+mispredicted, redirect                   48 
+
+Cycle                   13 ----------------------------------------------------
+
+cycle         13
+Stat update
+
+Cycle                   14 ----------------------------------------------------
+
+cycle         14
+Decode : from Pc                   34 , expanded inst : 000000000000aaaaaaaa, 
+halt
+Fetch : from Pc                   48 , expanded inst : 30f00000000000000000, 
+irmovq $'h0000000000000000,  %'h0
+
+Cycle                   15 ----------------------------------------------------
+
+cycle         15
+
+Cycle                   16 ----------------------------------------------------
+
+cycle         16
+
+Cycle                   17 ----------------------------------------------------
+
+cycle         17
+Decode : from Pc                   35 , expanded inst : 0000000000aaaaaaaaaa, 
+halt
+Fetch : from Pc                   58 , expanded inst : c00e00000000aaaaaaaa, 
+mtc0 %'h0, %'he
+
+Cycle                   18 ----------------------------------------------------
+
+cycle         18
+
+Cycle                   19 ----------------------------------------------------
+
+cycle         19
+
+Cycle                   20 ----------------------------------------------------
+
+cycle         20
+Decode : from Pc                   48 , expanded inst : 30f00000000000000000, 
+irmovq $'h0000000000000000,  %'h0
+Fetch : from Pc                   60 , expanded inst : 00000000aaaaaaaaaaaa, 
+halt
+
+Cycle                   21 ----------------------------------------------------
+
+cycle         21
+
+Cycle                   22 ----------------------------------------------------
+
+cycle         22
+
+Cycle                   23 ----------------------------------------------------
+
+cycle         23
+Decode : from Pc                   58 , expanded inst : c00e00000000aaaaaaaa, 
+mtc0 %'h0, %'he
+Fetch : from Pc                   61 , expanded inst : 000000aaaaaaaaaaaaaa, 
+halt
+
+Cycle                   24 ----------------------------------------------------
+
+cycle         24
+
+Cycle                   25 ----------------------------------------------------
+
+cycle         25
+
+Cycle                   26 ----------------------------------------------------
+
+cycle         26
+Execute.
+Decode : from Pc                   60 , expanded inst : 00000000aaaaaaaaaaaa, 
+halt
+Fetch : from Pc                   62 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
+halt
+
+Cycle                   27 ----------------------------------------------------
+
+cycle         27
+
+Cycle                   28 ----------------------------------------------------
+
+cycle         28
+On  0, writes                    0   (wrE)
+Stat update
+
+Cycle                   29 ----------------------------------------------------
+
+cycle         29
+Execute.
+Decode : from Pc                   61 , expanded inst : 000000aaaaaaaaaaaaaa, 
+halt
+Fetch : from Pc                   63 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
+halt
+
+Cycle                   30 ----------------------------------------------------
+
+cycle         30
+
+Cycle                   31 ----------------------------------------------------
+
+cycle         31
+On 14, writes 18446744073709551615   (wrE)
+Stat update
+
+Cycle                   32 ----------------------------------------------------

@@ -32,6 +32,16 @@ typedef struct {
     Maybe#(ExecInst) inst;
 } Mem2Write deriving(Bits, Eq);
 
+typedef struct {
+	Maybe#(FullIndx) rIndx;
+	Maybe#(Data)	  data;
+} Exec2Decode deriving(Bits, Eq);
+
+typedef struct {
+	Maybe#(FullIndx) rIndx;
+	Maybe#(Data)	  data;
+} Mem2Decode deriving(Bits, Eq);
+
 (*synthesize*)
 module mkProc(Proc);
 	Reg#(Addr)    pc  <- mkRegU;
@@ -42,6 +52,9 @@ module mkProc(Proc);
 
 	Reg#(CondFlag) 	 	condFlag	<- mkRegU;
 	Reg#(ProcStatus)   	stat		<- mkRegU;
+
+	Fifo#(1, Exec2Decode)	e2d		<- mkBypassFifo;
+	Fifo#(1, Mem2Decode)	m2d		<- mkBypassFifo;
 
 	Fifo#(1, Addr)       execRedirect <- mkBypassFifo;
 	Fifo#(1, ProcStatus) statRedirect <- mkBypassFifo;
@@ -89,6 +102,15 @@ module mkProc(Proc);
 
         /* let stall = sb.search1(dInst.regA) || sb.search2(dInst.regB) || sb.search3(dInst.dstE) || sb.search4(dInst.dstM);
         if (!stall) */
+		if(e2d.notEmpty || m2d.notEmpty) 
+		begin
+			if(e2d.notEmpty && m2d.notEmpty)
+			begin
+
+			end
+
+			else if (e2d.notEmpty)
+		end
         dInst.valA   = isValid(dInst.regA)? tagged Valid rf.rdA(validRegValue(dInst.regA)) : Invalid;
 		dInst.valB   = isValid(dInst.regB)? tagged Valid rf.rdB(validRegValue(dInst.regB)) : Invalid;
 		dInst.copVal = isValid(dInst.regA)? tagged Valid cop.rd(validRegValue(dInst.regA)) : Invalid;
@@ -105,17 +127,17 @@ module mkProc(Proc);
         let dInst = d2e.first.inst;
         let ppc = d2e.first.ppc;
         let iEpoch = d2e.first.epoch;
-    
+
         if(iEpoch == eEpoch)
 		begin
 			/* Execute */
 			let eInst = exec(dInst, condFlag, ppc);
 			condFlag <= eInst.condFlag;
-			$display("Execute.");	
+			$display("Execute.");
 			
             if(isValid(eInst.dstE))
             begin
-                rf.wrE(validRegValue(eInst.dstE), validValue(dstE))
+				e2d.enq(Exec2Decode{rIndx : eInst.dstE, data : eInst.valE});
             end
 
             e2m.enq(Exec2Mem{inst : Valid(eInst), epoch:iEpoch});	
@@ -146,7 +168,7 @@ module mkProc(Proc);
 				    end
                     if(iType == MRmov)
                     begin
-                        rf.wrM(validRegValue(eInst.dstE), ldData);
+						m2d.enq(Mem2Decode{rIndx : eInst.dstM, data : eInst.valM});
                     end
 			    end
 
@@ -202,7 +224,7 @@ module mkProc(Proc);
 			statRedirect.enq(newStatus);
 		end
 		m2w.deq;
-		sb.remove;
+		/*sb.remove;*/
     endrule
 
 	rule upd_Stat(cop.started);
