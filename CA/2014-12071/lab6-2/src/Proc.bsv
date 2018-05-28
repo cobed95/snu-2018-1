@@ -66,6 +66,7 @@ module mkProc(Proc);
 
 	Reg#(Bool) fEpoch <- mkRegU;
 	Reg#(Bool) eEpoch <- mkRegU;
+    Reg#(Bool) stall <- mkReg(False);
 
 	/* Scoreboard#(4) sb <- mkPipelineScoreboard; */
 
@@ -100,27 +101,51 @@ module mkProc(Proc);
 		/* Decode */
 		let dInst = decode(inst, ipc);
 
-        /* let stall = sb.search1(dInst.regA) || sb.search2(dInst.regB) || sb.search3(dInst.dstE) || sb.search4(dInst.dstM);
-        if (!stall) */
-		if(e2d.notEmpty || m2d.notEmpty) 
-		begin
-			if(e2d.notEmpty && m2d.notEmpty)
-			begin
+        if(dInst.iType == MRmov)
+            stall <= True;
+        if(stall)
+            stall <= !stall;
+        else
+        begin
+		    if(e2d.notEmpty || m2d.notEmpty) 
+		    begin
+			    if(e2d.notEmpty && m2d.notEmpty)
+                begin
+                    let bypassed = e2d.first;                
+                    e2d.deq;
+                    m2d.deq;
+                end
 
-			end
+			    else if(e2d.notEmpty)
+                begin
+                    let bypassed = e2d.first;
+                    e2d.deq;
+                end
 
-			else if (e2d.notEmpty)
-		end
-        dInst.valA   = isValid(dInst.regA)? tagged Valid rf.rdA(validRegValue(dInst.regA)) : Invalid;
-		dInst.valB   = isValid(dInst.regB)? tagged Valid rf.rdB(validRegValue(dInst.regB)) : Invalid;
-		dInst.copVal = isValid(dInst.regA)? tagged Valid cop.rd(validRegValue(dInst.regA)) : Invalid;
+                else if(m2d.notEmpty)
+                begin
+                    let bypassed = m2d.first;
+                    m2d.deq;
+                end
+                 
+                if(isValid(dInst.regA) && validRegValue(dInst.regA) == validRegValue(bypassed.rIndx))
+                    dInst.valA = bypassed.data;
+                if(isValid(dInst.regB) && validRegValue(dInst.regB) == validRegValue(bypassed.rIndx))
+                    dInst.valB = bypassed.data;
+		    end
+        
+            else
+            begin
+                dInst.valA   = isValid(dInst.regA)? tagged Valid rf.rdA(validRegValue(dInst.regA)) : Invalid;
+		        dInst.valB   = isValid(dInst.regB)? tagged Valid rf.rdB(validRegValue(dInst.regB)) : Invalid;
+            end
+		    dInst.copVal = isValid(dInst.regA)? tagged Valid cop.rd(validRegValue(dInst.regA)) : Invalid;
             
-		$display("Decode : from Pc %d , expanded inst : %x, \n", ipc, inst, showInst(inst));
+		    $display("Decode : from Pc %d , expanded inst : %x, \n", ipc, inst, showInst(inst));
 
-		d2e.enq(Decode2Exec{inst:dInst, ppc:ppc, epoch:iEpoch});
-		/* sb.insertE(dInst.dstE);
-		sb.insertM(dInst.dstM); */
-		f2d.deq;
+		    d2e.enq(Decode2Exec{inst:dInst, ppc:ppc, epoch:iEpoch});
+		    f2d.deq;
+        end
     endrule
 
     rule doExec(cop.started && stat == AOK);
@@ -153,6 +178,8 @@ module mkProc(Proc);
 		if (isValid(e2m.first.inst) && iEpoch == eEpoch)
 		begin
 			let eInst = validValue(e2m.first.inst);
+            if(isValid(eInst.dstE))
+                e2d.enq(Exec2Decode{rIndx : eInst.dstE, data : eInst.valE});
 		    
 			/* Memory */ 
 		    let iType = eInst.iType;
