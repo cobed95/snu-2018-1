@@ -12,29 +12,25 @@ Cycle                    1 ----------------------------------------------------
 cycle          1
 Decode : from Pc                    0 , expanded inst : 30f37800000000000000, 
 irmovq $'h0000000000000078,  %'h3
-valA: 12297829382473034410
-valB: $d                   0
 Fetch : from Pc                   10 , expanded inst : 30f10300000000000000, 
 irmovq $'h0000000000000003,  %'h1
 
 Cycle                    2 ----------------------------------------------------
 
 cycle          2
-Execute.
+Executed                    0
 Decode : from Pc                   10 , expanded inst : 30f10300000000000000, 
 irmovq $'h0000000000000003,  %'h1
-valA: 12297829382473034410
-valB: $d                   0
 Fetch : from Pc                   20 , expanded inst : 30f2fdffffffffffffff, 
 irmovq $'hfffffffffffffffd,  %'h2
 
 Cycle                    3 ----------------------------------------------------
 
 cycle          3
+Mem done with pc:                    0
+Executed                   10
 Decode : from Pc                   20 , expanded inst : 30f2fdffffffffffffff, 
 irmovq $'hfffffffffffffffd,  %'h2
-valA: 12297829382473034410
-valB: $d                   0
 Fetch : from Pc                   30 , expanded inst : 40130000000000000000, 
 rmmovq %'h1, 'h0000000000000000(%'h3)
 
@@ -42,11 +38,13 @@ Cycle                    4 ----------------------------------------------------
 
 cycle          4
 On  3, writes                  120   (wrE)
-Execute.
+wrE with                    0: 
+wrote with pc:                    0
+Mem done with pc:                   10
+Executed                   20
 Decode : from Pc                   30 , expanded inst : 40130000000000000000, 
 rmmovq %'h1, 'h0000000000000000(%'h3)
-valA: 18446744073709551619
-valB: $d18446744073709551736
+Decoded using forwarded data. srcA, srcB:                    3,                  120
 Fetch : from Pc                   40 , expanded inst : 40230800000000000000, 
 rmmovq %'h2, 'h0000000000000008(%'h3)
 Stat update
@@ -54,18 +52,30 @@ Stat update
 Cycle                    5 ----------------------------------------------------
 
 cycle          5
+On  1, writes                    3   (wrE)
+wrE with                   10: 
+wrote with pc:                   10
+Mem done with pc:                   20
+Executed                   30
+Decode : from Pc                   40 , expanded inst : 40230800000000000000, 
+rmmovq %'h2, 'h0000000000000008(%'h3)
+Decoded using forwarded data. srcA, srcB: 18446744073709551613,                  120
 Fetch : from Pc                   50 , expanded inst : 50030000000000000000, 
 mrmovq 'h0000000000000000(%'h3), %'h0
+Stat update
 
 Cycle                    6 ----------------------------------------------------
 
 cycle          6
-On  1, writes                    3   (wrE)
-Execute.
-Decode : from Pc                   40 , expanded inst : 40230800000000000000, 
-rmmovq %'h2, 'h0000000000000008(%'h3)
-valA: 36893488147419103229
-valB: $d18446744073709551736
+On  2, writes 18446744073709551613   (wrE)
+wrE with                   20: 
+wrote with pc:                   20
+Stored                    3 into                  120
+Mem done with pc:                   30
+Executed                   40
+Decode : from Pc                   50 , expanded inst : 50030000000000000000, 
+mrmovq 'h0000000000000000(%'h3), %'h0
+Decoded using forwarded data. srcA, srcB:                  128,                  120
 Fetch : from Pc                   60 , expanded inst : 50630800000000000000, 
 mrmovq 'h0000000000000008(%'h3), %'h6
 Stat update
@@ -73,122 +83,102 @@ Stat update
 Cycle                    7 ----------------------------------------------------
 
 cycle          7
+wrote with pc:                   30
+Stored 18446744073709551613 into                  128
+Mem done with pc:                   40
+Executed                   50
+Detected stall trigger at Exec stage with pc:                   50
+Decode : from Pc                   60 , expanded inst : 50630800000000000000, 
+mrmovq 'h0000000000000008(%'h3), %'h6
+Decoded using forwarded data. srcA, srcB:                  120,                  120
+Fetch : from Pc                   70 , expanded inst : 6060c00e000000000000, 
+addq %'h6, %'h0
+Stat update
 
 Cycle                    8 ----------------------------------------------------
 
 cycle          8
-On  2, writes 18446744073709551613   (wrE)
-Execute.
-Decode : from Pc                   50 , expanded inst : 50030000000000000000, 
-mrmovq 'h0000000000000000(%'h3), %'h0
-valA:                    0
-valB: $d18446744073709551736
-Fetch : from Pc                   70 , expanded inst : 6060c00e000000000000, 
+wrote with pc:                   40
+Loaded                    3 from                  120
+Mem done with pc:                   50
+Executed                   60
+Detected stall trigger at Exec stage with pc:                   60
+Decode : from Pc                   70 , expanded inst : 6060c00e000000000000, 
 addq %'h6, %'h0
+Stalling for load-use DH
+Fetch : from Pc                   72 , expanded inst : c00e000000000000aaaa, 
+mtc0 %'h0, %'he
 Stat update
 
 Cycle                    9 ----------------------------------------------------
 
 cycle          9
-Stored                    3 into                  120
+On  0, writes                    3   (wrM)
+wrM with $d:                   50
+wrote with pc:                   50
+Loaded 18446744073709551613 from                  128
+Mem done with pc:                   60
+Executed                   70
+Decode : from Pc                   70 , expanded inst : 6060c00e000000000000, 
+addq %'h6, %'h0
+Decoded using forwarded data. srcA, srcB: 18446744073709551613,                    3
+Fetch : from Pc                   74 , expanded inst : 000000000000aaaaaaaa, 
+halt
+Stat update
 
 Cycle                   10 ----------------------------------------------------
 
 cycle         10
-Execute.
-Decode : from Pc                   60 , expanded inst : 50630800000000000000, 
-mrmovq 'h0000000000000008(%'h3), %'h6
-valA:                    0
-valB: $d18446744073709551736
-Fetch : from Pc                   72 , expanded inst : c00e000000000000aaaa, 
+On  6, writes 18446744073709551613   (wrM)
+wrM with $d:                   60
+wrote with pc:                   60
+Mem done with pc:                   70
+Executed                   70
+Decode : from Pc                   72 , expanded inst : c00e000000000000aaaa, 
 mtc0 %'h0, %'he
+Decoded using forwarded data. srcA, srcB:                    0, 12297829382473034418
+Fetch : from Pc                   75 , expanded inst : 0000000000aaaaaaaaaa, 
+halt
 Stat update
 
 Cycle                   11 ----------------------------------------------------
 
 cycle         11
-Stored 18446744073709551613 into                  128
+wrote with pc:                   70
+Mem done with pc:                   70
+Executed                   72
+Decode : from Pc                   74 , expanded inst : 000000000000aaaaaaaa, 
+halt
+Fetch : from Pc                   76 , expanded inst : 00000000aaaaaaaaaaaa, 
+halt
+Stat update
 
 Cycle                   12 ----------------------------------------------------
 
 cycle         12
-Execute.
-Decode : from Pc                   70 , expanded inst : 6060c00e000000000000, 
-addq %'h6, %'h0
-valA: 18446744073709551616
-valB: $d18446744073709551616
-Fetch : from Pc                   74 , expanded inst : 000000000000aaaaaaaa, 
+On  0, writes                    0   (wrE)
+wrE with                   70: 
+wrote with pc:                   70
+Mem done with pc:                   72
+Executed                   74
+Decode : from Pc                   75 , expanded inst : 0000000000aaaaaaaaaa, 
+halt
+Fetch : from Pc                   77 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
 Stat update
 
 Cycle                   13 ----------------------------------------------------
 
 cycle         13
-Loaded                    3 from                  120
-
-Cycle                   14 ----------------------------------------------------
-
-cycle         14
-On  0, writes                    3   (wrM)
-Execute.
-Decode : from Pc                   72 , expanded inst : c00e000000000000aaaa, 
-mtc0 %'h0, %'he
-valA: 18446744073709551619
-valB: $d                   0
-Fetch : from Pc                   75 , expanded inst : 0000000000aaaaaaaaaa, 
-halt
-Stat update
-
-Cycle                   15 ----------------------------------------------------
-
-cycle         15
-Loaded 18446744073709551613 from                  128
-
-Cycle                   16 ----------------------------------------------------
-
-cycle         16
-On  6, writes 18446744073709551613   (wrM)
-Execute.
-Decode : from Pc                   74 , expanded inst : 000000000000aaaaaaaa, 
-halt
-valA:                    3
-valB: $d                   0
-Fetch : from Pc                   76 , expanded inst : 00000000aaaaaaaaaaaa, 
-halt
-Stat update
-
-Cycle                   17 ----------------------------------------------------
-
-cycle         17
-
-Cycle                   18 ----------------------------------------------------
-
-cycle         18
-On  0, writes 18446744073709551613   (wrE)
-Execute.
-Decode : from Pc                   75 , expanded inst : 0000000000aaaaaaaaaa, 
-halt
-valA: 18446744073709551613
-valB: $d                   0
-Fetch : from Pc                   77 , expanded inst : 000000aaaaaaaaaaaaaa, 
-halt
-Stat update
-
-Cycle                   19 ----------------------------------------------------
-
-cycle         19
-
-Cycle                   20 ----------------------------------------------------
-
-cycle         20
-On 14, writes                    3   (wrE)
-Execute.
+On 14, writes                    0   (wrE)
+wrE with                   72: 
+wrote with pc:                   72
+Mem done with pc:                   74
+Executed                   75
 Decode : from Pc                   76 , expanded inst : 00000000aaaaaaaaaaaa, 
 halt
-valA: 18446744073709551613
-valB: $d                   0
 Fetch : from Pc                   78 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt
 Stat update
 
-Cycle                   21 ----------------------------------------------------
+Cycle                   14 ----------------------------------------------------

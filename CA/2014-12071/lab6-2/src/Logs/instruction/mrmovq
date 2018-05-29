@@ -14,25 +14,28 @@ Cycle                    1 ----------------------------------------------------
 cycle          1
 Decode : from Pc                    0 , expanded inst : 30f67800000000000000, 
 irmovq $'h0000000000000078,  %'h6
-valA: 12297829382473034410
-valB: $d                   0
 Fetch : from Pc                   10 , expanded inst : 50360000000000000000, 
 mrmovq 'h0000000000000000(%'h6), %'h3
 
 Cycle                    2 ----------------------------------------------------
 
 cycle          2
-Execute.
+Executed                    0
 Decode : from Pc                   10 , expanded inst : 50360000000000000000, 
 mrmovq 'h0000000000000000(%'h6), %'h3
-valA:                    0
-valB: $d18446744073709551736
+Decoded using forwarded data. srcA, srcB:                    0,                  120
 Fetch : from Pc                   20 , expanded inst : 50160800000000000000, 
 mrmovq 'h0000000000000008(%'h6), %'h1
 
 Cycle                    3 ----------------------------------------------------
 
 cycle          3
+Mem done with pc:                    0
+Executed                   10
+Detected stall trigger at Exec stage with pc:                   10
+Decode : from Pc                   20 , expanded inst : 50160800000000000000, 
+mrmovq 'h0000000000000008(%'h6), %'h1
+Decoded using forwarded data. srcA, srcB:                  120,                  120
 Fetch : from Pc                   30 , expanded inst : 30f0fbffffffffffffff, 
 irmovq $'hfffffffffffffffb,  %'h0
 
@@ -40,11 +43,15 @@ Cycle                    4 ----------------------------------------------------
 
 cycle          4
 On  6, writes                  120   (wrE)
-Execute.
-Decode : from Pc                   20 , expanded inst : 50160800000000000000, 
-mrmovq 'h0000000000000008(%'h6), %'h1
-valA:                    0
-valB: $d18446744073709551736
+wrE with                    0: 
+wrote with pc:                    0
+Loaded                    2 from                  120
+Mem done with pc:                   10
+Executed                   20
+Detected stall trigger at Exec stage with pc:                   20
+Decode : from Pc                   30 , expanded inst : 30f0fbffffffffffffff, 
+irmovq $'hfffffffffffffffb,  %'h0
+Decoded using forwarded data. srcA, srcB:                  128,                  128
 Fetch : from Pc                   40 , expanded inst : 60306010c00e0000aaaa, 
 addq %'h3, %'h0
 Stat update
@@ -52,111 +59,89 @@ Stat update
 Cycle                    5 ----------------------------------------------------
 
 cycle          5
-Loaded                    2 from                  120
+On  3, writes                    2   (wrM)
+wrM with $d:                   10
+wrote with pc:                   10
+Loaded                    3 from                  128
+Mem done with pc:                   20
+Executed                   30
+Decode : from Pc                   40 , expanded inst : 60306010c00e0000aaaa, 
+addq %'h3, %'h0
+Decoded using forwarded data. srcA, srcB:                    2, 18446744073709551611
+Fetch : from Pc                   42 , expanded inst : 6010c00e0000aaaaaaaa, 
+addq %'h1, %'h0
+Stat update
 
 Cycle                    6 ----------------------------------------------------
 
 cycle          6
-On  3, writes                    2   (wrM)
-Execute.
-Decode : from Pc                   30 , expanded inst : 30f0fbffffffffffffff, 
-irmovq $'hfffffffffffffffb,  %'h0
-valA: 12297829382473034410
-valB: $d                   0
-Fetch : from Pc                   42 , expanded inst : 6010c00e0000aaaaaaaa, 
+On  1, writes                    3   (wrM)
+wrM with $d:                   20
+wrote with pc:                   20
+Mem done with pc:                   30
+Executed                   40
+Decode : from Pc                   42 , expanded inst : 6010c00e0000aaaaaaaa, 
 addq %'h1, %'h0
+Decoded using forwarded data. srcA, srcB:                    3, 18446744073709551613
+Fetch : from Pc                   44 , expanded inst : c00e0000aaaaaaaaaaaa, 
+mtc0 %'h0, %'he
 Stat update
 
 Cycle                    7 ----------------------------------------------------
 
 cycle          7
-Loaded                    3 from                  128
-Decode : from Pc                   40 , expanded inst : 60306010c00e0000aaaa, 
-addq %'h3, %'h0
-valA: 18446744073709551618
-valB: $d18446744073709551616
-Fetch : from Pc                   44 , expanded inst : c00e0000aaaaaaaaaaaa, 
+On  0, writes 18446744073709551611   (wrE)
+wrE with                   30: 
+wrote with pc:                   30
+Mem done with pc:                   40
+Executed                   42
+Decode : from Pc                   44 , expanded inst : c00e0000aaaaaaaaaaaa, 
 mtc0 %'h0, %'he
+Decoded using forwarded data. srcA, srcB:                    0, 12297829382473034410
+Fetch : from Pc                   46 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
+halt
+Stat update
 
 Cycle                    8 ----------------------------------------------------
 
 cycle          8
-On  1, writes                    3   (wrM)
-Execute.
-Decode : from Pc                   42 , expanded inst : 6010c00e0000aaaaaaaa, 
-addq %'h1, %'h0
-valA: 18446744073709551619
-valB: $d36893488147419103227
-Fetch : from Pc                   46 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
+On  0, writes 18446744073709551613   (wrE)
+wrE with                   40: 
+wrote with pc:                   40
+Mem done with pc:                   42
+Executed                   44
+Decode : from Pc                   46 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
+halt
+Fetch : from Pc                   47 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
 halt
 Stat update
 
 Cycle                    9 ----------------------------------------------------
 
 cycle          9
-
-Cycle                   10 ----------------------------------------------------
-
-cycle         10
-On  0, writes 18446744073709551611   (wrE)
-Execute.
-Decode : from Pc                   44 , expanded inst : c00e0000aaaaaaaaaaaa, 
-mtc0 %'h0, %'he
-valA: 18446744073709551618
-valB: $d                   0
-Fetch : from Pc                   47 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
+On  0, writes                    0   (wrE)
+wrE with                   42: 
+wrote with pc:                   42
+Mem done with pc:                   44
+Executed                   46
+Decode : from Pc                   47 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
 halt
-Stat update
-
-Cycle                   11 ----------------------------------------------------
-
-cycle         11
-
-Cycle                   12 ----------------------------------------------------
-
-cycle         12
-On  0, writes                    2   (wrE)
-Execute.
-Decode : from Pc                   46 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
-halt
-valA:                    2
-valB: $d                   0
 Fetch : from Pc                   48 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
 push %'ha
 Stat update
 
-Cycle                   13 ----------------------------------------------------
+Cycle                   10 ----------------------------------------------------
 
-cycle         13
-
-Cycle                   14 ----------------------------------------------------
-
-cycle         14
-On  0, writes 18446744073709551614   (wrE)
-Execute.
-Decode : from Pc                   47 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
-halt
-valA:                    0
-valB: $d                   0
+cycle         10
+On 14, writes                    0   (wrE)
+wrE with                   44: 
+wrote with pc:                   44
+Mem done with pc:                   46
+Executed                   47
+Decode : from Pc                   48 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
+push %'ha
 Fetch : from Pc                   50 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
 push %'ha
 Stat update
 
-Cycle                   15 ----------------------------------------------------
-
-cycle         15
-
-Cycle                   16 ----------------------------------------------------
-
-cycle         16
-On 14, writes                    2   (wrE)
-Execute.
-Decode : from Pc                   48 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
-push %'ha
-valA: 18446744073709551616
-valB: $d18446744073709551616
-Fetch : from Pc                   52 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
-push %'ha
-Stat update
-
-Cycle                   17 ----------------------------------------------------
+Cycle                   11 ----------------------------------------------------

@@ -12,29 +12,25 @@ Cycle                    1 ----------------------------------------------------
 cycle          1
 Decode : from Pc                    0 , expanded inst : 30f00000000000000000, 
 irmovq $'h0000000000000000,  %'h0
-valA: 12297829382473034410
-valB: $d                   0
 Fetch : from Pc                   10 , expanded inst : c00e00000000aaaaaaaa, 
 mtc0 %'h0, %'he
 
 Cycle                    2 ----------------------------------------------------
 
 cycle          2
-Execute.
+Executed                    0
 Decode : from Pc                   10 , expanded inst : c00e00000000aaaaaaaa, 
 mtc0 %'h0, %'he
-valA: 18446744073709551616
-valB: $d                   0
 Fetch : from Pc                   12 , expanded inst : 00000000aaaaaaaaaaaa, 
 halt
 
 Cycle                    3 ----------------------------------------------------
 
 cycle          3
+Mem done with pc:                    0
+Executed                   10
 Decode : from Pc                   12 , expanded inst : 00000000aaaaaaaaaaaa, 
 halt
-valA:                    0
-valB: $d                   0
 Fetch : from Pc                   13 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
 
@@ -42,11 +38,12 @@ Cycle                    4 ----------------------------------------------------
 
 cycle          4
 On  0, writes                    0   (wrE)
-Execute.
+wrE with                    0: 
+wrote with pc:                    0
+Mem done with pc:                   10
+Executed                   12
 Decode : from Pc                   13 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
-valA:                    0
-valB: $d                   0
 Fetch : from Pc                   14 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt
 Stat update
@@ -54,20 +51,15 @@ Stat update
 Cycle                    5 ----------------------------------------------------
 
 cycle          5
-Fetch : from Pc                   15 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
-halt
-
-Cycle                    6 ----------------------------------------------------
-
-cycle          6
 On 14, writes                    0   (wrE)
-Execute.
+wrE with                   10: 
+wrote with pc:                   10
+Mem done with pc:                   12
+Executed                   13
 Decode : from Pc                   14 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt
-valA:                    0
-valB: $d                   0
-Fetch : from Pc                   16 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
-push %'ha
+Fetch : from Pc                   15 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
+halt
 Stat update
 
-Cycle                    7 ----------------------------------------------------
+Cycle                    6 ----------------------------------------------------

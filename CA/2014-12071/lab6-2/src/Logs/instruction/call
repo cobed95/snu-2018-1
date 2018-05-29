@@ -14,29 +14,25 @@ Cycle                    1 ----------------------------------------------------
 cycle          1
 Decode : from Pc                    0 , expanded inst : 30f5a000000000000000, 
 irmovq $'h00000000000000a0,  %'h5
-valA: 12297829382473034410
-valB: $d                   0
 Fetch : from Pc                   10 , expanded inst : 30f4a000000000000000, 
 irmovq $'h00000000000000a0,  %'h4
 
 Cycle                    2 ----------------------------------------------------
 
 cycle          2
-Execute.
+Executed                    0
 Decode : from Pc                   10 , expanded inst : 30f4a000000000000000, 
 irmovq $'h00000000000000a0,  %'h4
-valA: 12297829382473034410
-valB: $d                   0
 Fetch : from Pc                   20 , expanded inst : 30f0ffffffffffffffff, 
 irmovq $'hffffffffffffffff,  %'h0
 
 Cycle                    3 ----------------------------------------------------
 
 cycle          3
+Mem done with pc:                    0
+Executed                   10
 Decode : from Pc                   20 , expanded inst : 30f0ffffffffffffffff, 
 irmovq $'hffffffffffffffff,  %'h0
-valA: 12297829382473034410
-valB: $d                   0
 Fetch : from Pc                   30 , expanded inst : 805000000000000000c0, 
 call 'h0000000000000050
 
@@ -44,11 +40,13 @@ Cycle                    4 ----------------------------------------------------
 
 cycle          4
 On  5, writes                  160   (wrE)
-Execute.
+wrE with                    0: 
+wrote with pc:                    0
+Mem done with pc:                   10
+Executed                   20
 Decode : from Pc                   30 , expanded inst : 805000000000000000c0, 
 call 'h0000000000000050
-valA:                    0
-valB: $d18446744073709551776
+Decoded using forwarded data. srcA, srcB: 12297829382473034410,                  160
 Fetch : from Pc                   39 , expanded inst : c00e00000000000000aa, 
 mtc0 %'h0, %'he
 Stat update
@@ -56,146 +54,97 @@ Stat update
 Cycle                    5 ----------------------------------------------------
 
 cycle          5
+On  4, writes                  160   (wrE)
+wrE with                   10: 
+wrote with pc:                   10
+Mem done with pc:                   20
+Executed                   30
+Decode : from Pc                   39 , expanded inst : c00e00000000000000aa, 
+mtc0 %'h0, %'he
+Decoded using forwarded data. srcA, srcB: 18446744073709551615, 12297829382473034410
 Fetch : from Pc                   41 , expanded inst : 00000000000000aaaaaa, 
 halt
+Stat update
 
 Cycle                    6 ----------------------------------------------------
 
 cycle          6
-On  4, writes                  160   (wrE)
-Execute.
-Decode : from Pc                   39 , expanded inst : c00e00000000000000aa, 
-mtc0 %'h0, %'he
-valA: 36893488147419103231
-valB: $d                 160
-Fetch : from Pc                   42 , expanded inst : 000000000000aaaaaaaa, 
+On  0, writes 18446744073709551615   (wrE)
+wrE with                   20: 
+wrote with pc:                   20
+Stored                   39 into                  152
+mispredicted, redirect                   80 
+Mem done with pc:                   30
+Not Executed because epoch is different:                   39 
+Decode : from Pc                   41 , expanded inst : 00000000000000aaaaaa, 
 halt
+Fetch : from Pc                   80 , expanded inst : 30f00000000000000000, 
+irmovq $'h0000000000000000,  %'h0
 Stat update
 
 Cycle                    7 ----------------------------------------------------
 
 cycle          7
+On  4, writes                  152   (wrE)
+wrE with                   30: 
+wrote with pc:                   30
+Mem cancelled with pc:                   39
+Not Executed because epoch is different:                   41 
+Decode : from Pc                   80 , expanded inst : 30f00000000000000000, 
+irmovq $'h0000000000000000,  %'h0
+Fetch : from Pc                   90 , expanded inst : c00e00000000aaaaaaaa, 
+mtc0 %'h0, %'he
+Stat update
 
 Cycle                    8 ----------------------------------------------------
 
 cycle          8
-On  0, writes 18446744073709551615   (wrE)
-Execute.
-Decode : from Pc                   41 , expanded inst : 00000000000000aaaaaa, 
+did not write with pc:                   39
+Mem cancelled with pc:                   41
+Executed                   80
+Decode : from Pc                   90 , expanded inst : c00e00000000aaaaaaaa, 
+mtc0 %'h0, %'he
+Decoded using forwarded data. srcA, srcB:                    0,                  152
+Fetch : from Pc                   92 , expanded inst : 00000000aaaaaaaaaaaa, 
 halt
-valA: 18446744073709551615
-valB: $d                 160
-Fetch : from Pc                   43 , expanded inst : 0000000000aaaaaaaaaa, 
-halt
-Stat update
 
 Cycle                    9 ----------------------------------------------------
 
 cycle          9
-Stored                   39 into                  152
-mispredicted, redirect                   80 
+did not write with pc:                   41
+Mem done with pc:                   80
+Executed                   90
+Decode : from Pc                   92 , expanded inst : 00000000aaaaaaaaaaaa, 
+halt
+Fetch : from Pc                   93 , expanded inst : 000000aaaaaaaaaaaaaa, 
+halt
 
 Cycle                   10 ----------------------------------------------------
 
 cycle         10
-On  4, writes                  152   (wrE)
-Decode : from Pc                   42 , expanded inst : 000000000000aaaaaaaa, 
+On  0, writes                    0   (wrE)
+wrE with                   80: 
+wrote with pc:                   80
+Mem done with pc:                   90
+Executed                   92
+Decode : from Pc                   93 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
-valA: 18446744073709551615
-valB: $d                 152
-Fetch : from Pc                   80 , expanded inst : 30f00000000000000000, 
-irmovq $'h0000000000000000,  %'h0
+Fetch : from Pc                   94 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
+halt
 Stat update
 
 Cycle                   11 ----------------------------------------------------
 
 cycle         11
-
-Cycle                   12 ----------------------------------------------------
-
-cycle         12
-Decode : from Pc                   43 , expanded inst : 0000000000aaaaaaaaaa, 
+On 14, writes                    0   (wrE)
+wrE with                   90: 
+wrote with pc:                   90
+Mem done with pc:                   92
+Executed                   93
+Decode : from Pc                   94 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt
-valA: 18446744073709551615
-valB: $d                 152
-Fetch : from Pc                   90 , expanded inst : c00e00000000aaaaaaaa, 
-mtc0 %'h0, %'he
-
-Cycle                   13 ----------------------------------------------------
-
-cycle         13
-
-Cycle                   14 ----------------------------------------------------
-
-cycle         14
-Decode : from Pc                   80 , expanded inst : 30f00000000000000000, 
-irmovq $'h0000000000000000,  %'h0
-valA: 12297829382473034410
-valB: $d                 152
-Fetch : from Pc                   92 , expanded inst : 00000000aaaaaaaaaaaa, 
-halt
-
-Cycle                   15 ----------------------------------------------------
-
-cycle         15
-
-Cycle                   16 ----------------------------------------------------
-
-cycle         16
-Decode : from Pc                   90 , expanded inst : c00e00000000aaaaaaaa, 
-mtc0 %'h0, %'he
-valA: 36893488147419103231
-valB: $d                 152
-Fetch : from Pc                   93 , expanded inst : 000000aaaaaaaaaaaaaa, 
-halt
-
-Cycle                   17 ----------------------------------------------------
-
-cycle         17
-
-Cycle                   18 ----------------------------------------------------
-
-cycle         18
-Execute.
-Decode : from Pc                   92 , expanded inst : 00000000aaaaaaaaaaaa, 
-halt
-valA: 18446744073709551615
-valB: $d                 152
-Fetch : from Pc                   94 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
-halt
-
-Cycle                   19 ----------------------------------------------------
-
-cycle         19
-
-Cycle                   20 ----------------------------------------------------
-
-cycle         20
-On  0, writes                    0   (wrE)
-Execute.
-Decode : from Pc                   93 , expanded inst : 000000aaaaaaaaaaaaaa, 
-halt
-valA:                    0
-valB: $d                 152
 Fetch : from Pc                   95 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
 halt
 Stat update
 
-Cycle                   21 ----------------------------------------------------
-
-cycle         21
-
-Cycle                   22 ----------------------------------------------------
-
-cycle         22
-On 14, writes 18446744073709551615   (wrE)
-Execute.
-Decode : from Pc                   94 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
-halt
-valA:                    0
-valB: $d                 152
-Fetch : from Pc                   96 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
-push %'ha
-Stat update
-
-Cycle                   23 ----------------------------------------------------
+Cycle                   12 ----------------------------------------------------
