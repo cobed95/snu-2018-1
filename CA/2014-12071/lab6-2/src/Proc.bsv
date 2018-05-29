@@ -154,7 +154,7 @@ module mkProc(Proc);
         
         if(trig.notEmpty && stall(dInst, trig.first))
         begin
-            dInst.iType = Nop;
+            /* dInst.iType = Nop;
 		    dInst.condUsed = Al;
 		    dInst.valP = pc + 1;
 	        dInst.dstE = Invalid;
@@ -163,7 +163,7 @@ module mkProc(Proc);
 		    dInst.regB = Invalid;
 		    dInst.valC = Invalid;
 
-			d2e.enq(Decode2Exec{inst:dInst, pc:ipc, ppc:ppc, epoch:iEpoch});
+			d2e.enq(Decode2Exec{inst:dInst, pc:ipc, ppc:ppc, epoch:iEpoch}); */
 			$display("Stalling for load-use DH");
         end
         

@@ -463,10 +463,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                   14 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                   14, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                   14,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -477,7 +476,6 @@ cycle         34
 On 11, writes                   14   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -489,14 +487,12 @@ Stat update
 Cycle                   35 ----------------------------------------------------
 
 cycle         35
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                   36 ----------------------------------------------------
 
@@ -665,10 +661,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                   13 from                   80
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                   13, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                   13,                   80
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -679,7 +674,6 @@ cycle         49
 On 11, writes                   13   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -691,14 +685,12 @@ Stat update
 Cycle                   50 ----------------------------------------------------
 
 cycle         50
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                   51 ----------------------------------------------------
 
@@ -867,10 +859,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                   12 from                   88
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                   12, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                   12,                   88
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -881,7 +872,6 @@ cycle         64
 On 11, writes                   12   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -893,14 +883,12 @@ Stat update
 Cycle                   65 ----------------------------------------------------
 
 cycle         65
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                   66 ----------------------------------------------------
 
@@ -1069,10 +1057,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                   11 from                   96
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                   11, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                   11,                   96
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -1083,7 +1070,6 @@ cycle         79
 On 11, writes                   11   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -1095,14 +1081,12 @@ Stat update
 Cycle                   80 ----------------------------------------------------
 
 cycle         80
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                   81 ----------------------------------------------------
 
@@ -1271,10 +1255,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                   10 from                  104
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                   10, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                   10,                  104
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -1285,7 +1268,6 @@ cycle         94
 On 11, writes                   10   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -1297,14 +1279,12 @@ Stat update
 Cycle                   95 ----------------------------------------------------
 
 cycle         95
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                   96 ----------------------------------------------------
 
@@ -1473,10 +1453,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    9 from                  112
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    9, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    9,                  112
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -1487,7 +1466,6 @@ cycle        109
 On 11, writes                    9   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -1499,14 +1477,12 @@ Stat update
 Cycle                  110 ----------------------------------------------------
 
 cycle        110
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  111 ----------------------------------------------------
 
@@ -1675,10 +1651,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    8 from                  120
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    8, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    8,                  120
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -1689,7 +1664,6 @@ cycle        124
 On 11, writes                    8   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -1701,14 +1675,12 @@ Stat update
 Cycle                  125 ----------------------------------------------------
 
 cycle        125
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  126 ----------------------------------------------------
 
@@ -1877,10 +1849,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    7 from                  128
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    7, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    7,                  128
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -1891,7 +1862,6 @@ cycle        139
 On 11, writes                    7   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -1903,14 +1873,12 @@ Stat update
 Cycle                  140 ----------------------------------------------------
 
 cycle        140
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  141 ----------------------------------------------------
 
@@ -2079,10 +2047,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    6 from                  136
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    6, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    6,                  136
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -2093,7 +2060,6 @@ cycle        154
 On 11, writes                    6   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -2105,14 +2071,12 @@ Stat update
 Cycle                  155 ----------------------------------------------------
 
 cycle        155
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  156 ----------------------------------------------------
 
@@ -2281,10 +2245,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    5 from                  144
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    5, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    5,                  144
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -2295,7 +2258,6 @@ cycle        169
 On 11, writes                    5   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -2307,14 +2269,12 @@ Stat update
 Cycle                  170 ----------------------------------------------------
 
 cycle        170
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  171 ----------------------------------------------------
 
@@ -2483,10 +2443,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    4 from                  152
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    4, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    4,                  152
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -2497,7 +2456,6 @@ cycle        184
 On 11, writes                    4   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -2509,14 +2467,12 @@ Stat update
 Cycle                  185 ----------------------------------------------------
 
 cycle        185
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  186 ----------------------------------------------------
 
@@ -2685,10 +2641,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    3 from                  160
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    3, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    3,                  160
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -2699,7 +2654,6 @@ cycle        199
 On 11, writes                    3   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -2711,14 +2665,12 @@ Stat update
 Cycle                  200 ----------------------------------------------------
 
 cycle        200
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  201 ----------------------------------------------------
 
@@ -2887,10 +2839,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    2 from                  168
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    2, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    2,                  168
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -2901,7 +2852,6 @@ cycle        214
 On 11, writes                    2   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -2913,14 +2863,12 @@ Stat update
 Cycle                  215 ----------------------------------------------------
 
 cycle        215
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  216 ----------------------------------------------------
 
@@ -3089,10 +3037,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    1 from                  176
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    1, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    1,                  176
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -3103,7 +3050,6 @@ cycle        229
 On 11, writes                    1   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -3115,14 +3061,12 @@ Stat update
 Cycle                  230 ----------------------------------------------------
 
 cycle        230
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  231 ----------------------------------------------------
 
@@ -3375,10 +3319,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                   13 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                   13, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                   13,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -3389,7 +3332,6 @@ cycle        250
 On 11, writes                   13   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -3401,14 +3343,12 @@ Stat update
 Cycle                  251 ----------------------------------------------------
 
 cycle        251
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  252 ----------------------------------------------------
 
@@ -3577,10 +3517,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                   12 from                   80
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                   12, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                   12,                   80
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -3591,7 +3530,6 @@ cycle        265
 On 11, writes                   12   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -3603,14 +3541,12 @@ Stat update
 Cycle                  266 ----------------------------------------------------
 
 cycle        266
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  267 ----------------------------------------------------
 
@@ -3779,10 +3715,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                   11 from                   88
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                   11, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                   11,                   88
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -3793,7 +3728,6 @@ cycle        280
 On 11, writes                   11   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -3805,14 +3739,12 @@ Stat update
 Cycle                  281 ----------------------------------------------------
 
 cycle        281
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  282 ----------------------------------------------------
 
@@ -3981,10 +3913,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                   10 from                   96
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                   10, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                   10,                   96
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -3995,7 +3926,6 @@ cycle        295
 On 11, writes                   10   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -4007,14 +3937,12 @@ Stat update
 Cycle                  296 ----------------------------------------------------
 
 cycle        296
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  297 ----------------------------------------------------
 
@@ -4183,10 +4111,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    9 from                  104
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    9, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    9,                  104
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -4197,7 +4124,6 @@ cycle        310
 On 11, writes                    9   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -4209,14 +4135,12 @@ Stat update
 Cycle                  311 ----------------------------------------------------
 
 cycle        311
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  312 ----------------------------------------------------
 
@@ -4385,10 +4309,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    8 from                  112
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    8, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    8,                  112
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -4399,7 +4322,6 @@ cycle        325
 On 11, writes                    8   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -4411,14 +4333,12 @@ Stat update
 Cycle                  326 ----------------------------------------------------
 
 cycle        326
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  327 ----------------------------------------------------
 
@@ -4587,10 +4507,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    7 from                  120
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    7, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    7,                  120
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -4601,7 +4520,6 @@ cycle        340
 On 11, writes                    7   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -4613,14 +4531,12 @@ Stat update
 Cycle                  341 ----------------------------------------------------
 
 cycle        341
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  342 ----------------------------------------------------
 
@@ -4789,10 +4705,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    6 from                  128
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    6, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    6,                  128
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -4803,7 +4718,6 @@ cycle        355
 On 11, writes                    6   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -4815,14 +4729,12 @@ Stat update
 Cycle                  356 ----------------------------------------------------
 
 cycle        356
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  357 ----------------------------------------------------
 
@@ -4991,10 +4903,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    5 from                  136
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    5, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    5,                  136
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -5005,7 +4916,6 @@ cycle        370
 On 11, writes                    5   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -5017,14 +4927,12 @@ Stat update
 Cycle                  371 ----------------------------------------------------
 
 cycle        371
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  372 ----------------------------------------------------
 
@@ -5193,10 +5101,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    4 from                  144
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    4, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    4,                  144
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -5207,7 +5114,6 @@ cycle        385
 On 11, writes                    4   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -5219,14 +5125,12 @@ Stat update
 Cycle                  386 ----------------------------------------------------
 
 cycle        386
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  387 ----------------------------------------------------
 
@@ -5395,10 +5299,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    3 from                  152
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    3, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    3,                  152
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -5409,7 +5312,6 @@ cycle        400
 On 11, writes                    3   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -5421,14 +5323,12 @@ Stat update
 Cycle                  401 ----------------------------------------------------
 
 cycle        401
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  402 ----------------------------------------------------
 
@@ -5597,10 +5497,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    2 from                  160
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    2, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    2,                  160
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -5611,7 +5510,6 @@ cycle        415
 On 11, writes                    2   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -5623,14 +5521,12 @@ Stat update
 Cycle                  416 ----------------------------------------------------
 
 cycle        416
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  417 ----------------------------------------------------
 
@@ -5799,10 +5695,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    1 from                  168
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    1, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    1,                  168
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -5813,7 +5708,6 @@ cycle        430
 On 11, writes                    1   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -5825,14 +5719,12 @@ Stat update
 Cycle                  431 ----------------------------------------------------
 
 cycle        431
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  432 ----------------------------------------------------
 
@@ -6085,10 +5977,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                   12 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                   12, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                   12,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -6099,7 +5990,6 @@ cycle        451
 On 11, writes                   12   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -6111,14 +6001,12 @@ Stat update
 Cycle                  452 ----------------------------------------------------
 
 cycle        452
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  453 ----------------------------------------------------
 
@@ -6287,10 +6175,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                   11 from                   80
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                   11, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                   11,                   80
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -6301,7 +6188,6 @@ cycle        466
 On 11, writes                   11   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -6313,14 +6199,12 @@ Stat update
 Cycle                  467 ----------------------------------------------------
 
 cycle        467
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  468 ----------------------------------------------------
 
@@ -6489,10 +6373,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                   10 from                   88
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                   10, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                   10,                   88
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -6503,7 +6386,6 @@ cycle        481
 On 11, writes                   10   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -6515,14 +6397,12 @@ Stat update
 Cycle                  482 ----------------------------------------------------
 
 cycle        482
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  483 ----------------------------------------------------
 
@@ -6691,10 +6571,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    9 from                   96
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    9, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    9,                   96
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -6705,7 +6584,6 @@ cycle        496
 On 11, writes                    9   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -6717,14 +6595,12 @@ Stat update
 Cycle                  497 ----------------------------------------------------
 
 cycle        497
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  498 ----------------------------------------------------
 
@@ -6893,10 +6769,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    8 from                  104
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    8, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    8,                  104
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -6907,7 +6782,6 @@ cycle        511
 On 11, writes                    8   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -6919,14 +6793,12 @@ Stat update
 Cycle                  512 ----------------------------------------------------
 
 cycle        512
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  513 ----------------------------------------------------
 
@@ -7095,10 +6967,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    7 from                  112
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    7, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    7,                  112
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -7109,7 +6980,6 @@ cycle        526
 On 11, writes                    7   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -7121,14 +6991,12 @@ Stat update
 Cycle                  527 ----------------------------------------------------
 
 cycle        527
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  528 ----------------------------------------------------
 
@@ -7297,10 +7165,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    6 from                  120
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    6, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    6,                  120
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -7311,7 +7178,6 @@ cycle        541
 On 11, writes                    6   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -7323,14 +7189,12 @@ Stat update
 Cycle                  542 ----------------------------------------------------
 
 cycle        542
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  543 ----------------------------------------------------
 
@@ -7499,10 +7363,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    5 from                  128
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    5, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    5,                  128
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -7513,7 +7376,6 @@ cycle        556
 On 11, writes                    5   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -7525,14 +7387,12 @@ Stat update
 Cycle                  557 ----------------------------------------------------
 
 cycle        557
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  558 ----------------------------------------------------
 
@@ -7701,10 +7561,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    4 from                  136
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    4, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    4,                  136
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -7715,7 +7574,6 @@ cycle        571
 On 11, writes                    4   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -7727,14 +7585,12 @@ Stat update
 Cycle                  572 ----------------------------------------------------
 
 cycle        572
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  573 ----------------------------------------------------
 
@@ -7903,10 +7759,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    3 from                  144
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    3, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    3,                  144
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -7917,7 +7772,6 @@ cycle        586
 On 11, writes                    3   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -7929,14 +7783,12 @@ Stat update
 Cycle                  587 ----------------------------------------------------
 
 cycle        587
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  588 ----------------------------------------------------
 
@@ -8105,10 +7957,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    2 from                  152
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    2, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    2,                  152
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -8119,7 +7970,6 @@ cycle        601
 On 11, writes                    2   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -8131,14 +7981,12 @@ Stat update
 Cycle                  602 ----------------------------------------------------
 
 cycle        602
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  603 ----------------------------------------------------
 
@@ -8307,10 +8155,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    1 from                  160
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    1, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    1,                  160
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -8321,7 +8168,6 @@ cycle        616
 On 11, writes                    1   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -8333,14 +8179,12 @@ Stat update
 Cycle                  617 ----------------------------------------------------
 
 cycle        617
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  618 ----------------------------------------------------
 
@@ -8593,10 +8437,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                   11 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                   11, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                   11,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -8607,7 +8450,6 @@ cycle        637
 On 11, writes                   11   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -8619,14 +8461,12 @@ Stat update
 Cycle                  638 ----------------------------------------------------
 
 cycle        638
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  639 ----------------------------------------------------
 
@@ -8795,10 +8635,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                   10 from                   80
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                   10, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                   10,                   80
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -8809,7 +8648,6 @@ cycle        652
 On 11, writes                   10   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -8821,14 +8659,12 @@ Stat update
 Cycle                  653 ----------------------------------------------------
 
 cycle        653
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  654 ----------------------------------------------------
 
@@ -8997,10 +8833,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    9 from                   88
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    9, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    9,                   88
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -9011,7 +8846,6 @@ cycle        667
 On 11, writes                    9   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -9023,14 +8857,12 @@ Stat update
 Cycle                  668 ----------------------------------------------------
 
 cycle        668
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  669 ----------------------------------------------------
 
@@ -9199,10 +9031,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    8 from                   96
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    8, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    8,                   96
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -9213,7 +9044,6 @@ cycle        682
 On 11, writes                    8   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -9225,14 +9055,12 @@ Stat update
 Cycle                  683 ----------------------------------------------------
 
 cycle        683
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  684 ----------------------------------------------------
 
@@ -9401,10 +9229,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    7 from                  104
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    7, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    7,                  104
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -9415,7 +9242,6 @@ cycle        697
 On 11, writes                    7   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -9427,14 +9253,12 @@ Stat update
 Cycle                  698 ----------------------------------------------------
 
 cycle        698
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  699 ----------------------------------------------------
 
@@ -9603,10 +9427,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    6 from                  112
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    6, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    6,                  112
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -9617,7 +9440,6 @@ cycle        712
 On 11, writes                    6   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -9629,14 +9451,12 @@ Stat update
 Cycle                  713 ----------------------------------------------------
 
 cycle        713
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  714 ----------------------------------------------------
 
@@ -9805,10 +9625,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    5 from                  120
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    5, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    5,                  120
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -9819,7 +9638,6 @@ cycle        727
 On 11, writes                    5   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -9831,14 +9649,12 @@ Stat update
 Cycle                  728 ----------------------------------------------------
 
 cycle        728
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  729 ----------------------------------------------------
 
@@ -10007,10 +9823,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    4 from                  128
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    4, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    4,                  128
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -10021,7 +9836,6 @@ cycle        742
 On 11, writes                    4   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -10033,14 +9847,12 @@ Stat update
 Cycle                  743 ----------------------------------------------------
 
 cycle        743
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  744 ----------------------------------------------------
 
@@ -10209,10 +10021,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    3 from                  136
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    3, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    3,                  136
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -10223,7 +10034,6 @@ cycle        757
 On 11, writes                    3   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -10235,14 +10045,12 @@ Stat update
 Cycle                  758 ----------------------------------------------------
 
 cycle        758
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  759 ----------------------------------------------------
 
@@ -10411,10 +10219,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    2 from                  144
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    2, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    2,                  144
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -10425,7 +10232,6 @@ cycle        772
 On 11, writes                    2   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -10437,14 +10243,12 @@ Stat update
 Cycle                  773 ----------------------------------------------------
 
 cycle        773
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  774 ----------------------------------------------------
 
@@ -10613,10 +10417,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    1 from                  152
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    1, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    1,                  152
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -10627,7 +10430,6 @@ cycle        787
 On 11, writes                    1   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -10639,14 +10441,12 @@ Stat update
 Cycle                  788 ----------------------------------------------------
 
 cycle        788
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  789 ----------------------------------------------------
 
@@ -10899,10 +10699,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                   10 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                   10, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                   10,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -10913,7 +10712,6 @@ cycle        808
 On 11, writes                   10   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -10925,14 +10723,12 @@ Stat update
 Cycle                  809 ----------------------------------------------------
 
 cycle        809
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  810 ----------------------------------------------------
 
@@ -11101,10 +10897,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    9 from                   80
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    9, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    9,                   80
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -11115,7 +10910,6 @@ cycle        823
 On 11, writes                    9   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -11127,14 +10921,12 @@ Stat update
 Cycle                  824 ----------------------------------------------------
 
 cycle        824
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  825 ----------------------------------------------------
 
@@ -11303,10 +11095,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    8 from                   88
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    8, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    8,                   88
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -11317,7 +11108,6 @@ cycle        838
 On 11, writes                    8   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -11329,14 +11119,12 @@ Stat update
 Cycle                  839 ----------------------------------------------------
 
 cycle        839
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  840 ----------------------------------------------------
 
@@ -11505,10 +11293,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    7 from                   96
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    7, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    7,                   96
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -11519,7 +11306,6 @@ cycle        853
 On 11, writes                    7   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -11531,14 +11317,12 @@ Stat update
 Cycle                  854 ----------------------------------------------------
 
 cycle        854
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  855 ----------------------------------------------------
 
@@ -11707,10 +11491,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    6 from                  104
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    6, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    6,                  104
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -11721,7 +11504,6 @@ cycle        868
 On 11, writes                    6   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -11733,14 +11515,12 @@ Stat update
 Cycle                  869 ----------------------------------------------------
 
 cycle        869
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  870 ----------------------------------------------------
 
@@ -11909,10 +11689,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    5 from                  112
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    5, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    5,                  112
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -11923,7 +11702,6 @@ cycle        883
 On 11, writes                    5   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -11935,14 +11713,12 @@ Stat update
 Cycle                  884 ----------------------------------------------------
 
 cycle        884
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  885 ----------------------------------------------------
 
@@ -12111,10 +11887,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    4 from                  120
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    4, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    4,                  120
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -12125,7 +11900,6 @@ cycle        898
 On 11, writes                    4   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -12137,14 +11911,12 @@ Stat update
 Cycle                  899 ----------------------------------------------------
 
 cycle        899
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  900 ----------------------------------------------------
 
@@ -12313,10 +12085,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    3 from                  128
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    3, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    3,                  128
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -12327,7 +12098,6 @@ cycle        913
 On 11, writes                    3   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -12339,14 +12109,12 @@ Stat update
 Cycle                  914 ----------------------------------------------------
 
 cycle        914
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  915 ----------------------------------------------------
 
@@ -12515,10 +12283,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    2 from                  136
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    2, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    2,                  136
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -12529,7 +12296,6 @@ cycle        928
 On 11, writes                    2   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -12541,14 +12307,12 @@ Stat update
 Cycle                  929 ----------------------------------------------------
 
 cycle        929
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  930 ----------------------------------------------------
 
@@ -12717,10 +12481,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    1 from                  144
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    1, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    1,                  144
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -12731,7 +12494,6 @@ cycle        943
 On 11, writes                    1   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -12743,14 +12505,12 @@ Stat update
 Cycle                  944 ----------------------------------------------------
 
 cycle        944
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  945 ----------------------------------------------------
 
@@ -13003,10 +12763,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    9 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    9, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    9,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -13017,7 +12776,6 @@ cycle        964
 On 11, writes                    9   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -13029,14 +12787,12 @@ Stat update
 Cycle                  965 ----------------------------------------------------
 
 cycle        965
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  966 ----------------------------------------------------
 
@@ -13205,10 +12961,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    8 from                   80
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    8, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    8,                   80
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -13219,7 +12974,6 @@ cycle        979
 On 11, writes                    8   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -13231,14 +12985,12 @@ Stat update
 Cycle                  980 ----------------------------------------------------
 
 cycle        980
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  981 ----------------------------------------------------
 
@@ -13407,10 +13159,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    7 from                   88
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    7, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    7,                   88
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -13421,7 +13172,6 @@ cycle        994
 On 11, writes                    7   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -13433,14 +13183,12 @@ Stat update
 Cycle                  995 ----------------------------------------------------
 
 cycle        995
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                  996 ----------------------------------------------------
 
@@ -13609,10 +13357,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    6 from                   96
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    6, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    6,                   96
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -13623,7 +13370,6 @@ cycle       1009
 On 11, writes                    6   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -13635,14 +13381,12 @@ Stat update
 Cycle                 1010 ----------------------------------------------------
 
 cycle       1010
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1011 ----------------------------------------------------
 
@@ -13811,10 +13555,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    5 from                  104
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    5, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    5,                  104
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -13825,7 +13568,6 @@ cycle       1024
 On 11, writes                    5   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -13837,14 +13579,12 @@ Stat update
 Cycle                 1025 ----------------------------------------------------
 
 cycle       1025
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1026 ----------------------------------------------------
 
@@ -14013,10 +13753,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    4 from                  112
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    4, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    4,                  112
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -14027,7 +13766,6 @@ cycle       1039
 On 11, writes                    4   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -14039,14 +13777,12 @@ Stat update
 Cycle                 1040 ----------------------------------------------------
 
 cycle       1040
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1041 ----------------------------------------------------
 
@@ -14215,10 +13951,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    3 from                  120
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    3, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    3,                  120
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -14229,7 +13964,6 @@ cycle       1054
 On 11, writes                    3   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -14241,14 +13975,12 @@ Stat update
 Cycle                 1055 ----------------------------------------------------
 
 cycle       1055
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1056 ----------------------------------------------------
 
@@ -14417,10 +14149,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    2 from                  128
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    2, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    2,                  128
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -14431,7 +14162,6 @@ cycle       1069
 On 11, writes                    2   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -14443,14 +14173,12 @@ Stat update
 Cycle                 1070 ----------------------------------------------------
 
 cycle       1070
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1071 ----------------------------------------------------
 
@@ -14619,10 +14347,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    1 from                  136
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    1, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    1,                  136
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -14633,7 +14360,6 @@ cycle       1084
 On 11, writes                    1   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -14645,14 +14371,12 @@ Stat update
 Cycle                 1085 ----------------------------------------------------
 
 cycle       1085
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1086 ----------------------------------------------------
 
@@ -14905,10 +14629,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    8 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    8, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    8,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -14919,7 +14642,6 @@ cycle       1105
 On 11, writes                    8   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -14931,14 +14653,12 @@ Stat update
 Cycle                 1106 ----------------------------------------------------
 
 cycle       1106
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1107 ----------------------------------------------------
 
@@ -15107,10 +14827,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    7 from                   80
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    7, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    7,                   80
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -15121,7 +14840,6 @@ cycle       1120
 On 11, writes                    7   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -15133,14 +14851,12 @@ Stat update
 Cycle                 1121 ----------------------------------------------------
 
 cycle       1121
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1122 ----------------------------------------------------
 
@@ -15309,10 +15025,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    6 from                   88
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    6, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    6,                   88
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -15323,7 +15038,6 @@ cycle       1135
 On 11, writes                    6   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -15335,14 +15049,12 @@ Stat update
 Cycle                 1136 ----------------------------------------------------
 
 cycle       1136
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1137 ----------------------------------------------------
 
@@ -15511,10 +15223,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    5 from                   96
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    5, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    5,                   96
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -15525,7 +15236,6 @@ cycle       1150
 On 11, writes                    5   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -15537,14 +15247,12 @@ Stat update
 Cycle                 1151 ----------------------------------------------------
 
 cycle       1151
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1152 ----------------------------------------------------
 
@@ -15713,10 +15421,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    4 from                  104
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    4, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    4,                  104
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -15727,7 +15434,6 @@ cycle       1165
 On 11, writes                    4   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -15739,14 +15445,12 @@ Stat update
 Cycle                 1166 ----------------------------------------------------
 
 cycle       1166
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1167 ----------------------------------------------------
 
@@ -15915,10 +15619,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    3 from                  112
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    3, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    3,                  112
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -15929,7 +15632,6 @@ cycle       1180
 On 11, writes                    3   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -15941,14 +15643,12 @@ Stat update
 Cycle                 1181 ----------------------------------------------------
 
 cycle       1181
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1182 ----------------------------------------------------
 
@@ -16117,10 +15817,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    2 from                  120
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    2, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    2,                  120
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -16131,7 +15830,6 @@ cycle       1195
 On 11, writes                    2   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -16143,14 +15841,12 @@ Stat update
 Cycle                 1196 ----------------------------------------------------
 
 cycle       1196
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1197 ----------------------------------------------------
 
@@ -16319,10 +16015,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    1 from                  128
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    1, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    1,                  128
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -16333,7 +16028,6 @@ cycle       1210
 On 11, writes                    1   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -16345,14 +16039,12 @@ Stat update
 Cycle                 1211 ----------------------------------------------------
 
 cycle       1211
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1212 ----------------------------------------------------
 
@@ -16605,10 +16297,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    7 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    7, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    7,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -16619,7 +16310,6 @@ cycle       1231
 On 11, writes                    7   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -16631,14 +16321,12 @@ Stat update
 Cycle                 1232 ----------------------------------------------------
 
 cycle       1232
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1233 ----------------------------------------------------
 
@@ -16807,10 +16495,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    6 from                   80
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    6, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    6,                   80
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -16821,7 +16508,6 @@ cycle       1246
 On 11, writes                    6   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -16833,14 +16519,12 @@ Stat update
 Cycle                 1247 ----------------------------------------------------
 
 cycle       1247
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1248 ----------------------------------------------------
 
@@ -17009,10 +16693,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    5 from                   88
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    5, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    5,                   88
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -17023,7 +16706,6 @@ cycle       1261
 On 11, writes                    5   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -17035,14 +16717,12 @@ Stat update
 Cycle                 1262 ----------------------------------------------------
 
 cycle       1262
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1263 ----------------------------------------------------
 
@@ -17211,10 +16891,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    4 from                   96
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    4, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    4,                   96
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -17225,7 +16904,6 @@ cycle       1276
 On 11, writes                    4   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -17237,14 +16915,12 @@ Stat update
 Cycle                 1277 ----------------------------------------------------
 
 cycle       1277
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1278 ----------------------------------------------------
 
@@ -17413,10 +17089,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    3 from                  104
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    3, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    3,                  104
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -17427,7 +17102,6 @@ cycle       1291
 On 11, writes                    3   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -17439,14 +17113,12 @@ Stat update
 Cycle                 1292 ----------------------------------------------------
 
 cycle       1292
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1293 ----------------------------------------------------
 
@@ -17615,10 +17287,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    2 from                  112
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    2, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    2,                  112
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -17629,7 +17300,6 @@ cycle       1306
 On 11, writes                    2   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -17641,14 +17311,12 @@ Stat update
 Cycle                 1307 ----------------------------------------------------
 
 cycle       1307
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1308 ----------------------------------------------------
 
@@ -17817,10 +17485,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    1 from                  120
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    1, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    1,                  120
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -17831,7 +17498,6 @@ cycle       1321
 On 11, writes                    1   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -17843,14 +17509,12 @@ Stat update
 Cycle                 1322 ----------------------------------------------------
 
 cycle       1322
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1323 ----------------------------------------------------
 
@@ -18103,10 +17767,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    6 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    6, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    6,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -18117,7 +17780,6 @@ cycle       1342
 On 11, writes                    6   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -18129,14 +17791,12 @@ Stat update
 Cycle                 1343 ----------------------------------------------------
 
 cycle       1343
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1344 ----------------------------------------------------
 
@@ -18305,10 +17965,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    5 from                   80
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    5, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    5,                   80
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -18319,7 +17978,6 @@ cycle       1357
 On 11, writes                    5   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -18331,14 +17989,12 @@ Stat update
 Cycle                 1358 ----------------------------------------------------
 
 cycle       1358
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1359 ----------------------------------------------------
 
@@ -18507,10 +18163,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    4 from                   88
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    4, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    4,                   88
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -18521,7 +18176,6 @@ cycle       1372
 On 11, writes                    4   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -18533,14 +18187,12 @@ Stat update
 Cycle                 1373 ----------------------------------------------------
 
 cycle       1373
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1374 ----------------------------------------------------
 
@@ -18709,10 +18361,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    3 from                   96
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    3, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    3,                   96
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -18723,7 +18374,6 @@ cycle       1387
 On 11, writes                    3   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -18735,14 +18385,12 @@ Stat update
 Cycle                 1388 ----------------------------------------------------
 
 cycle       1388
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1389 ----------------------------------------------------
 
@@ -18911,10 +18559,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    2 from                  104
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    2, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    2,                  104
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -18925,7 +18572,6 @@ cycle       1402
 On 11, writes                    2   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -18937,14 +18583,12 @@ Stat update
 Cycle                 1403 ----------------------------------------------------
 
 cycle       1403
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1404 ----------------------------------------------------
 
@@ -19113,10 +18757,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    1 from                  112
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    1, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    1,                  112
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -19127,7 +18770,6 @@ cycle       1417
 On 11, writes                    1   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -19139,14 +18781,12 @@ Stat update
 Cycle                 1418 ----------------------------------------------------
 
 cycle       1418
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1419 ----------------------------------------------------
 
@@ -19399,10 +19039,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    5 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    5, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    5,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -19413,7 +19052,6 @@ cycle       1438
 On 11, writes                    5   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -19425,14 +19063,12 @@ Stat update
 Cycle                 1439 ----------------------------------------------------
 
 cycle       1439
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1440 ----------------------------------------------------
 
@@ -19601,10 +19237,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    4 from                   80
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    4, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    4,                   80
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -19615,7 +19250,6 @@ cycle       1453
 On 11, writes                    4   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -19627,14 +19261,12 @@ Stat update
 Cycle                 1454 ----------------------------------------------------
 
 cycle       1454
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1455 ----------------------------------------------------
 
@@ -19803,10 +19435,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    3 from                   88
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    3, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    3,                   88
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -19817,7 +19448,6 @@ cycle       1468
 On 11, writes                    3   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -19829,14 +19459,12 @@ Stat update
 Cycle                 1469 ----------------------------------------------------
 
 cycle       1469
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1470 ----------------------------------------------------
 
@@ -20005,10 +19633,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    2 from                   96
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    2, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    2,                   96
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -20019,7 +19646,6 @@ cycle       1483
 On 11, writes                    2   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -20031,14 +19657,12 @@ Stat update
 Cycle                 1484 ----------------------------------------------------
 
 cycle       1484
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1485 ----------------------------------------------------
 
@@ -20207,10 +19831,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    1 from                  104
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    1, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    1,                  104
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -20221,7 +19844,6 @@ cycle       1498
 On 11, writes                    1   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -20233,14 +19855,12 @@ Stat update
 Cycle                 1499 ----------------------------------------------------
 
 cycle       1499
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1500 ----------------------------------------------------
 
@@ -20493,10 +20113,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    4 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    4, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    4,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -20507,7 +20126,6 @@ cycle       1519
 On 11, writes                    4   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -20519,14 +20137,12 @@ Stat update
 Cycle                 1520 ----------------------------------------------------
 
 cycle       1520
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1521 ----------------------------------------------------
 
@@ -20695,10 +20311,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    3 from                   80
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    3, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    3,                   80
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -20709,7 +20324,6 @@ cycle       1534
 On 11, writes                    3   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -20721,14 +20335,12 @@ Stat update
 Cycle                 1535 ----------------------------------------------------
 
 cycle       1535
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1536 ----------------------------------------------------
 
@@ -20897,10 +20509,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    2 from                   88
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    2, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    2,                   88
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -20911,7 +20522,6 @@ cycle       1549
 On 11, writes                    2   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -20923,14 +20533,12 @@ Stat update
 Cycle                 1550 ----------------------------------------------------
 
 cycle       1550
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1551 ----------------------------------------------------
 
@@ -21099,10 +20707,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    1 from                   96
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    1, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    1,                   96
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -21113,7 +20720,6 @@ cycle       1564
 On 11, writes                    1   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -21125,14 +20731,12 @@ Stat update
 Cycle                 1565 ----------------------------------------------------
 
 cycle       1565
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1566 ----------------------------------------------------
 
@@ -21385,10 +20989,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    3 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    3, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    3,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -21399,7 +21002,6 @@ cycle       1585
 On 11, writes                    3   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -21411,14 +21013,12 @@ Stat update
 Cycle                 1586 ----------------------------------------------------
 
 cycle       1586
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1587 ----------------------------------------------------
 
@@ -21587,10 +21187,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    2 from                   80
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    2, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    2,                   80
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -21601,7 +21200,6 @@ cycle       1600
 On 11, writes                    2   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -21613,14 +21211,12 @@ Stat update
 Cycle                 1601 ----------------------------------------------------
 
 cycle       1601
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1602 ----------------------------------------------------
 
@@ -21789,10 +21385,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    1 from                   88
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    1, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    1,                   88
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -21803,7 +21398,6 @@ cycle       1615
 On 11, writes                    1   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -21815,14 +21409,12 @@ Stat update
 Cycle                 1616 ----------------------------------------------------
 
 cycle       1616
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1617 ----------------------------------------------------
 
@@ -22075,10 +21667,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    2 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    2, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    2,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -22089,7 +21680,6 @@ cycle       1636
 On 11, writes                    2   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -22101,14 +21691,12 @@ Stat update
 Cycle                 1637 ----------------------------------------------------
 
 cycle       1637
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1638 ----------------------------------------------------
 
@@ -22277,10 +21865,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    1 from                   80
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    1, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    1,                   80
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -22291,7 +21878,6 @@ cycle       1651
 On 11, writes                    1   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -22303,14 +21889,12 @@ Stat update
 Cycle                 1652 ----------------------------------------------------
 
 cycle       1652
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1653 ----------------------------------------------------
 
@@ -22563,9 +22147,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    1 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
+Decoded using forwarded data. srcA, srcB:                    1,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -22576,7 +22160,6 @@ cycle       1672
 On 11, writes                    1   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -22588,14 +22171,12 @@ Stat update
 Cycle                 1673 ----------------------------------------------------
 
 cycle       1673
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1674 ----------------------------------------------------
 
@@ -22848,10 +22429,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    2 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
-Decoded using forwarded data. srcA, srcB:                    2, 12297829382473034410
+Decoded using forwarded data. srcA, srcB:                    2,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -22862,7 +22442,6 @@ cycle       1693
 On 11, writes                    2   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -22874,14 +22453,12 @@ Stat update
 Cycle                 1694 ----------------------------------------------------
 
 cycle       1694
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1695 ----------------------------------------------------
 
@@ -23141,9 +22718,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    2 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
+Decoded using forwarded data. srcA, srcB:                    2,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -23154,7 +22731,6 @@ cycle       1715
 On 11, writes                    2   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -23166,14 +22742,12 @@ Stat update
 Cycle                 1716 ----------------------------------------------------
 
 cycle       1716
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1717 ----------------------------------------------------
 
@@ -23433,9 +23007,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    2 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
+Decoded using forwarded data. srcA, srcB:                    2,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -23446,7 +23020,6 @@ cycle       1737
 On 11, writes                    2   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -23458,14 +23031,12 @@ Stat update
 Cycle                 1738 ----------------------------------------------------
 
 cycle       1738
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1739 ----------------------------------------------------
 
@@ -23725,9 +23296,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    2 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
+Decoded using forwarded data. srcA, srcB:                    2,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -23738,7 +23309,6 @@ cycle       1759
 On 11, writes                    2   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -23750,14 +23320,12 @@ Stat update
 Cycle                 1760 ----------------------------------------------------
 
 cycle       1760
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1761 ----------------------------------------------------
 
@@ -24017,9 +23585,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    2 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
+Decoded using forwarded data. srcA, srcB:                    2,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -24030,7 +23598,6 @@ cycle       1781
 On 11, writes                    2   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -24042,14 +23609,12 @@ Stat update
 Cycle                 1782 ----------------------------------------------------
 
 cycle       1782
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1783 ----------------------------------------------------
 
@@ -24309,9 +23874,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    2 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
+Decoded using forwarded data. srcA, srcB:                    2,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -24322,7 +23887,6 @@ cycle       1803
 On 11, writes                    2   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -24334,14 +23898,12 @@ Stat update
 Cycle                 1804 ----------------------------------------------------
 
 cycle       1804
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1805 ----------------------------------------------------
 
@@ -24601,9 +24163,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    2 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
+Decoded using forwarded data. srcA, srcB:                    2,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -24614,7 +24176,6 @@ cycle       1825
 On 11, writes                    2   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -24626,14 +24187,12 @@ Stat update
 Cycle                 1826 ----------------------------------------------------
 
 cycle       1826
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1827 ----------------------------------------------------
 
@@ -24893,9 +24452,9 @@ wrM with $d:                  569
 wrote with pc:                  569
 Loaded                    2 from                   72
 Mem done with pc:                  579
-Executed                  589
 Decode : from Pc                  589 , expanded inst : 20bc61ac756e02000000, 
 rrmovq %'hb, %'hc
+Decoded using forwarded data. srcA, srcB:                    2,                   72
 Fetch : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Stat update
@@ -24906,7 +24465,6 @@ cycle       1847
 On 11, writes                    2   (wrM)
 wrM with $d:                  579
 wrote with pc:                  579
-Mem done with pc:                  589
 Executed                  589
 Decode : from Pc                  591 , expanded inst : 61ac756e020000000000, 
 subq %'ha, %'hc
@@ -24918,14 +24476,12 @@ Stat update
 Cycle                 1848 ----------------------------------------------------
 
 cycle       1848
-wrote with pc:                  589
 Mem done with pc:                  589
 Executed                  591
 Decode : from Pc                  593 , expanded inst : 756e0200000000000040, 
 jge $'h000000000000026e
 Fetch : from Pc                  612 , expanded inst : 40b20000000000000000, 
 rmmovq %'hb, 'h0000000000000000(%'h2)
-Stat update
 
 Cycle                 1849 ----------------------------------------------------
 
@@ -25300,7 +24856,6 @@ wrM with $d:                  329
 wrote with pc:                  329
 Loaded                    2 from                   72
 Mem done with pc:                  339
-Executed                  349
 Decode : from Pc                  349 , expanded inst : 61dc767f010000000000, 
 subq %'hd, %'hc
 Decoded using forwarded data. srcA, srcB:                    2,                    1
@@ -25314,11 +24869,10 @@ cycle       1876
 On 13, writes                    2   (wrM)
 wrM with $d:                  339
 wrote with pc:                  339
-Mem done with pc:                  349
 Executed                  349
 Decode : from Pc                  351 , expanded inst : 767f0100000000000060, 
 jg $'h000000000000017f
-Decoded using forwarded data. srcA, srcB: 12297829382473034402, 12297829382473034402
+Decoded using forwarded data. srcA, srcB:                   72,                   72
 Fetch : from Pc                  362 , expanded inst : 61037649010000000000, 
 subq %'h0, %'h3
 Stat update
@@ -25326,14 +24880,12 @@ Stat update
 Cycle                 1877 ----------------------------------------------------
 
 cycle       1877
-wrote with pc:                  349
 Mem done with pc:                  349
 Executed                  351
 Decode : from Pc                  360 , expanded inst : 60ba6103764901000000, 
 addq %'hb, %'ha
 Fetch : from Pc                  364 , expanded inst : 76490100000000000030, 
 jg $'h0000000000000149
-Stat update
 
 Cycle                 1878 ----------------------------------------------------
 
@@ -25446,7 +24998,6 @@ wrM with $d:                  329
 wrote with pc:                  329
 Loaded                    3 from                   80
 Mem done with pc:                  339
-Executed                  349
 Decode : from Pc                  349 , expanded inst : 61dc767f010000000000, 
 subq %'hd, %'hc
 Decoded using forwarded data. srcA, srcB:                    3,                    2
@@ -25460,11 +25011,10 @@ cycle       1887
 On 13, writes                    3   (wrM)
 wrM with $d:                  339
 wrote with pc:                  339
-Mem done with pc:                  349
 Executed                  349
 Decode : from Pc                  351 , expanded inst : 767f0100000000000060, 
 jg $'h000000000000017f
-Decoded using forwarded data. srcA, srcB: 12297829382473034402, 12297829382473034402
+Decoded using forwarded data. srcA, srcB:                   80,                   80
 Fetch : from Pc                  362 , expanded inst : 61037649010000000000, 
 subq %'h0, %'h3
 Stat update
@@ -25472,14 +25022,12 @@ Stat update
 Cycle                 1888 ----------------------------------------------------
 
 cycle       1888
-wrote with pc:                  349
 Mem done with pc:                  349
 Executed                  351
 Decode : from Pc                  360 , expanded inst : 60ba6103764901000000, 
 addq %'hb, %'ha
 Fetch : from Pc                  364 , expanded inst : 76490100000000000030, 
 jg $'h0000000000000149
-Stat update
 
 Cycle                 1889 ----------------------------------------------------
 
@@ -25592,7 +25140,6 @@ wrM with $d:                  329
 wrote with pc:                  329
 Loaded                    4 from                   88
 Mem done with pc:                  339
-Executed                  349
 Decode : from Pc                  349 , expanded inst : 61dc767f010000000000, 
 subq %'hd, %'hc
 Decoded using forwarded data. srcA, srcB:                    4,                    3
@@ -25606,11 +25153,10 @@ cycle       1898
 On 13, writes                    4   (wrM)
 wrM with $d:                  339
 wrote with pc:                  339
-Mem done with pc:                  349
 Executed                  349
 Decode : from Pc                  351 , expanded inst : 767f0100000000000060, 
 jg $'h000000000000017f
-Decoded using forwarded data. srcA, srcB: 12297829382473034402, 12297829382473034402
+Decoded using forwarded data. srcA, srcB:                   88,                   88
 Fetch : from Pc                  362 , expanded inst : 61037649010000000000, 
 subq %'h0, %'h3
 Stat update
@@ -25618,14 +25164,12 @@ Stat update
 Cycle                 1899 ----------------------------------------------------
 
 cycle       1899
-wrote with pc:                  349
 Mem done with pc:                  349
 Executed                  351
 Decode : from Pc                  360 , expanded inst : 60ba6103764901000000, 
 addq %'hb, %'ha
 Fetch : from Pc                  364 , expanded inst : 76490100000000000030, 
 jg $'h0000000000000149
-Stat update
 
 Cycle                 1900 ----------------------------------------------------
 
@@ -25738,7 +25282,6 @@ wrM with $d:                  329
 wrote with pc:                  329
 Loaded                    5 from                   96
 Mem done with pc:                  339
-Executed                  349
 Decode : from Pc                  349 , expanded inst : 61dc767f010000000000, 
 subq %'hd, %'hc
 Decoded using forwarded data. srcA, srcB:                    5,                    4
@@ -25752,11 +25295,10 @@ cycle       1909
 On 13, writes                    5   (wrM)
 wrM with $d:                  339
 wrote with pc:                  339
-Mem done with pc:                  349
 Executed                  349
 Decode : from Pc                  351 , expanded inst : 767f0100000000000060, 
 jg $'h000000000000017f
-Decoded using forwarded data. srcA, srcB: 12297829382473034402, 12297829382473034402
+Decoded using forwarded data. srcA, srcB:                   96,                   96
 Fetch : from Pc                  362 , expanded inst : 61037649010000000000, 
 subq %'h0, %'h3
 Stat update
@@ -25764,14 +25306,12 @@ Stat update
 Cycle                 1910 ----------------------------------------------------
 
 cycle       1910
-wrote with pc:                  349
 Mem done with pc:                  349
 Executed                  351
 Decode : from Pc                  360 , expanded inst : 60ba6103764901000000, 
 addq %'hb, %'ha
 Fetch : from Pc                  364 , expanded inst : 76490100000000000030, 
 jg $'h0000000000000149
-Stat update
 
 Cycle                 1911 ----------------------------------------------------
 
@@ -25884,7 +25424,6 @@ wrM with $d:                  329
 wrote with pc:                  329
 Loaded                    6 from                  104
 Mem done with pc:                  339
-Executed                  349
 Decode : from Pc                  349 , expanded inst : 61dc767f010000000000, 
 subq %'hd, %'hc
 Decoded using forwarded data. srcA, srcB:                    6,                    5
@@ -25898,11 +25437,10 @@ cycle       1920
 On 13, writes                    6   (wrM)
 wrM with $d:                  339
 wrote with pc:                  339
-Mem done with pc:                  349
 Executed                  349
 Decode : from Pc                  351 , expanded inst : 767f0100000000000060, 
 jg $'h000000000000017f
-Decoded using forwarded data. srcA, srcB: 12297829382473034402, 12297829382473034402
+Decoded using forwarded data. srcA, srcB:                  104,                  104
 Fetch : from Pc                  362 , expanded inst : 61037649010000000000, 
 subq %'h0, %'h3
 Stat update
@@ -25910,14 +25448,12 @@ Stat update
 Cycle                 1921 ----------------------------------------------------
 
 cycle       1921
-wrote with pc:                  349
 Mem done with pc:                  349
 Executed                  351
 Decode : from Pc                  360 , expanded inst : 60ba6103764901000000, 
 addq %'hb, %'ha
 Fetch : from Pc                  364 , expanded inst : 76490100000000000030, 
 jg $'h0000000000000149
-Stat update
 
 Cycle                 1922 ----------------------------------------------------
 

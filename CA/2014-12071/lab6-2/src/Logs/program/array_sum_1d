@@ -277,7 +277,6 @@ cycle         22
 did not write with pc:                  385
 Loaded                    1 from                   40
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                    1,                    0
@@ -290,7 +289,6 @@ cycle         23
 On 10, writes                    1   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -301,14 +299,12 @@ Stat update
 Cycle                   24 ----------------------------------------------------
 
 cycle         24
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                   25 ----------------------------------------------------
 
@@ -393,7 +389,6 @@ cycle         31
 did not write with pc:                  386
 Loaded                    2 from                   48
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                    2,                    1
@@ -406,7 +401,6 @@ cycle         32
 On 10, writes                    2   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -417,14 +411,12 @@ Stat update
 Cycle                   33 ----------------------------------------------------
 
 cycle         33
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                   34 ----------------------------------------------------
 
@@ -509,7 +501,6 @@ cycle         40
 did not write with pc:                  386
 Loaded                    3 from                   56
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                    3,                    3
@@ -522,7 +513,6 @@ cycle         41
 On 10, writes                    3   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -533,14 +523,12 @@ Stat update
 Cycle                   42 ----------------------------------------------------
 
 cycle         42
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                   43 ----------------------------------------------------
 
@@ -625,7 +613,6 @@ cycle         49
 did not write with pc:                  386
 Loaded                    4 from                   64
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                    4,                    6
@@ -638,7 +625,6 @@ cycle         50
 On 10, writes                    4   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -649,14 +635,12 @@ Stat update
 Cycle                   51 ----------------------------------------------------
 
 cycle         51
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                   52 ----------------------------------------------------
 
@@ -741,7 +725,6 @@ cycle         58
 did not write with pc:                  386
 Loaded                    5 from                   72
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                    5,                   10
@@ -754,7 +737,6 @@ cycle         59
 On 10, writes                    5   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -765,14 +747,12 @@ Stat update
 Cycle                   60 ----------------------------------------------------
 
 cycle         60
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                   61 ----------------------------------------------------
 
@@ -857,7 +837,6 @@ cycle         67
 did not write with pc:                  386
 Loaded                    6 from                   80
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                    6,                   15
@@ -870,7 +849,6 @@ cycle         68
 On 10, writes                    6   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -881,14 +859,12 @@ Stat update
 Cycle                   69 ----------------------------------------------------
 
 cycle         69
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                   70 ----------------------------------------------------
 
@@ -973,7 +949,6 @@ cycle         76
 did not write with pc:                  386
 Loaded                    7 from                   88
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                    7,                   21
@@ -986,7 +961,6 @@ cycle         77
 On 10, writes                    7   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -997,14 +971,12 @@ Stat update
 Cycle                   78 ----------------------------------------------------
 
 cycle         78
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                   79 ----------------------------------------------------
 
@@ -1089,7 +1061,6 @@ cycle         85
 did not write with pc:                  386
 Loaded                    8 from                   96
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                    8,                   28
@@ -1102,7 +1073,6 @@ cycle         86
 On 10, writes                    8   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -1113,14 +1083,12 @@ Stat update
 Cycle                   87 ----------------------------------------------------
 
 cycle         87
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                   88 ----------------------------------------------------
 
@@ -1205,7 +1173,6 @@ cycle         94
 did not write with pc:                  386
 Loaded                    9 from                  104
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                    9,                   36
@@ -1218,7 +1185,6 @@ cycle         95
 On 10, writes                    9   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -1229,14 +1195,12 @@ Stat update
 Cycle                   96 ----------------------------------------------------
 
 cycle         96
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                   97 ----------------------------------------------------
 
@@ -1321,7 +1285,6 @@ cycle        103
 did not write with pc:                  386
 Loaded                   10 from                  112
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   10,                   45
@@ -1334,7 +1297,6 @@ cycle        104
 On 10, writes                   10   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -1345,14 +1307,12 @@ Stat update
 Cycle                  105 ----------------------------------------------------
 
 cycle        105
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  106 ----------------------------------------------------
 
@@ -1437,7 +1397,6 @@ cycle        112
 did not write with pc:                  386
 Loaded                   11 from                  120
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   11,                   55
@@ -1450,7 +1409,6 @@ cycle        113
 On 10, writes                   11   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -1461,14 +1419,12 @@ Stat update
 Cycle                  114 ----------------------------------------------------
 
 cycle        114
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  115 ----------------------------------------------------
 
@@ -1553,7 +1509,6 @@ cycle        121
 did not write with pc:                  386
 Loaded                   12 from                  128
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   12,                   66
@@ -1566,7 +1521,6 @@ cycle        122
 On 10, writes                   12   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -1577,14 +1531,12 @@ Stat update
 Cycle                  123 ----------------------------------------------------
 
 cycle        123
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  124 ----------------------------------------------------
 
@@ -1669,7 +1621,6 @@ cycle        130
 did not write with pc:                  386
 Loaded                   13 from                  136
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   13,                   78
@@ -1682,7 +1633,6 @@ cycle        131
 On 10, writes                   13   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -1693,14 +1643,12 @@ Stat update
 Cycle                  132 ----------------------------------------------------
 
 cycle        132
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  133 ----------------------------------------------------
 
@@ -1785,7 +1733,6 @@ cycle        139
 did not write with pc:                  386
 Loaded                   14 from                  144
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   14,                   91
@@ -1798,7 +1745,6 @@ cycle        140
 On 10, writes                   14   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -1809,14 +1755,12 @@ Stat update
 Cycle                  141 ----------------------------------------------------
 
 cycle        141
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  142 ----------------------------------------------------
 
@@ -1901,7 +1845,6 @@ cycle        148
 did not write with pc:                  386
 Loaded                   15 from                  152
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   15,                  105
@@ -1914,7 +1857,6 @@ cycle        149
 On 10, writes                   15   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -1925,14 +1867,12 @@ Stat update
 Cycle                  150 ----------------------------------------------------
 
 cycle        150
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  151 ----------------------------------------------------
 
@@ -2017,7 +1957,6 @@ cycle        157
 did not write with pc:                  386
 Loaded                   16 from                  160
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   16,                  120
@@ -2030,7 +1969,6 @@ cycle        158
 On 10, writes                   16   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -2041,14 +1979,12 @@ Stat update
 Cycle                  159 ----------------------------------------------------
 
 cycle        159
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  160 ----------------------------------------------------
 
@@ -2133,7 +2069,6 @@ cycle        166
 did not write with pc:                  386
 Loaded                   17 from                  168
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   17,                  136
@@ -2146,7 +2081,6 @@ cycle        167
 On 10, writes                   17   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -2157,14 +2091,12 @@ Stat update
 Cycle                  168 ----------------------------------------------------
 
 cycle        168
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  169 ----------------------------------------------------
 
@@ -2249,7 +2181,6 @@ cycle        175
 did not write with pc:                  386
 Loaded                   18 from                  176
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   18,                  153
@@ -2262,7 +2193,6 @@ cycle        176
 On 10, writes                   18   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -2273,14 +2203,12 @@ Stat update
 Cycle                  177 ----------------------------------------------------
 
 cycle        177
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  178 ----------------------------------------------------
 
@@ -2365,7 +2293,6 @@ cycle        184
 did not write with pc:                  386
 Loaded                   19 from                  184
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   19,                  171
@@ -2378,7 +2305,6 @@ cycle        185
 On 10, writes                   19   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -2389,14 +2315,12 @@ Stat update
 Cycle                  186 ----------------------------------------------------
 
 cycle        186
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  187 ----------------------------------------------------
 
@@ -2481,7 +2405,6 @@ cycle        193
 did not write with pc:                  386
 Loaded                   20 from                  192
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   20,                  190
@@ -2494,7 +2417,6 @@ cycle        194
 On 10, writes                   20   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -2505,14 +2427,12 @@ Stat update
 Cycle                  195 ----------------------------------------------------
 
 cycle        195
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  196 ----------------------------------------------------
 
@@ -2597,7 +2517,6 @@ cycle        202
 did not write with pc:                  386
 Loaded                   21 from                  200
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   21,                  210
@@ -2610,7 +2529,6 @@ cycle        203
 On 10, writes                   21   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -2621,14 +2539,12 @@ Stat update
 Cycle                  204 ----------------------------------------------------
 
 cycle        204
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  205 ----------------------------------------------------
 
@@ -2713,7 +2629,6 @@ cycle        211
 did not write with pc:                  386
 Loaded                   22 from                  208
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   22,                  231
@@ -2726,7 +2641,6 @@ cycle        212
 On 10, writes                   22   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -2737,14 +2651,12 @@ Stat update
 Cycle                  213 ----------------------------------------------------
 
 cycle        213
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  214 ----------------------------------------------------
 
@@ -2829,7 +2741,6 @@ cycle        220
 did not write with pc:                  386
 Loaded                   23 from                  216
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   23,                  253
@@ -2842,7 +2753,6 @@ cycle        221
 On 10, writes                   23   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -2853,14 +2763,12 @@ Stat update
 Cycle                  222 ----------------------------------------------------
 
 cycle        222
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  223 ----------------------------------------------------
 
@@ -2945,7 +2853,6 @@ cycle        229
 did not write with pc:                  386
 Loaded                   24 from                  224
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   24,                  276
@@ -2958,7 +2865,6 @@ cycle        230
 On 10, writes                   24   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -2969,14 +2875,12 @@ Stat update
 Cycle                  231 ----------------------------------------------------
 
 cycle        231
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  232 ----------------------------------------------------
 
@@ -3061,7 +2965,6 @@ cycle        238
 did not write with pc:                  386
 Loaded                   25 from                  232
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   25,                  300
@@ -3074,7 +2977,6 @@ cycle        239
 On 10, writes                   25   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -3085,14 +2987,12 @@ Stat update
 Cycle                  240 ----------------------------------------------------
 
 cycle        240
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  241 ----------------------------------------------------
 
@@ -3177,7 +3077,6 @@ cycle        247
 did not write with pc:                  386
 Loaded                   26 from                  240
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   26,                  325
@@ -3190,7 +3089,6 @@ cycle        248
 On 10, writes                   26   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -3201,14 +3099,12 @@ Stat update
 Cycle                  249 ----------------------------------------------------
 
 cycle        249
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  250 ----------------------------------------------------
 
@@ -3293,7 +3189,6 @@ cycle        256
 did not write with pc:                  386
 Loaded                   27 from                  248
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   27,                  351
@@ -3306,7 +3201,6 @@ cycle        257
 On 10, writes                   27   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -3317,14 +3211,12 @@ Stat update
 Cycle                  258 ----------------------------------------------------
 
 cycle        258
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  259 ----------------------------------------------------
 
@@ -3409,7 +3301,6 @@ cycle        265
 did not write with pc:                  386
 Loaded                   28 from                  256
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   28,                  378
@@ -3422,7 +3313,6 @@ cycle        266
 On 10, writes                   28   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -3433,14 +3323,12 @@ Stat update
 Cycle                  267 ----------------------------------------------------
 
 cycle        267
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  268 ----------------------------------------------------
 
@@ -3525,7 +3413,6 @@ cycle        274
 did not write with pc:                  386
 Loaded                   29 from                  264
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   29,                  406
@@ -3538,7 +3425,6 @@ cycle        275
 On 10, writes                   29   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -3549,14 +3435,12 @@ Stat update
 Cycle                  276 ----------------------------------------------------
 
 cycle        276
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  277 ----------------------------------------------------
 
@@ -3641,7 +3525,6 @@ cycle        283
 did not write with pc:                  386
 Loaded                   30 from                  272
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   30,                  435
@@ -3654,7 +3537,6 @@ cycle        284
 On 10, writes                   30   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -3665,14 +3547,12 @@ Stat update
 Cycle                  285 ----------------------------------------------------
 
 cycle        285
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  286 ----------------------------------------------------
 
@@ -3757,7 +3637,6 @@ cycle        292
 did not write with pc:                  386
 Loaded                   31 from                  280
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   31,                  465
@@ -3770,7 +3649,6 @@ cycle        293
 On 10, writes                   31   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -3781,14 +3659,12 @@ Stat update
 Cycle                  294 ----------------------------------------------------
 
 cycle        294
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  295 ----------------------------------------------------
 
@@ -3873,7 +3749,6 @@ cycle        301
 did not write with pc:                  386
 Loaded                   32 from                  288
 Mem done with pc:                  359
-Executed                  369
 Decode : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 Decoded using forwarded data. srcA, srcB:                   32,                  496
@@ -3886,7 +3761,6 @@ cycle        302
 On 10, writes                   32   (wrM)
 wrM with $d:                  359
 wrote with pc:                  359
-Mem done with pc:                  369
 Executed                  369
 Decode : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
@@ -3897,14 +3771,12 @@ Stat update
 Cycle                  303 ----------------------------------------------------
 
 cycle        303
-wrote with pc:                  369
 Mem done with pc:                  369
 Executed                  371
 Decode : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
-Stat update
 
 Cycle                  304 ----------------------------------------------------
 

@@ -102,7 +102,6 @@ wrE with                   40:
 wrote with pc:                   40
 Loaded                    3 from                   72
 Mem done with pc:                   42
-Executed                   52
 Decode : from Pc                   52 , expanded inst : 6010c00e000000000000, 
 addq %'h1, %'h0
 Decoded using forwarded data. srcA, srcB:                    3, 18446744073709551613
@@ -116,11 +115,10 @@ cycle          9
 On  1, writes                    3   (wrM)
 wrM with $d:                   42
 wrote with pc:                   42
-Mem done with pc:                   52
 Executed                   52
 Decode : from Pc                   54 , expanded inst : c00e0000000000000000, 
 mtc0 %'h0, %'he
-Decoded using forwarded data. srcA, srcB:                    0, 12297829382473034418
+Decoded using forwarded data. srcA, srcB:                    0,                   72
 Fetch : from Pc                   57 , expanded inst : 00000000000000aaaaaa, 
 halt
 Stat update
@@ -128,14 +126,12 @@ Stat update
 Cycle                   10 ----------------------------------------------------
 
 cycle         10
-wrote with pc:                   52
 Mem done with pc:                   52
 Executed                   54
 Decode : from Pc                   56 , expanded inst : 0000000000000000aaaa, 
 halt
 Fetch : from Pc                   58 , expanded inst : 000000000000aaaaaaaa, 
 halt
-Stat update
 
 Cycle                   11 ----------------------------------------------------
 
