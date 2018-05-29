@@ -96,7 +96,8 @@ module mkProc(Proc);
 
 		/* Decode */
 		let dInst = decode(inst, ipc);
-        let stall = sb.search1(dInst.regA) || sb.search2(dInst.regB);
+
+        let stall = (isValid(dInst.regA) && sb.search1(dInst.regA)) || (isValid(dInst.regB) && sb.search2(dInst.regB));
         if(!stall) 
         begin
             dInst.valA   = isValid(dInst.regA)? tagged Valid rf.rdA(validRegValue(dInst.regA)) : Invalid;
@@ -111,97 +112,105 @@ module mkProc(Proc);
 			f2d.deq;
         end
 		else
-			$display("STALL");
+			$display("STALLING for pc: %d. \n", ipc, showInst(inst));
     endrule
 
     rule doExec(cop.started && stat == AOK);
+		if(!d2e.notEmpty)
+			$display("d2e empty.");
         let dInst = d2e.first.inst;
         let ppc = d2e.first.ppc;
         let iEpoch = d2e.first.epoch;
 		let ipc = d2e.first.pc;
-    
+		
         if(iEpoch == eEpoch)
 		begin
 			/* Execute */
 			let eInst = exec(dInst, condFlag, ppc);
 			condFlag <= eInst.condFlag;
-			$display("Execute.");	
+			$display("Executed %d", ipc);	
 
-			if(eInst.mispredict && eInst.iType != Ret)
+			if(eInst.mispredict)
 			begin
 				eEpoch <= !eEpoch;
-				let redirPc = validValue(eInst.nextPc);
-				$display("mispredicted, redirect %d ", redirPc);
-				execRedirect.enq(redirPc);
-				eInst.mispredict = !eInst.mispredict;
-			end
-			     
-            e2m.enq(Exec2Mem{inst : Valid(eInst), pc:ipc, epoch:iEpoch});	
+				/* if(eInst.iType != Ret)
+				begin
+					let redirPc = validValue(eInst.nextPc);
+					$display("mispredicted, redirect %d ", redirPc);
+					execRedirect.enq(redirPc);
+					eInst.mispredict = !eInst.mispredict;
+				end */
+			end 
+			
+			e2m.enq(Exec2Mem{inst:Valid(eInst), pc:ipc, epoch:iEpoch});
+			d2e.deq;
         end
 			
 		else
 		begin
-			e2m.enq(Exec2Mem{inst : Invalid, pc:ipc, epoch:iEpoch});
+			e2m.enq(Exec2Mem{inst:Invalid, pc:ipc, epoch:iEpoch});
 			$display("Not Executed because epoch is different: %d ", ipc);
+			d2e.deq;
 		end
-		d2e.deq;
     endrule
 
     rule doMem(cop.started && stat == AOK);
 		let iEpoch = e2m.first.epoch;
 		let ipc = e2m.first.pc;
 		
-		if (isValid(e2m.first.inst) && iEpoch == eEpoch)
-		begin
+		if(isValid(e2m.first.inst))
+		begin		
 			let eInst = validValue(e2m.first.inst);
 		    
 			/* Memory */ 
-		    let iType = eInst.iType;
-		    case(iType)
-			    MRmov, Pop, Ret :
-			    begin
-			        let ldData <- (dMem.req(MemReq{op: Ld, addr: eInst.memAddr, data:?}));
-				    eInst.valM = Valid(little2BigEndian(ldData));
-				    $display("Loaded %d from %d", little2BigEndian(ldData), eInst.memAddr);
-				    if(iType == Ret)
-				    begin
-					    eInst.nextPc = eInst.valM;	
-				    end
-			    end
+			let iType = eInst.iType;
+			case(iType)
+				MRmov, Pop, Ret :
+				begin
+					let ldData <- (dMem.req(MemReq{op: Ld, addr: eInst.memAddr, data:?}));
+					eInst.valM = Valid(little2BigEndian(ldData));
+					$display("Loaded %d from %d", little2BigEndian(ldData), eInst.memAddr);
+					if(iType == Ret)
+					begin
+						eInst.nextPc = eInst.valM;	
+					end
+				end
 
-			    RMmov, Call, Push :
-			    begin
-				    let stData = (iType == Call)? eInst.valP : validValue(eInst.valA);
-				    let dummy <- dMem.req(MemReq{op: St, addr: eInst.memAddr, data: big2LittleEndian(stData)});
-				    $display("Stored %d into %d", stData, eInst.memAddr);
-			    end
-		    endcase
+				RMmov, Call, Push :
+				begin
+					let stData = (iType == Call)? eInst.valP : validValue(eInst.valA);
+					let dummy <- dMem.req(MemReq{op: St, addr: eInst.memAddr, data: big2LittleEndian(stData)});
+					$display("Stored %d into %d", stData, eInst.memAddr);
+				end
+			endcase
 			
-			if(eInst.mispredict && eInst.iType == Ret)
+			if(eInst.mispredict)
 			begin
-				eEpoch <= !eEpoch;
 				let redirPc = validValue(eInst.nextPc);
 				$display("mispredicted, redirect %d ", redirPc);
 				execRedirect.enq(redirPc);
 			end
 		    
 			$display("Mem done with pc: %d", ipc);
+
 			m2w.enq(Mem2Write{inst:Valid(eInst), pc:ipc, epoch:iEpoch});
-        end
-		
+			e2m.deq;
+		end
+			
 		else
 		begin
-			$display("Mem cancelled with pc: %d", ipc);
 			m2w.enq(Mem2Write{inst:Invalid, pc:ipc, epoch:iEpoch});
+			$display("Mem cancelled with pc: %d", ipc);
+			e2m.deq;
 		end
-		e2m.deq;
     endrule
 
     rule doWrite(cop.started && stat == AOK);
 		let iEpoch = m2w.first.epoch;
 		let ipc = m2w.first.pc;
-		if (iEpoch == eEpoch && isValid(m2w.first.inst))
-		begin
+		
+		if(isValid(m2w.first.inst))
+		begin		
 			let eInst = validValue(m2w.first.inst);
         
 			/* WriteBack */
@@ -226,10 +235,21 @@ module mkProc(Proc);
 								Hlt 		  : HLT;
 								default     : AOK;
 							endcase;
-			statRedirect.enq(newStatus);
+			statRedirect.enq(newStatus);	
+			
+			m2w.deq;
+			$display("wrote with pc: %d", ipc);
+			sb.remove;
+			$display("removed an item from scoreboard.");
+		end	
+
+		else
+		begin
+			m2w.deq;
+			$display("did not write with pc: %d", ipc);
+			sb.remove;
+			$display("removed an item from scoreboard.");
 		end
-		m2w.deq;
-		sb.remove;
     endrule
 
 	rule upd_Stat(cop.started);

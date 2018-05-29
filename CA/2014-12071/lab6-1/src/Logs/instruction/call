@@ -20,7 +20,7 @@ irmovq $'h00000000000000a0,  %'h4
 Cycle                    2 ----------------------------------------------------
 
 cycle          2
-Execute.
+Executed                    0
 Decode : from Pc                   10 , expanded inst : 30f4a000000000000000, 
 irmovq $'h00000000000000a0,  %'h4
 Fetch : from Pc                   20 , expanded inst : 30f0ffffffffffffffff, 
@@ -30,6 +30,7 @@ Cycle                    3 ----------------------------------------------------
 
 cycle          3
 Mem done with pc:                    0
+Executed                   10
 Decode : from Pc                   20 , expanded inst : 30f0ffffffffffffffff, 
 irmovq $'hffffffffffffffff,  %'h0
 Fetch : from Pc                   30 , expanded inst : 805000000000000000c0, 
@@ -40,8 +41,12 @@ Cycle                    4 ----------------------------------------------------
 cycle          4
 On  5, writes                  160   (wrE)
 wrE with                    0: 
-Execute.
-STALL
+wrote with pc:                    0
+removed an item from scoreboard.
+Mem done with pc:                   10
+Executed                   20
+STALLING for pc:                   30. 
+call 'h0000000000000050
 Fetch : from Pc                   39 , expanded inst : c00e00000000000000aa, 
 mtc0 %'h0, %'he
 Stat update
@@ -49,127 +54,134 @@ Stat update
 Cycle                    5 ----------------------------------------------------
 
 cycle          5
-Mem done with pc:                   10
-STALL
-
-Cycle                    6 ----------------------------------------------------
-
-cycle          6
 On  4, writes                  160   (wrE)
 wrE with                   10: 
-Execute.
+wrote with pc:                   10
+removed an item from scoreboard.
+Mem done with pc:                   20
 Decode : from Pc                   30 , expanded inst : 805000000000000000c0, 
 call 'h0000000000000050
 Fetch : from Pc                   41 , expanded inst : 00000000000000aaaaaa, 
 halt
 Stat update
 
+Cycle                    6 ----------------------------------------------------
+
+cycle          6
+On  0, writes 18446744073709551615   (wrE)
+wrE with                   20: 
+wrote with pc:                   20
+removed an item from scoreboard.
+Executed                   30
+Decode : from Pc                   39 , expanded inst : c00e00000000000000aa, 
+mtc0 %'h0, %'he
+Fetch : from Pc                   42 , expanded inst : 000000000000aaaaaaaa, 
+halt
+Stat update
+
 Cycle                    7 ----------------------------------------------------
 
 cycle          7
-Mem done with pc:                   20
-STALL
+Stored                   39 into                  152
+mispredicted, redirect                   80 
+Mem done with pc:                   30
+Not Executed because epoch is different:                   39 
+Decode : from Pc                   41 , expanded inst : 00000000000000aaaaaa, 
+halt
+Fetch : from Pc                   80 , expanded inst : 30f00000000000000000, 
+irmovq $'h0000000000000000,  %'h0
 
 Cycle                    8 ----------------------------------------------------
 
 cycle          8
-On  0, writes 18446744073709551615   (wrE)
-wrE with                   20: 
-Execute.
-mispredicted, redirect                   80 
-Decode : from Pc                   39 , expanded inst : c00e00000000000000aa, 
+On  4, writes                  152   (wrE)
+wrE with                   30: 
+wrote with pc:                   30
+removed an item from scoreboard.
+Mem cancelled with pc:                   39
+Not Executed because epoch is different:                   41 
+Decode : from Pc                   42 , expanded inst : 000000000000aaaaaaaa, 
+halt
+Fetch : from Pc                   90 , expanded inst : c00e00000000aaaaaaaa, 
 mtc0 %'h0, %'he
-Fetch : from Pc                   80 , expanded inst : 30f00000000000000000, 
-irmovq $'h0000000000000000,  %'h0
 Stat update
 
 Cycle                    9 ----------------------------------------------------
 
 cycle          9
-Mem cancelled with pc:                   30
-Decode : from Pc                   41 , expanded inst : 00000000000000aaaaaa, 
-halt
-Fetch : from Pc                   90 , expanded inst : c00e00000000aaaaaaaa, 
-mtc0 %'h0, %'he
-
-Cycle                   10 ----------------------------------------------------
-
-cycle         10
-Not Executed because epoch is different:                   39 
+did not write with pc:                   39
+removed an item from scoreboard.
+Mem cancelled with pc:                   41
+Not Executed because epoch is different:                   42 
 Decode : from Pc                   80 , expanded inst : 30f00000000000000000, 
 irmovq $'h0000000000000000,  %'h0
 Fetch : from Pc                   92 , expanded inst : 00000000aaaaaaaaaaaa, 
 halt
 
+Cycle                   10 ----------------------------------------------------
+
+cycle         10
+did not write with pc:                   41
+removed an item from scoreboard.
+Mem cancelled with pc:                   42
+Executed                   80
+STALLING for pc:                   90. 
+mtc0 %'h0, %'he
+
 Cycle                   11 ----------------------------------------------------
 
 cycle         11
-Mem cancelled with pc:                   39
-STALL
+did not write with pc:                   42
+removed an item from scoreboard.
+Mem done with pc:                   80
+STALLING for pc:                   90. 
+mtc0 %'h0, %'he
 
 Cycle                   12 ----------------------------------------------------
 
 cycle         12
-Not Executed because epoch is different:                   41 
-STALL
-
-Cycle                   13 ----------------------------------------------------
-
-cycle         13
-Mem cancelled with pc:                   41
-STALL
-
-Cycle                   14 ----------------------------------------------------
-
-cycle         14
-Execute.
-STALL
-
-Cycle                   15 ----------------------------------------------------
-
-cycle         15
-Mem done with pc:                   80
-STALL
-
-Cycle                   16 ----------------------------------------------------
-
-cycle         16
 On  0, writes                    0   (wrE)
 wrE with                   80: 
+wrote with pc:                   80
+removed an item from scoreboard.
 Decode : from Pc                   90 , expanded inst : c00e00000000aaaaaaaa, 
 mtc0 %'h0, %'he
 Fetch : from Pc                   93 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
 Stat update
 
-Cycle                   17 ----------------------------------------------------
+Cycle                   13 ----------------------------------------------------
 
-cycle         17
-Execute.
+cycle         13
+Executed                   90
 Decode : from Pc                   92 , expanded inst : 00000000aaaaaaaaaaaa, 
 halt
 Fetch : from Pc                   94 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt
 
-Cycle                   18 ----------------------------------------------------
+Cycle                   14 ----------------------------------------------------
 
-cycle         18
+cycle         14
 Mem done with pc:                   90
+Executed                   92
 Decode : from Pc                   93 , expanded inst : 000000aaaaaaaaaaaaaa, 
 halt
 Fetch : from Pc                   95 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
 halt
 
-Cycle                   19 ----------------------------------------------------
+Cycle                   15 ----------------------------------------------------
 
-cycle         19
+cycle         15
 On 14, writes                    0   (wrE)
 wrE with                   90: 
-Execute.
+wrote with pc:                   90
+removed an item from scoreboard.
+Mem done with pc:                   92
+Executed                   93
 Decode : from Pc                   94 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt
 Fetch : from Pc                   96 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
 push %'ha
 Stat update
 
-Cycle                   20 ----------------------------------------------------
+Cycle                   16 ----------------------------------------------------
