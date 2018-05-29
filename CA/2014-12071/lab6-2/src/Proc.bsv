@@ -42,35 +42,23 @@ typedef struct {
 } Bypassed deriving(Bits, Eq);
 
 typedef struct {
-	Maybe#(ICode) iCode;
+	Maybe#(IType) iType;
 	Maybe#(FullIndx) dstM;
 } LoadUseTrigger deriving(Bits, Eq);
 
+function Bool stall(DecodedInst dInst, LoadUseTrigger trigger);
+    return trigger = (trig.first.iType == MRmov || trig.first.iCode == Pop)  
+				&& (trig.first.dstM == dInst.regA || trig.first.dstM == dInst.regB);
+endfunction
+
 function DecodedInst forward(DecodedInst dInst, 
-					Fifo#(1, LoadUseTrigger) trig, 
 					Fifo#(1, Bypassed) e2d, 
 					Fifo#(1, Bypassed) m2dE, 
 					Fifo#(1, Bypassed) m2dM, 
 					Fifo#(1, Bypassed) w2dE, 
 					Fifo#(1, Bypassed) w2dM);
-	Bool trigger;
-	if(trig.notEmpty)
-		trigger = (trig.first.iCode == mrmovq || trig.first.iCode == pop)  
-				&& (trig.first.dstM == dInst.regA || trig.first.dstM == dInst.regB);
 	
-	DecodedInst forwarded = dInst;
-	if(trigger)
-	begin
-		forwarded.iType = Nop;
-		forwarded.condUsed = Al;
-		forwarded.valP = pc + 1;
-		forwarded.dstE = Invalid;
-		forwarded.dstM = Invalid;
-		forwarded.regA = Invalid;
-		forwarded.regB = Invalid;
-		forwarded.valC = Invalid;
-	end
-	
+    DecodedInst forwarded = dInst;
 	if(e2d.notEmpty && (e2d.first.rIndx == dInst.regA || e2d.first.rIndx == dInst.regB))
 	begin
 		if(e2d.first.rIndx == dInst.regA)
@@ -98,8 +86,26 @@ function DecodedInst forward(DecodedInst dInst,
 	else if(w2dE.notEmpty && (w2dE.first.rIndx == dInst.regA || w2dE.first.rIndx == dInst.regB))
 	begin
 		if(w2dE.first.rIndx == dInst.regA)
+            forwarded.valA = w2dE.first.data;
+        else if(w2dE.first.rIndx == dInst.regB)
+            forwarded.valB = w2dE.first.data;
 	end
+
+    else if(w2dM.notEmpty && (w2dM.first.rIndx == dInst.regA || w2dM.first.rIndx == dInst.regB))
+    begin
+        if(w2dM.first.rIndx == dInst.regA)
+            forwarded.valA = w2dM.first.data;
+        else if(w2dM.first.rIndx == dInst.regB)
+            forwarded.valB = w2dM.first.data;
+    end
 	
+    e2d.deq;
+    m2dE.deq;
+    m2dM.deq;
+    w2dE.deq;
+    w2dM.deq;
+
+    return forwarded;
 endfunction
 
 (*synthesize*)
@@ -168,12 +174,28 @@ module mkProc(Proc);
 
 		/* Decode */
 		let dInst = decode(inst, ipc);
-
-        if(True) 
+        
+        DecodedInst bubble;
+        if(trig.notEmpty && stall(dInst, trig.first))
+        begin
+            bubble.iType = Nop;
+		    bubble.condUsed = Al;
+		    bubble.valP = pc + 1;
+	        bubble.dstE = Invalid;
+		    bubble.dstM = Invalid;
+		    bubble.regA = Invalid;
+		    bubble.regB = Invalid;
+		    bubble.valC = Invalid;
+            d2e.enq(Decode2Exec{inst:bubble, pc:ipc, ppc:ppc, epoch:iEpoch);
+        end
+        
+        else
         begin
             dInst.valA   = isValid(dInst.regA)? tagged Valid rf.rdA(validRegValue(dInst.regA)) : Invalid;
 			dInst.valB   = isValid(dInst.regB)? tagged Valid rf.rdB(validRegValue(dInst.regB)) : Invalid;
 			dInst.copVal = isValid(dInst.regA)? tagged Valid cop.rd(validRegValue(dInst.regA)) : Invalid;
+
+            dInst = forward(dInst, e2d, m2dE, m2dM, w2dE, w2dM);
             
 			$display("Decode : from Pc %d , expanded inst : %x, \n", ipc, inst, showInst(inst));
 
@@ -196,6 +218,7 @@ module mkProc(Proc);
 		begin
 			/* Execute */
 			let eInst = exec(dInst, condFlag, ppc);
+            e2d.enq(Bypassed{rIndx:dstE, data:valE});
 			condFlag <= eInst.condFlag;
 			$display("Executed %d", ipc);	
 
@@ -223,6 +246,7 @@ module mkProc(Proc);
 		if(isValid(e2m.first.inst))
 		begin		
 			let eInst = validValue(e2m.first.inst);
+            m2dE.enq(Bypassed{rIndx:eInst.dstE, data:valE});
 		    
 			/* Memory */ 
 			let iType = eInst.iType;
@@ -236,6 +260,8 @@ module mkProc(Proc);
 					begin
 						eInst.nextPc = eInst.valM;	
 					end
+                    if(iType == MRmov || iType == Pop)
+                        trig.enq(LoadUseTrigger{iType:iType, dstM:eInst.dstM});
 				end
 
 				RMmov, Call, Push :
@@ -255,6 +281,7 @@ module mkProc(Proc);
 		    
 			$display("Mem done with pc: %d", ipc);
 
+            m2dM.enq(Bypassed{rIndx:eInst.dstM, data:eInst.valM});
 			m2w.enq(Mem2Write{inst:Valid(eInst), pc:ipc, epoch:iEpoch});
 			e2m.deq;
 		end
@@ -274,6 +301,8 @@ module mkProc(Proc);
 		if(isValid(m2w.first.inst))
 		begin		
 			let eInst = validValue(m2w.first.inst);
+            w2dE.enq(Bypassed{rIndx:eInst.dstE, data:eInst.valE});
+            w2dM.enq(Bypassed{rIndx:eInst.dstM, data:eInst.valM});
         
 			/* WriteBack */
 			if(isValid(eInst.dstE))

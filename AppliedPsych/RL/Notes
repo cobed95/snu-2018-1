@@ -1,0 +1,7 @@
+DP: V(S(t))new = V(S(t))old + (R(t+1) + gamma*E[V(S(t+1)old]) - V(S(t))old
+    V(S(t))new = V(S(t))old + (-1 + gamma*0.5(V(S(t))old + V(S(t))old) - V(S(t))old
+
+MC: V(S(t))new = V(S(t))old + alpha*(G(S(t)) - V(S(t))old)  <- 1 epi
+    
+TD: V(S(t))new = V(S(t))old + alpha(R + gamma*V(S(t+1)) - V(S(t))old)  <- 1 step
+    V(S(t))new = V(S(t))old + alpha(-1 + gamma*V(S(t))old - V(S(t))old)
