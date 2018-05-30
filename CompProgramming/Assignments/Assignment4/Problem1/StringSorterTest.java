@@ -1,10 +1,8 @@
 public class StringSorterTest {
     public static class Tester {
-        StringSorter stringSorter;
         String[] arr;
 
-        public Tester(StringSorter stringSorter, String[] arr) {
-            this.stringSorter = stringSorter;
+        public Tester(String[] arr) {
             this.arr = arr;
         } 
        
@@ -23,7 +21,7 @@ public class StringSorterTest {
             printArray(arr);
             System.out.println();
             
-            stringSorter.selectionSort(arr);
+            StringSorter.selectionSort(arr);
             System.out.println("Printing sorted array...");
             printArray(arr);
             System.out.println();
@@ -41,7 +39,7 @@ public class StringSorterTest {
             printArray(arr);
             System.out.println();
             
-            stringSorter.insertionSort(arr);
+            StringSorter.insertionSort(arr);
             System.out.println("Printing sorted array...");
             printArray(arr);
             System.out.println();
@@ -59,7 +57,7 @@ public class StringSorterTest {
             printArray(arr);
             System.out.println();
             
-            stringSorter.bubbleSort(arr);
+            StringSorter.bubbleSort(arr);
             System.out.println("Printing sorted array...");
             printArray(arr);
             System.out.println();
@@ -77,7 +75,7 @@ public class StringSorterTest {
             printArray(arr);
             System.out.println();
             
-            stringSorter.mergeSort(arr);
+            StringSorter.mergeSort(arr);
             System.out.println("Printing sorted array...");
             printArray(arr);
             System.out.println();
@@ -109,9 +107,8 @@ public class StringSorterTest {
     }
 
     public static void main(String[] args) {
-        StringSorter stringSorter = new StringSorter();
         String[] arr = {"hello", "garbage", "world", "java"}; 
-        Tester tester = new Tester(stringSorter, arr);
+        Tester tester = new Tester(arr);
         tester.test();
     }
 }

@@ -33,13 +33,13 @@ public class StringSorter {
         }
     }
     
-    private void swap(String[] arr, int p, int q) {
+    private static void swap(String[] arr, int p, int q) {
         String temp = arr[p];
         arr[p] = arr[q];
         arr[q] = temp;
     }
 
-    public void selectionSort(String[] arr) {
+    public static void selectionSort(String[] arr) {
         for (int i = 0; i < arr.length-1; i++) {
             int min = i;
             for (int j = i+1; j < arr.length; j++) {
@@ -51,7 +51,7 @@ public class StringSorter {
         }
     }
 
-    public void insertionSort(String[] arr) {
+    public static void insertionSort(String[] arr) {
         for (int i = 1; i < arr.length; i++) {
             String key = arr[i];
             int j = i-1;
@@ -63,7 +63,7 @@ public class StringSorter {
         }
     }
 
-    public void bubbleSort(String[] arr) {
+    public static void bubbleSort(String[] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length-1; j++) {
                 if (StringScale.isGreaterThan(arr[j], arr[j+1])) {
@@ -73,7 +73,7 @@ public class StringSorter {
         }
     }
 
-    private void merge(String[] arr, int p, int q, int r) {
+    private static void merge(String[] arr, int p, int q, int r) {
         String[] left = new String[q-p+1];
         String[] right = new String[r-q];
         for (int i = p; i <= q; i++) {
@@ -102,7 +102,7 @@ public class StringSorter {
         }
     }
 
-    private void mergeSortAux(String[] arr, int p, int r) {
+    private static void mergeSortAux(String[] arr, int p, int r) {
         if (p < r) {
             int q = (p+r)/2;
             mergeSortAux(arr, p, q);
@@ -111,7 +111,7 @@ public class StringSorter {
         }
     }
 
-    public void mergeSort(String[] arr) {
+    public static void mergeSort(String[] arr) {
         mergeSortAux(arr, 0, arr.length-1);
     }
 }
