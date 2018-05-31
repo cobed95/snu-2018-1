@@ -264,7 +264,7 @@ module mkProc(Proc);
 	 		 		begin
 
 					/* TODO: Change this part to make processor use dCache */
-		 			mem.dReq(CacheMemReq{op: Ld, addr: eInst.memAddr, data:?, burstLength : 1});
+		 			dCache.req(CacheMemReq{op: Ld, addr: eInst.memAddr, data:?, burstLength : 1});
 
 					end
 
@@ -275,7 +275,7 @@ module mkProc(Proc);
 					/* TODO: Change this part to make processor use dCache */
 					Line stLine = newVector;
 					stLine[0] = big2LittleEndian(stData);
-					mem.dReq(CacheMemReq{op: St, addr: eInst.memAddr, data: stLine, burstLength: 1});
+					dCache.req(CacheMemReq{op: St, addr: eInst.memAddr, data: stLine, burstLength: 1});
 					$display("Store %d on %d", stData, eInst.memAddr);
 
 				end
@@ -302,7 +302,7 @@ module mkProc(Proc);
 				begin
 
 				/* TODO: Change this part to make processor use dCache */
-				let dResp <- mem.dResp;
+				let dResp <- dCache.resp;
 				ldData = dResp[0];
 
  				eInst.valM = Valid(little2BigEndian(ldData));
@@ -363,8 +363,8 @@ module mkProc(Proc);
 	endrule
 
 	/* TODO: Activate these two lines to use cache */
-//	mkConnection(mem.dReq, dCache.memReq);
-//	mkConnection(mem.dResp, dCache.memResp);
+    mkConnection(mem.dReq, dCache.memReq);
+    mkConnection(mem.dResp, dCache.memResp);
 
 	method ActionValue#(Tuple3#(RIndx, Data, Data)) cpuToHost;
 		let retV <- cop.cpuToHost;
