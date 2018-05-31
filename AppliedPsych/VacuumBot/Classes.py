@@ -55,6 +55,7 @@ class Position:
 class Environment:
     np.array blueprint;
     Bot bot;
+    int validArea;
 
     def __init__(self):
         rowCnt = 0;
@@ -73,9 +74,13 @@ class Environment:
                     coordinate = idxToCoordinate([rowIdx, colIdx], rowCnt);
                     self.blueprint[rowIdx].append(Position(Point(coordinate[0], coordinate[1]), char));
 
+        self.validArea = rowCnt * colCnt;
+
     def get(point):
         idx = coordinateToIdx([point.x, point.y]);
         return self.blueprint[idx[0]][idx[1]]
+
+    def Bot(move):
 
 
 class Bot:
