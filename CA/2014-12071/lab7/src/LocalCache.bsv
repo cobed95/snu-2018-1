@@ -72,7 +72,9 @@ module mkCacheDirectMap(Cache);
 
 	rule sendFillReq(status == SendFillReq);
 		/* TODO: Implement here */
-        memReqQ.enq(CacheMemReq{op:missReq.op, addr:missReq.addr, data:missReq.data}); 
+		let idx = getIdx(missReq.addr);
+		let line = dataArray.sub(idx);
+        memReqQ.enq(CacheMemReq{op:missReq.op, addr:missReq.addr, data:line, burstLength:1}); 
         status <= WaitFillResp;
 	endrule
 
@@ -80,13 +82,13 @@ module mkCacheDirectMap(Cache);
 		/* TODO: Implement here */
         let idx = getIdx(missReq.addr);
         let tag = getTag(missReq.addr);
-        let data = memRespQ.first.data;
+        let line = memRespQ.first;
 
-        dataArray.upd(idx, data);
+        dataArray.upd(idx, line);
         tagArray.upd(idx, Valid(tag));
         dirtyArray.upd(idx, False);
 
-        hitQ.enq(data);
+        hitQ.enq(line[0]);
         memRespQ.deq;
 
         status <= Ready;
@@ -98,11 +100,11 @@ module mkCacheDirectMap(Cache);
         let tag = getTag(r.addr);
         let currTag = tagArray.sub(idx);
 
-		let hit = isValid(currTag)? ValidValue(currTag) == tag : False;
+		let hit = isValid(currTag)? validValue(currTag) == tag : False;
 
         if(r.op == Ld)
         begin
-            if(hit) hitQ.enq(dataArray.sub(idx));
+            if(hit) hitQ.enq(dataArray.sub(idx)[0]);
             else
             begin   
                 missReq <= r;
@@ -114,11 +116,17 @@ module mkCacheDirectMap(Cache);
         begin
             if(hit)
             begin
-                dataArray.upd(idx, r.data);
+				let line = dataArray.sub(idx);
+				line[tag] = r.data;
+                dataArray.upd(idx, line);
                 dirtyArray.upd(idx, True);
             end
 
-            else memReqQ.enq(r);
+            else 
+			begin
+				let line = dataArray.sub(idx);
+				memReqQ.enq(CacheMemReq{op:r.op, addr:r.addr, data:line, burstLength:1});
+			end
         end
 
 		/* DO NOT MODIFY BELOW HERE! */

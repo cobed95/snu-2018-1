@@ -264,7 +264,7 @@ module mkProc(Proc);
 	 		 		begin
 
 					/* TODO: Change this part to make processor use dCache */
-		 			dCache.req(CacheMemReq{op: Ld, addr: eInst.memAddr, data:?, burstLength : 1});
+		 			dCache.req(MemReq{op: Ld, addr: eInst.memAddr, data:?});
 
 					end
 
@@ -273,9 +273,9 @@ module mkProc(Proc);
 					let stData = (iType == Call)? eInst.valP : validValue(eInst.valA);
 
 					/* TODO: Change this part to make processor use dCache */
-					Line stLine = newVector;
-					stLine[0] = big2LittleEndian(stData);
-					dCache.req(CacheMemReq{op: St, addr: eInst.memAddr, data: stLine, burstLength: 1});
+					//Line stLine = newVector;
+					//stLine[0] = big2LittleEndian(stData);
+					dCache.req(MemReq{op: St, addr: eInst.memAddr, data: stData});
 					$display("Store %d on %d", stData, eInst.memAddr);
 
 				end
@@ -303,7 +303,7 @@ module mkProc(Proc);
 
 				/* TODO: Change this part to make processor use dCache */
 				let dResp <- dCache.resp;
-				ldData = dResp[0];
+				ldData = dResp;
 
  				eInst.valM = Valid(little2BigEndian(ldData));
  				$display("Loaded %d from %d", little2BigEndian(ldData), eInst.memAddr);
