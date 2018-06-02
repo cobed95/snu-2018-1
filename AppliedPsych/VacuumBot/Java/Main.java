@@ -2,6 +2,10 @@ import java.util.*;
 import java.io.*;
 
 public class Main {
+    public final double GAMMA = 0.9;
+    public final double EPSILON = 0.5;
+    public final int EPISODE = 50;
+
     public static ArrayList<ArrayList<Point>> buildMaze(Scanner scanner) {
         ArrayList<ArrayList<Point>> maze = new ArrayList<ArrayList<Point>>();
         while (scanner.hasNextLine()) {
@@ -15,32 +19,6 @@ public class Main {
             }
         }
         return maze;
-    }
-
-    public static void setArrIdx(ArrayList<ArrayList<Point>> rawMaze) {
-        for (int i = 0; i < rawMaze.size(); i++) {
-            for (int j = 0; j < rawMaze.get(i).size(); j++) {
-                int[] arrIdx = new int[2];
-                arrIdx[0] = i;
-                arrIdx[1] = j;
-                rawMaze.get(i).get(j).setArrIdx(arrIdx);
-            }
-        }
-    }
-    
-    public static int[] getCoordFromIdx(int[] idx, int sizeY) {
-        int[] coord = new int[2];
-        coord[0] = idx[1];
-        coord[1] = sizeY-idx[0]-1;
-        return coord;
-    }
-
-    public static void setCoord(ArrayList<ArrayList<Point>> rawMaze) {
-        for (int i = 0; i < rawMaze.size(); i++) {
-            for (int j = 0; j < rawMaze.get(i).size(); j++) {
-                rawMaze.get(i).get(j).setCoord(getCoordFromIdx(rawMaze.get(i).get(j).getArrIdx(), rawMaze.size()));
-            }
-        }
     }
 
     public static int[] getStart(Maze maze) {
@@ -60,17 +38,21 @@ public class Main {
         return start;
     }
 
+    public static void monteCarlo(Maze maze, Bot bot, Trace trace) {
+                
+    }
+
     public static void main(String[] args) throws FileNotFoundException {
         String fileName = args[0]; 
         Scanner scanner = new Scanner(fileName);
         
         ArrayList<ArrayList<Point>> rawMaze = buildMaze(scanner);
-        setArrIdx(rawMaze); 
-        setCoord(rawMaze);
-        
         Maze maze = new Maze(rawMaze);
+        maze.setArrIdx();
+        maze.setCoord();
         
         int[] startIdx = getStart(maze);
-        Bot bot = new Bot(maze.getPoint(startIdx[0], startIdx[1]));
+        Bot bot = new Bot(maze.getPoint(startIdx[0], startIdx[1]), maze.getArea());
+
     }
 }

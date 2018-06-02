@@ -4,15 +4,41 @@ public class Maze {
     private ArrayList<ArrayList<Point>> maze;
     private int sizeX;
     private int sizeY;
+    private int area;
     
     public Maze(ArrayList<ArrayList<Point>> maze) {
         this.maze = maze;
         this.sizeX = maze.size();
         this.sizeY = maze.get(0).size();
+        this.area = sizeX * sizeY;
     }
 
     public Point getPoint(int i, int j) {
         return maze.get(i).get(j);
+    }
+
+    public void setArrIdx() {
+        for (int i = 0; i < this.sizeX; i++) {
+            for (int j = 0; j < this.sizeY; j++) {
+                this.getPoint(i, j).setArrIdx(i, j);
+            }
+        }
+    }
+    
+    public static int[] getCoordFromIdx(int[] idx, int sizeY) {
+        int[] coord = new int[2];
+        coord[0] = idx[1];
+        coord[1] = sizeY-idx[0]-1;
+        return coord;
+    }
+    
+    public void setCoord() {
+        for (ArrayList<Point> line : this.maze) {
+            for (Point point : line) {
+                int[] newCoord = getCoordFromIdx(point.getArrIdx(), this.sizeY);
+                point.setCoord(newCoord[0], newCoord[1]);
+            }
+        }
     }
 
     public Point getEastOf(Point point) {
@@ -53,5 +79,9 @@ public class Maze {
 
     public int getSizeY() {
         return this.sizeY;
+    }
+
+    public int getArea() {
+        return this.area;
     }
 }
