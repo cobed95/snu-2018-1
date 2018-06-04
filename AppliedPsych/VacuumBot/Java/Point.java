@@ -37,7 +37,7 @@ public class Point {
     public int[] getArrIdx() {
         return this.arrIdx;
     }
-
+    
     public void setCoord(int x, int y) {
         this.x = x;
         this.y = y;
@@ -77,6 +77,10 @@ public class Point {
 
     public int hashCode() {
         return Objects.hash(this.x, this.y);
+    }
+    
+    public String toString() {
+        return this.coordToString();
     }
 
     public String coordToString() {
