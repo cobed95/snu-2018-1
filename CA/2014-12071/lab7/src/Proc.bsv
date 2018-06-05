@@ -270,13 +270,14 @@ module mkProc(Proc);
 
 				RMmov, Call, Push :
 				begin
-					let stData = (iType == Call)? eInst.valP : validValue(eInst.valA);
+					let data = (iType == Call)? eInst.valP : validValue(eInst.valA);
 
 					/* TODO: Change this part to make processor use dCache */
 					//Line stLine = newVector;
 					//stLine[0] = big2LittleEndian(stData);
+					let stData = big2LittleEndian(data);
 					dCache.req(MemReq{op: St, addr: eInst.memAddr, data: stData});
-					$display("Store %d on %d", stData, eInst.memAddr);
+					$display("Store %d on %d", data, eInst.memAddr);
 
 				end
 			endcase
