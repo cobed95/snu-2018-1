@@ -2910,14 +2910,14 @@ Cycle                  571 ----------------------------------------------------
 
 cycle        571
 stall occured
-Loaded 12297829382473034410 from                  104
+Loaded                    9 from                  104
 
 Cycle                  572 ----------------------------------------------------
 
 cycle        572
 Write Back
 WriteE writes                  112 on  4
-WriteM writes 12297829382473034410 on  6
+WriteM writes                    9 on  6
 Fetch1
 Fetch : from Pc                   58 , expanded inst : 60606070c00e00000000, 
 addq %'h6, %'h0
@@ -3471,7 +3471,7 @@ Cycle                  681 ----------------------------------------------------
 
 cycle        681
 stall occured
-Loaded 12297829382473034410 from                  112
+Loaded                    7 from                  112
 
 Cycle                  682 ----------------------------------------------------
 
@@ -3479,14 +3479,14 @@ cycle        682
 Mem on pc                   58
 Write Back
 WriteE writes                  120 on  4
-WriteM writes 12297829382473034410 on  7
+WriteM writes                    7 on  7
 stall occured
 
 Cycle                  683 ----------------------------------------------------
 
 cycle        683
 Write Back
-WriteE writes 12297829382473034394 on  0
+WriteE writes 18446744073709551609 on  0
 Fetch1
 Fetch : from Pc                   62 , expanded inst : c00e0000000000000000, 
 mtc0 %'h0, %'he
@@ -3507,7 +3507,7 @@ Cycle                  686 ----------------------------------------------------
 
 cycle        686
 Write Back
-WriteE writes  6148914691236517188 on  0
+WriteE writes                    0 on  0
 Fetch1
 Fetch : from Pc                   64 , expanded inst : 0000000000000000aaaa, 
 halt
@@ -3535,7 +3535,7 @@ cycle        689
 Mem on pc                   64
 Exec on pc                   65
 Write Back
-WriteE writes  6148914691236517188 on 14
+WriteE writes                    0 on 14
 Fetch1
 Fetch : from Pc                   67 , expanded inst : 0000000000aaaaaaaaaa, 
 halt

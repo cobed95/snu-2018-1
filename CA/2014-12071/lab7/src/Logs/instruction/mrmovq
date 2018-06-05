@@ -1589,7 +1589,7 @@ Cycle                  363 ----------------------------------------------------
 
 cycle        363
 stall occured
-Loaded 12297829382473034410 from                  120
+Loaded                    2 from                  120
 
 Cycle                  364 ----------------------------------------------------
 
@@ -1597,7 +1597,7 @@ cycle        364
 Mem on pc                   20
 Exec on pc                   30
 Write Back
-WriteM writes 12297829382473034410 on  3
+WriteM writes                    2 on  3
 stall occured
 
 Cycle                  365 ----------------------------------------------------
@@ -2134,14 +2134,14 @@ Cycle                  471 ----------------------------------------------------
 
 cycle        471
 stall occured
-Loaded 12297829382473034410 from                  128
+Loaded                    3 from                  128
 
 Cycle                  472 ----------------------------------------------------
 
 cycle        472
 Mem on pc                   30
 Write Back
-WriteM writes 12297829382473034410 on  1
+WriteM writes                    3 on  1
 stall occured
 
 Cycle                  473 ----------------------------------------------------
@@ -2169,7 +2169,7 @@ Cycle                  476 ----------------------------------------------------
 
 cycle        476
 Write Back
-WriteE writes 12297829382473034405 on  0
+WriteE writes 18446744073709551613 on  0
 Fetch1
 Fetch : from Pc                   44 , expanded inst : c00e0000aaaaaaaaaaaa, 
 mtc0 %'h0, %'he
@@ -2190,7 +2190,7 @@ Cycle                  479 ----------------------------------------------------
 
 cycle        479
 Write Back
-WriteE writes  6148914691236517199 on  0
+WriteE writes                    0 on  0
 Fetch1
 Fetch : from Pc                   46 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
 halt
@@ -2218,7 +2218,7 @@ cycle        482
 Mem on pc                   46
 Exec on pc                   47
 Write Back
-WriteE writes  6148914691236517199 on 14
+WriteE writes                    0 on 14
 Fetch1
 Fetch : from Pc                   50 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
 push %'ha

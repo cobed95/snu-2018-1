@@ -2377,13 +2377,13 @@ Cycle                  467 ----------------------------------------------------
 
 cycle        467
 stall occured
-Loaded 12297829382473034410 from                   72
+Loaded                    3 from                   72
 
 Cycle                  468 ----------------------------------------------------
 
 cycle        468
 Write Back
-WriteM writes 12297829382473034410 on  1
+WriteM writes                    3 on  1
 Fetch1
 Fetch : from Pc                   54 , expanded inst : c00e0000000000000000, 
 mtc0 %'h0, %'he
@@ -2404,7 +2404,7 @@ Cycle                  471 ----------------------------------------------------
 
 cycle        471
 Write Back
-WriteE writes 12297829382473034407 on  0
+WriteE writes                    0 on  0
 Fetch1
 Fetch : from Pc                   56 , expanded inst : 0000000000000000aaaa, 
 halt
@@ -2432,7 +2432,7 @@ cycle        474
 Mem on pc                   56
 Exec on pc                   57
 Write Back
-WriteE writes 12297829382473034407 on 14
+WriteE writes                    0 on 14
 Fetch1
 Fetch : from Pc                   59 , expanded inst : 0000000000aaaaaaaaaa, 
 halt

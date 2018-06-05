@@ -65,7 +65,7 @@ module mkCacheDirectMap(Cache);
         begin
             let addr = {validValue(tag), idx, 3'b0};
             let line = dataArray.sub(idx);
-            memReqQ.enq(CacheMemReq{op: St, addr:addr, data:line, burstLength:1});
+            memReqQ.enq(CacheMemReq{op:St, addr:addr, data:line, burstLength:1});
         end
         status <= SendFillReq;
 	endrule
@@ -73,16 +73,15 @@ module mkCacheDirectMap(Cache);
 	rule sendFillReq(status == SendFillReq);
 		/* TODO: Implement here */
 		let idx = getIdx(missReq.addr);
-		let tag = tagArray.sub(idx);
-		let addr = {validValue(tag), idx, 3'b0};
 		let line = dataArray.sub(idx);
-        memReqQ.enq(CacheMemReq{op:missReq.op, addr:addr, data:line, burstLength:1}); 
+        memReqQ.enq(CacheMemReq{op:missReq.op, addr:missReq.addr, data:line, burstLength:1}); 
         status <= WaitFillResp;
 	endrule
 
 	rule waitFillResp(status == WaitFillResp);
 		/* TODO: Implement here */
         let idx = getIdx(missReq.addr);
+		let blockOffset = getOffset(missReq.addr);
         let tag = getTag(missReq.addr);
         let line = memRespQ.first;
 
@@ -90,7 +89,7 @@ module mkCacheDirectMap(Cache);
         tagArray.upd(idx, Valid(tag));
         dirtyArray.upd(idx, False);
 
-        hitQ.enq(line[tag]);
+        hitQ.enq(line[0]);
         memRespQ.deq;
 
         status <= Ready;
@@ -101,12 +100,17 @@ module mkCacheDirectMap(Cache);
         let idx = getIdx(r.addr);
         let tag = getTag(r.addr);
         let currTag = tagArray.sub(idx);
+		let blockOffset = getOffset(r.addr);
 
 		let hit = isValid(currTag)? validValue(currTag) == tag : False;
 
         if(r.op == Ld)
         begin
-            if(hit) hitQ.enq(dataArray.sub(idx)[tag]);
+            if(hit) 
+			begin
+				let line = dataArray.sub(idx);
+				hitQ.enq(line[0]);
+			end
             else
             begin   
                 missReq <= r;
@@ -119,7 +123,7 @@ module mkCacheDirectMap(Cache);
             if(hit)
             begin
 				let line = dataArray.sub(idx);
-				line[tag] = r.data;
+				line[0] = r.data;
                 dataArray.upd(idx, line);
                 dirtyArray.upd(idx, True);
             end
@@ -127,6 +131,7 @@ module mkCacheDirectMap(Cache);
             else 
 			begin
 				let line = dataArray.sub(idx);
+				line[0] = r.data;
 				memReqQ.enq(CacheMemReq{op:r.op, addr:r.addr, data:line, burstLength:1});
 			end
         end
