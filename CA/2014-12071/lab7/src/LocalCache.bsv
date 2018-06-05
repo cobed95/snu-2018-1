@@ -89,7 +89,7 @@ module mkCacheDirectMap(Cache);
         tagArray.upd(idx, Valid(tag));
         dirtyArray.upd(idx, False);
 
-        hitQ.enq(line[0]);
+        hitQ.enq(line[blockOffset]);
         memRespQ.deq;
 
         status <= Ready;
@@ -109,7 +109,7 @@ module mkCacheDirectMap(Cache);
             if(hit) 
 			begin
 				let line = dataArray.sub(idx);
-				hitQ.enq(line[0]);
+				hitQ.enq(line[blockOffset]);
 			end
             else
             begin   
@@ -123,7 +123,7 @@ module mkCacheDirectMap(Cache);
             if(hit)
             begin
 				let line = dataArray.sub(idx);
-				line[0] = r.data;
+				line[blockOffset] = r.data;
                 dataArray.upd(idx, line);
                 dirtyArray.upd(idx, True);
             end
@@ -131,7 +131,7 @@ module mkCacheDirectMap(Cache);
             else 
 			begin
 				let line = dataArray.sub(idx);
-				line[0] = r.data;
+				line[blockOffset] = r.data;
 				memReqQ.enq(CacheMemReq{op:r.op, addr:r.addr, data:line, burstLength:1});
 			end
         end
