@@ -63,7 +63,7 @@ module mkCacheDirectMap(Cache);
         let dirty = dirtyArray.sub(idx);
         if(isValid(tag) && dirty)
         begin
-            let addr = {validValue(tag), idx, 3'b0};
+            let addr = getBlockAddr(validValue(tag), idx);
             let line = dataArray.sub(idx);
             memReqQ.enq(CacheMemReq{op:St, addr:addr, data:line, burstLength:1});
         end
@@ -73,8 +73,10 @@ module mkCacheDirectMap(Cache);
 	rule sendFillReq(status == SendFillReq);
 		/* TODO: Implement here */
 		let idx = getIdx(missReq.addr);
+        let tag = getTag(missReq.addr);
+        let addr = getBlockAddr(tag, idx);
 		let line = dataArray.sub(idx);
-        memReqQ.enq(CacheMemReq{op:missReq.op, addr:missReq.addr, data:line, burstLength:1}); 
+        memReqQ.enq(CacheMemReq{op:missReq.op, addr:addr, data:line, burstLength:1}); 
         status <= WaitFillResp;
 	endrule
 
@@ -132,7 +134,8 @@ module mkCacheDirectMap(Cache);
 			begin
 				let line = dataArray.sub(idx);
 				line[blockOffset] = r.data;
-				memReqQ.enq(CacheMemReq{op:r.op, addr:r.addr, data:line, burstLength:1});
+                let addr = getBlockAddr(tag, idx);
+				memReqQ.enq(CacheMemReq{op:r.op, addr:addr, data:line, burstLength:1});
 			end
         end
 
