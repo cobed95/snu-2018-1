@@ -296,6 +296,7 @@ Cycle                   66 ----------------------------------------------------
 
 cycle         66
 stall occured
+                  96
 
 Cycle                   67 ----------------------------------------------------
 
@@ -821,15 +822,10 @@ Cycle                  171 ----------------------------------------------------
 
 cycle        171
 stall occured
-Loaded 12297829382473034410 from                  120
 
 Cycle                  172 ----------------------------------------------------
 
 cycle        172
-Mem on pc                   20
-Exec on pc                   30
-Write Back
-WriteM writes 12297829382473034410 on  3
 stall occured
 
 Cycle                  173 ----------------------------------------------------
@@ -841,10 +837,20 @@ Cycle                  174 ----------------------------------------------------
 
 cycle        174
 stall occured
+3
+12297829382473034410
+12297829382473034410
+12297829382473034410
+12297829382473034410
+Loaded                    2 from                  120
 
 Cycle                  175 ----------------------------------------------------
 
 cycle        175
+Mem on pc                   20
+Exec on pc                   30
+Write Back
+WriteM writes                    2 on  3
 stall occured
 
 Cycle                  176 ----------------------------------------------------
@@ -856,6 +862,7 @@ Cycle                  177 ----------------------------------------------------
 
 cycle        177
 stall occured
+                 128
 
 Cycle                  178 ----------------------------------------------------
 
@@ -1366,93 +1373,128 @@ Cycle                  279 ----------------------------------------------------
 
 cycle        279
 stall occured
-Loaded                    3 from                  128
 
 Cycle                  280 ----------------------------------------------------
 
 cycle        280
-Mem on pc                   30
-Write Back
-WriteM writes                    3 on  1
 stall occured
 
 Cycle                  281 ----------------------------------------------------
 
 cycle        281
-Write Back
-WriteE writes 18446744073709551611 on  0
-Fetch1
-Fetch : from Pc                   42 , expanded inst : 6010c00e0000aaaaaaaa, 
-addq %'h1, %'h0
+stall occured
 
 Cycle                  282 ----------------------------------------------------
 
 cycle        282
-Exec on pc                   40
 stall occured
 
 Cycle                  283 ----------------------------------------------------
 
 cycle        283
-Mem on pc                   40
 stall occured
 
 Cycle                  284 ----------------------------------------------------
 
 cycle        284
-Write Back
-WriteE writes 12297829382473034405 on  0
-Fetch1
-Fetch : from Pc                   44 , expanded inst : c00e0000aaaaaaaaaaaa, 
-mtc0 %'h0, %'he
+stall occured
 
 Cycle                  285 ----------------------------------------------------
 
 cycle        285
-Exec on pc                   42
 stall occured
+0
+12297829382473034410
+12297829382473034410
+                   3
+12297829382473034410
+Loaded                    3 from                  128
 
 Cycle                  286 ----------------------------------------------------
 
 cycle        286
-Mem on pc                   42
+Mem on pc                   30
+Write Back
+WriteM writes                    3 on  1
 stall occured
 
 Cycle                  287 ----------------------------------------------------
 
 cycle        287
 Write Back
-WriteE writes 12297829382473034408 on  0
+WriteE writes 18446744073709551611 on  0
 Fetch1
-Fetch : from Pc                   46 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
-halt
+Fetch : from Pc                   42 , expanded inst : 6010c00e0000aaaaaaaa, 
+addq %'h1, %'h0
 
 Cycle                  288 ----------------------------------------------------
 
 cycle        288
+Exec on pc                   40
+stall occured
+
+Cycle                  289 ----------------------------------------------------
+
+cycle        289
+Mem on pc                   40
+stall occured
+
+Cycle                  290 ----------------------------------------------------
+
+cycle        290
+Write Back
+WriteE writes 18446744073709551613 on  0
+Fetch1
+Fetch : from Pc                   44 , expanded inst : c00e0000aaaaaaaaaaaa, 
+mtc0 %'h0, %'he
+
+Cycle                  291 ----------------------------------------------------
+
+cycle        291
+Exec on pc                   42
+stall occured
+
+Cycle                  292 ----------------------------------------------------
+
+cycle        292
+Mem on pc                   42
+stall occured
+
+Cycle                  293 ----------------------------------------------------
+
+cycle        293
+Write Back
+WriteE writes                    0 on  0
+Fetch1
+Fetch : from Pc                   46 , expanded inst : 0000aaaaaaaaaaaaaaaa, 
+halt
+
+Cycle                  294 ----------------------------------------------------
+
+cycle        294
 Exec on pc                   44
 Fetch1
 Fetch : from Pc                   47 , expanded inst : 00aaaaaaaaaaaaaaaaaa, 
 halt
 
-Cycle                  289 ----------------------------------------------------
+Cycle                  295 ----------------------------------------------------
 
-cycle        289
+cycle        295
 Mem on pc                   44
 Exec on pc                   46
 Fetch1
 Fetch : from Pc                   48 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
 push %'ha
 
-Cycle                  290 ----------------------------------------------------
+Cycle                  296 ----------------------------------------------------
 
-cycle        290
+cycle        296
 Mem on pc                   46
 Exec on pc                   47
 Write Back
-WriteE writes 12297829382473034408 on 14
+WriteE writes                    0 on 14
 Fetch1
 Fetch : from Pc                   50 , expanded inst : aaaaaaaaaaaaaaaaaaaa, 
 push %'ha
 
-Cycle                  291 ----------------------------------------------------
+Cycle                  297 ----------------------------------------------------

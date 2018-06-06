@@ -4,6 +4,7 @@ import CacheTypes::*;
 import Fifo::*;
 import RegFile::*;
 import Vector::*;
+import ProcTypes::*;
 
 interface Cache;
 	method Action req(MemReq r);
@@ -65,7 +66,7 @@ module mkCacheDirectMap(Cache);
         begin
             let addr = getBlockAddr(validValue(tag), idx);
             let line = dataArray.sub(idx);
-            memReqQ.enq(CacheMemReq{op:St, addr:addr, data:line, burstLength:1});
+            memReqQ.enq(CacheMemReq{op:St, addr:addr, data:line, burstLength:4});
         end
         status <= SendFillReq;
 	endrule
@@ -75,21 +76,26 @@ module mkCacheDirectMap(Cache);
 		let idx = getIdx(missReq.addr);
         let tag = getTag(missReq.addr);
         let addr = getBlockAddr(tag, idx);
-		let line = dataArray.sub(idx);
-        memReqQ.enq(CacheMemReq{op:missReq.op, addr:addr, data:line, burstLength:1}); 
+        $display(addr);
+        memReqQ.enq(CacheMemReq{op:Ld, addr:addr, data:?, burstLength:4}); 
         status <= WaitFillResp;
 	endrule
 
 	rule waitFillResp(status == WaitFillResp);
 		/* TODO: Implement here */
         let idx = getIdx(missReq.addr);
-		let blockOffset = getOffset(missReq.addr);
         let tag = getTag(missReq.addr);
+		let blockOffset = getOffset(missReq.addr);
+        $display(blockOffset);
         let line = memRespQ.first;
 
         dataArray.upd(idx, line);
+        $display(little2BigEndian(dataArray.sub(idx)[0]));
+        $display(little2BigEndian(dataArray.sub(idx)[1]));
         tagArray.upd(idx, Valid(tag));
         dirtyArray.upd(idx, False);
+        $display(little2BigEndian(line[0]));
+        $display(little2BigEndian(line[1]));
 
         hitQ.enq(line[blockOffset]);
         memRespQ.deq;
@@ -105,6 +111,7 @@ module mkCacheDirectMap(Cache);
 		let blockOffset = getOffset(r.addr);
 
 		let hit = isValid(currTag)? validValue(currTag) == tag : False;
+        if(hit) $display("HIT");
 
         if(r.op == Ld)
         begin
@@ -132,10 +139,9 @@ module mkCacheDirectMap(Cache);
 
             else 
 			begin
-				let line = dataArray.sub(idx);
-				line[blockOffset] = r.data;
-                let addr = getBlockAddr(tag, idx);
-				memReqQ.enq(CacheMemReq{op:r.op, addr:addr, data:line, burstLength:1});
+				let line = newVector;
+				line[0] = r.data;
+				memReqQ.enq(CacheMemReq{op:r.op, addr:r.addr, data:line, burstLength:1});
 			end
         end
 

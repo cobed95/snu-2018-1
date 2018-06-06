@@ -435,6 +435,7 @@ Cycle                   76 ----------------------------------------------------
 
 cycle         76
 stall occured
+                  96
 
 Cycle                   77 ----------------------------------------------------
 
@@ -1950,99 +1951,120 @@ Cycle                  379 ----------------------------------------------------
 
 cycle        379
 stall occured
-Loaded 12297829382473034410 from                  104
 
 Cycle                  380 ----------------------------------------------------
 
 cycle        380
-Write Back
-WriteE writes                  112 on  4
-WriteM writes 12297829382473034410 on  6
-Fetch1
-Fetch : from Pc                   58 , expanded inst : 60606070c00e00000000, 
-addq %'h6, %'h0
+stall occured
 
 Cycle                  381 ----------------------------------------------------
 
 cycle        381
+stall occured
+
+Cycle                  382 ----------------------------------------------------
+
+cycle        382
+stall occured
+1
+12297829382473034410
+12297829382473034410
+12297829382473034410
+                   9
+Loaded                    9 from                  104
+
+Cycle                  383 ----------------------------------------------------
+
+cycle        383
+Write Back
+WriteE writes                  112 on  4
+WriteM writes                    9 on  6
+Fetch1
+Fetch : from Pc                   58 , expanded inst : 60606070c00e00000000, 
+addq %'h6, %'h0
+
+Cycle                  384 ----------------------------------------------------
+
+cycle        384
 Exec on pc                   56
 Fetch1
 Fetch : from Pc                   60 , expanded inst : 6070c00e000000000000, 
 addq %'h7, %'h0
 
-Cycle                  382 ----------------------------------------------------
-
-cycle        382
-Mem on pc                   56
-Exec on pc                   58
-stall occured
-Loaded 12297829382473034410 from                  112
-
-Cycle                  383 ----------------------------------------------------
-
-cycle        383
-Mem on pc                   58
-Write Back
-WriteE writes                  120 on  4
-WriteM writes 12297829382473034410 on  7
-stall occured
-
-Cycle                  384 ----------------------------------------------------
-
-cycle        384
-Write Back
-WriteE writes 12297829382473034394 on  0
-Fetch1
-Fetch : from Pc                   62 , expanded inst : c00e0000000000000000, 
-mtc0 %'h0, %'he
-
 Cycle                  385 ----------------------------------------------------
 
 cycle        385
-Exec on pc                   60
+Mem on pc                   56
+HIT
+Exec on pc                   58
 stall occured
+Loaded                    7 from                  112
 
 Cycle                  386 ----------------------------------------------------
 
 cycle        386
-Mem on pc                   60
+Mem on pc                   58
+Write Back
+WriteE writes                  120 on  4
+WriteM writes                    7 on  7
 stall occured
 
 Cycle                  387 ----------------------------------------------------
 
 cycle        387
 Write Back
-WriteE writes  6148914691236517188 on  0
+WriteE writes 18446744073709551609 on  0
 Fetch1
-Fetch : from Pc                   64 , expanded inst : 0000000000000000aaaa, 
-halt
+Fetch : from Pc                   62 , expanded inst : c00e0000000000000000, 
+mtc0 %'h0, %'he
 
 Cycle                  388 ----------------------------------------------------
 
 cycle        388
+Exec on pc                   60
+stall occured
+
+Cycle                  389 ----------------------------------------------------
+
+cycle        389
+Mem on pc                   60
+stall occured
+
+Cycle                  390 ----------------------------------------------------
+
+cycle        390
+Write Back
+WriteE writes                    0 on  0
+Fetch1
+Fetch : from Pc                   64 , expanded inst : 0000000000000000aaaa, 
+halt
+
+Cycle                  391 ----------------------------------------------------
+
+cycle        391
 Exec on pc                   62
 Fetch1
 Fetch : from Pc                   65 , expanded inst : 00000000000000aaaaaa, 
 halt
 
-Cycle                  389 ----------------------------------------------------
+Cycle                  392 ----------------------------------------------------
 
-cycle        389
+cycle        392
 Mem on pc                   62
 Exec on pc                   64
 Fetch1
 Fetch : from Pc                   66 , expanded inst : 000000000000aaaaaaaa, 
 halt
 
-Cycle                  390 ----------------------------------------------------
+Cycle                  393 ----------------------------------------------------
 
-cycle        390
+cycle        393
 Mem on pc                   64
 Exec on pc                   65
 Write Back
-WriteE writes  6148914691236517188 on 14
+WriteE writes                    0 on 14
 Fetch1
 Fetch : from Pc                   67 , expanded inst : 0000000000aaaaaaaaaa, 
 halt
 
-Cycle                  391 ----------------------------------------------------
+Cycle                  394 ----------------------------------------------------

@@ -261,12 +261,12 @@ module mkProc(Proc);
 			let iType = eInst.iType;
 			case(iType)
 		 		MRmov, Pop, Ret :
-	 		 		begin
+	 		 	begin
 
 					/* TODO: Change this part to make processor use dCache */
 		 			dCache.req(MemReq{op: Ld, addr: eInst.memAddr, data:?});
 
-					end
+				end
 
 				RMmov, Call, Push :
 				begin
