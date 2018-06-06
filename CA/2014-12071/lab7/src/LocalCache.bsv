@@ -286,20 +286,107 @@ module mkCacheSetAssociative (Cache);
 
 	rule startMiss(status == StartMiss);
 		/* TODO: Implement here */
+        let idx = getIdx(missReq.addr);
+        let empty = findInvalid(idx);
+        SetOffset setOffset;
+        if (isValid(empty))
+            setOffset = validValue(empty);
+        else
+            setOffset = findLRU(idx);
+
+        let tag = tagArray[idx].sub(setOffset);
+        let dirty = dirtyArray[idx].sub(setOffset);
+        if(isValid(tag) && dirty)
+        begin
+            let addr = getBlockAddr(validValue(tag), idx);
+            let line = dataArray[idx].sub(setOffset);
+            memReqQ.enq(CacheMemReq{op:St, addr:addr, data:line, burstLength:4});
+        end
+        
+        targetLine <= empty;
+        status <= SendFillReq;
 	endrule
 
 	rule sendFillReq(status == SendFillReq);
 		/* TODO: Implement here */
+        let idx = getIdx(missReq.addr);
+        let tag = getTag(missReq.addr);
+        let addr = getBlockAddr(tag, idx);
+        $display(addr);
+        memReqQ.enq(CacheMemReq{op:Ld, addr:addr, data:?, burstLength:4}); 
+        status <= WaitFillResp;
 	endrule
 
 	rule waitFillResp(status == WaitFillResp);
 		/* TODO: Implement here */
+        let idx = getIdx(missReq.addr);
+        let empty = targetLine;
+        SetOffset target;
+        if (isValid(empty))
+            target = validValue(empty);
+        else 
+            target = findLRU(idx);
+
+        let tag = getTag(missReq.addr);
+		let blockOffset = getOffset(missReq.addr);
+        $display(blockOffset);
+        let line = memRespQ.first;
+
+        dataArray[idx].upd(target, line);
+        tagArray[idx].upd(target, Valid(tag));
+        dirtyArray[idx].upd(target, False);
+        $display(little2BigEndian(line[0]));
+        $display(little2BigEndian(line[1]));
+
+        hitQ.enq(line[blockOffset]);
+        memRespQ.deq;
+
+        status <= Ready;
 	endrule
 
 	method Action req(MemReq r) if (status == Ready && inited);
 		/* TODO: Implement here */
+        let idx = getIdx(r.addr);
+        let tag = getTag(r.addr);
+		let blockOffset = getOffset(r.addr);
 
-		let hit = ?;
+		let hit = checkHit(tag, idx);
+        if(isValid(hit)) $display("HIT");
+
+        if(r.op == Ld)
+        begin
+            if(isValid(hit)) 
+			begin
+                let set = dataArray[idx];
+				let line = set.sub(hit);
+				hitQ.enq(line[blockOffset]);
+			end
+            
+            else
+            begin   
+                missReq <= r;
+                status <= StartMiss;
+            end
+        end
+
+        else
+        begin
+            if(isValid(hit))
+            begin
+                let set = dataArray[idx];
+				let line = set.sub(hit);
+				line[blockOffset] = r.data;
+                set.upd(hit, line);
+                dirtyArray[idx].upd(idx, True);
+            end
+
+            else 
+			begin
+				let line = newVector;
+				line[0] = r.data;
+				memReqQ.enq(CacheMemReq{op:r.op, addr:r.addr, data:line, burstLength:1});
+			end
+        end
 
 		/* DO NOT MODIFY BELOW HERE! */
 		if(!isValid(hit))
@@ -334,13 +421,13 @@ endmodule
 
 module mkCache (Cache);
 	/* TODO: Switch the comments for testing different types of Cache. */
-
-	Cache cacheDirectMap <- mkCacheDirectMap;
-	return cacheDirectMap;
-
-	/*
+   
+    /*
+    Cache cacheDirectMap <- mkCacheDirectMap;
+    return cacheDirectMap;
+    */
+	
 	Cache cacheSetAssociative <- mkCacheSetAssociative;
 	return cacheSetAssociative;
-	*/
 
 endmodule
