@@ -48,238 +48,6 @@ irmovq $'h0000000000000028,  %'h7
 Cycle                    6 ----------------------------------------------------
 
 cycle          6
-
-Cycle                    7 ----------------------------------------------------
-
-cycle          7
-
-Cycle                    8 ----------------------------------------------------
-
-cycle          8
-
-Cycle                    9 ----------------------------------------------------
-
-cycle          9
-
-Cycle                   10 ----------------------------------------------------
-
-cycle         10
-
-Cycle                   11 ----------------------------------------------------
-
-cycle         11
-
-Cycle                   12 ----------------------------------------------------
-
-cycle         12
-
-Cycle                   13 ----------------------------------------------------
-
-cycle         13
-
-Cycle                   14 ----------------------------------------------------
-
-cycle         14
-
-Cycle                   15 ----------------------------------------------------
-
-cycle         15
-
-Cycle                   16 ----------------------------------------------------
-
-cycle         16
-
-Cycle                   17 ----------------------------------------------------
-
-cycle         17
-
-Cycle                   18 ----------------------------------------------------
-
-cycle         18
-
-Cycle                   19 ----------------------------------------------------
-
-cycle         19
-
-Cycle                   20 ----------------------------------------------------
-
-cycle         20
-
-Cycle                   21 ----------------------------------------------------
-
-cycle         21
-
-Cycle                   22 ----------------------------------------------------
-
-cycle         22
-
-Cycle                   23 ----------------------------------------------------
-
-cycle         23
-
-Cycle                   24 ----------------------------------------------------
-
-cycle         24
-
-Cycle                   25 ----------------------------------------------------
-
-cycle         25
-
-Cycle                   26 ----------------------------------------------------
-
-cycle         26
-
-Cycle                   27 ----------------------------------------------------
-
-cycle         27
-
-Cycle                   28 ----------------------------------------------------
-
-cycle         28
-
-Cycle                   29 ----------------------------------------------------
-
-cycle         29
-
-Cycle                   30 ----------------------------------------------------
-
-cycle         30
-
-Cycle                   31 ----------------------------------------------------
-
-cycle         31
-
-Cycle                   32 ----------------------------------------------------
-
-cycle         32
-
-Cycle                   33 ----------------------------------------------------
-
-cycle         33
-
-Cycle                   34 ----------------------------------------------------
-
-cycle         34
-
-Cycle                   35 ----------------------------------------------------
-
-cycle         35
-
-Cycle                   36 ----------------------------------------------------
-
-cycle         36
-
-Cycle                   37 ----------------------------------------------------
-
-cycle         37
-
-Cycle                   38 ----------------------------------------------------
-
-cycle         38
-
-Cycle                   39 ----------------------------------------------------
-
-cycle         39
-
-Cycle                   40 ----------------------------------------------------
-
-cycle         40
-
-Cycle                   41 ----------------------------------------------------
-
-cycle         41
-
-Cycle                   42 ----------------------------------------------------
-
-cycle         42
-
-Cycle                   43 ----------------------------------------------------
-
-cycle         43
-
-Cycle                   44 ----------------------------------------------------
-
-cycle         44
-
-Cycle                   45 ----------------------------------------------------
-
-cycle         45
-
-Cycle                   46 ----------------------------------------------------
-
-cycle         46
-
-Cycle                   47 ----------------------------------------------------
-
-cycle         47
-
-Cycle                   48 ----------------------------------------------------
-
-cycle         48
-
-Cycle                   49 ----------------------------------------------------
-
-cycle         49
-
-Cycle                   50 ----------------------------------------------------
-
-cycle         50
-
-Cycle                   51 ----------------------------------------------------
-
-cycle         51
-
-Cycle                   52 ----------------------------------------------------
-
-cycle         52
-
-Cycle                   53 ----------------------------------------------------
-
-cycle         53
-
-Cycle                   54 ----------------------------------------------------
-
-cycle         54
-
-Cycle                   55 ----------------------------------------------------
-
-cycle         55
-
-Cycle                   56 ----------------------------------------------------
-
-cycle         56
-
-Cycle                   57 ----------------------------------------------------
-
-cycle         57
-
-Cycle                   58 ----------------------------------------------------
-
-cycle         58
-
-Cycle                   59 ----------------------------------------------------
-
-cycle         59
-
-Cycle                   60 ----------------------------------------------------
-
-cycle         60
-
-Cycle                   61 ----------------------------------------------------
-
-cycle         61
-
-Cycle                   62 ----------------------------------------------------
-
-cycle         62
-
-Cycle                   63 ----------------------------------------------------
-
-cycle         63
-
-Cycle                   64 ----------------------------------------------------
-
-cycle         64
 Mem on pc                   10
 Store                   19 on                  504
 Exec : Invalidated on pc                   19
@@ -287,9 +55,9 @@ Fetch1
 Fetch : from Pc                  306 , expanded inst : 30f62000000000000000, 
 irmovq $'h0000000000000020,  %'h6
 
-Cycle                   65 ----------------------------------------------------
+Cycle                    7 ----------------------------------------------------
 
-cycle         65
+cycle          7
 Mem invalidated on pc                   19
 Exec on pc                  296
 Write Back
@@ -298,9 +66,9 @@ Fetch1
 Fetch : from Pc                  316 , expanded inst : 80460100000000000090, 
 call 'h0000000000000146
 
-Cycle                   66 ----------------------------------------------------
+Cycle                    8 ----------------------------------------------------
 
-cycle         66
+cycle          8
 Mem on pc                  296
 Exec on pc                  306
 Write Back
@@ -308,9 +76,9 @@ Fetch1
 Fetch : from Pc                  326 , expanded inst : 30f80800000000000000, 
 irmovq $'h0000000000000008,  %'h8
 
-Cycle                   67 ----------------------------------------------------
+Cycle                    9 ----------------------------------------------------
 
-cycle         67
+cycle          9
 Mem on pc                  306
 Exec on pc                  316
 Write Back
@@ -319,9 +87,9 @@ Fetch1
 Fetch : from Pc                  336 , expanded inst : 30f90100000000000000, 
 irmovq $'h0000000000000001,  %'h9
 
-Cycle                   68 ----------------------------------------------------
+Cycle                   10 ----------------------------------------------------
 
-cycle         68
+cycle         10
 Mem on pc                  316
 Store                  325 on                  496
 Exec on pc                  326
@@ -331,9 +99,9 @@ Fetch1
 Fetch : from Pc                  346 , expanded inst : 63006266707701000000, 
 xorq %'h0, %'h0
 
-Cycle                   69 ----------------------------------------------------
+Cycle                   11 ----------------------------------------------------
 
-cycle         69
+cycle         11
 Mem on pc                  326
 Exec on pc                  336
 Write Back
@@ -342,9 +110,9 @@ Fetch1
 Fetch : from Pc                  348 , expanded inst : 62667077010000000000, 
 andq %'h6, %'h6
 
-Cycle                   70 ----------------------------------------------------
+Cycle                   12 ----------------------------------------------------
 
-cycle         70
+cycle         12
 Mem on pc                  336
 Exec on pc                  346
 Write Back
@@ -353,9 +121,9 @@ Fetch1
 Fetch : from Pc                  350 , expanded inst : 70770100000000000050, 
 jmp $'h0000000000000177
 
-Cycle                   71 ----------------------------------------------------
+Cycle                   13 ----------------------------------------------------
 
-cycle         71
+cycle         13
 Mem on pc                  346
 Exec on pc                  348
 Write Back
@@ -364,9 +132,9 @@ Fetch1
 Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
 mrmovq 'h0000000000000000(%'h7), %'ha
 
-Cycle                   72 ----------------------------------------------------
+Cycle                   14 ----------------------------------------------------
 
-cycle         72
+cycle         14
 Mem on pc                  348
 Exec on pc                  350
 ExecRedirect : addr                  375
@@ -376,9 +144,9 @@ Fetch1
 Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
 jne $'h0000000000000167
 
-Cycle                   73 ----------------------------------------------------
+Cycle                   15 ----------------------------------------------------
 
-cycle         73
+cycle         15
 Mem on pc                  350
 Exec : Invalidated on pc                  359
 Write Back
@@ -387,9 +155,9 @@ Fetch1
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
 
-Cycle                   74 ----------------------------------------------------
+Cycle                   16 ----------------------------------------------------
 
-cycle         74
+cycle         16
 Mem invalidated on pc                  359
 Exec on pc                  375
 ExecRedirect : addr                  359
@@ -398,9 +166,9 @@ Fetch1
 Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
 mrmovq 'h0000000000000000(%'h7), %'ha
 
-Cycle                   75 ----------------------------------------------------
+Cycle                   17 ----------------------------------------------------
 
-cycle         75
+cycle         17
 Mem on pc                  375
 Exec : Invalidated on pc                  384
 Write Back
@@ -408,19 +176,309 @@ Fetch1
 Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
 addq %'ha, %'h0
 
-Cycle                   76 ----------------------------------------------------
+Cycle                   18 ----------------------------------------------------
 
-cycle         76
+cycle         18
 Mem invalidated on pc                  384
 Exec on pc                  359
 Write Back
 stall occured
 
+Cycle                   19 ----------------------------------------------------
+
+cycle         19
+Mem on pc                  359
+Write Back
+stall occured
+
+Cycle                   20 ----------------------------------------------------
+
+cycle         20
+stall occured
+
+Cycle                   21 ----------------------------------------------------
+
+cycle         21
+stall occured
+
+Cycle                   22 ----------------------------------------------------
+
+cycle         22
+stall occured
+
+Cycle                   23 ----------------------------------------------------
+
+cycle         23
+stall occured
+
+Cycle                   24 ----------------------------------------------------
+
+cycle         24
+stall occured
+
+Cycle                   25 ----------------------------------------------------
+
+cycle         25
+stall occured
+
+Cycle                   26 ----------------------------------------------------
+
+cycle         26
+stall occured
+
+Cycle                   27 ----------------------------------------------------
+
+cycle         27
+stall occured
+
+Cycle                   28 ----------------------------------------------------
+
+cycle         28
+stall occured
+
+Cycle                   29 ----------------------------------------------------
+
+cycle         29
+stall occured
+
+Cycle                   30 ----------------------------------------------------
+
+cycle         30
+stall occured
+
+Cycle                   31 ----------------------------------------------------
+
+cycle         31
+stall occured
+
+Cycle                   32 ----------------------------------------------------
+
+cycle         32
+stall occured
+
+Cycle                   33 ----------------------------------------------------
+
+cycle         33
+stall occured
+
+Cycle                   34 ----------------------------------------------------
+
+cycle         34
+stall occured
+
+Cycle                   35 ----------------------------------------------------
+
+cycle         35
+stall occured
+
+Cycle                   36 ----------------------------------------------------
+
+cycle         36
+stall occured
+
+Cycle                   37 ----------------------------------------------------
+
+cycle         37
+stall occured
+
+Cycle                   38 ----------------------------------------------------
+
+cycle         38
+stall occured
+
+Cycle                   39 ----------------------------------------------------
+
+cycle         39
+stall occured
+
+Cycle                   40 ----------------------------------------------------
+
+cycle         40
+stall occured
+
+Cycle                   41 ----------------------------------------------------
+
+cycle         41
+stall occured
+
+Cycle                   42 ----------------------------------------------------
+
+cycle         42
+stall occured
+
+Cycle                   43 ----------------------------------------------------
+
+cycle         43
+stall occured
+
+Cycle                   44 ----------------------------------------------------
+
+cycle         44
+stall occured
+
+Cycle                   45 ----------------------------------------------------
+
+cycle         45
+stall occured
+
+Cycle                   46 ----------------------------------------------------
+
+cycle         46
+stall occured
+
+Cycle                   47 ----------------------------------------------------
+
+cycle         47
+stall occured
+
+Cycle                   48 ----------------------------------------------------
+
+cycle         48
+stall occured
+
+Cycle                   49 ----------------------------------------------------
+
+cycle         49
+stall occured
+
+Cycle                   50 ----------------------------------------------------
+
+cycle         50
+stall occured
+
+Cycle                   51 ----------------------------------------------------
+
+cycle         51
+stall occured
+
+Cycle                   52 ----------------------------------------------------
+
+cycle         52
+stall occured
+
+Cycle                   53 ----------------------------------------------------
+
+cycle         53
+stall occured
+
+Cycle                   54 ----------------------------------------------------
+
+cycle         54
+stall occured
+
+Cycle                   55 ----------------------------------------------------
+
+cycle         55
+stall occured
+
+Cycle                   56 ----------------------------------------------------
+
+cycle         56
+stall occured
+
+Cycle                   57 ----------------------------------------------------
+
+cycle         57
+stall occured
+
+Cycle                   58 ----------------------------------------------------
+
+cycle         58
+stall occured
+
+Cycle                   59 ----------------------------------------------------
+
+cycle         59
+stall occured
+
+Cycle                   60 ----------------------------------------------------
+
+cycle         60
+stall occured
+
+Cycle                   61 ----------------------------------------------------
+
+cycle         61
+stall occured
+
+Cycle                   62 ----------------------------------------------------
+
+cycle         62
+stall occured
+
+Cycle                   63 ----------------------------------------------------
+
+cycle         63
+stall occured
+
+Cycle                   64 ----------------------------------------------------
+
+cycle         64
+stall occured
+
+Cycle                   65 ----------------------------------------------------
+
+cycle         65
+stall occured
+
+Cycle                   66 ----------------------------------------------------
+
+cycle         66
+stall occured
+
+Cycle                   67 ----------------------------------------------------
+
+cycle         67
+stall occured
+
+Cycle                   68 ----------------------------------------------------
+
+cycle         68
+stall occured
+
+Cycle                   69 ----------------------------------------------------
+
+cycle         69
+stall occured
+
+Cycle                   70 ----------------------------------------------------
+
+cycle         70
+stall occured
+
+Cycle                   71 ----------------------------------------------------
+
+cycle         71
+stall occured
+
+Cycle                   72 ----------------------------------------------------
+
+cycle         72
+stall occured
+
+Cycle                   73 ----------------------------------------------------
+
+cycle         73
+stall occured
+
+Cycle                   74 ----------------------------------------------------
+
+cycle         74
+stall occured
+
+Cycle                   75 ----------------------------------------------------
+
+cycle         75
+stall occured
+
+Cycle                   76 ----------------------------------------------------
+
+cycle         76
+stall occured
+
 Cycle                   77 ----------------------------------------------------
 
 cycle         77
-Mem on pc                  359
-Write Back
 stall occured
 
 Cycle                   78 ----------------------------------------------------
@@ -432,7 +490,6 @@ Cycle                   79 ----------------------------------------------------
 
 cycle         79
 stall occured
-                  32
 
 Cycle                   80 ----------------------------------------------------
 
@@ -1638,110 +1695,200 @@ Cycle                  320 ----------------------------------------------------
 
 cycle        320
 stall occured
+Loaded                    1 from                   40
 
 Cycle                  321 ----------------------------------------------------
 
 cycle        321
-stall occured
+Write Back
+WriteM writes                    1 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                  322 ----------------------------------------------------
 
 cycle        322
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                  323 ----------------------------------------------------
 
 cycle        323
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                  324 ----------------------------------------------------
 
 cycle        324
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                    1 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                  325 ----------------------------------------------------
 
 cycle        325
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                   48 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                  326 ----------------------------------------------------
 
 cycle        326
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   31 on  6
 stall occured
 
 Cycle                  327 ----------------------------------------------------
 
 cycle        327
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                    2 from                   48
 
 Cycle                  328 ----------------------------------------------------
 
 cycle        328
-stall occured
+Write Back
+WriteM writes                    2 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                  329 ----------------------------------------------------
 
 cycle        329
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                  330 ----------------------------------------------------
 
 cycle        330
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                  331 ----------------------------------------------------
 
 cycle        331
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                    3 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                  332 ----------------------------------------------------
 
 cycle        332
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                   56 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                  333 ----------------------------------------------------
 
 cycle        333
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   30 on  6
 stall occured
 
 Cycle                  334 ----------------------------------------------------
 
 cycle        334
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                    3 from                   56
 
 Cycle                  335 ----------------------------------------------------
 
 cycle        335
-stall occured
+Write Back
+WriteM writes                    3 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                  336 ----------------------------------------------------
 
 cycle        336
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                  337 ----------------------------------------------------
 
 cycle        337
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                  338 ----------------------------------------------------
 
 cycle        338
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                    6 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                  339 ----------------------------------------------------
 
 cycle        339
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                   64 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                  340 ----------------------------------------------------
 
 cycle        340
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   29 on  6
 stall occured
 
 Cycle                  341 ----------------------------------------------------
 
 cycle        341
+Mem on pc                  359
+Write Back
 stall occured
 
 Cycle                  342 ----------------------------------------------------
@@ -1928,207 +2075,110 @@ Cycle                  378 ----------------------------------------------------
 
 cycle        378
 stall occured
-1
-12297829382473034410
-12297829382473034410
-                  14
-                   1
-Loaded                    1 from                   40
 
 Cycle                  379 ----------------------------------------------------
 
 cycle        379
-Write Back
-WriteM writes                    1 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                  380 ----------------------------------------------------
 
 cycle        380
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                  381 ----------------------------------------------------
 
 cycle        381
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                  382 ----------------------------------------------------
 
 cycle        382
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                    1 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                  383 ----------------------------------------------------
 
 cycle        383
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                   48 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                  384 ----------------------------------------------------
 
 cycle        384
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   31 on  6
 stall occured
 
 Cycle                  385 ----------------------------------------------------
 
 cycle        385
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                    2 from                   48
 
 Cycle                  386 ----------------------------------------------------
 
 cycle        386
-Write Back
-WriteM writes                    2 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                  387 ----------------------------------------------------
 
 cycle        387
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                  388 ----------------------------------------------------
 
 cycle        388
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                  389 ----------------------------------------------------
 
 cycle        389
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                    3 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                  390 ----------------------------------------------------
 
 cycle        390
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                   56 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                  391 ----------------------------------------------------
 
 cycle        391
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   30 on  6
 stall occured
 
 Cycle                  392 ----------------------------------------------------
 
 cycle        392
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                    3 from                   56
 
 Cycle                  393 ----------------------------------------------------
 
 cycle        393
-Write Back
-WriteM writes                    3 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                  394 ----------------------------------------------------
 
 cycle        394
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                  395 ----------------------------------------------------
 
 cycle        395
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                  396 ----------------------------------------------------
 
 cycle        396
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                    6 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                  397 ----------------------------------------------------
 
 cycle        397
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                   64 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                  398 ----------------------------------------------------
 
 cycle        398
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   29 on  6
 stall occured
 
 Cycle                  399 ----------------------------------------------------
 
 cycle        399
-Mem on pc                  359
-Write Back
 stall occured
 
 Cycle                  400 ----------------------------------------------------
@@ -2140,7 +2190,6 @@ Cycle                  401 ----------------------------------------------------
 
 cycle        401
 stall occured
-                  64
 
 Cycle                  402 ----------------------------------------------------
 
@@ -2391,145 +2440,265 @@ Cycle                  451 ----------------------------------------------------
 
 cycle        451
 stall occured
+Loaded                    4 from                   64
 
 Cycle                  452 ----------------------------------------------------
 
 cycle        452
-stall occured
+Write Back
+WriteM writes                    4 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                  453 ----------------------------------------------------
 
 cycle        453
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                  454 ----------------------------------------------------
 
 cycle        454
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                  455 ----------------------------------------------------
 
 cycle        455
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                   10 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                  456 ----------------------------------------------------
 
 cycle        456
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                   72 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                  457 ----------------------------------------------------
 
 cycle        457
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   28 on  6
 stall occured
 
 Cycle                  458 ----------------------------------------------------
 
 cycle        458
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                    5 from                   72
 
 Cycle                  459 ----------------------------------------------------
 
 cycle        459
-stall occured
+Write Back
+WriteM writes                    5 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                  460 ----------------------------------------------------
 
 cycle        460
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                  461 ----------------------------------------------------
 
 cycle        461
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                  462 ----------------------------------------------------
 
 cycle        462
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                   15 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                  463 ----------------------------------------------------
 
 cycle        463
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                   80 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                  464 ----------------------------------------------------
 
 cycle        464
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   27 on  6
 stall occured
 
 Cycle                  465 ----------------------------------------------------
 
 cycle        465
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                    6 from                   80
 
 Cycle                  466 ----------------------------------------------------
 
 cycle        466
-stall occured
+Write Back
+WriteM writes                    6 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                  467 ----------------------------------------------------
 
 cycle        467
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                  468 ----------------------------------------------------
 
 cycle        468
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                  469 ----------------------------------------------------
 
 cycle        469
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                   21 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                  470 ----------------------------------------------------
 
 cycle        470
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                   88 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                  471 ----------------------------------------------------
 
 cycle        471
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   26 on  6
 stall occured
 
 Cycle                  472 ----------------------------------------------------
 
 cycle        472
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                    7 from                   88
 
 Cycle                  473 ----------------------------------------------------
 
 cycle        473
-stall occured
+Write Back
+WriteM writes                    7 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                  474 ----------------------------------------------------
 
 cycle        474
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                  475 ----------------------------------------------------
 
 cycle        475
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                  476 ----------------------------------------------------
 
 cycle        476
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                   28 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                  477 ----------------------------------------------------
 
 cycle        477
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                   96 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                  478 ----------------------------------------------------
 
 cycle        478
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   25 on  6
 stall occured
 
 Cycle                  479 ----------------------------------------------------
 
 cycle        479
+Mem on pc                  359
+Write Back
 stall occured
 
 Cycle                  480 ----------------------------------------------------
@@ -2681,273 +2850,145 @@ Cycle                  509 ----------------------------------------------------
 
 cycle        509
 stall occured
-0
-12297829382473034410
-12297829382473034410
-                   4
-                   5
-Loaded                    4 from                   64
 
 Cycle                  510 ----------------------------------------------------
 
 cycle        510
-Write Back
-WriteM writes                    4 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                  511 ----------------------------------------------------
 
 cycle        511
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                  512 ----------------------------------------------------
 
 cycle        512
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                  513 ----------------------------------------------------
 
 cycle        513
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                   10 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                  514 ----------------------------------------------------
 
 cycle        514
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                   72 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                  515 ----------------------------------------------------
 
 cycle        515
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   28 on  6
 stall occured
 
 Cycle                  516 ----------------------------------------------------
 
 cycle        516
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                    5 from                   72
 
 Cycle                  517 ----------------------------------------------------
 
 cycle        517
-Write Back
-WriteM writes                    5 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                  518 ----------------------------------------------------
 
 cycle        518
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                  519 ----------------------------------------------------
 
 cycle        519
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                  520 ----------------------------------------------------
 
 cycle        520
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                   15 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                  521 ----------------------------------------------------
 
 cycle        521
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                   80 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                  522 ----------------------------------------------------
 
 cycle        522
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   27 on  6
 stall occured
 
 Cycle                  523 ----------------------------------------------------
 
 cycle        523
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                    6 from                   80
 
 Cycle                  524 ----------------------------------------------------
 
 cycle        524
-Write Back
-WriteM writes                    6 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                  525 ----------------------------------------------------
 
 cycle        525
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                  526 ----------------------------------------------------
 
 cycle        526
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                  527 ----------------------------------------------------
 
 cycle        527
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                   21 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                  528 ----------------------------------------------------
 
 cycle        528
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                   88 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                  529 ----------------------------------------------------
 
 cycle        529
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   26 on  6
 stall occured
 
 Cycle                  530 ----------------------------------------------------
 
 cycle        530
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                    7 from                   88
 
 Cycle                  531 ----------------------------------------------------
 
 cycle        531
-Write Back
-WriteM writes                    7 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                  532 ----------------------------------------------------
 
 cycle        532
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                  533 ----------------------------------------------------
 
 cycle        533
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                  534 ----------------------------------------------------
 
 cycle        534
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                   28 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                  535 ----------------------------------------------------
 
 cycle        535
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                   96 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                  536 ----------------------------------------------------
 
 cycle        536
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   25 on  6
 stall occured
 
 Cycle                  537 ----------------------------------------------------
 
 cycle        537
-Mem on pc                  359
-Write Back
 stall occured
 
 Cycle                  538 ----------------------------------------------------
@@ -2959,7 +3000,6 @@ Cycle                  539 ----------------------------------------------------
 
 cycle        539
 stall occured
-                  96
 
 Cycle                  540 ----------------------------------------------------
 
@@ -3210,145 +3250,265 @@ Cycle                  589 ----------------------------------------------------
 
 cycle        589
 stall occured
+Loaded                    8 from                   96
 
 Cycle                  590 ----------------------------------------------------
 
 cycle        590
-stall occured
+Write Back
+WriteM writes                    8 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                  591 ----------------------------------------------------
 
 cycle        591
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                  592 ----------------------------------------------------
 
 cycle        592
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                  593 ----------------------------------------------------
 
 cycle        593
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                   36 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                  594 ----------------------------------------------------
 
 cycle        594
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  104 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                  595 ----------------------------------------------------
 
 cycle        595
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   24 on  6
 stall occured
 
 Cycle                  596 ----------------------------------------------------
 
 cycle        596
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                    9 from                  104
 
 Cycle                  597 ----------------------------------------------------
 
 cycle        597
-stall occured
+Write Back
+WriteM writes                    9 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                  598 ----------------------------------------------------
 
 cycle        598
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                  599 ----------------------------------------------------
 
 cycle        599
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                  600 ----------------------------------------------------
 
 cycle        600
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                   45 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                  601 ----------------------------------------------------
 
 cycle        601
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  112 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                  602 ----------------------------------------------------
 
 cycle        602
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   23 on  6
 stall occured
 
 Cycle                  603 ----------------------------------------------------
 
 cycle        603
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                   10 from                  112
 
 Cycle                  604 ----------------------------------------------------
 
 cycle        604
-stall occured
+Write Back
+WriteM writes                   10 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                  605 ----------------------------------------------------
 
 cycle        605
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                  606 ----------------------------------------------------
 
 cycle        606
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                  607 ----------------------------------------------------
 
 cycle        607
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                   55 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                  608 ----------------------------------------------------
 
 cycle        608
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  120 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                  609 ----------------------------------------------------
 
 cycle        609
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   22 on  6
 stall occured
 
 Cycle                  610 ----------------------------------------------------
 
 cycle        610
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                   11 from                  120
 
 Cycle                  611 ----------------------------------------------------
 
 cycle        611
-stall occured
+Write Back
+WriteM writes                   11 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                  612 ----------------------------------------------------
 
 cycle        612
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                  613 ----------------------------------------------------
 
 cycle        613
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                  614 ----------------------------------------------------
 
 cycle        614
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                   66 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                  615 ----------------------------------------------------
 
 cycle        615
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  128 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                  616 ----------------------------------------------------
 
 cycle        616
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   21 on  6
 stall occured
 
 Cycle                  617 ----------------------------------------------------
 
 cycle        617
+Mem on pc                  359
+Write Back
 stall occured
 
 Cycle                  618 ----------------------------------------------------
@@ -3500,273 +3660,145 @@ Cycle                  647 ----------------------------------------------------
 
 cycle        647
 stall occured
-0
-12297829382473034410
-12297829382473034410
-                   8
-                   9
-Loaded                    8 from                   96
 
 Cycle                  648 ----------------------------------------------------
 
 cycle        648
-Write Back
-WriteM writes                    8 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                  649 ----------------------------------------------------
 
 cycle        649
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                  650 ----------------------------------------------------
 
 cycle        650
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                  651 ----------------------------------------------------
 
 cycle        651
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                   36 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                  652 ----------------------------------------------------
 
 cycle        652
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  104 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                  653 ----------------------------------------------------
 
 cycle        653
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   24 on  6
 stall occured
 
 Cycle                  654 ----------------------------------------------------
 
 cycle        654
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                    9 from                  104
 
 Cycle                  655 ----------------------------------------------------
 
 cycle        655
-Write Back
-WriteM writes                    9 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                  656 ----------------------------------------------------
 
 cycle        656
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                  657 ----------------------------------------------------
 
 cycle        657
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                  658 ----------------------------------------------------
 
 cycle        658
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                   45 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                  659 ----------------------------------------------------
 
 cycle        659
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  112 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                  660 ----------------------------------------------------
 
 cycle        660
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   23 on  6
 stall occured
 
 Cycle                  661 ----------------------------------------------------
 
 cycle        661
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                   10 from                  112
 
 Cycle                  662 ----------------------------------------------------
 
 cycle        662
-Write Back
-WriteM writes                   10 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                  663 ----------------------------------------------------
 
 cycle        663
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                  664 ----------------------------------------------------
 
 cycle        664
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                  665 ----------------------------------------------------
 
 cycle        665
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                   55 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                  666 ----------------------------------------------------
 
 cycle        666
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  120 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                  667 ----------------------------------------------------
 
 cycle        667
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   22 on  6
 stall occured
 
 Cycle                  668 ----------------------------------------------------
 
 cycle        668
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                   11 from                  120
 
 Cycle                  669 ----------------------------------------------------
 
 cycle        669
-Write Back
-WriteM writes                   11 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                  670 ----------------------------------------------------
 
 cycle        670
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                  671 ----------------------------------------------------
 
 cycle        671
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                  672 ----------------------------------------------------
 
 cycle        672
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                   66 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                  673 ----------------------------------------------------
 
 cycle        673
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  128 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                  674 ----------------------------------------------------
 
 cycle        674
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   21 on  6
 stall occured
 
 Cycle                  675 ----------------------------------------------------
 
 cycle        675
-Mem on pc                  359
-Write Back
 stall occured
 
 Cycle                  676 ----------------------------------------------------
@@ -3778,7 +3810,6 @@ Cycle                  677 ----------------------------------------------------
 
 cycle        677
 stall occured
-                 128
 
 Cycle                  678 ----------------------------------------------------
 
@@ -4029,145 +4060,265 @@ Cycle                  727 ----------------------------------------------------
 
 cycle        727
 stall occured
+Loaded                   12 from                  128
 
 Cycle                  728 ----------------------------------------------------
 
 cycle        728
-stall occured
+Write Back
+WriteM writes                   12 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                  729 ----------------------------------------------------
 
 cycle        729
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                  730 ----------------------------------------------------
 
 cycle        730
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                  731 ----------------------------------------------------
 
 cycle        731
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                   78 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                  732 ----------------------------------------------------
 
 cycle        732
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  136 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                  733 ----------------------------------------------------
 
 cycle        733
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   20 on  6
 stall occured
 
 Cycle                  734 ----------------------------------------------------
 
 cycle        734
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                   13 from                  136
 
 Cycle                  735 ----------------------------------------------------
 
 cycle        735
-stall occured
+Write Back
+WriteM writes                   13 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                  736 ----------------------------------------------------
 
 cycle        736
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                  737 ----------------------------------------------------
 
 cycle        737
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                  738 ----------------------------------------------------
 
 cycle        738
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                   91 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                  739 ----------------------------------------------------
 
 cycle        739
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  144 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                  740 ----------------------------------------------------
 
 cycle        740
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   19 on  6
 stall occured
 
 Cycle                  741 ----------------------------------------------------
 
 cycle        741
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                   14 from                  144
 
 Cycle                  742 ----------------------------------------------------
 
 cycle        742
-stall occured
+Write Back
+WriteM writes                   14 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                  743 ----------------------------------------------------
 
 cycle        743
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                  744 ----------------------------------------------------
 
 cycle        744
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                  745 ----------------------------------------------------
 
 cycle        745
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                  105 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                  746 ----------------------------------------------------
 
 cycle        746
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  152 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                  747 ----------------------------------------------------
 
 cycle        747
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   18 on  6
 stall occured
 
 Cycle                  748 ----------------------------------------------------
 
 cycle        748
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                   15 from                  152
 
 Cycle                  749 ----------------------------------------------------
 
 cycle        749
-stall occured
+Write Back
+WriteM writes                   15 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                  750 ----------------------------------------------------
 
 cycle        750
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                  751 ----------------------------------------------------
 
 cycle        751
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                  752 ----------------------------------------------------
 
 cycle        752
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                  120 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                  753 ----------------------------------------------------
 
 cycle        753
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  160 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                  754 ----------------------------------------------------
 
 cycle        754
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   17 on  6
 stall occured
 
 Cycle                  755 ----------------------------------------------------
 
 cycle        755
+Mem on pc                  359
+Write Back
 stall occured
 
 Cycle                  756 ----------------------------------------------------
@@ -4319,273 +4470,145 @@ Cycle                  785 ----------------------------------------------------
 
 cycle        785
 stall occured
-0
-12297829382473034410
-12297829382473034410
-                  12
-                  13
-Loaded                   12 from                  128
 
 Cycle                  786 ----------------------------------------------------
 
 cycle        786
-Write Back
-WriteM writes                   12 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                  787 ----------------------------------------------------
 
 cycle        787
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                  788 ----------------------------------------------------
 
 cycle        788
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                  789 ----------------------------------------------------
 
 cycle        789
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                   78 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                  790 ----------------------------------------------------
 
 cycle        790
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  136 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                  791 ----------------------------------------------------
 
 cycle        791
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   20 on  6
 stall occured
 
 Cycle                  792 ----------------------------------------------------
 
 cycle        792
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                   13 from                  136
 
 Cycle                  793 ----------------------------------------------------
 
 cycle        793
-Write Back
-WriteM writes                   13 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                  794 ----------------------------------------------------
 
 cycle        794
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                  795 ----------------------------------------------------
 
 cycle        795
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                  796 ----------------------------------------------------
 
 cycle        796
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                   91 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                  797 ----------------------------------------------------
 
 cycle        797
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  144 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                  798 ----------------------------------------------------
 
 cycle        798
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   19 on  6
 stall occured
 
 Cycle                  799 ----------------------------------------------------
 
 cycle        799
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                   14 from                  144
 
 Cycle                  800 ----------------------------------------------------
 
 cycle        800
-Write Back
-WriteM writes                   14 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                  801 ----------------------------------------------------
 
 cycle        801
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                  802 ----------------------------------------------------
 
 cycle        802
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                  803 ----------------------------------------------------
 
 cycle        803
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                  105 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                  804 ----------------------------------------------------
 
 cycle        804
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  152 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                  805 ----------------------------------------------------
 
 cycle        805
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   18 on  6
 stall occured
 
 Cycle                  806 ----------------------------------------------------
 
 cycle        806
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                   15 from                  152
 
 Cycle                  807 ----------------------------------------------------
 
 cycle        807
-Write Back
-WriteM writes                   15 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                  808 ----------------------------------------------------
 
 cycle        808
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                  809 ----------------------------------------------------
 
 cycle        809
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                  810 ----------------------------------------------------
 
 cycle        810
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                  120 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                  811 ----------------------------------------------------
 
 cycle        811
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  160 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                  812 ----------------------------------------------------
 
 cycle        812
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   17 on  6
 stall occured
 
 Cycle                  813 ----------------------------------------------------
 
 cycle        813
-Mem on pc                  359
-Write Back
 stall occured
 
 Cycle                  814 ----------------------------------------------------
@@ -4597,7 +4620,6 @@ Cycle                  815 ----------------------------------------------------
 
 cycle        815
 stall occured
-                 160
 
 Cycle                  816 ----------------------------------------------------
 
@@ -4848,145 +4870,265 @@ Cycle                  865 ----------------------------------------------------
 
 cycle        865
 stall occured
+Loaded                   16 from                  160
 
 Cycle                  866 ----------------------------------------------------
 
 cycle        866
-stall occured
+Write Back
+WriteM writes                   16 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                  867 ----------------------------------------------------
 
 cycle        867
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                  868 ----------------------------------------------------
 
 cycle        868
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                  869 ----------------------------------------------------
 
 cycle        869
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                  136 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                  870 ----------------------------------------------------
 
 cycle        870
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  168 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                  871 ----------------------------------------------------
 
 cycle        871
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   16 on  6
 stall occured
 
 Cycle                  872 ----------------------------------------------------
 
 cycle        872
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                   17 from                  168
 
 Cycle                  873 ----------------------------------------------------
 
 cycle        873
-stall occured
+Write Back
+WriteM writes                   17 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                  874 ----------------------------------------------------
 
 cycle        874
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                  875 ----------------------------------------------------
 
 cycle        875
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                  876 ----------------------------------------------------
 
 cycle        876
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                  153 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                  877 ----------------------------------------------------
 
 cycle        877
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  176 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                  878 ----------------------------------------------------
 
 cycle        878
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   15 on  6
 stall occured
 
 Cycle                  879 ----------------------------------------------------
 
 cycle        879
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                   18 from                  176
 
 Cycle                  880 ----------------------------------------------------
 
 cycle        880
-stall occured
+Write Back
+WriteM writes                   18 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                  881 ----------------------------------------------------
 
 cycle        881
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                  882 ----------------------------------------------------
 
 cycle        882
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                  883 ----------------------------------------------------
 
 cycle        883
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                  171 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                  884 ----------------------------------------------------
 
 cycle        884
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  184 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                  885 ----------------------------------------------------
 
 cycle        885
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   14 on  6
 stall occured
 
 Cycle                  886 ----------------------------------------------------
 
 cycle        886
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                   19 from                  184
 
 Cycle                  887 ----------------------------------------------------
 
 cycle        887
-stall occured
+Write Back
+WriteM writes                   19 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                  888 ----------------------------------------------------
 
 cycle        888
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                  889 ----------------------------------------------------
 
 cycle        889
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                  890 ----------------------------------------------------
 
 cycle        890
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                  190 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                  891 ----------------------------------------------------
 
 cycle        891
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  192 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                  892 ----------------------------------------------------
 
 cycle        892
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   13 on  6
 stall occured
 
 Cycle                  893 ----------------------------------------------------
 
 cycle        893
+Mem on pc                  359
+Write Back
 stall occured
 
 Cycle                  894 ----------------------------------------------------
@@ -5138,273 +5280,145 @@ Cycle                  923 ----------------------------------------------------
 
 cycle        923
 stall occured
-0
-12297829382473034410
-12297829382473034410
-                  16
-                  17
-Loaded                   16 from                  160
 
 Cycle                  924 ----------------------------------------------------
 
 cycle        924
-Write Back
-WriteM writes                   16 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                  925 ----------------------------------------------------
 
 cycle        925
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                  926 ----------------------------------------------------
 
 cycle        926
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                  927 ----------------------------------------------------
 
 cycle        927
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                  136 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                  928 ----------------------------------------------------
 
 cycle        928
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  168 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                  929 ----------------------------------------------------
 
 cycle        929
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   16 on  6
 stall occured
 
 Cycle                  930 ----------------------------------------------------
 
 cycle        930
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                   17 from                  168
 
 Cycle                  931 ----------------------------------------------------
 
 cycle        931
-Write Back
-WriteM writes                   17 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                  932 ----------------------------------------------------
 
 cycle        932
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                  933 ----------------------------------------------------
 
 cycle        933
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                  934 ----------------------------------------------------
 
 cycle        934
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                  153 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                  935 ----------------------------------------------------
 
 cycle        935
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  176 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                  936 ----------------------------------------------------
 
 cycle        936
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   15 on  6
 stall occured
 
 Cycle                  937 ----------------------------------------------------
 
 cycle        937
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                   18 from                  176
 
 Cycle                  938 ----------------------------------------------------
 
 cycle        938
-Write Back
-WriteM writes                   18 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                  939 ----------------------------------------------------
 
 cycle        939
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                  940 ----------------------------------------------------
 
 cycle        940
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                  941 ----------------------------------------------------
 
 cycle        941
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                  171 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                  942 ----------------------------------------------------
 
 cycle        942
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  184 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                  943 ----------------------------------------------------
 
 cycle        943
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   14 on  6
 stall occured
 
 Cycle                  944 ----------------------------------------------------
 
 cycle        944
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                   19 from                  184
 
 Cycle                  945 ----------------------------------------------------
 
 cycle        945
-Write Back
-WriteM writes                   19 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                  946 ----------------------------------------------------
 
 cycle        946
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                  947 ----------------------------------------------------
 
 cycle        947
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                  948 ----------------------------------------------------
 
 cycle        948
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                  190 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                  949 ----------------------------------------------------
 
 cycle        949
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  192 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                  950 ----------------------------------------------------
 
 cycle        950
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   13 on  6
 stall occured
 
 Cycle                  951 ----------------------------------------------------
 
 cycle        951
-Mem on pc                  359
-Write Back
 stall occured
 
 Cycle                  952 ----------------------------------------------------
@@ -5416,7 +5430,6 @@ Cycle                  953 ----------------------------------------------------
 
 cycle        953
 stall occured
-                 192
 
 Cycle                  954 ----------------------------------------------------
 
@@ -5667,145 +5680,265 @@ Cycle                 1003 ----------------------------------------------------
 
 cycle       1003
 stall occured
+Loaded                   20 from                  192
 
 Cycle                 1004 ----------------------------------------------------
 
 cycle       1004
-stall occured
+Write Back
+WriteM writes                   20 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                 1005 ----------------------------------------------------
 
 cycle       1005
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                 1006 ----------------------------------------------------
 
 cycle       1006
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                 1007 ----------------------------------------------------
 
 cycle       1007
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                  210 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                 1008 ----------------------------------------------------
 
 cycle       1008
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  200 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                 1009 ----------------------------------------------------
 
 cycle       1009
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   12 on  6
 stall occured
 
 Cycle                 1010 ----------------------------------------------------
 
 cycle       1010
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                   21 from                  200
 
 Cycle                 1011 ----------------------------------------------------
 
 cycle       1011
-stall occured
+Write Back
+WriteM writes                   21 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                 1012 ----------------------------------------------------
 
 cycle       1012
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                 1013 ----------------------------------------------------
 
 cycle       1013
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                 1014 ----------------------------------------------------
 
 cycle       1014
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                  231 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                 1015 ----------------------------------------------------
 
 cycle       1015
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  208 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                 1016 ----------------------------------------------------
 
 cycle       1016
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   11 on  6
 stall occured
 
 Cycle                 1017 ----------------------------------------------------
 
 cycle       1017
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                   22 from                  208
 
 Cycle                 1018 ----------------------------------------------------
 
 cycle       1018
-stall occured
+Write Back
+WriteM writes                   22 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                 1019 ----------------------------------------------------
 
 cycle       1019
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                 1020 ----------------------------------------------------
 
 cycle       1020
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                 1021 ----------------------------------------------------
 
 cycle       1021
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                  253 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                 1022 ----------------------------------------------------
 
 cycle       1022
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  216 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                 1023 ----------------------------------------------------
 
 cycle       1023
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                   10 on  6
 stall occured
 
 Cycle                 1024 ----------------------------------------------------
 
 cycle       1024
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                   23 from                  216
 
 Cycle                 1025 ----------------------------------------------------
 
 cycle       1025
-stall occured
+Write Back
+WriteM writes                   23 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                 1026 ----------------------------------------------------
 
 cycle       1026
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                 1027 ----------------------------------------------------
 
 cycle       1027
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                 1028 ----------------------------------------------------
 
 cycle       1028
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                  276 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                 1029 ----------------------------------------------------
 
 cycle       1029
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  224 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                 1030 ----------------------------------------------------
 
 cycle       1030
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                    9 on  6
 stall occured
 
 Cycle                 1031 ----------------------------------------------------
 
 cycle       1031
+Mem on pc                  359
+Write Back
 stall occured
 
 Cycle                 1032 ----------------------------------------------------
@@ -5957,273 +6090,145 @@ Cycle                 1061 ----------------------------------------------------
 
 cycle       1061
 stall occured
-0
-12297829382473034410
-12297829382473034410
-                  20
-                  21
-Loaded                   20 from                  192
 
 Cycle                 1062 ----------------------------------------------------
 
 cycle       1062
-Write Back
-WriteM writes                   20 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                 1063 ----------------------------------------------------
 
 cycle       1063
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                 1064 ----------------------------------------------------
 
 cycle       1064
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                 1065 ----------------------------------------------------
 
 cycle       1065
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                  210 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                 1066 ----------------------------------------------------
 
 cycle       1066
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  200 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                 1067 ----------------------------------------------------
 
 cycle       1067
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   12 on  6
 stall occured
 
 Cycle                 1068 ----------------------------------------------------
 
 cycle       1068
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                   21 from                  200
 
 Cycle                 1069 ----------------------------------------------------
 
 cycle       1069
-Write Back
-WriteM writes                   21 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                 1070 ----------------------------------------------------
 
 cycle       1070
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                 1071 ----------------------------------------------------
 
 cycle       1071
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                 1072 ----------------------------------------------------
 
 cycle       1072
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                  231 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                 1073 ----------------------------------------------------
 
 cycle       1073
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  208 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                 1074 ----------------------------------------------------
 
 cycle       1074
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   11 on  6
 stall occured
 
 Cycle                 1075 ----------------------------------------------------
 
 cycle       1075
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                   22 from                  208
 
 Cycle                 1076 ----------------------------------------------------
 
 cycle       1076
-Write Back
-WriteM writes                   22 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                 1077 ----------------------------------------------------
 
 cycle       1077
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                 1078 ----------------------------------------------------
 
 cycle       1078
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                 1079 ----------------------------------------------------
 
 cycle       1079
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                  253 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                 1080 ----------------------------------------------------
 
 cycle       1080
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  216 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                 1081 ----------------------------------------------------
 
 cycle       1081
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                   10 on  6
 stall occured
 
 Cycle                 1082 ----------------------------------------------------
 
 cycle       1082
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                   23 from                  216
 
 Cycle                 1083 ----------------------------------------------------
 
 cycle       1083
-Write Back
-WriteM writes                   23 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                 1084 ----------------------------------------------------
 
 cycle       1084
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                 1085 ----------------------------------------------------
 
 cycle       1085
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                 1086 ----------------------------------------------------
 
 cycle       1086
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                  276 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                 1087 ----------------------------------------------------
 
 cycle       1087
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  224 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                 1088 ----------------------------------------------------
 
 cycle       1088
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                    9 on  6
 stall occured
 
 Cycle                 1089 ----------------------------------------------------
 
 cycle       1089
-Mem on pc                  359
-Write Back
 stall occured
 
 Cycle                 1090 ----------------------------------------------------
@@ -6235,7 +6240,6 @@ Cycle                 1091 ----------------------------------------------------
 
 cycle       1091
 stall occured
-                 224
 
 Cycle                 1092 ----------------------------------------------------
 
@@ -6486,145 +6490,265 @@ Cycle                 1141 ----------------------------------------------------
 
 cycle       1141
 stall occured
+Loaded                   24 from                  224
 
 Cycle                 1142 ----------------------------------------------------
 
 cycle       1142
-stall occured
+Write Back
+WriteM writes                   24 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                 1143 ----------------------------------------------------
 
 cycle       1143
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                 1144 ----------------------------------------------------
 
 cycle       1144
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                 1145 ----------------------------------------------------
 
 cycle       1145
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                  300 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                 1146 ----------------------------------------------------
 
 cycle       1146
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  232 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                 1147 ----------------------------------------------------
 
 cycle       1147
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                    8 on  6
 stall occured
 
 Cycle                 1148 ----------------------------------------------------
 
 cycle       1148
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                   25 from                  232
 
 Cycle                 1149 ----------------------------------------------------
 
 cycle       1149
-stall occured
+Write Back
+WriteM writes                   25 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                 1150 ----------------------------------------------------
 
 cycle       1150
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                 1151 ----------------------------------------------------
 
 cycle       1151
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                 1152 ----------------------------------------------------
 
 cycle       1152
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                  325 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                 1153 ----------------------------------------------------
 
 cycle       1153
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  240 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                 1154 ----------------------------------------------------
 
 cycle       1154
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                    7 on  6
 stall occured
 
 Cycle                 1155 ----------------------------------------------------
 
 cycle       1155
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                   26 from                  240
 
 Cycle                 1156 ----------------------------------------------------
 
 cycle       1156
-stall occured
+Write Back
+WriteM writes                   26 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                 1157 ----------------------------------------------------
 
 cycle       1157
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                 1158 ----------------------------------------------------
 
 cycle       1158
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                 1159 ----------------------------------------------------
 
 cycle       1159
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                  351 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                 1160 ----------------------------------------------------
 
 cycle       1160
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  248 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                 1161 ----------------------------------------------------
 
 cycle       1161
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                    6 on  6
 stall occured
 
 Cycle                 1162 ----------------------------------------------------
 
 cycle       1162
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                   27 from                  248
 
 Cycle                 1163 ----------------------------------------------------
 
 cycle       1163
-stall occured
+Write Back
+WriteM writes                   27 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                 1164 ----------------------------------------------------
 
 cycle       1164
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                 1165 ----------------------------------------------------
 
 cycle       1165
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                 1166 ----------------------------------------------------
 
 cycle       1166
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                  378 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                 1167 ----------------------------------------------------
 
 cycle       1167
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  256 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                 1168 ----------------------------------------------------
 
 cycle       1168
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                    5 on  6
 stall occured
 
 Cycle                 1169 ----------------------------------------------------
 
 cycle       1169
+Mem on pc                  359
+Write Back
 stall occured
 
 Cycle                 1170 ----------------------------------------------------
@@ -6776,273 +6900,145 @@ Cycle                 1199 ----------------------------------------------------
 
 cycle       1199
 stall occured
-0
-12297829382473034410
-12297829382473034410
-                  24
-                  25
-Loaded                   24 from                  224
 
 Cycle                 1200 ----------------------------------------------------
 
 cycle       1200
-Write Back
-WriteM writes                   24 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                 1201 ----------------------------------------------------
 
 cycle       1201
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                 1202 ----------------------------------------------------
 
 cycle       1202
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                 1203 ----------------------------------------------------
 
 cycle       1203
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                  300 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                 1204 ----------------------------------------------------
 
 cycle       1204
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  232 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                 1205 ----------------------------------------------------
 
 cycle       1205
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                    8 on  6
 stall occured
 
 Cycle                 1206 ----------------------------------------------------
 
 cycle       1206
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                   25 from                  232
 
 Cycle                 1207 ----------------------------------------------------
 
 cycle       1207
-Write Back
-WriteM writes                   25 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                 1208 ----------------------------------------------------
 
 cycle       1208
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                 1209 ----------------------------------------------------
 
 cycle       1209
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                 1210 ----------------------------------------------------
 
 cycle       1210
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                  325 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                 1211 ----------------------------------------------------
 
 cycle       1211
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  240 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                 1212 ----------------------------------------------------
 
 cycle       1212
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                    7 on  6
 stall occured
 
 Cycle                 1213 ----------------------------------------------------
 
 cycle       1213
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                   26 from                  240
 
 Cycle                 1214 ----------------------------------------------------
 
 cycle       1214
-Write Back
-WriteM writes                   26 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                 1215 ----------------------------------------------------
 
 cycle       1215
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                 1216 ----------------------------------------------------
 
 cycle       1216
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                 1217 ----------------------------------------------------
 
 cycle       1217
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                  351 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                 1218 ----------------------------------------------------
 
 cycle       1218
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  248 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                 1219 ----------------------------------------------------
 
 cycle       1219
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                    6 on  6
 stall occured
 
 Cycle                 1220 ----------------------------------------------------
 
 cycle       1220
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                   27 from                  248
 
 Cycle                 1221 ----------------------------------------------------
 
 cycle       1221
-Write Back
-WriteM writes                   27 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                 1222 ----------------------------------------------------
 
 cycle       1222
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                 1223 ----------------------------------------------------
 
 cycle       1223
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                 1224 ----------------------------------------------------
 
 cycle       1224
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                  378 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                 1225 ----------------------------------------------------
 
 cycle       1225
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  256 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                 1226 ----------------------------------------------------
 
 cycle       1226
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                    5 on  6
 stall occured
 
 Cycle                 1227 ----------------------------------------------------
 
 cycle       1227
-Mem on pc                  359
-Write Back
 stall occured
 
 Cycle                 1228 ----------------------------------------------------
@@ -7054,7 +7050,6 @@ Cycle                 1229 ----------------------------------------------------
 
 cycle       1229
 stall occured
-                 256
 
 Cycle                 1230 ----------------------------------------------------
 
@@ -7305,145 +7300,265 @@ Cycle                 1279 ----------------------------------------------------
 
 cycle       1279
 stall occured
+Loaded                   28 from                  256
 
 Cycle                 1280 ----------------------------------------------------
 
 cycle       1280
-stall occured
+Write Back
+WriteM writes                   28 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                 1281 ----------------------------------------------------
 
 cycle       1281
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                 1282 ----------------------------------------------------
 
 cycle       1282
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                 1283 ----------------------------------------------------
 
 cycle       1283
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                  406 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                 1284 ----------------------------------------------------
 
 cycle       1284
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  264 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                 1285 ----------------------------------------------------
 
 cycle       1285
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                    4 on  6
 stall occured
 
 Cycle                 1286 ----------------------------------------------------
 
 cycle       1286
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                   29 from                  264
 
 Cycle                 1287 ----------------------------------------------------
 
 cycle       1287
-stall occured
+Write Back
+WriteM writes                   29 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                 1288 ----------------------------------------------------
 
 cycle       1288
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                 1289 ----------------------------------------------------
 
 cycle       1289
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                 1290 ----------------------------------------------------
 
 cycle       1290
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                  435 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                 1291 ----------------------------------------------------
 
 cycle       1291
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  272 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                 1292 ----------------------------------------------------
 
 cycle       1292
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                    3 on  6
 stall occured
 
 Cycle                 1293 ----------------------------------------------------
 
 cycle       1293
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                   30 from                  272
 
 Cycle                 1294 ----------------------------------------------------
 
 cycle       1294
-stall occured
+Write Back
+WriteM writes                   30 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                 1295 ----------------------------------------------------
 
 cycle       1295
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                 1296 ----------------------------------------------------
 
 cycle       1296
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                 1297 ----------------------------------------------------
 
 cycle       1297
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                  465 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                 1298 ----------------------------------------------------
 
 cycle       1298
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  280 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                 1299 ----------------------------------------------------
 
 cycle       1299
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                    2 on  6
 stall occured
 
 Cycle                 1300 ----------------------------------------------------
 
 cycle       1300
+Mem on pc                  359
+Write Back
 stall occured
+Loaded                   31 from                  280
 
 Cycle                 1301 ----------------------------------------------------
 
 cycle       1301
-stall occured
+Write Back
+WriteM writes                   31 on 10
+Fetch1
+Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
+addq %'h8, %'h7
 
 Cycle                 1302 ----------------------------------------------------
 
 cycle       1302
-stall occured
+Exec on pc                  369
+Fetch1
+Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
+subq %'h9, %'h6
 
 Cycle                 1303 ----------------------------------------------------
 
 cycle       1303
-stall occured
+Mem on pc                  369
+Exec on pc                  371
+Fetch1
+Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
+jne $'h0000000000000167
 
 Cycle                 1304 ----------------------------------------------------
 
 cycle       1304
-stall occured
+Mem on pc                  371
+Exec on pc                  373
+Write Back
+WriteE writes                  496 on  0
+Fetch1
+Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
+mrmovq 'h0000000000000000(%'h7), %'ha
 
 Cycle                 1305 ----------------------------------------------------
 
 cycle       1305
-stall occured
+Mem on pc                  373
+Exec on pc                  375
+Write Back
+WriteE writes                  288 on  7
+Fetch1
+Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
+addq %'ha, %'h0
 
 Cycle                 1306 ----------------------------------------------------
 
 cycle       1306
+Mem on pc                  375
+Exec on pc                  359
+Write Back
+WriteE writes                    1 on  6
 stall occured
 
 Cycle                 1307 ----------------------------------------------------
 
 cycle       1307
+Mem on pc                  359
+Write Back
 stall occured
 
 Cycle                 1308 ----------------------------------------------------
@@ -7595,273 +7710,145 @@ Cycle                 1337 ----------------------------------------------------
 
 cycle       1337
 stall occured
-0
-12297829382473034410
-12297829382473034410
-                  28
-                  29
-Loaded                   28 from                  256
 
 Cycle                 1338 ----------------------------------------------------
 
 cycle       1338
-Write Back
-WriteM writes                   28 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                 1339 ----------------------------------------------------
 
 cycle       1339
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                 1340 ----------------------------------------------------
 
 cycle       1340
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                 1341 ----------------------------------------------------
 
 cycle       1341
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                  406 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                 1342 ----------------------------------------------------
 
 cycle       1342
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  264 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                 1343 ----------------------------------------------------
 
 cycle       1343
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                    4 on  6
 stall occured
 
 Cycle                 1344 ----------------------------------------------------
 
 cycle       1344
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                   29 from                  264
 
 Cycle                 1345 ----------------------------------------------------
 
 cycle       1345
-Write Back
-WriteM writes                   29 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                 1346 ----------------------------------------------------
 
 cycle       1346
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                 1347 ----------------------------------------------------
 
 cycle       1347
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                 1348 ----------------------------------------------------
 
 cycle       1348
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                  435 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                 1349 ----------------------------------------------------
 
 cycle       1349
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  272 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                 1350 ----------------------------------------------------
 
 cycle       1350
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                    3 on  6
 stall occured
 
 Cycle                 1351 ----------------------------------------------------
 
 cycle       1351
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                   30 from                  272
 
 Cycle                 1352 ----------------------------------------------------
 
 cycle       1352
-Write Back
-WriteM writes                   30 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                 1353 ----------------------------------------------------
 
 cycle       1353
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                 1354 ----------------------------------------------------
 
 cycle       1354
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                 1355 ----------------------------------------------------
 
 cycle       1355
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                  465 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                 1356 ----------------------------------------------------
 
 cycle       1356
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  280 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                 1357 ----------------------------------------------------
 
 cycle       1357
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                    2 on  6
 stall occured
 
 Cycle                 1358 ----------------------------------------------------
 
 cycle       1358
-Mem on pc                  359
-HIT
-Write Back
 stall occured
-Loaded                   31 from                  280
 
 Cycle                 1359 ----------------------------------------------------
 
 cycle       1359
-Write Back
-WriteM writes                   31 on 10
-Fetch1
-Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
-addq %'h8, %'h7
+stall occured
 
 Cycle                 1360 ----------------------------------------------------
 
 cycle       1360
-Exec on pc                  369
-Fetch1
-Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
-subq %'h9, %'h6
+stall occured
 
 Cycle                 1361 ----------------------------------------------------
 
 cycle       1361
-Mem on pc                  369
-Exec on pc                  371
-Fetch1
-Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
-jne $'h0000000000000167
+stall occured
 
 Cycle                 1362 ----------------------------------------------------
 
 cycle       1362
-Mem on pc                  371
-Exec on pc                  373
-Write Back
-WriteE writes                  496 on  0
-Fetch1
-Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
-mrmovq 'h0000000000000000(%'h7), %'ha
+stall occured
 
 Cycle                 1363 ----------------------------------------------------
 
 cycle       1363
-Mem on pc                  373
-Exec on pc                  375
-Write Back
-WriteE writes                  288 on  7
-Fetch1
-Fetch : from Pc                  369 , expanded inst : 60a06087619674670100, 
-addq %'ha, %'h0
+stall occured
 
 Cycle                 1364 ----------------------------------------------------
 
 cycle       1364
-Mem on pc                  375
-Exec on pc                  359
-Write Back
-WriteE writes                    1 on  6
 stall occured
 
 Cycle                 1365 ----------------------------------------------------
 
 cycle       1365
-Mem on pc                  359
-Write Back
 stall occured
 
 Cycle                 1366 ----------------------------------------------------
@@ -7873,7 +7860,6 @@ Cycle                 1367 ----------------------------------------------------
 
 cycle       1367
 stall occured
-                 288
 
 Cycle                 1368 ----------------------------------------------------
 
@@ -8124,332 +8110,37 @@ Cycle                 1417 ----------------------------------------------------
 
 cycle       1417
 stall occured
+Loaded                   32 from                  288
 
 Cycle                 1418 ----------------------------------------------------
 
 cycle       1418
-stall occured
-
-Cycle                 1419 ----------------------------------------------------
-
-cycle       1419
-stall occured
-
-Cycle                 1420 ----------------------------------------------------
-
-cycle       1420
-stall occured
-
-Cycle                 1421 ----------------------------------------------------
-
-cycle       1421
-stall occured
-
-Cycle                 1422 ----------------------------------------------------
-
-cycle       1422
-stall occured
-
-Cycle                 1423 ----------------------------------------------------
-
-cycle       1423
-stall occured
-
-Cycle                 1424 ----------------------------------------------------
-
-cycle       1424
-stall occured
-
-Cycle                 1425 ----------------------------------------------------
-
-cycle       1425
-stall occured
-
-Cycle                 1426 ----------------------------------------------------
-
-cycle       1426
-stall occured
-
-Cycle                 1427 ----------------------------------------------------
-
-cycle       1427
-stall occured
-
-Cycle                 1428 ----------------------------------------------------
-
-cycle       1428
-stall occured
-
-Cycle                 1429 ----------------------------------------------------
-
-cycle       1429
-stall occured
-
-Cycle                 1430 ----------------------------------------------------
-
-cycle       1430
-stall occured
-
-Cycle                 1431 ----------------------------------------------------
-
-cycle       1431
-stall occured
-
-Cycle                 1432 ----------------------------------------------------
-
-cycle       1432
-stall occured
-
-Cycle                 1433 ----------------------------------------------------
-
-cycle       1433
-stall occured
-
-Cycle                 1434 ----------------------------------------------------
-
-cycle       1434
-stall occured
-
-Cycle                 1435 ----------------------------------------------------
-
-cycle       1435
-stall occured
-
-Cycle                 1436 ----------------------------------------------------
-
-cycle       1436
-stall occured
-
-Cycle                 1437 ----------------------------------------------------
-
-cycle       1437
-stall occured
-
-Cycle                 1438 ----------------------------------------------------
-
-cycle       1438
-stall occured
-
-Cycle                 1439 ----------------------------------------------------
-
-cycle       1439
-stall occured
-
-Cycle                 1440 ----------------------------------------------------
-
-cycle       1440
-stall occured
-
-Cycle                 1441 ----------------------------------------------------
-
-cycle       1441
-stall occured
-
-Cycle                 1442 ----------------------------------------------------
-
-cycle       1442
-stall occured
-
-Cycle                 1443 ----------------------------------------------------
-
-cycle       1443
-stall occured
-
-Cycle                 1444 ----------------------------------------------------
-
-cycle       1444
-stall occured
-
-Cycle                 1445 ----------------------------------------------------
-
-cycle       1445
-stall occured
-
-Cycle                 1446 ----------------------------------------------------
-
-cycle       1446
-stall occured
-
-Cycle                 1447 ----------------------------------------------------
-
-cycle       1447
-stall occured
-
-Cycle                 1448 ----------------------------------------------------
-
-cycle       1448
-stall occured
-
-Cycle                 1449 ----------------------------------------------------
-
-cycle       1449
-stall occured
-
-Cycle                 1450 ----------------------------------------------------
-
-cycle       1450
-stall occured
-
-Cycle                 1451 ----------------------------------------------------
-
-cycle       1451
-stall occured
-
-Cycle                 1452 ----------------------------------------------------
-
-cycle       1452
-stall occured
-
-Cycle                 1453 ----------------------------------------------------
-
-cycle       1453
-stall occured
-
-Cycle                 1454 ----------------------------------------------------
-
-cycle       1454
-stall occured
-
-Cycle                 1455 ----------------------------------------------------
-
-cycle       1455
-stall occured
-
-Cycle                 1456 ----------------------------------------------------
-
-cycle       1456
-stall occured
-
-Cycle                 1457 ----------------------------------------------------
-
-cycle       1457
-stall occured
-
-Cycle                 1458 ----------------------------------------------------
-
-cycle       1458
-stall occured
-
-Cycle                 1459 ----------------------------------------------------
-
-cycle       1459
-stall occured
-
-Cycle                 1460 ----------------------------------------------------
-
-cycle       1460
-stall occured
-
-Cycle                 1461 ----------------------------------------------------
-
-cycle       1461
-stall occured
-
-Cycle                 1462 ----------------------------------------------------
-
-cycle       1462
-stall occured
-
-Cycle                 1463 ----------------------------------------------------
-
-cycle       1463
-stall occured
-
-Cycle                 1464 ----------------------------------------------------
-
-cycle       1464
-stall occured
-
-Cycle                 1465 ----------------------------------------------------
-
-cycle       1465
-stall occured
-
-Cycle                 1466 ----------------------------------------------------
-
-cycle       1466
-stall occured
-
-Cycle                 1467 ----------------------------------------------------
-
-cycle       1467
-stall occured
-
-Cycle                 1468 ----------------------------------------------------
-
-cycle       1468
-stall occured
-
-Cycle                 1469 ----------------------------------------------------
-
-cycle       1469
-stall occured
-
-Cycle                 1470 ----------------------------------------------------
-
-cycle       1470
-stall occured
-
-Cycle                 1471 ----------------------------------------------------
-
-cycle       1471
-stall occured
-
-Cycle                 1472 ----------------------------------------------------
-
-cycle       1472
-stall occured
-
-Cycle                 1473 ----------------------------------------------------
-
-cycle       1473
-stall occured
-
-Cycle                 1474 ----------------------------------------------------
-
-cycle       1474
-stall occured
-
-Cycle                 1475 ----------------------------------------------------
-
-cycle       1475
-stall occured
-0
-12297829382473034410
-12297829382473034410
-                  32
-             2684720
-Loaded                   32 from                  288
-
-Cycle                 1476 ----------------------------------------------------
-
-cycle       1476
 Write Back
 WriteM writes                   32 on 10
 Fetch1
 Fetch : from Pc                  371 , expanded inst : 60876196746701000000, 
 addq %'h8, %'h7
 
-Cycle                 1477 ----------------------------------------------------
+Cycle                 1419 ----------------------------------------------------
 
-cycle       1477
+cycle       1419
 Exec on pc                  369
 Fetch1
 Fetch : from Pc                  373 , expanded inst : 61967467010000000000, 
 subq %'h9, %'h6
 
-Cycle                 1478 ----------------------------------------------------
+Cycle                 1420 ----------------------------------------------------
 
-cycle       1478
+cycle       1420
 Mem on pc                  369
 Exec on pc                  371
 Fetch1
 Fetch : from Pc                  375 , expanded inst : 74670100000000000090, 
 jne $'h0000000000000167
 
-Cycle                 1479 ----------------------------------------------------
+Cycle                 1421 ----------------------------------------------------
 
-cycle       1479
+cycle       1421
 Mem on pc                  371
 Exec on pc                  373
 Write Back
@@ -8458,9 +8149,9 @@ Fetch1
 Fetch : from Pc                  359 , expanded inst : 50a70000000000000000, 
 mrmovq 'h0000000000000000(%'h7), %'ha
 
-Cycle                 1480 ----------------------------------------------------
+Cycle                 1422 ----------------------------------------------------
 
-cycle       1480
+cycle       1422
 Mem on pc                  373
 Exec on pc                  375
 ExecRedirect : addr                  384
@@ -8470,9 +8161,9 @@ Fetch1
 Fetch : from Pc                  384 , expanded inst : 9000000000000000aaaa, 
 ret
 
-Cycle                 1481 ----------------------------------------------------
+Cycle                 1423 ----------------------------------------------------
 
-cycle       1481
+cycle       1423
 Mem on pc                  375
 Exec : Invalidated on pc                  359
 Write Back
@@ -8481,9 +8172,9 @@ Fetch1
 Fetch : from Pc                  385 , expanded inst : 00000000000000aaaaaa, 
 halt
 
-Cycle                 1482 ----------------------------------------------------
+Cycle                 1424 ----------------------------------------------------
 
-cycle       1482
+cycle       1424
 Mem invalidated on pc                  359
 Exec on pc                  384
 Write Back
@@ -8491,15 +8182,247 @@ Fetch1
 Fetch : from Pc                  386 , expanded inst : 000000000000aaaaaaaa, 
 halt
 
-Cycle                 1483 ----------------------------------------------------
+Cycle                 1425 ----------------------------------------------------
 
-cycle       1483
+cycle       1425
 Mem on pc                  384
 Exec : Invalidated on pc                  385
 Write Back
 Fetch1
 Fetch : from Pc                  387 , expanded inst : 0000000000aaaaaaaaaa, 
 halt
+
+Cycle                 1426 ----------------------------------------------------
+
+cycle       1426
+
+Cycle                 1427 ----------------------------------------------------
+
+cycle       1427
+
+Cycle                 1428 ----------------------------------------------------
+
+cycle       1428
+
+Cycle                 1429 ----------------------------------------------------
+
+cycle       1429
+
+Cycle                 1430 ----------------------------------------------------
+
+cycle       1430
+
+Cycle                 1431 ----------------------------------------------------
+
+cycle       1431
+
+Cycle                 1432 ----------------------------------------------------
+
+cycle       1432
+
+Cycle                 1433 ----------------------------------------------------
+
+cycle       1433
+
+Cycle                 1434 ----------------------------------------------------
+
+cycle       1434
+
+Cycle                 1435 ----------------------------------------------------
+
+cycle       1435
+
+Cycle                 1436 ----------------------------------------------------
+
+cycle       1436
+
+Cycle                 1437 ----------------------------------------------------
+
+cycle       1437
+
+Cycle                 1438 ----------------------------------------------------
+
+cycle       1438
+
+Cycle                 1439 ----------------------------------------------------
+
+cycle       1439
+
+Cycle                 1440 ----------------------------------------------------
+
+cycle       1440
+
+Cycle                 1441 ----------------------------------------------------
+
+cycle       1441
+
+Cycle                 1442 ----------------------------------------------------
+
+cycle       1442
+
+Cycle                 1443 ----------------------------------------------------
+
+cycle       1443
+
+Cycle                 1444 ----------------------------------------------------
+
+cycle       1444
+
+Cycle                 1445 ----------------------------------------------------
+
+cycle       1445
+
+Cycle                 1446 ----------------------------------------------------
+
+cycle       1446
+
+Cycle                 1447 ----------------------------------------------------
+
+cycle       1447
+
+Cycle                 1448 ----------------------------------------------------
+
+cycle       1448
+
+Cycle                 1449 ----------------------------------------------------
+
+cycle       1449
+
+Cycle                 1450 ----------------------------------------------------
+
+cycle       1450
+
+Cycle                 1451 ----------------------------------------------------
+
+cycle       1451
+
+Cycle                 1452 ----------------------------------------------------
+
+cycle       1452
+
+Cycle                 1453 ----------------------------------------------------
+
+cycle       1453
+
+Cycle                 1454 ----------------------------------------------------
+
+cycle       1454
+
+Cycle                 1455 ----------------------------------------------------
+
+cycle       1455
+
+Cycle                 1456 ----------------------------------------------------
+
+cycle       1456
+
+Cycle                 1457 ----------------------------------------------------
+
+cycle       1457
+
+Cycle                 1458 ----------------------------------------------------
+
+cycle       1458
+
+Cycle                 1459 ----------------------------------------------------
+
+cycle       1459
+
+Cycle                 1460 ----------------------------------------------------
+
+cycle       1460
+
+Cycle                 1461 ----------------------------------------------------
+
+cycle       1461
+
+Cycle                 1462 ----------------------------------------------------
+
+cycle       1462
+
+Cycle                 1463 ----------------------------------------------------
+
+cycle       1463
+
+Cycle                 1464 ----------------------------------------------------
+
+cycle       1464
+
+Cycle                 1465 ----------------------------------------------------
+
+cycle       1465
+
+Cycle                 1466 ----------------------------------------------------
+
+cycle       1466
+
+Cycle                 1467 ----------------------------------------------------
+
+cycle       1467
+
+Cycle                 1468 ----------------------------------------------------
+
+cycle       1468
+
+Cycle                 1469 ----------------------------------------------------
+
+cycle       1469
+
+Cycle                 1470 ----------------------------------------------------
+
+cycle       1470
+
+Cycle                 1471 ----------------------------------------------------
+
+cycle       1471
+
+Cycle                 1472 ----------------------------------------------------
+
+cycle       1472
+
+Cycle                 1473 ----------------------------------------------------
+
+cycle       1473
+
+Cycle                 1474 ----------------------------------------------------
+
+cycle       1474
+
+Cycle                 1475 ----------------------------------------------------
+
+cycle       1475
+
+Cycle                 1476 ----------------------------------------------------
+
+cycle       1476
+
+Cycle                 1477 ----------------------------------------------------
+
+cycle       1477
+
+Cycle                 1478 ----------------------------------------------------
+
+cycle       1478
+
+Cycle                 1479 ----------------------------------------------------
+
+cycle       1479
+
+Cycle                 1480 ----------------------------------------------------
+
+cycle       1480
+
+Cycle                 1481 ----------------------------------------------------
+
+cycle       1481
+
+Cycle                 1482 ----------------------------------------------------
+
+cycle       1482
+
+Cycle                 1483 ----------------------------------------------------
+
+cycle       1483
 
 Cycle                 1484 ----------------------------------------------------
 
@@ -8508,7 +8431,6 @@ cycle       1484
 Cycle                 1485 ----------------------------------------------------
 
 cycle       1485
-                 480
 
 Cycle                 1486 ----------------------------------------------------
 
@@ -8709,249 +8631,12 @@ cycle       1534
 Cycle                 1535 ----------------------------------------------------
 
 cycle       1535
+Loaded                  325 from                  496
+memRedirect : addr                  325
 
 Cycle                 1536 ----------------------------------------------------
 
 cycle       1536
-
-Cycle                 1537 ----------------------------------------------------
-
-cycle       1537
-
-Cycle                 1538 ----------------------------------------------------
-
-cycle       1538
-
-Cycle                 1539 ----------------------------------------------------
-
-cycle       1539
-
-Cycle                 1540 ----------------------------------------------------
-
-cycle       1540
-
-Cycle                 1541 ----------------------------------------------------
-
-cycle       1541
-
-Cycle                 1542 ----------------------------------------------------
-
-cycle       1542
-
-Cycle                 1543 ----------------------------------------------------
-
-cycle       1543
-
-Cycle                 1544 ----------------------------------------------------
-
-cycle       1544
-
-Cycle                 1545 ----------------------------------------------------
-
-cycle       1545
-
-Cycle                 1546 ----------------------------------------------------
-
-cycle       1546
-
-Cycle                 1547 ----------------------------------------------------
-
-cycle       1547
-
-Cycle                 1548 ----------------------------------------------------
-
-cycle       1548
-
-Cycle                 1549 ----------------------------------------------------
-
-cycle       1549
-
-Cycle                 1550 ----------------------------------------------------
-
-cycle       1550
-
-Cycle                 1551 ----------------------------------------------------
-
-cycle       1551
-
-Cycle                 1552 ----------------------------------------------------
-
-cycle       1552
-
-Cycle                 1553 ----------------------------------------------------
-
-cycle       1553
-
-Cycle                 1554 ----------------------------------------------------
-
-cycle       1554
-
-Cycle                 1555 ----------------------------------------------------
-
-cycle       1555
-
-Cycle                 1556 ----------------------------------------------------
-
-cycle       1556
-
-Cycle                 1557 ----------------------------------------------------
-
-cycle       1557
-
-Cycle                 1558 ----------------------------------------------------
-
-cycle       1558
-
-Cycle                 1559 ----------------------------------------------------
-
-cycle       1559
-
-Cycle                 1560 ----------------------------------------------------
-
-cycle       1560
-
-Cycle                 1561 ----------------------------------------------------
-
-cycle       1561
-
-Cycle                 1562 ----------------------------------------------------
-
-cycle       1562
-
-Cycle                 1563 ----------------------------------------------------
-
-cycle       1563
-
-Cycle                 1564 ----------------------------------------------------
-
-cycle       1564
-
-Cycle                 1565 ----------------------------------------------------
-
-cycle       1565
-
-Cycle                 1566 ----------------------------------------------------
-
-cycle       1566
-
-Cycle                 1567 ----------------------------------------------------
-
-cycle       1567
-
-Cycle                 1568 ----------------------------------------------------
-
-cycle       1568
-
-Cycle                 1569 ----------------------------------------------------
-
-cycle       1569
-
-Cycle                 1570 ----------------------------------------------------
-
-cycle       1570
-
-Cycle                 1571 ----------------------------------------------------
-
-cycle       1571
-
-Cycle                 1572 ----------------------------------------------------
-
-cycle       1572
-
-Cycle                 1573 ----------------------------------------------------
-
-cycle       1573
-
-Cycle                 1574 ----------------------------------------------------
-
-cycle       1574
-
-Cycle                 1575 ----------------------------------------------------
-
-cycle       1575
-
-Cycle                 1576 ----------------------------------------------------
-
-cycle       1576
-
-Cycle                 1577 ----------------------------------------------------
-
-cycle       1577
-
-Cycle                 1578 ----------------------------------------------------
-
-cycle       1578
-
-Cycle                 1579 ----------------------------------------------------
-
-cycle       1579
-
-Cycle                 1580 ----------------------------------------------------
-
-cycle       1580
-
-Cycle                 1581 ----------------------------------------------------
-
-cycle       1581
-
-Cycle                 1582 ----------------------------------------------------
-
-cycle       1582
-
-Cycle                 1583 ----------------------------------------------------
-
-cycle       1583
-
-Cycle                 1584 ----------------------------------------------------
-
-cycle       1584
-
-Cycle                 1585 ----------------------------------------------------
-
-cycle       1585
-
-Cycle                 1586 ----------------------------------------------------
-
-cycle       1586
-
-Cycle                 1587 ----------------------------------------------------
-
-cycle       1587
-
-Cycle                 1588 ----------------------------------------------------
-
-cycle       1588
-
-Cycle                 1589 ----------------------------------------------------
-
-cycle       1589
-
-Cycle                 1590 ----------------------------------------------------
-
-cycle       1590
-
-Cycle                 1591 ----------------------------------------------------
-
-cycle       1591
-
-Cycle                 1592 ----------------------------------------------------
-
-cycle       1592
-
-Cycle                 1593 ----------------------------------------------------
-
-cycle       1593
-2
-12297829382473034410
-12297829382473034410
-12297829382473034410
-12297829382473034410
-Loaded                  325 from                  496
-memRedirect : addr                  325
-
-Cycle                 1594 ----------------------------------------------------
-
-cycle       1594
 Mem invalidated on pc                  385
 Exec : Invalidated on pc                  386
 Write Back
@@ -8960,9 +8645,9 @@ Fetch1
 Fetch : from Pc                  325 , expanded inst : 9030f808000000000000, 
 ret
 
-Cycle                 1595 ----------------------------------------------------
+Cycle                 1537 ----------------------------------------------------
 
-cycle       1595
+cycle       1537
 Mem invalidated on pc                  386
 Exec : Invalidated on pc                  387
 Write Back
@@ -8970,9 +8655,9 @@ Fetch1
 Fetch : from Pc                  326 , expanded inst : 30f80800000000000000, 
 irmovq $'h0000000000000008,  %'h8
 
-Cycle                 1596 ----------------------------------------------------
+Cycle                 1538 ----------------------------------------------------
 
-cycle       1596
+cycle       1538
 Mem invalidated on pc                  387
 Exec on pc                  325
 Write Back
@@ -8980,11 +8665,10 @@ Fetch1
 Fetch : from Pc                  336 , expanded inst : 30f90100000000000000, 
 irmovq $'h0000000000000001,  %'h9
 
-Cycle                 1597 ----------------------------------------------------
+Cycle                 1539 ----------------------------------------------------
 
-cycle       1597
+cycle       1539
 Mem on pc                  325
-HIT
 Exec : Invalidated on pc                  326
 Write Back
 Loaded                   19 from                  504
@@ -8993,9 +8677,9 @@ Fetch1
 Fetch : from Pc                   19 , expanded inst : 30f81002000000000000, 
 irmovq $'h0000000000000210,  %'h8
 
-Cycle                 1598 ----------------------------------------------------
+Cycle                 1540 ----------------------------------------------------
 
-cycle       1598
+cycle       1540
 Mem invalidated on pc                  326
 Exec : Invalidated on pc                  336
 Write Back
@@ -9004,71 +8688,71 @@ Fetch1
 Fetch : from Pc                   29 , expanded inst : 6180c00e000000000000, 
 subq %'h8, %'h0
 
-Cycle                 1599 ----------------------------------------------------
+Cycle                 1541 ----------------------------------------------------
 
-cycle       1599
+cycle       1541
 Mem invalidated on pc                  336
 Exec on pc                   19
 Write Back
 stall occured
 
-Cycle                 1600 ----------------------------------------------------
+Cycle                 1542 ----------------------------------------------------
 
-cycle       1600
+cycle       1542
 Mem on pc                   19
 Write Back
 stall occured
 
-Cycle                 1601 ----------------------------------------------------
+Cycle                 1543 ----------------------------------------------------
 
-cycle       1601
+cycle       1543
 Write Back
 WriteE writes                  528 on  8
 Fetch1
 Fetch : from Pc                   31 , expanded inst : c00e0000000000000001, 
 mtc0 %'h0, %'he
 
-Cycle                 1602 ----------------------------------------------------
+Cycle                 1544 ----------------------------------------------------
 
-cycle       1602
+cycle       1544
 Exec on pc                   29
 stall occured
 
-Cycle                 1603 ----------------------------------------------------
+Cycle                 1545 ----------------------------------------------------
 
-cycle       1603
+cycle       1545
 Mem on pc                   29
 stall occured
 
-Cycle                 1604 ----------------------------------------------------
+Cycle                 1546 ----------------------------------------------------
 
-cycle       1604
+cycle       1546
 Write Back
 WriteE writes                    0 on  0
 Fetch1
 Fetch : from Pc                   33 , expanded inst : 00000000000000010000, 
 halt
 
-Cycle                 1605 ----------------------------------------------------
+Cycle                 1547 ----------------------------------------------------
 
-cycle       1605
+cycle       1547
 Exec on pc                   31
 Fetch1
 Fetch : from Pc                   34 , expanded inst : 00000000000001000000, 
 halt
 
-Cycle                 1606 ----------------------------------------------------
+Cycle                 1548 ----------------------------------------------------
 
-cycle       1606
+cycle       1548
 Mem on pc                   31
 Exec on pc                   33
 Fetch1
 Fetch : from Pc                   35 , expanded inst : 00000000000100000000, 
 halt
 
-Cycle                 1607 ----------------------------------------------------
+Cycle                 1549 ----------------------------------------------------
 
-cycle       1607
+cycle       1549
 Mem on pc                   33
 Exec on pc                   34
 Write Back
@@ -9077,4 +8761,4 @@ Fetch1
 Fetch : from Pc                   36 , expanded inst : 00000000010000000000, 
 halt
 
-Cycle                 1608 ----------------------------------------------------
+Cycle                 1550 ----------------------------------------------------

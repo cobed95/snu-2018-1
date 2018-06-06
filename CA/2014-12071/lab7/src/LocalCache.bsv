@@ -4,7 +4,6 @@ import CacheTypes::*;
 import Fifo::*;
 import RegFile::*;
 import Vector::*;
-import ProcTypes::*;
 
 interface Cache;
 	method Action req(MemReq r);
@@ -76,7 +75,6 @@ module mkCacheDirectMap(Cache);
 		let idx = getIdx(missReq.addr);
         let tag = getTag(missReq.addr);
         let addr = getBlockAddr(tag, idx);
-        $display(addr);
         memReqQ.enq(CacheMemReq{op:Ld, addr:addr, data:?, burstLength:4}); 
         status <= WaitFillResp;
 	endrule
@@ -86,16 +84,11 @@ module mkCacheDirectMap(Cache);
         let idx = getIdx(missReq.addr);
         let tag = getTag(missReq.addr);
 		let blockOffset = getOffset(missReq.addr);
-        $display(blockOffset);
         let line = memRespQ.first;
 
         dataArray.upd(idx, line);
-        $display(little2BigEndian(dataArray.sub(idx)[0]));
-        $display(little2BigEndian(dataArray.sub(idx)[1]));
         tagArray.upd(idx, Valid(tag));
         dirtyArray.upd(idx, False);
-        $display(little2BigEndian(line[0]));
-        $display(little2BigEndian(line[1]));
 
         hitQ.enq(line[blockOffset]);
         memRespQ.deq;
@@ -111,7 +104,6 @@ module mkCacheDirectMap(Cache);
 		let blockOffset = getOffset(r.addr);
 
 		let hit = isValid(currTag)? validValue(currTag) == tag : False;
-        if(hit) $display("HIT");
 
         if(r.op == Ld)
         begin
@@ -294,12 +286,12 @@ module mkCacheSetAssociative (Cache);
         else
             setOffset = findLRU(idx);
 
-        let tag = tagArray[idx].sub(setOffset);
-        let dirty = dirtyArray[idx].sub(setOffset);
+        let tag = tagArray[setOffset].sub(idx);
+        let dirty = dirtyArray[setOffset].sub(idx);
         if(isValid(tag) && dirty)
         begin
             let addr = getBlockAddr(validValue(tag), idx);
-            let line = dataArray[idx].sub(setOffset);
+            let line = dataArray[setOffset].sub(idx);
             memReqQ.enq(CacheMemReq{op:St, addr:addr, data:line, burstLength:4});
         end
         
@@ -312,7 +304,6 @@ module mkCacheSetAssociative (Cache);
         let idx = getIdx(missReq.addr);
         let tag = getTag(missReq.addr);
         let addr = getBlockAddr(tag, idx);
-        $display(addr);
         memReqQ.enq(CacheMemReq{op:Ld, addr:addr, data:?, burstLength:4}); 
         status <= WaitFillResp;
 	endrule
@@ -329,18 +320,16 @@ module mkCacheSetAssociative (Cache);
 
         let tag = getTag(missReq.addr);
 		let blockOffset = getOffset(missReq.addr);
-        $display(blockOffset);
         let line = memRespQ.first;
 
-        dataArray[idx].upd(target, line);
-        tagArray[idx].upd(target, Valid(tag));
-        dirtyArray[idx].upd(target, False);
-        $display(little2BigEndian(line[0]));
-        $display(little2BigEndian(line[1]));
+        dataArray[target].upd(idx, line);
+        tagArray[target].upd(idx, Valid(tag));
+        dirtyArray[target].upd(idx, False);
 
         hitQ.enq(line[blockOffset]);
         memRespQ.deq;
-
+        
+        updateLRUArray(idx, target);
         status <= Ready;
 	endrule
 
@@ -351,15 +340,14 @@ module mkCacheSetAssociative (Cache);
 		let blockOffset = getOffset(r.addr);
 
 		let hit = checkHit(tag, idx);
-        if(isValid(hit)) $display("HIT");
 
         if(r.op == Ld)
         begin
             if(isValid(hit)) 
 			begin
-                let set = dataArray[idx];
-				let line = set.sub(hit);
+				let line = dataArray[validValue(hit)].sub(idx);
 				hitQ.enq(line[blockOffset]);
+                updateLRUArray(idx, validValue(hit));
 			end
             
             else
@@ -373,11 +361,11 @@ module mkCacheSetAssociative (Cache);
         begin
             if(isValid(hit))
             begin
-                let set = dataArray[idx];
-				let line = set.sub(hit);
+				let line = dataArray[validValue(hit)].sub(idx);
 				line[blockOffset] = r.data;
-                set.upd(hit, line);
-                dirtyArray[idx].upd(idx, True);
+                dataArray[validValue(hit)].upd(idx, line);
+                dirtyArray[validValue(hit)].upd(idx, True);
+                updateLRUArray(idx, validValue(hit));
             end
 
             else 
