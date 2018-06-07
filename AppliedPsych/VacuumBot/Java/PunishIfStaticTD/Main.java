@@ -54,7 +54,13 @@ public class Main {
             while (bot.getBattery() > 0 && !bot.taskFinished(maze.getValidArea())) {
                 int direction = bot.epsilonGreedy(maze);
                 Point next = getNext(maze, bot.getCurrent(), direction);
+                if (next.equals(bot.getCurrent())) {
+                    bot.externallyPunish(direction);
+                }
                 bot.move(next);
+                if (bot.taskFinished(maze.getValidArea())) {
+                    bot.externallyReward();
+                }
             }
             printLog(maze, bot, i, log);
             printResult(maze, bot, i, result);

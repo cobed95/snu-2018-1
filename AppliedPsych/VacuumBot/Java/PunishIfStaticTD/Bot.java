@@ -275,4 +275,23 @@ public class Bot {
             return false;
         }
     }
+
+    public void externallyReward() {
+        int[] arrIdx = this.current.getArrIdx();
+        this.rewardMap[arrIdx[0]][arrIdx[1]] = 1;
+    }
+
+    public void externallyPunish(int direction) {
+        int[] arrIdx;
+        if (direction == 0) {
+            arrIdx = this.getEastIdx();
+        } else if (direction == 1) {
+            arrIdx = this.getWestIdx();
+        } else if (direction == 2) {
+            arrIdx = this.getSouthIdx();
+        } else {
+            arrIdx = this.getNorthIdx();
+        }
+        this.rewardMap[arrIdx[0]][arrIdx[1]] = -1;
+    }
 }
