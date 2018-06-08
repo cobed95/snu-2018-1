@@ -15,11 +15,6 @@ public:
     cpVector Multiply(const cpScalar &s) const;
 
     ostream& Insert(ostream &sout) const;
-
-    friend cpVector operator+(const cpVector &v, const cpVector &w);
-    friend cpVector operator+(const cpVector &v, const cpScalar &s);
-    friend cpVector operator+(const cpScalar &s, const cpVector &v);
-    friend ostream& operator<<(ostream &sout, cpVector &v);
 protected:
     cpScalar GetScalar(int i) const;
     unsigned int GetSize() const;
@@ -131,7 +126,7 @@ cpVector operator/(const cpVector &v, const cpScalar &s) {
     return v.Multiply(s.Inverse());
 }
 
-ostream& operator<<(ostream &sout, cpVector &v) {
+const ostream& operator<<(ostream &sout, cpVector &v) {
     return v.Insert(sout);
 }
 
