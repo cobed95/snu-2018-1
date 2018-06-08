@@ -30,14 +30,14 @@ int main() {
     cout << v << endl;
     cout << w << endl;
     cout << v+w << endl;
-    cout << sumvs << endl;
-    cout << sumsv << endl;
-    cout << diffvw << endl;
-    cout << diffvs << endl;
-    cout << v * w << endl;
-    cout << mulvs << endl;
-    cout << mulsv << endl;
-    cout << divvs << endl;
+    cout << v+s << endl;
+    cout << s+v << endl;
+    cout << v-w << endl;
+    cout << v-s << endl;
+    cout << v*w << endl;
+    cout << v*s << endl;
+    cout << s*v << endl;
+    cout << v/s << endl;
 
     return 0;
 }
