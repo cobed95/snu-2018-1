@@ -27,15 +27,11 @@ cpScalar::cpScalar(int num) {
     IntVal = num;
     RealVal = num * 1.0;
     IsInt = true;
-    cout << "scalar" << endl;
-    cout << RealVal << endl;
 }
 
 cpScalar::cpScalar(double num) {
     RealVal = num;
     IsInt = false;
-    cout << "scalar" << endl;
-    cout << RealVal << endl;
 }
 
 cpScalar::~cpScalar() {

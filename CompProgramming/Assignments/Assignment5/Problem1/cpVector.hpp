@@ -15,6 +15,11 @@ public:
     cpVector Multiply(const cpScalar &s) const;
 
     ostream& Insert(ostream &sout) const;
+
+    friend cpVector operator+(const cpVector &v, const cpVector &w);
+    friend cpVector operator+(const cpVector &v, const cpScalar &s);
+    friend cpVector operator+(const cpScalar &s, const cpVector &v);
+    friend ostream& operator<<(ostream &sout, cpVector &v);
 protected:
     cpScalar GetScalar(int i) const;
     unsigned int GetSize() const;
@@ -26,10 +31,6 @@ private:
 cpVector::cpVector(cpScalar *sarr, unsigned int size) {
     ScalarArr = new cpScalar[size];
     ScalarArr = sarr;
-    cout << endl;
-    cout << ScalarArr[0] << endl;
-    cout << ScalarArr[1] << endl;
-    cout << endl;
     Size = size;
 }
 
@@ -46,7 +47,7 @@ unsigned int cpVector::GetSize() const {
 }
 
 cpVector cpVector::Add(const cpVector &v) const {
-    cpScalar newArr[Size];
+    cpScalar *newArr = new cpScalar[Size];
     if (Size == v.GetSize()) {
         for (int i = 0; i < Size; i++) {
             newArr[i] = GetScalar(i) + v.GetScalar(i);
@@ -70,7 +71,7 @@ cpScalar cpVector::Dot(const cpVector &v) const {
 }
 
 cpVector cpVector::Add(const cpScalar &s) const {
-    cpScalar sarr[Size];
+    cpScalar *sarr = new cpScalar[Size];
     for (int i = 0; i < Size; i++) {
         sarr[i] = s.Add(GetScalar(i));
     }
@@ -78,7 +79,7 @@ cpVector cpVector::Add(const cpScalar &s) const {
 }
 
 cpVector cpVector::Multiply(const cpScalar &s) const {
-    cpScalar sarr[Size];
+    cpScalar *sarr = new cpScalar[Size];
     for (int i = 0; i < Size; i++) {
         sarr[i] = s.Multiply(GetScalar(i));
     }

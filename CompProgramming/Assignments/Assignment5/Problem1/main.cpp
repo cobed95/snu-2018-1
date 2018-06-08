@@ -29,7 +29,7 @@ int main() {
 
     cout << v << endl;
     cout << w << endl;
-    cout << sumvw << endl;
+    cout << v+w << endl;
     cout << sumvs << endl;
     cout << sumsv << endl;
     cout << diffvw << endl;
