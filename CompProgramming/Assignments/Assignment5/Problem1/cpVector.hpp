@@ -5,7 +5,7 @@
 
 class cpVector {
 public:
-    cpVector(cpScalar sarr[], unsigned int size);
+    cpVector(cpScalar* sarr, unsigned int size);
     cpVector(const cpVector &copy);
     ~cpVector();
 
@@ -16,6 +16,8 @@ public:
     cpVector Multiply(const cpScalar &s) const;
 
     ostream& Insert(ostream &sout) const;
+    
+    cpVector& operator=(const cpVector &copy);
 protected:
     cpScalar GetScalar(int i) const;
     unsigned int GetSize() const;
@@ -26,7 +28,9 @@ private:
 
 cpVector::cpVector(cpScalar *sarr, unsigned int size) {
     ScalarArr = new cpScalar[size];
-    ScalarArr = sarr;
+    for (int i = 0; i < size; i++) {
+        ScalarArr[i] = sarr[i];
+    }
     Size = size;
 }
 
@@ -36,6 +40,15 @@ cpVector::cpVector(const cpVector &copy) {
     for (int i = 0; i < Size; i++) {
         ScalarArr[i] = copy.GetScalar(i);
     }
+}
+
+cpVector& cpVector::operator=(const cpVector &copy) {
+    Size = copy.GetSize();
+    ScalarArr = new cpScalar[Size];
+    for (int i = 0; i < Size; i++) {
+        ScalarArr[i] = copy.GetScalar(i);
+    }
+    return *this;
 }
 
 cpVector::~cpVector() {
@@ -51,7 +64,7 @@ unsigned int cpVector::GetSize() const {
 }
 
 cpVector cpVector::Add(const cpVector &v) const {
-    cpScalar *newArr = new cpScalar[Size];
+    cpScalar newArr[Size];
     if (Size == v.GetSize()) {
         for (int i = 0; i < Size; i++) {
             newArr[i] = GetScalar(i) + v.GetScalar(i);
@@ -60,7 +73,7 @@ cpVector cpVector::Add(const cpVector &v) const {
         cerr << "Error: Addition of two vectors of different lengths" << endl;
     }
     cpVector result = cpVector(newArr, Size);
-    return cpVector(newArr, Size);
+    return result;
 }
 
 cpScalar cpVector::Dot(const cpVector &v) const {
@@ -76,7 +89,7 @@ cpScalar cpVector::Dot(const cpVector &v) const {
 }
 
 cpVector cpVector::Add(const cpScalar &s) const {
-    cpScalar *sarr = new cpScalar[Size];
+    cpScalar sarr[Size];
     for (int i = 0; i < Size; i++) {
         sarr[i] = s.Add(GetScalar(i));
     }
@@ -85,7 +98,7 @@ cpVector cpVector::Add(const cpScalar &s) const {
 }
 
 cpVector cpVector::Multiply(const cpScalar &s) const {
-    cpScalar *sarr = new cpScalar[Size];
+    cpScalar sarr[Size];
     for (int i = 0; i < Size; i++) {
         sarr[i] = s.Multiply(GetScalar(i));
     }
@@ -115,12 +128,12 @@ cpVector operator+(const cpScalar &s, const cpVector &v) {
 }
 
 cpVector operator-(const cpVector &v, const cpVector &w) {
-    cpVector negated = w.Multiply(cpScalar(-1));
+    const cpVector negated = w.Multiply(cpScalar(-1));
     return v.Add(negated);
 }
 
 cpVector operator-(const cpVector &v, const cpScalar &s) {
-    cpScalar negated = s.Multiply(cpScalar(-1));
+    const cpScalar negated = s.Multiply(cpScalar(-1));
     return v.Add(negated);
 }
 
@@ -137,11 +150,10 @@ cpVector operator*(const cpScalar &s, const cpVector &v) {
 }
 
 cpVector operator/(const cpVector &v, const cpScalar &s) {
-    cpScalar inverse = s.Inverse();
+    const cpScalar inverse = s.Inverse();
     return v.Multiply(inverse);
 }
 
 ostream& operator<<(ostream &sout, cpVector v) {
     return v.Insert(sout);
 }
-
