@@ -119,7 +119,7 @@ public class Main {
         maze.setCoord();
         
         int[] startIdx = getStart(maze);
-        int battery = maze.getValidArea()*2;
+        int battery = maze.getValidArea()*4;
         double gamma = 0.9;
         double epsilon = 0.5;
         Bot bot = new Bot(maze.getPoint(startIdx[0], startIdx[1]), battery, maze.getSizeX(), maze.getSizeY(), gamma, epsilon);
