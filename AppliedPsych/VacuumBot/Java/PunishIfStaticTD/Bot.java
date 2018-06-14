@@ -117,7 +117,7 @@ public class Bot {
             result += "[";
             for (int j = 0; j < this.sizeY; j++) {
                 if (option == 'v') {
-                    result += this.valueMap[i][j];
+                    result += this.valueMap[i][j] % 0.01;
                 } else if (option == 't') {
                     result += this.traceMap[i][j];
                 }
