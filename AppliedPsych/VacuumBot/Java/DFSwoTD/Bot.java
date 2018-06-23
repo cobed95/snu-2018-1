@@ -87,7 +87,15 @@ public class Bot {
         }
     }
 
-    public void traceWall() {
+    public int getWallTraceDirection(int origDirection, Point p) {
+        int direction;
+        if (p.equals(this.current)) {
+            Random rand = new Random();
+            direction = rand.nextInt(4);
+        } else {
+            direction = origDirection;
+        }
+        return direction;
     }
 
     private Integer getTraceMapPoint(int i, int j) {

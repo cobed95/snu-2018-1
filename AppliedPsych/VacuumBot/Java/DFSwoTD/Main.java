@@ -50,8 +50,12 @@ public class Main {
     }
 
     public static void traceWall(Maze maze, Bot bot) {
-        while (bot.getBatter() > 0 && !bot.taskFinisehd(maze.getValidArea())) {
-            
+        int direction = 0;
+        while (bot.getBattery() > 0) {
+            Point prev = bot.getCurrent();
+            Point next = getNext(maze, bot.getCurrent(), direction);
+            bot.move(next);
+            direction = bot.getWallTraceDirection(direction, prev);
         }
     }
 
