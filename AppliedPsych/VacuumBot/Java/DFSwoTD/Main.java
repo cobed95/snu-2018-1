@@ -52,10 +52,9 @@ public class Main {
     public static void traceWall(Maze maze, Bot bot) {
         int direction = 0;
         while (bot.getBattery() > 0) {
-            Point prev = bot.getCurrent();
-            Point next = getNext(maze, bot.getCurrent(), direction);
+            Point next = getNext(maze, bot.getCurrent(), bot.wallTracer.getDirection());
             bot.move(next);
-            direction = bot.getWallTraceDirection(direction, prev);
+            bot.wallTracer.update(bot.getCurrent());
         }
     }
 

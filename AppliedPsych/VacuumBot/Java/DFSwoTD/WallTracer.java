@@ -3,14 +3,23 @@ import java.util.*;
 public class WallTracer {
     private Point prev;
     private ArrayList<Point> wallList;
+    private int direction;
     
     public WallTracer(Point curr) {
         this.prev = curr;
+        this.wallList = new ArrayList<Point>();
+        this.direction = 0;
     }
 
-    public void update(int direction, Point curr) {
+    public int getDirection() {
+        return this.direction;
+    }
+
+    public void update(Point curr) {
         if (this.prev.equals(curr)) {
-            updateWallList(direction, curr);
+            updateWallList(this.direction, curr);
+            Random rand = new Random();
+            this.direction = rand.nextInt(4);
         }
         this.prev = curr;
     }

@@ -18,7 +18,9 @@ public class Bot {
 
     private ArrayList<Point> coveredArea;
 
-    private WallTracer wallTracer;
+    public WallTracer wallTracer;
+    
+    private ArrayList<Point> visited;
     
     public Bot(Point start, int battery, int sizeX, int sizeY, double gamma, double epsilon) {
         this.current = start;
@@ -41,6 +43,7 @@ public class Bot {
         this.coveredArea.add(current);
 
         this.wallTracer = new WallTracer(start);
+        this.visited = new ArrayList<Point>();
     }
 
     public void reset(Point start, int battery) {
@@ -85,17 +88,6 @@ public class Bot {
                 this.rewardMap[i][j] = -1;
             }
         }
-    }
-
-    public int getWallTraceDirection(int origDirection, Point p) {
-        int direction;
-        if (p.equals(this.current)) {
-            Random rand = new Random();
-            direction = rand.nextInt(4);
-        } else {
-            direction = origDirection;
-        }
-        return direction;
     }
 
     private Integer getTraceMapPoint(int i, int j) {
@@ -155,6 +147,40 @@ public class Bot {
 
     public int getCoveredAreaSize() {
         return this.coveredArea.size();
+    }
+
+    public void dfs() {
+        this.dfs(this.this.currentent);    
+    }
+
+    private void dfs(Point start) {
+        int[] directions = {0, 1, 2, 3};
+        
+    }
+
+    private Point getPoint(int direction) {
+        Point point;
+        int[] arrIdx = new int[2];
+        if (direction == 0) {
+            arrIdx[0] = this.current.getArrIdx()[0];
+            arrIdx[1] = this.current.getArrIdx()[1] + 1;
+            point = new Point(arrIdx);
+        } else if (direction == 1) {
+            arrIdx[0] = this.current.getArrIdx()[0];
+            arrIdx[1] = this.current.getArrIdx()[1] - 1;
+            point = new Point(arrIdx);
+        } else if (direction == 2) {
+            arrIdx[0] = this.current.getArrIdx()[0] + 1;
+            arrIdx[1] = this.current.getArrIdx()[1];
+            point = new Point(arrIdx);
+        } else if (direction == 3) {
+            arrIdx[0] = this.current.getArrIdx()[0] - 1;
+            arrIdx[1] = this.current.getArrIdx()[1];
+            point = new Point(arrIdx);
+        } else {
+            point = null;
+        }
+        return point;
     }
 
     /*
