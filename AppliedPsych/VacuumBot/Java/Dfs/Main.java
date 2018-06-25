@@ -65,7 +65,7 @@ public class Main {
        int battery = maze.getValidArea() * 2;
        bot.reset(maze.getPoint(startIdx[0], startIdx[1]), battery);
        for (int i = 0; i < episode; i++) {
-           bot.dfs();
+           bot.dfs(maze.getValidArea());
 
            printLog(maze, bot, i, log);
            printResult(maze, bot, i, result);
@@ -116,8 +116,8 @@ public class Main {
    }
 
    public static void main(String[] args) throws FileNotFoundException {
-       //String input = args[0];
-       Scanner scanner = new Scanner(new File("complex.txt"));
+       String input = args[0];
+       Scanner scanner = new Scanner(new File(input));
 
        ArrayList<ArrayList<Point>> rawMaze = buildMaze(scanner);
        Maze maze = new Maze(rawMaze);
@@ -125,7 +125,7 @@ public class Main {
        maze.setCoord();
 
        int[] startIdx = getStart(maze);
-       int battery = maze.getValidArea()*2;
+       int battery = maze.getValidArea()*10;
        double gamma = 0.9;
        double epsilon = 0.5;
        Bot bot = new Bot(maze.getPoint(startIdx[0], startIdx[1]), battery, maze.getSizeX(), maze.getSizeY(), gamma, epsilon);

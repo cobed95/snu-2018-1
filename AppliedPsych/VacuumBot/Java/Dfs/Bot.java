@@ -122,7 +122,7 @@ public class Bot {
            result += "[";
            for (int j = 0; j < this.sizeY; j++) {
                if (option == 'v') {
-                   result += this.valueMap[i][j] / 0.01;
+                   result += this.valueMap[i][j];
                } else if (option == 't') {
                    result += this.traceMap[i][j];
                }
@@ -146,18 +146,19 @@ public class Bot {
        return this.coveredArea.size();
    }
 
-   public void dfs() {
-       System.out.println("dfs step done");
-       ArrayList<Point> toVisit = getList();
-       mergesort(toVisit, 0, 4);
-       for (Point p : toVisit) {
-           if (this.wallTracer.searchWallList(p) || this.visited(p)) {
-               continue;
+   public void dfs(int validArea) {
+       if (!taskFinished(validArea)) {
+           ArrayList<Point> toVisit = getList();
+           mergesort(toVisit, 0, toVisit.size());
+           for (Point p : toVisit) {
+               if (this.wallTracer.searchWallList(p) || this.visited(p)) {
+                   continue;
+               }
+               Point prev = this.current;
+               this.move(p); 
+               this.dfs(validArea); 
+               this.move(prev);
            }
-           Point prev = this.current;
-           this.move(p); 
-           this.dfs(); 
-           this.move(prev); 
        }
    }
 
@@ -220,6 +221,14 @@ public class Bot {
        int[] directions = {0, 1, 2, 3}; 
        ArrayList<Point> toVisit = new ArrayList<Point>();
        for (int direction : directions) {
+           Point p = getPoint(direction);
+           if (p.getArrIdx()[0] >= this.sizeX 
+                   || p.getArrIdx()[1] >= this.sizeY 
+                   || p.getArrIdx()[0] < 0
+                   || p.getArrIdx()[1] < 0
+                   || this.wallTracer.searchWallList(p)) {
+               continue;
+           }
            toVisit.add(getPoint(direction));
        }
        return toVisit;

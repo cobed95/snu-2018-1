@@ -27,6 +27,7 @@ public class WallTracer {
     private void updateWallList(int direction, Point curr) {
         Point wall = getWall(direction, curr);
         this.wallList.add(wall);
+        System.out.println("wall updated: " + Arrays.toString(wall.getArrIdx()));
     }
 
     private Point getWall(int direction, Point curr) {
