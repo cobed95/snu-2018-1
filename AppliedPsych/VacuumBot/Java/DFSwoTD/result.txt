@@ -2,13 +2,13 @@
 ############## Episode 0 ##############
 
 Covered Area Size:
-104
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-61.1764705882353%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -18,13 +18,13 @@ Percentaged covered
 ############## Episode 1 ##############
 
 Covered Area Size:
-106
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-62.35294117647059%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -34,13 +34,13 @@ Percentaged covered
 ############## Episode 2 ##############
 
 Covered Area Size:
-73
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-42.94117647058823%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -50,13 +50,13 @@ Percentaged covered
 ############## Episode 3 ##############
 
 Covered Area Size:
-112
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-65.88235294117646%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -66,13 +66,13 @@ Percentaged covered
 ############## Episode 4 ##############
 
 Covered Area Size:
-122
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-71.76470588235294%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -82,13 +82,13 @@ Percentaged covered
 ############## Episode 5 ##############
 
 Covered Area Size:
-90
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-52.94117647058824%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -98,13 +98,13 @@ Percentaged covered
 ############## Episode 6 ##############
 
 Covered Area Size:
-101
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-59.411764705882355%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -114,13 +114,13 @@ Percentaged covered
 ############## Episode 7 ##############
 
 Covered Area Size:
-76
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-44.70588235294118%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -130,13 +130,13 @@ Percentaged covered
 ############## Episode 8 ##############
 
 Covered Area Size:
-126
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-74.11764705882354%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -146,13 +146,13 @@ Percentaged covered
 ############## Episode 9 ##############
 
 Covered Area Size:
-75
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-44.11764705882353%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -162,13 +162,13 @@ Percentaged covered
 ############## Episode 10 ##############
 
 Covered Area Size:
-111
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-65.29411764705883%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -178,13 +178,13 @@ Percentaged covered
 ############## Episode 11 ##############
 
 Covered Area Size:
-83
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-48.8235294117647%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -194,13 +194,13 @@ Percentaged covered
 ############## Episode 12 ##############
 
 Covered Area Size:
-85
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-50.0%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -210,13 +210,13 @@ Percentaged covered
 ############## Episode 13 ##############
 
 Covered Area Size:
-97
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-57.05882352941176%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -226,13 +226,13 @@ Percentaged covered
 ############## Episode 14 ##############
 
 Covered Area Size:
-77
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-45.294117647058826%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -242,13 +242,13 @@ Percentaged covered
 ############## Episode 15 ##############
 
 Covered Area Size:
-87
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-51.17647058823529%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -258,13 +258,13 @@ Percentaged covered
 ############## Episode 16 ##############
 
 Covered Area Size:
-89
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-52.352941176470594%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -274,13 +274,13 @@ Percentaged covered
 ############## Episode 17 ##############
 
 Covered Area Size:
-76
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-44.70588235294118%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -290,13 +290,13 @@ Percentaged covered
 ############## Episode 18 ##############
 
 Covered Area Size:
-85
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-50.0%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -306,13 +306,13 @@ Percentaged covered
 ############## Episode 19 ##############
 
 Covered Area Size:
-119
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-70.0%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -322,13 +322,13 @@ Percentaged covered
 ############## Episode 20 ##############
 
 Covered Area Size:
-127
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-74.70588235294117%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -338,13 +338,13 @@ Percentaged covered
 ############## Episode 21 ##############
 
 Covered Area Size:
-81
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-47.647058823529406%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -354,13 +354,13 @@ Percentaged covered
 ############## Episode 22 ##############
 
 Covered Area Size:
-114
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-67.05882352941175%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -370,13 +370,13 @@ Percentaged covered
 ############## Episode 23 ##############
 
 Covered Area Size:
-93
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-54.70588235294118%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -386,13 +386,13 @@ Percentaged covered
 ############## Episode 24 ##############
 
 Covered Area Size:
-81
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-47.647058823529406%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -402,13 +402,13 @@ Percentaged covered
 ############## Episode 25 ##############
 
 Covered Area Size:
-86
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-50.588235294117645%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -418,13 +418,13 @@ Percentaged covered
 ############## Episode 26 ##############
 
 Covered Area Size:
-72
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-42.35294117647059%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -434,13 +434,13 @@ Percentaged covered
 ############## Episode 27 ##############
 
 Covered Area Size:
-124
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-72.94117647058823%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -450,13 +450,13 @@ Percentaged covered
 ############## Episode 28 ##############
 
 Covered Area Size:
-86
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-50.588235294117645%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -466,13 +466,13 @@ Percentaged covered
 ############## Episode 29 ##############
 
 Covered Area Size:
-89
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-52.352941176470594%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -482,13 +482,13 @@ Percentaged covered
 ############## Episode 30 ##############
 
 Covered Area Size:
-70
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-41.17647058823529%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -498,13 +498,13 @@ Percentaged covered
 ############## Episode 31 ##############
 
 Covered Area Size:
-66
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-38.82352941176471%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -514,13 +514,13 @@ Percentaged covered
 ############## Episode 32 ##############
 
 Covered Area Size:
-96
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-56.470588235294116%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -530,13 +530,13 @@ Percentaged covered
 ############## Episode 33 ##############
 
 Covered Area Size:
-109
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-64.11764705882354%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -546,13 +546,13 @@ Percentaged covered
 ############## Episode 34 ##############
 
 Covered Area Size:
-89
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-52.352941176470594%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -562,13 +562,13 @@ Percentaged covered
 ############## Episode 35 ##############
 
 Covered Area Size:
-115
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-67.64705882352942%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -578,13 +578,13 @@ Percentaged covered
 ############## Episode 36 ##############
 
 Covered Area Size:
-57
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-33.52941176470588%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -594,13 +594,13 @@ Percentaged covered
 ############## Episode 37 ##############
 
 Covered Area Size:
-87
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-51.17647058823529%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -610,13 +610,13 @@ Percentaged covered
 ############## Episode 38 ##############
 
 Covered Area Size:
-58
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-34.11764705882353%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -626,13 +626,13 @@ Percentaged covered
 ############## Episode 39 ##############
 
 Covered Area Size:
-86
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-50.588235294117645%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -642,13 +642,13 @@ Percentaged covered
 ############## Episode 40 ##############
 
 Covered Area Size:
-129
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-75.88235294117646%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -658,13 +658,13 @@ Percentaged covered
 ############## Episode 41 ##############
 
 Covered Area Size:
-85
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-50.0%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -674,13 +674,13 @@ Percentaged covered
 ############## Episode 42 ##############
 
 Covered Area Size:
-97
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-57.05882352941176%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -690,13 +690,13 @@ Percentaged covered
 ############## Episode 43 ##############
 
 Covered Area Size:
-84
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-49.411764705882355%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -706,13 +706,13 @@ Percentaged covered
 ############## Episode 44 ##############
 
 Covered Area Size:
-47
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-27.647058823529413%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -722,13 +722,13 @@ Percentaged covered
 ############## Episode 45 ##############
 
 Covered Area Size:
-80
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-47.05882352941176%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -738,13 +738,13 @@ Percentaged covered
 ############## Episode 46 ##############
 
 Covered Area Size:
-107
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-62.94117647058823%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -754,13 +754,13 @@ Percentaged covered
 ############## Episode 47 ##############
 
 Covered Area Size:
-92
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-54.11764705882353%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -770,13 +770,13 @@ Percentaged covered
 ############## Episode 48 ##############
 
 Covered Area Size:
-55
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-32.35294117647059%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -786,13 +786,13 @@ Percentaged covered
 ############## Episode 49 ##############
 
 Covered Area Size:
-76
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-44.70588235294118%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -802,13 +802,13 @@ Percentaged covered
 ############## Episode 50 ##############
 
 Covered Area Size:
-89
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-52.352941176470594%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -818,13 +818,13 @@ Percentaged covered
 ############## Episode 51 ##############
 
 Covered Area Size:
-66
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-38.82352941176471%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -834,13 +834,13 @@ Percentaged covered
 ############## Episode 52 ##############
 
 Covered Area Size:
-103
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-60.588235294117645%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -850,13 +850,13 @@ Percentaged covered
 ############## Episode 53 ##############
 
 Covered Area Size:
-72
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-42.35294117647059%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -866,13 +866,13 @@ Percentaged covered
 ############## Episode 54 ##############
 
 Covered Area Size:
-132
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-77.64705882352942%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -882,13 +882,13 @@ Percentaged covered
 ############## Episode 55 ##############
 
 Covered Area Size:
-111
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-65.29411764705883%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -898,13 +898,13 @@ Percentaged covered
 ############## Episode 56 ##############
 
 Covered Area Size:
-69
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-40.588235294117645%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -914,13 +914,13 @@ Percentaged covered
 ############## Episode 57 ##############
 
 Covered Area Size:
-66
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-38.82352941176471%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -930,13 +930,13 @@ Percentaged covered
 ############## Episode 58 ##############
 
 Covered Area Size:
-111
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-65.29411764705883%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -946,13 +946,13 @@ Percentaged covered
 ############## Episode 59 ##############
 
 Covered Area Size:
-66
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-38.82352941176471%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -962,13 +962,13 @@ Percentaged covered
 ############## Episode 60 ##############
 
 Covered Area Size:
-123
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-72.35294117647058%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -978,13 +978,13 @@ Percentaged covered
 ############## Episode 61 ##############
 
 Covered Area Size:
-87
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-51.17647058823529%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -994,13 +994,13 @@ Percentaged covered
 ############## Episode 62 ##############
 
 Covered Area Size:
-128
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-75.29411764705883%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1010,13 +1010,13 @@ Percentaged covered
 ############## Episode 63 ##############
 
 Covered Area Size:
-95
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-55.88235294117647%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1026,13 +1026,13 @@ Percentaged covered
 ############## Episode 64 ##############
 
 Covered Area Size:
-81
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-47.647058823529406%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1042,13 +1042,13 @@ Percentaged covered
 ############## Episode 65 ##############
 
 Covered Area Size:
-106
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-62.35294117647059%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1058,13 +1058,13 @@ Percentaged covered
 ############## Episode 66 ##############
 
 Covered Area Size:
-140
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-82.35294117647058%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1074,13 +1074,13 @@ Percentaged covered
 ############## Episode 67 ##############
 
 Covered Area Size:
-73
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-42.94117647058823%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1090,13 +1090,13 @@ Percentaged covered
 ############## Episode 68 ##############
 
 Covered Area Size:
-122
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-71.76470588235294%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1106,13 +1106,13 @@ Percentaged covered
 ############## Episode 69 ##############
 
 Covered Area Size:
-77
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-45.294117647058826%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1122,13 +1122,13 @@ Percentaged covered
 ############## Episode 70 ##############
 
 Covered Area Size:
-98
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-57.647058823529406%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1138,13 +1138,13 @@ Percentaged covered
 ############## Episode 71 ##############
 
 Covered Area Size:
-78
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-45.88235294117647%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1154,13 +1154,13 @@ Percentaged covered
 ############## Episode 72 ##############
 
 Covered Area Size:
-80
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-47.05882352941176%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1170,13 +1170,13 @@ Percentaged covered
 ############## Episode 73 ##############
 
 Covered Area Size:
-110
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-64.70588235294117%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1186,13 +1186,13 @@ Percentaged covered
 ############## Episode 74 ##############
 
 Covered Area Size:
-44
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-25.882352941176475%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1202,13 +1202,13 @@ Percentaged covered
 ############## Episode 75 ##############
 
 Covered Area Size:
-85
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-50.0%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1218,13 +1218,13 @@ Percentaged covered
 ############## Episode 76 ##############
 
 Covered Area Size:
-103
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-60.588235294117645%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1234,13 +1234,13 @@ Percentaged covered
 ############## Episode 77 ##############
 
 Covered Area Size:
-105
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-61.76470588235294%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1250,13 +1250,13 @@ Percentaged covered
 ############## Episode 78 ##############
 
 Covered Area Size:
-123
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-72.35294117647058%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1266,13 +1266,13 @@ Percentaged covered
 ############## Episode 79 ##############
 
 Covered Area Size:
-106
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-62.35294117647059%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1282,13 +1282,13 @@ Percentaged covered
 ############## Episode 80 ##############
 
 Covered Area Size:
-68
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-40.0%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1298,13 +1298,13 @@ Percentaged covered
 ############## Episode 81 ##############
 
 Covered Area Size:
-129
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-75.88235294117646%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1314,13 +1314,13 @@ Percentaged covered
 ############## Episode 82 ##############
 
 Covered Area Size:
-98
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-57.647058823529406%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1330,13 +1330,13 @@ Percentaged covered
 ############## Episode 83 ##############
 
 Covered Area Size:
-60
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-35.294117647058826%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1346,13 +1346,13 @@ Percentaged covered
 ############## Episode 84 ##############
 
 Covered Area Size:
-69
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-40.588235294117645%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1362,13 +1362,13 @@ Percentaged covered
 ############## Episode 85 ##############
 
 Covered Area Size:
-80
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-47.05882352941176%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1378,13 +1378,13 @@ Percentaged covered
 ############## Episode 86 ##############
 
 Covered Area Size:
-97
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-57.05882352941176%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1394,13 +1394,13 @@ Percentaged covered
 ############## Episode 87 ##############
 
 Covered Area Size:
-117
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-68.82352941176471%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1410,13 +1410,13 @@ Percentaged covered
 ############## Episode 88 ##############
 
 Covered Area Size:
-119
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-70.0%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1426,13 +1426,13 @@ Percentaged covered
 ############## Episode 89 ##############
 
 Covered Area Size:
-89
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-52.352941176470594%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1442,13 +1442,13 @@ Percentaged covered
 ############## Episode 90 ##############
 
 Covered Area Size:
-76
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-44.70588235294118%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1458,13 +1458,13 @@ Percentaged covered
 ############## Episode 91 ##############
 
 Covered Area Size:
-71
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-41.76470588235294%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1474,13 +1474,13 @@ Percentaged covered
 ############## Episode 92 ##############
 
 Covered Area Size:
-85
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-50.0%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1490,13 +1490,13 @@ Percentaged covered
 ############## Episode 93 ##############
 
 Covered Area Size:
-93
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-54.70588235294118%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1506,13 +1506,13 @@ Percentaged covered
 ############## Episode 94 ##############
 
 Covered Area Size:
-125
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-73.52941176470588%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1522,13 +1522,13 @@ Percentaged covered
 ############## Episode 95 ##############
 
 Covered Area Size:
-72
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-42.35294117647059%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1538,13 +1538,13 @@ Percentaged covered
 ############## Episode 96 ##############
 
 Covered Area Size:
-91
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-53.529411764705884%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1554,13 +1554,13 @@ Percentaged covered
 ############## Episode 97 ##############
 
 Covered Area Size:
-89
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-52.352941176470594%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1570,13 +1570,13 @@ Percentaged covered
 ############## Episode 98 ##############
 
 Covered Area Size:
-101
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-59.411764705882355%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
@@ -1586,13 +1586,13 @@ Percentaged covered
 ############## Episode 99 ##############
 
 Covered Area Size:
-87
+1
 
 Total Valid Area:
-170
+168
 
 Percentaged covered
-51.17647058823529%
+0.5952380952380952%
 
 ############## Episode finished ##############
 -----------------------------------------------
