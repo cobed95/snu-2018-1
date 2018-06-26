@@ -69,14 +69,14 @@ public class Point {
     public boolean equals(Object o) {
         if (o instanceof Point) {
             Point other = (Point) o;
-            return (this.arrIdx[0] == other.getArrIdx()[0]) && (this.arrIdx[1] == other.getArrIdx()[1]) && (this.x == other.x) && (this.y == other.y);
+            return (this.arrIdx[0] == other.getArrIdx()[0]) && (this.arrIdx[1] == other.getArrIdx()[1]); 
         } else {
             return false;
         }
     }
 
     public int hashCode() {
-        return Objects.hash(this.x, this.y, this.arrIdx[0], this.arrIdx[1]);
+        return Objects.hash(this.arrIdx[0], this.arrIdx[1]);
     }
     
     public String toString() {

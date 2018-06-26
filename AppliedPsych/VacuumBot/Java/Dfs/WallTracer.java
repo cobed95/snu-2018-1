@@ -2,7 +2,7 @@ import java.util.*;
 
 public class WallTracer {
     private Point prev;
-    private ArrayList<Point> wallList;
+    public ArrayList<Point> wallList;
     private int direction;
     
     public WallTracer(Point curr) {
@@ -19,7 +19,12 @@ public class WallTracer {
         if (this.prev.equals(curr)) {
             updateWallList(this.direction, curr);
             Random rand = new Random();
-            this.direction = rand.nextInt(4);
+            int oldDirection = this.direction;
+            int newDirection = rand.nextInt(4);
+            while (oldDirection == newDirection) {
+                newDirection = rand.nextInt(4);
+            }
+            this.direction = newDirection;
         }
         this.prev = curr;
     }
